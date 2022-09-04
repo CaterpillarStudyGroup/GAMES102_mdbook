@@ -1,0 +1,24 @@
+[book]
+authors = ["windmissing"]
+language = "en"
+description = "The note of GAMES102"
+multilingual = false
+src = "src"
+title = "GAMES102"
+
+[output.html]
+mathjax-support = true
+git-repository-url = "https://github.com/CaterpillarStudyGroup/GAMES102_mdbook"
+git-repository-icon = "fa-github"
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
+
+[output.html.fold]
+
+[output.html.print]
+enable = true
+
+[output.html.search]
+enable = true
+
+# [output.pdf]
