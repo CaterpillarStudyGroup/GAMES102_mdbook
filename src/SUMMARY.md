@@ -9,3 +9,5 @@
 - [数据拟合]()
   - [数据拟合](DataFitting/DataFitting.md)
   - [1. 多项式插值](DataFitting/PolynomialInterpolation.md)
+  - [2. 多项式逼近](DataFitting/PolynomialApproximation.md)
+  - [3. 函数空间及基函数](DataFitting/Funtion.md)
