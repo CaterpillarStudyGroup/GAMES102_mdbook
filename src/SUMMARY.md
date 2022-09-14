@@ -11,3 +11,5 @@
   - [1. 多项式插值](DataFitting/PolynomialInterpolation.md)
   - [2. 多项式逼近](DataFitting/PolynomialApproximation.md)
   - [3. 函数空间及基函数](DataFitting/Funtion.md)
+  - [4. RBF函数插值/逼近](DataFitting/RBF.md)
+  - [5. 从另一个角度来看拟合函数](DataFitting/NewView.md)
