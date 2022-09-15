@@ -13,3 +13,6 @@
   - [3. 函数空间及基函数](DataFitting/Funtion.md)
   - [4. RBF函数插值/逼近](DataFitting/RBF.md)
   - [5. 从另一个角度来看拟合函数](DataFitting/NewView.md)
+- [参数拟合]()
+  - [回顾](ParametricFitting/Review.md)
+  - [多元函数](ParametricFitting/Multi.md)
