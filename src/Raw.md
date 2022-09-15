@@ -1,30 +1,3 @@
-# Gauss 拟合函数
-把任意 Gauss 函数9 mom 中的人做平移
-与缩放，使之成为 std Gauss 函数
-即 䑺从1=> go,、以'）
-通过推导得. Next 口，其电 ai.biz
-
-绝实际上是基于蓝点画的 Beier 曲线 g
-采样点足够多时。红线逼近蓝点
-Bnltx)=[til bn.­name tetro
-Is
-采样点 组合繖
-井 RBF 函数插值/逼近
--维 RBF 称为 Gauss 函数
-的一些
-gu.co 以1=上 一
-均值 M 方差0
-不同µ和0的 Gauss 函数都线性无关.
-RBF 函数。
-㤈= b。十三 big it)
-[M:44图了
-改进，通过优化得到µ和0
-# Gauss 拟合函数
-把任意 Gauss 函数9 mom 中的人做平移
-与缩放，使之成为 std Gauss 函数
-即 䑺从1=> go,、以'）
-通过推导得. Next 口，其电 ai.biz
-
 123参数曲线
 #多元函数 10
 ftp.n-ri 或伶州或 y =忷心划
