@@ -37,7 +37,7 @@ $$
 – n次多项式  
 
 $$
-L=span \left \{  B_{1},B_2,\dots,B_n \right \} =  \sum_{k=1}^{n}a_kB_k
+L=span \{  B_{1},B_2,\dots,B_n \} =  \sum_{k=1}^{n}a_kB_k
 $$
 
 # 映射 (mapping)
