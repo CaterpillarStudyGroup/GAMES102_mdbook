@@ -68,7 +68,7 @@ $$
 • 用若干简单函数（“基函数”）线性组合张成一个函数空间
 
 $$
--L=span\left (f_1,f_2,\dots ,f_n \right ) =\left \{  {\textstyle \sum_{i=1}^{n}a_if_i(x)|a_i\in R}  \right \} 
+-L=span\left (f_1,f_2,\dots ,f_n \right ) =({\textstyle \sum_{i=1}^{n}} a_if_i(x)|a_i)
 $$
 — 每个函数就表达（对应）为\\(n\\)个实数，即系数向量\\((a_1,a_2,\dots ,a_n)\\)
 
@@ -119,6 +119,10 @@ $$
 ![](../assets/47-1.png)
 # 更复杂的函数：函数复合
 ![](../assets/48-1.png)  
+
+$$
+f=f_{k}{ }^{\circ} f_{k-1}{ }^{\circ} \ldots{ }^{\circ} f_{0}
+$$ 
 
 $$
 \frac{1}{1+\left(\frac{2 x}{1+x^{2}}\right)^{2}}
