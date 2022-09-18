@@ -36,11 +36,11 @@ $$
 – 欧氏空间：1D实数、2D平面、3D空间、…  
 – n次多项式  
 
-# 映射 (mapping)
-两个非空集全A和B的映射\\(f:A\to B\\):对A中的任何一个元素\\(a\\)，有唯一的一个B中的元素\\(b\\)与之对应，记为\\(f(a)=b\\)
-– \\(b\\)称为\\(a\\)的象， \\(a\\)称为\\(b\\)的原象
+# 映射 (mapping)  
+两个非空集全A和B的映射\\(f:A\to B\\):对A中的任何一个元素\\(a\\)，有唯一的一个B中的元素\\(b\\)与之对应，记为\\(f(a)=b\\)  
+– \\(b\\)称为\\(a\\)的象， \\(a\\)称为\\(b\\)的原象  
 – \\(A\\)称为定义域，\\(B\\)称为值域  
-![](../assets/41-1.png)
+![](../assets/41-1.png)  
 
 # 函数 (Function)
 • 非空实数集之间的映射称为（一元）函数 \\(y=f(x)\\)，或变换
@@ -66,8 +66,9 @@ $$
 # 函数的集合（函数空间）
 
 • 用若干简单函数（“基函数”）线性组合张成一个函数空间
+
 $$
--L=span\left \{ f_1,f_2,\dots ,f_n \right \} =\left \{  {\textstyle \sum_{i=1}^{n}a_if_i(x)|a_i\in R}  \right \} 
+-L=span\left (f_1,f_2,\dots ,f_n \right ) =\left \{  {\textstyle \sum_{i=1}^{n}a_if_i(x)|a_i\in R}  \right \} 
 $$
 — 每个函数就表达（对应）为\\(n\\)个实数，即系数向量\\((a_1,a_2,\dots ,a_n)\\)
 
@@ -109,18 +110,21 @@ $$
 
 # 傅里叶级数
 $$
-\begin{array}{l}
-f(t)=A_{0}+\sum_{n=1}^{\infty}\left[a_{n} \cos (n \omega t)+b_{n} \sin (n \omega t)\right] \\
-f(t)=A_{0}+\sum_{n=1}^{\infty} A_{n} \sin \left(n \omega t+\psi_{n}\right)
-\end{array}
-$$  
-![](../assets/47-1.png)
-# 更复杂的函数：函数复合
-![](../assets/48-1.png)
+f(t)=A_{0}+\sum_{n=1}^{\infty}\left[a_{n} \cos (n \omega t)+b_{n} \sin (n \omega t)\right]
+$$
 
 $$
-f=f_{k}{ }^{\circ} f_{k-1}{ }^{\circ} \ldots{ }^{\circ} f_{0}
-$$$$
-\frac{1}{1+\left(\frac{2 x}{1+x^{2}}\right)^{2}} \cdot \quad f(x)=\frac{e^{x}}{x^{2}+1}
+f(t)=A_{0}+\sum_{n=1}^{\infty} A_{n} \sin n w t+\psi_{n}
+$$
+![](../assets/47-1.png)
+# 更复杂的函数：函数复合
+![](../assets/48-1.png)  
+
+$$
+\frac{1}{1+\left(\frac{2 x}{1+x^{2}}\right)^{2}}
+$$
+
+$$
+f(x)=\frac{e^{x}}{x^{2}+1}
 $$
 
