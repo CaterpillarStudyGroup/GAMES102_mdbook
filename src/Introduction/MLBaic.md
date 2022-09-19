@@ -110,7 +110,7 @@ $$
 目标2：函数尽量靠近数据点（**逼近**）
 
 $$
--\min  {\textstyle \sum_{i=0}^{n}} (y_i-f(x_i))^2
+\min \sum_{i=0}^{n}\left(y_{i}-f\left(x_{i}\right)\right)^{2} 
 $$
 
 ![](../assets/ML拟合-2.png) 
@@ -120,13 +120,13 @@ $$
 - 目标2: 函数尽量靠近数据点(**逼近**)  
 
 $$
--\min \sum_{i=0}^{n}\left(y_{i}-f\left(x_{i}\right)\right)^{2} 
+\min \sum_{i=0}^{n}\left(y_{i}-f\left(x_{i}\right)\right)^{2} 
 $$
 
 - 对各系数求导，得法方程（线性方程组）　　
 
 $$
--AX=b　　
+AX=b　　
 $$  
 
 **最小二乘法**  
@@ -198,9 +198,13 @@ $$
 • 选择一个函数空间  
 – 基函数的线性表达  
 
-\\(W=\left(w_{0}, w_{1}, \ldots, w_{n}\right)\\)
+$$
+W=\left(w_{0}, w_{1}, \ldots, w_{n}\right)
+$$
 
-\\(y=f(x)=\sum_{i=0}^{n} w_{i} B_{i}(x)\\)
+$$
+y=f(x)=\sum_{i=0}^{n} w_{i} B_{i}(x)
+$$
 
 • 最小二乘拟合 
 $$
@@ -208,21 +212,22 @@ $$
 $$
 
 - **Ridge regression**（**岭回归**）
-
-\\(\min _{W}\|Y-X W\|^{2}+\mu\|W\|_{2}^{2} \\)
+$$ 
+\min_{W} -XW\left |  \right | ^2+\left \| W \right \| ^2_2
+$$
 
 # 稀疏学习：稀疏正则化
  
 • 冗余基函数（过完备）  
 • 通过优化来选择合适的基函数  
-– 系数向量的\\( L 0 \\)模（ **非0元素个数**）尽量小  
+– 系数向量的\\( L_0 \\)模（ **非0元素个数**）尽量小  
 – **挑选**（“**学习**”）出合适的基函数  
 $$
-\min _{\alpha}\|Y-X W\|^{2}+\mu\|W\|_{0} \\
+\min_{a} \left |  \right |Y -XW\left |  \right | ^2+\mu\left \| W \right \| ^2_2
 $$
 
 $$
-\min _{\alpha}\|Y-X W\|^{2}, \quad \text { s.t. }\|W\|_{0} \leq \beta
+\min_{a}\left |  \right | Y -XW\left |  \right | ^2,s.t\left \| W \right \| _0\le \beta  
 $$
 
 > &#x2705; \\(||W||_0\\)表示 W 中的非零元素个数
@@ -236,14 +241,10 @@ $$
 • 已知\\(y\\)和\\(Φ \\)，有无穷多解\\(x  \\)  
 • 对于**稀疏**信号\\(x\\)，可通过优化能完全**重建**\\(x\\)   
 – 在一定条件下 \\((on Φ) \\)[Candes and Tao 2005]   
-**\\(L 0 \\)优化**   
-$$
-min\left \| x \right \| _0
-$$
+**\\(L_0 \\)优化**   
+min\\(\left \| x \right \| _0\\)
 
-$$
-s.t.Φx=y
-$$
+s.t.Φ\\(x=y\\)
 
 > &#x1F50E; [1：13：20]    
 
