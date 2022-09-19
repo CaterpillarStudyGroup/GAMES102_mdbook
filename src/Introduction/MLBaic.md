@@ -208,12 +208,12 @@ $$
 
 • 最小二乘拟合 
 $$
-\min _{W}\|Y-X W\|^{2}
+\min _{W}||Y-X W||^{2}
 $$
 
 - **Ridge regression**（**岭回归**）
 $$ 
-\min_{W} -XW\left |  \right | ^2+\left \| W \right \| ^2_2
+\min_{W}||Y -XW\left |  \right | ^2+|| W|| ^2_2
 $$
 
 # 稀疏学习：稀疏正则化
@@ -223,11 +223,11 @@ $$
 – 系数向量的\\( L_0 \\)模（ **非0元素个数**）尽量小  
 – **挑选**（“**学习**”）出合适的基函数  
 $$
-\min_{a} \left |  \right |Y -XW\left |  \right | ^2+\mu\left \| W \right \| ^2_2
+\min_{a} \left |  \right |Y -XW\left |  \right | ^2+\mu\left \| W \right \| _0
 $$
 
 $$
-\min_{a}\left |  \right | Y -XW\left |  \right | ^2,s.t\left \| W \right \| _0\le \beta  
+\min_{a}\left |  \right | Y -XW\left |  \right | ^2,s.t|| W || _0\le \beta  
 $$
 
 > &#x2705; \\(||W||_0\\)表示 W 中的非零元素个数
