@@ -2,6 +2,34 @@
 
 • 一般Gauss函数表达为标准Gauss函数的形式  
 
+$$
+g_{\mu ,\sigma } (x)= \frac{1}{\sqrt{2\pi } } e^{-\frac{(x-\mu )^{2} }{2\sigma ^{2} } } =\frac{1}{\sqrt{2\pi } } e^{-\frac{1}{2}(\frac{x}{\sigma } -\frac{\mu }{\sigma } )^2} =g_{0,1 } (ax+b)
+$$
+
+$$
+a=\frac{x}{\sigma },b=\frac{\mu }{\sigma }   
+$$
+
+$$
+f(x)=b_{0}+\sum_{i=1}^{n} b_{i} g_{i}(x)
+$$
+
+$$
+\Downarrow 
+$$
+
+$$
+f(x)=\omega_{0}+\sum_{i=1}^{n} \omega_{i} g_{0,1}\left(a_{i} x+b_{i}\right)
+$$
+
+$$
+\Downarrow 
+$$
+
+<u>**基函数是由一个基本函数通 过平移和伸缩变换而来的**</U>
+
+![](../assets/2-5-1.png)  
+
 
 > &#x2705; 把任意 Gauss 函数 \\(g_{\mu,\sigma}(x)\\)9 mom 中的x做平移与缩放，使之成为 std Gauss 函数，即：
 $$
@@ -27,6 +55,8 @@ $$
 f(x) = \omega_0 + \sum \omega_i g_{0,1}(a_ix+b_i)
 $$
 
+![](../assets/2-5-22.png)
+
 > &#x2705; 其中\\(\omega_0, \omega_i, a_i, b_i\\)都是待优化的函数。 
 > 当n足够多时，f(x)可以逼近任何函数。  
 
@@ -51,13 +81,26 @@ $$
 # 思考：激活函数的选择？
 
 • 启发：**由一个简单的函数通过（仿射）变换构造出一组基函数，张成一个函数空间**  
-• 表达能力是否足够强：是否完备/稠密的？  
+• 表达能力是否足够强：是否完备/稠密的？   
+![](../assets/2-5-5.png)  
 
-# 高维情形：多元函数
 
-（后面的课程再展开解释）  
+# 高维情形：多元函数  
+<font size=2>（后面的课程再展开解释）</font>
+
+
+  
 • 变量的多个分量的线性组合  
-• 单隐层神经网络函数：  
+
+$$
+(x_1,x_2,...,x_n)\longrightarrow g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
+$$
+
+• 单隐层神经网络函数： 
+
+$$
+f(x_1,x_2,...,x_n)\longrightarrow g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
+$$
 
 # 多层神经网络：多重复合的函数  
 
@@ -92,5 +135,5 @@ Output: Adjust parameters  (for every node) to make:
 • 初始值、参数…  
 调参：有耐心、有直觉…
 
-
+－ 
 
