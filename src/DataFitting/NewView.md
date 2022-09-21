@@ -26,7 +26,7 @@ $$
 \Downarrow 
 $$
 
-<u>**基函数是由一个基本函数通 过平移和伸缩变换而来的**</U>
+<u>**基函数是由一个基本函数通过平移和伸缩变换而来的**</U>
 
 ![](../assets/2-5-1.png)  
 
@@ -52,7 +52,7 @@ $$
 > &#x2705; RBF函数由此演变为：  
 
 $$
-f(x) = \omega_0 + \sum \omega_i g_{0,1}(a_ix+b_i)
+f(x)=\omega_{0}+\sum_{i=1}^{n} \omega_{i} g_{0,1}\left(a_{i} x+b_{i}\right)
 $$
 
 ![](../assets/2-5-22.png)
@@ -72,11 +72,11 @@ $$
 
 # RBF 神经网络
 
-• 高维情形：RBF (Radial Basis Function)，径向基函数   
-• 一种特殊的BP网络  
+* 高维情形：RBF (Radial Basis Function)，径向基函数   
+* 一种特殊的BP网络  
 • 优化：BP算法  
-• 核函数思想  
-• Gauss函数的特性：拟局部性  
+* 核函数思想  
+* Gauss函数的特性：拟局部性  
 
 # 思考：激活函数的选择？
 
@@ -86,7 +86,7 @@ $$
 
 
 # 高维情形：多元函数  
-<font size=2>（后面的课程再展开解释）</font>
+<font size=2>**（后面的课程再展开解释）**</font>
 
 
   
@@ -99,7 +99,7 @@ $$
 • 单隐层神经网络函数： 
 
 $$
-f(x_1,x_2,...,x_n)\longrightarrow g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
+f(x_1,x_2,...,x_n)\longrightarrow \omega_{0}+\sum_{i=1}^{n} \omega_{i} g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
 $$
 
 # 多层神经网络：多重复合的函数  
@@ -110,17 +110,17 @@ $$
 ![](../assets/2-5-7.png)   
 
 $$
-h_{w,b}(x)=f(W^Tx)=f(\sum_{i=1}^{3} W_ix_i+b)
+h_{W,b}(x)=f(W^Tx)=f(\sum_{i=1}^{3} W_ix_i+b)
 $$
 
-![](../assets/2-5-7.png)  
+![](../assets/2-5-8.png)  
 
 $$
-a_1^{(2)}=f(W_11^{(1)} x_1+W_12^{(1)}x_2+W_13^{(1)} x_3+b_1^{(1)})
+a_1^{(2)}=f(W_{11}^{(1)} x_1+W_{12}^{(1)}x_2+W_{13}^{(1)} x_3+b_1^{(1)})
 $$
 
 $$
-a_2^{(2)}=f(W_21^{(1)} x_1+W_22^{(1)} x_2+W_{23}^{(1)} x_{3}+b_{2}^{(1)})
+a_2^{(2)}=f(W_{21}^{(1)} x_1+W_{22}^{(1)} x_2+W_{23}^{(1)} x_{3}+b_{2}^{(1)})
 $$
 
 $$
@@ -136,7 +136,7 @@ $$
 ![](../assets/2-5-9.png)   
 
 Regression problem:  
-Input: Given training set (x_1,y_1), (x_2,y_2),(x_3, y_3),….   
+Input: Given training set \\((x_1,y_1), (x_2,y_2),(x_3, y_3)\\),….   
 Output: Adjust **parameters** \\(0\\)(for every node)to make:
 $$
 h(x_i)\approx y_i
@@ -168,6 +168,7 @@ $$
 * 怎么找？  
 • 优化方法（BP方法）  
 • 初始值、参数…  
+
 **调参：有耐心、有直觉…**
 
 
