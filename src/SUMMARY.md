@@ -17,5 +17,5 @@
   - [回顾](ParametricFitting/Review.md)
   - [多元函数](ParametricFitting/Multi.md)
   - [向量值函数](ParametricFitting/VectorValue.md)
-  - [几何设计](ParametricFitting/4_CubicSplines.md)
+  - [几何设计](Four/4_CubicSplines.md)
     
