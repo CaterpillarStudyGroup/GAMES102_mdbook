@@ -343,3 +343,13 @@ $$
 • 纹理映射  
 ![](../assets/曲线-8.png)   
 
+
+
+$$ f(x)=\left\{
+\begin{aligned}
+x & = & \cos(t) \\
+y & = & \sin(t) \\
+z & = & \frac xy
+\end{aligned}
+\right.
+$$
