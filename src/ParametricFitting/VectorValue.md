@@ -19,12 +19,14 @@ $$
 • 一般会用同样的基函数（共享基函数）     
 
 $$
-\left\{\begin{array}{c}
-y_{1}=f_{1}(x) \\
-\vdots \\
-y_{m}=f_{m}(x)
-\end{array}\right.
+\left\{\begin{matrix}
+ y_1=f_1(x)\\
+\vdots  \\
+y_m=f_m(x)
+\end{matrix}\right.
 $$
+
+
 
 
 向量值函数（多个应变量）  
