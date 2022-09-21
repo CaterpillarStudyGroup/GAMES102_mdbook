@@ -16,3 +16,5 @@
 - [参数拟合]()
   - [回顾](ParametricFitting/Review.md)
   - [多元函数](ParametricFitting/Multi.md)
+  - [向量值函数](ParametricFitting/VectorValue.md)
+  
