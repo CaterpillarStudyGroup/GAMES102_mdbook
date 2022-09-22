@@ -1,202 +1,258 @@
-几何建模与处理基础
-刘利刚
-中国科学技术大学
-GAMES 102在线课程
-B样条曲线
-GAMES 102在线课程：几何建模与处理基础
-Bezier曲线的不足
-• 次Bezier曲线： 个控制顶点
-𝑥 𝑡 ? ?𝐵 ?
-?
-𝑡 ⋅ 𝑏 ?
-?
-???
-全局性：牵一发而动全身，不利于设计
-原因：基函数是全局的
-样条曲线
-• 分段的多项式曲线（Bezier曲线）
-• 分段表达，具有局部性
-有无统一的表达方式？
-思考：样条曲线的统一表达
-• 形式类比：每个控制顶点用一个基函数进行组合
-?,?
-?
-???
-?
-• 性质要求：
-• 基函数须局部性（局部支集）
-• 基函数要有正性+权性
-• …
-• 如何构造？
-B样条的产生
-• Early use of splines on computers for data
-interpolation
-• Ferguson at Boeing, 1963
-• Gordon and de Boor at General Motors
-• B‐splines, de Boor 1972
-• Free form curve design
-• Gordon and Riesenfeld, 1974 → B‐splines as a
-generalization of Bezier curves
-启发：
-• Bernstein基函数的递推公式：
-?
-?
-?
-???
-???
-???
-with
-?
-?
-?
-?
-for
-• 思路：
-• 局部处处类似定义，由一个基函数平移得到
-• 高阶的基函数由2个低阶的基函数“升阶”得到
-• 利于保持一些良好的性质，比如提高光滑性
-Key Ideas
-• 以三次为例
-• We design one basis function 𝑏 𝑡
-• Properties:
-𝐶 ? continuous
-is piecewise polynomial, degree 3 (cubic)
-𝑏 𝑡 has local support
-Overlaying shifted 𝑏 𝑡 ? 𝑖 forms a partition of unity
-• 𝑏 𝑡 ? 0 for all 𝑡
-• In short:
-• All desirable properties build into the basis
-• Linear combinations will inherit these
-Shifted Basis Functions
-• 型值点参数化：节点向量
-Shifted basis function 𝑏 𝑡
-Illustration only
-Courtesy of Renjie Chen
-Repeated linear interpolation
-• Another way to increase smoothness:
-Repeated linear interpolation
-• Another way to increase smoothness:
-Repeated linear interpolation
-• Another way to increase smoothness
-De Boor Recursion: uniform case
-• The uniform B‐spline basis of order 𝒌 (degree 𝒌 ? 𝟏) is
-given as
-• 𝑁 ?
-?
-𝑡 ? ? 1,if 𝑖 ? 𝑡 ? 𝑖 ? 1
-0, otherwise
-• 𝑁 ?
-?
-𝑡 ?
-?
-????? ??
-𝑁 ?
-???
-𝑡 ?
-??? ??
-??? ? ???
-𝑁 ???
-???
-𝑡
-• ?
-?
-???
-𝑁 ?
-???
-𝑡 ?
-?????
-???
-𝑁 ???
-???
-𝑡
-B‐spline curves: general case
-• Given: knot sequence
-? ? ? ???
-(
-? ? ???
-is called knot vector)
-• Normalized B‐spline functions
-?,?
-of the order
-(degree  ) are defined as:
-?,?
-? ???
-?,?
-??? ?
-? ????? ?? ?
-?,???
-? ??? ??
-? ??? ?? ???
-???,???
-for  and
-Example
-𝑁 ?,? 𝑡 ? ? 1, 𝑡 ?
-? 𝑡 ? 𝑡 ???
-0, otherwise
-𝑁 ?,? 𝑡 ?
-??? ?
-? ????? ?? ?
-𝑁 ?,??? 𝑡 ?
-? ??? ??
-? ??? ?? ???
-𝑁 ???,??? 𝑡
-for 𝑘 ? 1 and 𝑖 ? 0,…,𝑛
-Example
-Example
-Basis properties
-• For the so defined basis functions, the following
-properties can be shown:
-? ? 𝑡 ? 𝑡 ???
-𝑁 ?,? 𝑡 ? 0 for 𝑡 ? ? 𝑡 ? 𝑡 ? or 𝑡 ??? ? 𝑡 ? 𝑡 ???
-• ∑ 𝑁 ?,?
-𝑡
-?
-???
-? 1 for 𝑡 ??? ? 𝑡 ? 𝑡 ???
-• For
-? ? ??? , the basis functions  ?,?
-are
-???
-at the knots
-?
-• The interval
-? ???
-is called support of
-?,?
-B‐spline curves
-• B‐spline curves
-• Given:  𝑛 ? 1 control points 𝒅 ? ,…,𝒅 ? ∈ ℝ ?
-knot vector 𝑇 ? 𝑡 ? ,…,𝑡 ? ,…𝑡 ???
-• Then, the B‐spline curve 𝒙 𝑡 of the order 𝑘 is defined
-as
-𝒙 𝑡 ? ?𝑁 ?,? 𝑡
-?
-???
-⋅ 𝒅 ?
-• The points 𝒅 ? are called de Boor points
-Carl R. de Boor
-German‐American mathematician
-University of Wisconsin‐Madison
-Example
-•
-Support intervals of 𝑁 ?,?
-Curve defined in interval 𝑡 ? ? 𝑡 ? 𝑡 ?
-B‐spline curves
-• Multiple weighted knot vectors
-• So far: 𝑇 ? 𝑡 ? ,…,𝑡 ? ,…,𝑡 ??? with 𝑡 ? ? 𝑡 ? ? ⋯ ?
-𝑡 ???
-• Now: also multiple knots allowed, i.e. with 𝑡 ? ? 𝑡 ? ?
-⋯ ? 𝑡 ???
-• The recursive definition of the B spline function 𝑁 ?,?
-𝑖 ? 0,…,𝑛 works nonetheless, as long as no more
-than 𝑘 knots coincide
-B‐spline curves
-• Effect of multiple knots:
-set: 𝑡 ? ? 𝑡 ? ? ⋯ 𝑡 ???
-• and 𝑡 ??? ? 𝑡 ??? ? ⋯ ? 𝑡 ???
-𝒅 ? and 𝒅 ? are interpolated
-B‐spline curves
+
+# B样条曲线  
+
+# Bezier曲线的不足   
+• \\(n\\)次Bezier曲线：\\(n+1\\)个控制顶点  
+
+![](../assets/曲线1.png)
+
+$$
+x(t)=\sum_{i=0}^{n} B_i^n(t)\cdot b_i
+$$
+
+![](../assets/曲线2.png)
+![](../assets/曲线3.png)
+
+
+> **全局性：牵一发而动全身，不利于设计**  
+
+**原因：基函数是全局的**  
+
+
+# 样条曲线  
+
+* 分段的多项式曲线（Bezier曲线）   
+• 分段表达，具有局部性   
+
+![](../assets/曲线4.png)
+
+**有无统一的表达方式？**
+
+
+
+# 思考：样条曲线的统一表达  
+
+
+* 形式类比：每个控制顶点用一个基函数进行组合  
+
+$$
+x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot b_i
+$$
+
+* 性质要求：  
+• 基函数须局部性（局部支集）  
+• 基函数要有正性+权性   
+• …    
+
+* 如何构造？   
+
+
+# B样条的产生  
+
+* Early use of splines on computers for data interpolation     
+• Ferguson at Boeing, 1963    
+• Gordon and de Boor at General Motors     
+• B‐splines, de Boor 1972    
+
+
+* Free form curve design    
+• Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves    
+
+启发：  
+* Bernstein基函数的递推公式：  
+
+$$
+B_i^n(t)=(1-t)B_{i-1}^{(n-1)}(1-t)
+$$
+
+$$
+with B_0^0(t)=1,B^n_i(t)=0 for i \in \left \{  0...n\right \} 
+$$
+
+* 思路：   
+• 局部处处类似定义，由一个基函数平移得到    
+• 高阶的基函数由2个低阶的基函数“升阶”得到    
+• 利于保持一些良好的性质，比如提高光滑性   
+
+# Key Ideas   
+
+![](../assets/曲线5.png)  
+
+* 以三次为例    
+• We design one basis function 𝑏(𝑡)      
+>* Properties:   
+• 𝑏(𝑡) is \\(C^2\\) continuous    
+• 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
+• 𝑏(𝑡) is has local support   
+• Overlaying shifted 𝑏 (𝑡+i) forms a partition of unity   
+• 𝑏(𝑡)\ge 0 or all 𝑡  
+
+* In short:   
+• All desirable properties build into the basis   
+• Linear combinations will inherit these  
+
+
+# Shifted Basis Functions   
+
+• 型值点参数化：节点向量    
+
+![](../assets/曲线6.png)
+
+Courtesy of Renjie Chen   
+
+
+
+# Repeated linear interpolation  
+
+
+• Another way to increase smoothness:    
+
+![](../assets/曲线7.png)  
+
+
+# Repeated linear interpolation   
+
+• Another way to increase smoothness:  
+![](../assets/曲线8.png)  
+
+
+# Repeated linear interpolation   
+
+• Another way to increase smoothness    
+![](../assets/曲线9.png)  
+
+
+# De Boor Recursion: uniform case       
+• The **uniform** B‐spline basis of order 𝒌 (degree 𝒌 ? 𝟏) is
+given as     
+
+![](../assets/曲线10.png)  
+
+
+
+# B‐spline curves: general case   
+
+* Given: knot sequence t_o<t_1< ...< t_n< ...< t_{n+k} ((t_0,t_i,...,t_{n=k})is called knot vector)      
+
+* Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:
+
+$$
+N_{i,1}(t)=\begin{cases}
+ 1,t_i\le t\le t_{i+1}\\
+0,otherwise
+\end{cases}
+$$
+
+$$
+N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
+$$
+
+$$
+for k>1, and i=0,...,n
+$$
+
+
+
+# Example
+
+![](../assets/曲线11.png)    
+
+$$
+N_{i,1}(t)=\begin{cases}
+ 1,t_i\le t\le t_{i+1}\\
+0,otherwise
+\end{cases}
+$$
+
+$$
+N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
+$$
+
+$$
+for k>1, and i=0,...,n
+$$
+
+# Example  
+
+![](../assets/曲线12.png)  
+
+# Example  
+
+![](../assets/曲线13.png)  
+
+# Basis properties   
+
+* For the so defined basis functions, the following properties can be shown:   
+
+• \\(𝑁_{i,k}\\) > 0 for \\(𝑡_i\\) < 𝑡 < \\(t_{i+k}\\)   
+
+•\\(𝑁_{i,k}\\) > 0 for \\(𝑡_0\\) < 𝑡 < \\(t_i\\) or \\(t_{i+k}\\) <t < \\(t_{n+k}\\)  
+
+• \\(\sum_{i=0}^{n} N_{i,k}(t)=1 \\)for \\(t_{k-1}\le t\le t_{n+1} \\)   
+
+• For \\(t_i\le t_j\le t_{i+k}\\), the basis functions \\(N_{i,k}(t)\\) are \\(C^{k-2} \\)at the knots \\(t_j\\)    
+
+
+• The interval\\([t_i,t_{i+k}\\), 
+is called support of\\(N_{i,k}\\)      
+
+
+# B‐spline curves  
+
+
+* B‐spline curves    
+• Given:𝑛+1 control points 𝒅_0,...,d_n∈ ℝ^3   
+
+knot vector \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)    
+
+• Then, the B‐spline curve 𝒙(𝑡) of the order 𝑘 is defined as   
+
+$$
+x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot d_i
+$$
+
+• The points 𝒅_i are called de Boor points    
+
+**Carl R. de Boor**     
+German‐American mathematician   
+University of Wisconsin‐Madison   
+
+
+# Example    
+
+• \\(k=4,n=5\\)     
+
+![](../assets/曲线14.png)  
+
+Support intervals of \\(𝑁_{i,k}\\)  
+
+Curve defined in interval\\(t_3\le t\le t_6\\)  
+
+
+# B‐spline curves
+
+* Multiple weighted knot vectors  
+• So far: \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)with\\(t_0\le t_1\le ...\le t_{n+k}\\)     
+• Now: also multiple knots allowed, i.e. with \\(t_0\le t_1\le ...\le t_{n+k}\\)   
+• The recursive definition of the B spline function \\(𝑁_{i,k}(i=0,...,n) \\) works nonetheless as long as no more than 𝑘 knots coincide    
+
+
+# B‐spline curves
+
+* Effect of multiple knots:   
+set: \\(t_0=t_1=...=t_{n+k}\\)    
+• and \\(t_{n+1}=t_{n+2}=...=t_{n+k}\\)   
+
+\\(𝒅_0\\) and \\(𝒅_n\\) are interpolated      
+
+
+# B‐spline curves
+
+
 • Example:
+
+![](../assets/曲线15.png)  
+
 B‐spline curves
 • Example:
 B‐spline curves
