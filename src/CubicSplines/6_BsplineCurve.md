@@ -249,19 +249,30 @@ set: \\(t_0=t_1=...=t_{n+k}\\)
 # B‐spline curves
 
 
-• Example:
+• Example:\\(k=4,n=5\\)
 
 ![](../assets/曲线15.png)  
 
-B‐spline curves
-• Example:
-B‐spline curves
-• Further example
-B‐spline curves
-• Interesting property:
-• B‐spline functions 𝑁 ?,? (𝑖 ? 0,…,𝑘 ? 1) of the order 𝑘
-over the knot vector 𝑇 ? 𝑡 ? ,𝑡 ? ,…,𝑡 ???? ?
-0,…,0,1,…,1
+
+# B‐spline curves   
+
+• Example:\\(k=4,n=5\\)
+
+![](../assets/曲线16.png)  
+
+# B‐spline curves  
+
+• Further example   
+
+![](../assets/曲线17.png)  
+
+
+# B‐spline curves    
+
+* Interesting property:    
+• B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})=(0,...,0,1,...,1)\\)   
+
+
 are Bernstein polynomials 𝐵 ?
 ???
 of degree 𝑘 ? 1
