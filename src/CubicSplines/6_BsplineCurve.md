@@ -2,15 +2,15 @@
 # B样条曲线  
 
 # Bezier曲线的不足   
-• \\(n\\)次Bezier曲线：\\(n+1\\)个控制顶点  
+• \\(n\\)次Bezier曲线：\\(n+1\\)个控制顶点    
 
-![](../assets/曲线1.png)
+![](../assets/曲线1.png)   
 
 $$
 x(t)=\sum_{i=0}^{n} B_i^n(t)\cdot b_i
 $$
 
-![](../assets/曲线2.png)
+![](../assets/曲线2.png)  
 ![](../assets/曲线3.png)
 
 
@@ -24,7 +24,7 @@ $$
 * 分段的多项式曲线（Bezier曲线）   
 • 分段表达，具有局部性   
 
-![](../assets/曲线4.png)
+![](../assets/曲线4.png)   
 
 **有无统一的表达方式？**
 
@@ -33,7 +33,7 @@ $$
 # 思考：样条曲线的统一表达  
 
 
-* 形式类比：每个控制顶点用一个基函数进行组合  
+* 形式类比：每个控制顶点用一个基函数进行组合   
 
 $$
 x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot b_i
@@ -56,7 +56,7 @@ $$
 
 
 * Free form curve design    
-• Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves    
+• Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves   
 
 启发：  
 * Bernstein基函数的递推公式：  
@@ -84,8 +84,8 @@ $$
 • 𝑏(𝑡) is \\(C^2\\) continuous    
 • 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
 • 𝑏(𝑡) is has local support   
-• Overlaying shifted 𝑏 (𝑡+i) forms a partition of unity   
-• 𝑏(𝑡)\ge 0 or all 𝑡  
+• Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
+• \\(𝑏(𝑡)\\)ge 0 or all 𝑡  
 
 * In short:   
 • All desirable properties build into the basis   
@@ -123,8 +123,7 @@ Courtesy of Renjie Chen
 
 
 # De Boor Recursion: uniform case       
-• The **uniform** B‐spline basis of order 𝒌 (degree 𝒌 ? 𝟏) is
-given as     
+• The **uniform** B‐spline basis of order 𝒌 (degree 𝒌 ? 𝟏) is given as     
 
 ![](../assets/曲线10.png)  
 
@@ -134,7 +133,7 @@ given as
 
 * Given: knot sequence t_o<t_1< ...< t_n< ...< t_{n+k} ((t_0,t_i,...,t_{n=k})is called knot vector)      
 
-* Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:
+* Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
 
 $$
 N_{i,1}(t)=\begin{cases}
@@ -200,11 +199,11 @@ $$
 
 
 * B‐spline curves    
-• Given:𝑛+1 control points 𝒅_0,...,d_n∈ ℝ^3   
+• Given:\\(𝑛+1\\) control points \\(𝒅_0,...,d_n∈R^3\\)     
 
 knot vector \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)    
 
-• Then, the B‐spline curve 𝒙(𝑡) of the order 𝑘 is defined as   
+• Then, the B‐spline curve 𝒙(𝑡) of the order 𝑘 is defined as    
 
 $$
 x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot d_i
@@ -290,69 +289,82 @@ are Bernstein polynomials\\(𝐵_i^{k-1} of degree \\(𝑘-1\\)
 •\\(x(t_0)=d_0,(t_{n+1})=d_n\\) (end point interpolation)    
 •\\(\dot{x} (t_0)=\frac{k-1}{t_k-t_0} (d_1-d_0)\\) (tangent direction at \\(d_0,\\) similar in \\(d_n\\)    
 
-• \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
+• \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
 
 
-# B‐spline curves properties
-• Multiple inner knots ⇒ reduction of continuity of 𝑥 𝑡 .
-𝑙‐times inner knot (1 ? 𝑙 ? 𝑘? means
-𝐶 ????? ‐continuity
-• Local impact of  the de Boor points: moving of 𝑑 ? only
-changes the curve in the region 𝑡 ? ,𝑡 ???
-• The insertion of new de Boor points does not change the
-polynomial degree of the curve segments
-B‐spline curves properties
-• Locality of B‐spline curves
-B‐spline curves
-• Evaluation of B‐spline curves
-• Using B‐spline functions
-• Using the de Boor algorithm
-Similar algorithm to the de Casteljau algorithm for Bezier curves;
-consists of a number of linear interpolations on the de Boor polygon
-The de Boor algorithm
+# B‐spline curves properties   
+
+• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1/le 𝑙/le 𝑘)\\) means \\(𝐶^{k-𝑙-1}\\) ‐continuity     
+• Local impact of the de Boor points: moving of \\(𝑑_i\\) only changes the curve in the region \\([𝑡_i,t_{i+k}]\\)    
+• The insertion of new de Boor points does not change the polynomial degree of the curve segments        
+
+
+# B‐spline curves properties 
+
+• Locality of B‐spline curves     
+![](../assets/曲线19.png)   
+
+
+# B‐spline curves   
+
+* Evaluation of B‐spline curves   
+• Using B‐spline functions   
+• Using the de Boor algorithm
+Similar algorithm to the de Casteljau algorithm for Bezier curves; consists of a number of linear interpolations on the de Boor polygon     
+
+
+# The de Boor algorithm   
+
 • Given:
-𝒅 ? ,…,𝒅 ? : de Boor points
-𝑡 ? ,…,𝑡 ??? ? 𝑡 ? ,𝑡 ? ,𝑡 ??? ,…,𝑡 ? ,𝑡 ??? ,…,𝑡 ??? ? 𝑡 ??? :
+\\(𝒅_0,…,𝒅_n\\): de Boor points     
+
+$$
+(t_0,...,t_{k-1}=t_0,t_k,t_{k+1},...,t_n,t_{n+1},...,t_{n+k}=t_{n+1})
+$$
+
 Knot vector
+
 • wanted:
-Curve point 𝒙 𝑡 of the B‐spline curve of the order 𝑘
-The de Boor algorithm
-1. Search index with
-? ???
-2. for
-•
-?
-?
-?
-• for
-• for
-•
-?
-?
-?
-?
-???
-???
-?
-?
-?
-???
-• with
-?
-? ??? ?
-? ????? ?? ?
-• Then: 
-?
-???
-B样条曲线：分段Bezier曲线
-•
-B：Basic（亦称“基本样条”）
-B样条的其他理论知识
-• B样条的许多性质
-• 局部凸包性、变差缩减性、包络性
-• B样条的导数、积分递推式、几何作图
-• 重节点的B样条基函数及B样条曲线
-• Bezier样条曲线转换为B样条曲线
-• B样条插值方法
+Curve point \\(𝒙(𝑡)\\) of the B‐spline curve of the order 𝑘    
+
+
+# The de Boor algorithm    
+
+1. Search index with \\(t_r/le t/le t_{r+1}\\)   
+2. for \\(i=r-k+1,...,r\\)
+$$
+d^0_i=d_i
+$$
+
+• for \\(j=1,...,k-1\\)   
+for \\(i=r-k+1+j,...,r\\)    
+
+$$
+d_i^j=(1-a^j_i)\cdot d^{j-1}_{i-1}+a_j^i\cdot d^{j-1}_i
+$$
+
+with \\(a_i^j=\frac{t-t_i}{t_{i+k-j}-t_i} \\)
+
+• Then: \\(d^{k-1}_r=x(t)\\)    
+
+
+# B样条曲线：分段Bezier曲线    
+• \\(n=3\\)    
+
+![](../assets/曲线20.png)   
+
+> **B：Basic（亦称“基本样条”）**
+
+
+
+# B样条的其他理论知识  
+
+* B样条的许多性质   
+• 局部凸包性、变差缩减性、包络性   
+• B样条的导数、积分递推式、几何作图    
+• 重节点的B样条基函数及B样条曲线   
+• Bezier样条曲线转换为B样条曲线    
+• **B样条插值方法**    
 • …
-谢 谢 ！
+
+![](../assets/曲线21.png)   
