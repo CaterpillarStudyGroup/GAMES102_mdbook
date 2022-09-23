@@ -79,12 +79,12 @@ with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i \in \left \{  0...n\right \}\\)
 
 * 以三次为例    
 • We design one basis function 𝑏(𝑡)      
->* Properties:   
+* Properties:   
 • 𝑏(𝑡) is \\(C^2\\) continuous    
 • 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
 • 𝑏(𝑡) is has local support   
 • Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
-• \\(𝑏(𝑡)\\)ge 0 or all 𝑡  
+• \\(𝑏(𝑡)\\)/ge 0 or all 𝑡  
 
 * In short:   
 • All desirable properties build into the basis   
@@ -122,7 +122,7 @@ Courtesy of Renjie Chen
 
 
 # De Boor Recursion: uniform case       
-• The **uniform** B‐spline basis of order 𝒌 (degree 𝒌 ? 𝟏) is given as     
+• The **uniform** B‐spline basis of order 𝒌 (degree 𝒌-𝟏) is given as       
 
 ![](../assets/曲线10.png)  
 
@@ -130,7 +130,8 @@ Courtesy of Renjie Chen
 
 # B‐spline curves: general case   
 
-* Given: knot sequence t_o<t_1< ...< t_n< ...< t_{n+k} ((t_0,t_i,...,t_{n=k})is called knot vector)      
+* Given: knot sequence \\(t_o < t_1 < ... < t_n < ... < t_{n+k}\\)
+\\((t_0,t_i,...,t_{n=k})\\) is called knot vector)      
 
 * Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
 
@@ -145,9 +146,7 @@ $$
 N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
 $$
 
-$$
-for k>1, and i=0,...,n
-$$
+for \\(k>1\\), and \\(i=0,...,n\\)   
 
 
 
@@ -166,9 +165,8 @@ $$
 N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
 $$
 
-$$
-for k>1, and i=0,...,n
-$$
+for\\( k>1,\\) and \\(i=0,...,n\\)
+
 
 # Example  
 
@@ -188,10 +186,10 @@ $$
 
 • \\(\sum_{i=0}^{n} N_{i,k}(t)=1 \\)for \\(t_{k-1}\le t\le t_{n+1} \\)   
 
-• For \\(t_i\le t_j\le t_{i+k}\\), the basis functions \\(N_{i,k}(t)\\) are \\(C^{k-2} \\)at the knots \\(t_j\\)    
+* For \\(t_i\le t_j\le t_{i+k}\\), the basis functions \\(N_{i,k}(t)\\) are \\(C^{k-2} \\)at the knots \\(t_j\\)    
 
 
-• The interval\\([t_i,t_{i+k}\\), is called support of\\(N_{i,k}\\)      
+* The interval\\([t_i,t_{i+k}]\\), is called support of\\(N_{i,k}\\)      
 
 
 # B‐spline curves  
@@ -199,7 +197,6 @@ $$
 
 * B‐spline curves    
 • Given:\\(𝑛+1\\) control points \\(𝒅_0,...,d_n∈R^3\\)     
-
 knot vector \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)    
 
 • Then, the B‐spline curve 𝒙(𝑡) of the order 𝑘 is defined as    
@@ -208,10 +205,12 @@ $$
 x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot d_i
 $$
 
-• The points 𝒅_i are called de Boor points    
+• The points \\(𝒅_i\\) are called de Boor points    
 
 **Carl R. de Boor**     
 German‐American mathematician University of Wisconsin‐Madison   
+
+
 
 
 # Example    
@@ -222,7 +221,7 @@ German‐American mathematician University of Wisconsin‐Madison
 
 Support intervals of \\(𝑁_{i,k}\\)  
 
-Curve defined in interval\\(t_3\le t\le t_6\\)  
+Curve defined in interval \\(t_3\le t\le t_6\\)    
 
 
 # B‐spline curves
@@ -271,7 +270,7 @@ set: \\(t_0=t_1=...=t_{n+k}\\)
 
 ![](../assets/曲线24.png)
 
-are Bernstein polynomials\\(𝐵_i^{k-1} of degree \\(𝑘-1\\)    
+are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)    
 
 
 # B‐spline curves properties    
@@ -285,7 +284,8 @@ are Bernstein polynomials\\(𝐵_i^{k-1} of degree \\(𝑘-1\\)
 
 # B‐spline curves properties    
 
-•\\(x(t_0)=d_0,(t_{n+1})=d_n\\) (end point interpolation)    
+•\\(x(t_0)=d_0,x(t_{n+1})=d_n\\) (end point interpolation)    
+
 •\\(\dot{x} (t_0)=\frac{k-1}{t_k-t_0} (d_1-d_0)\\) (tangent direction at \\(d_0,\\) similar in \\(d_n\\)    
 
 • \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
@@ -293,7 +293,7 @@ are Bernstein polynomials\\(𝐵_i^{k-1} of degree \\(𝑘-1\\)
 
 # B‐spline curves properties   
 
-• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1/le 𝑙/le 𝑘)\\) means \\(𝐶^{k-𝑙-1}\\) ‐continuity     
+• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1\dots \le 𝑙 < 𝑘)\\) means \\(𝐶^{k-𝑙-1}\\) ‐continuity     
 • Local impact of the de Boor points: moving of \\(𝑑_i\\) only changes the curve in the region \\([𝑡_i,t_{i+k}]\\)    
 • The insertion of new de Boor points does not change the polynomial degree of the curve segments        
 
@@ -318,7 +318,7 @@ Similar algorithm to the de Casteljau algorithm for Bezier curves; consists of a
 \\(𝒅_0,…,𝒅_n\\): de Boor points     
 
 $$
-(t_0,...,t_{k-1}=t_0,t_k,t_{k+1},...,t_n,t_{n+1},...,t_{n+k}=t_{n+1})
+(t_0,\cdots ,t_{k-1}=t_0,t_k,t_{k+1},\cdots ,t_n,t_{n+1},\cdots ,t_{n+k}=t_{n+1})
 $$
 
 Knot vector
@@ -329,17 +329,17 @@ Curve point \\(𝒙(𝑡)\\) of the B‐spline curve of the order 𝑘
 
 # The de Boor algorithm    
 
-1. Search index with \\(t_r/le t/le t_{r+1}\\)   
-2. for \\(i=r-k+1,...,r\\)
+1. Search index with \\(t_r\le  t\le t_{r+1}\\)   
+2. for \\(i=r-k+1,\cdots ,r\\)
 $$
 d^0_i=d_i
 $$
 
-• for \\(j=1,...,k-1\\)   
-for \\(i=r-k+1+j,...,r\\)    
+• for \\(j=1,\cdots ,k-1\\)   
+for \\(i=r-k+1+j,\cdots ,r\\)    
 
 $$
-d_i^j=(1-a^j_i)\cdot d^{j-1}_{i-1}+a_j^i\cdot d^{j-1}_i
+d_i^j=(1-a^j_i)\cdots  d^{j-1}_{i-1}+a_j^i \ cdots ^{j-1}_i
 $$
 
 with \\(a_i^j=\frac{t-t_i}{t_{i+k-j}-t_i} \\)
