@@ -193,8 +193,7 @@ $$
 • For \\(t_i\le t_j\le t_{i+k}\\), the basis functions \\(N_{i,k}(t)\\) are \\(C^{k-2} \\)at the knots \\(t_j\\)    
 
 
-• The interval\\([t_i,t_{i+k}\\), 
-is called support of\\(N_{i,k}\\)      
+• The interval\\([t_i,t_{i+k}\\), is called support of\\(N_{i,k}\\)      
 
 
 # B‐spline curves  
@@ -214,8 +213,7 @@ $$
 • The points 𝒅_i are called de Boor points    
 
 **Carl R. de Boor**     
-German‐American mathematician   
-University of Wisconsin‐Madison   
+German‐American mathematician University of Wisconsin‐Madison   
 
 
 # Example    
@@ -271,36 +269,31 @@ set: \\(t_0=t_1=...=t_{n+k}\\)
 
 * Interesting property:    
 • B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})=(0,...,0,1,...,1)\\)   
+𝑘 times    𝑘 times
+
+![](../assets/曲线24.png)
+
+are Bernstein polynomials\\(𝐵_i^{k-1} of degree \\(𝑘-1\\)    
 
 
-are Bernstein polynomials 𝐵 ?
-???
-of degree 𝑘 ? 1
-𝑘 times 𝑘 times
-B‐spline curves properties
-• Given:
-• 𝑇 ? 𝑡 ? ,…,𝑡 ? ,𝑡 ? ,…,𝑡 ? ,𝑡 ??? ,…,𝑡 ???
-• de Boor polygon 𝒅 ? ,…,𝒅 ?
-• Then, the following applies for the related B‐spline
-curve  :
-𝒌 times 𝒌 times
-B‐spline curves properties
-•
-? ? ??? ?
-(end point interpolation)
-•
-?
-??
-? ? ?? ?
-? ?
-(tangent direction at
-? ,
-similar in
-? )
-• consists of  polynomial curve
-segments of degree  (assuming no multiple
-inner knots)
-B‐spline curves properties
+# B‐spline curves properties    
+
+* Given:   
+
+![](../assets/曲线22.png)    
+• de Boor polygon \\(𝒅_0,…,𝒅_n\\)    
+• Then, the following applies for the related B‐spline curve\\(x(t)\\):   
+
+
+# B‐spline curves properties    
+
+•\\(x(t_0)=d_0,(t_{n+1})=d_n\\) (end point interpolation)    
+•\\(\dot{x} (t_0)=\frac{k-1}{t_k-t_0} (d_1-d_0)\\) (tangent direction at \\(d_0,\\) similar in \\(d_n\\)    
+
+• \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
+
+
+# B‐spline curves properties
 • Multiple inner knots ⇒ reduction of continuity of 𝑥 𝑡 .
 𝑙‐times inner knot (1 ? 𝑙 ? 𝑘? means
 𝐶 ????? ‐continuity
