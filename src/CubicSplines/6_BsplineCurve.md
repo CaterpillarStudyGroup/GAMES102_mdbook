@@ -65,9 +65,8 @@ $$
 B_i^n(t)=(1-t)B_{i-1}^{(n-1)}(1-t)
 $$
 
-$$
-with B_0^0(t)=1,B^n_i(t)=0 for i \in \left \{  0...n\right \} 
-$$
+with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i \in \left \{  0...n\right \}\\) 
+
 
 * 思路：   
 • 局部处处类似定义，由一个基函数平移得到    
