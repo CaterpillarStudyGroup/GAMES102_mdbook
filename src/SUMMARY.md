@@ -21,4 +21,5 @@
 - [几何设计]()
   - [几何设计](CubicSplines/4_CubicSplines.md)
   - [Bezier曲线](CubicSplines/6_BsplineCurve.md)
+  - [有理曲线](CubicSplines/7_NURBS.md)
     
