@@ -83,7 +83,7 @@ $$
  p_i^{(1)}\\
  \cdots \\
 p_i^{(n)}
-\end{pmatrix}}{\sum_{i=0}^{n}B_i^{(d)} (t)p_i^{(n+1)} } 
+\end{pmatrix}}{\sum_{i=0}^{n}B_j^{(d)} (t)p_j^{(n+1)} } 
 $$
 
 # 有理Bezier曲线
@@ -149,7 +149,7 @@ with \\(\sum_{i=0}^{n} q_i(t)=1\\)
 # NURBS: Non‐Uniform Rational B‐Spline （非均匀有理B样条）   
 
 NURBS: Rational B‐Splines   
-* Formally:\\(𝑁^{(d)}_i\\)
+* Formally:(\\(𝑁^{(d)}_i\\)
 :B‐spline basis function 𝑖 of degree d)     
 
 $$
@@ -170,6 +170,6 @@ $$
 
 ![](../assets/有理曲线-9.png)   
 
-* NURBS曲线的性质
+* NURBS曲线的性质    
 • 大部分与Bezier/B样条曲线类同：具有良好的几何直观性     
 
