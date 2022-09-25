@@ -260,8 +260,8 @@ $$
 
 $$
 \begin{cases}
- {\varphi}_{n+1} (x_j)=1 \\\\
- {\varphi}'_{n+1} (x_0)=1 \\\\
+ \varphi_{n+1}(x_j)=1\\\\
+ \varphi_{n+1} (x_0)=1\\\\
 {\varphi}'_{n+1} (x_n)=0
 \end{cases}
 $$
@@ -272,9 +272,19 @@ $$
 
 $$
 \begin{cases}
- {\varphi}_{n+2} (x_j)=0 \\\\
- {\varphi}'_{n+2} (x_0)=0 \\\\
-{\varphi}'_{n+2} (x_n)=1
+ \varphi_{n+2}(x_j)=1\\\\
+ {\varphi }' _{n+2}(x_0)=1\\\\
+{\varphi}'_{n+2} (x_n)=0
+\end{cases}
+$$
+
+
+
+$$
+\begin{cases}
+ \varphi_{n+2}(x_j)=0\\\\
+ {\varphi}'_{n+2}(x_0)=0\\\\
+{\varphi}'_{n+2}(x_n)=1
 \end{cases}
 $$
 
@@ -361,11 +371,12 @@ $$
 
 ![](../assets/几何-24.png)
 
+
 $$
-\varphi(t)=\left\{\begin{array}{c}
-v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1 \\
+\varphi(t)=\begin{cases}
+ v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1\\\\
 v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-1), 1 \leq t \leq 2
-\end{array}\right.
+\end{cases}
 $$
 
 • 但是，
@@ -388,11 +399,12 @@ $$
 ![](../assets/几何-25-1.png)
 
 $$
-\varphi(t)=\left\{\begin{array}{c}
-v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1 \\
-v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-1), 1 \leq t \leq 2
-\end{array}\right.
+\varphi(t)=\begin{cases}
+ v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq \frac{2}{3}\\\\
+v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-\frac{2}{3}), \frac{2}{3} \leq t \leq 2
+\end{cases}
 $$
+
 
 • 则\\({\varphi }' (\frac{2}{3}- )={\varphi }' (\frac{2}{3}+ ),\varphi (t)\\)在\\([0,2]\\)就是\\(C^\infty \\)了。    
 
@@ -400,10 +412,11 @@ $$
 
 $$
 t=\begin{cases}
- \frac{2}{3}s,0\le s\le \frac{2}{3}, \\
+ \frac{2}{3}s,0\le s\le \frac{2}{3},\\\\
 \frac{3}{4}(s-\frac{2}{3})+1,\frac{2}{3}\le s\le 2.
 \end{cases}
 $$
+
 
 • 使得原来不是\\(C^1 \\)的曲线变为\\(C^1 \\)的了。
 
