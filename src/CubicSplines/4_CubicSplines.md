@@ -212,16 +212,18 @@ $$
 ## Hermit型插值多项式     
 
 假设
-$$
-\left\{\begin{array} { r l } 
-{ S ( x _ { i - 1 } ) } & { = y _ { i - 1 } } \\
-{ S ( x _ { i } ) } & { = y _ { i } }
-\end{array} \quad \right.
-$$
 
 $$
 \begin{cases}
-{s}' (x_{i-1})=m_{i-1} \\
+ S(x_{i-1})=f_{i-1}\\\\
+S(x_i)=y_i
+\end{cases}
+$$
+
+
+$$
+\begin{cases}
+ {s}' (x_{i-1})=m_{i-1} \\\\
 {s}' (x_i)=m_i
 \end{cases}
 $$
@@ -241,8 +243,55 @@ S(x)=\sum_{i=0}^{n}y_i \varphi _i(x)+{y}'_0 \varphi _{n+1}(x)+{y}'_n \varphi _{n
 $$
 
 其中\\(\varphi _i(x)\\)均为三次样条函数，且满足  
+$$
+\begin{cases}
+ {\varphi} (x_j)=\delta _{ij} \\\\
+{\varphi}'_i (x_0)={\varphi}'_i(x_n)=0
+\end{cases}
+$$
 
-![](../assets/几何-31.png)
+$$
+(i,j=0,1,\dots,n)
+$$
+
+$$
+(i=0,1,\dots,n)
+$$
+
+$$
+\begin{cases}
+ \varphi_{n+1}(x_j)=1\\\\
+ \varphi_{n+1} (x_0)=1\\\\
+{\varphi}'_{n+1} (x_n)=0
+\end{cases}
+$$
+
+$$
+(j=0,1,\dots,n)
+$$
+
+$$
+\begin{cases}
+ \varphi_{n+2}(x_j)=1\\\\
+ {\varphi }' _{n+2}(x_0)=1\\\\
+{\varphi}'_{n+2} (x_n)=0
+\end{cases}
+$$
+
+
+
+$$
+\begin{cases}
+ \varphi_{n+2}(x_j)=0\\\\
+ {\varphi}'_{n+2}(x_0)=0\\\\
+{\varphi}'_{n+2}(x_n)=1
+\end{cases}
+$$
+
+$$
+(j=0,1,\dots,n)
+$$
+
 
 任一\\(\varphi _i(x)\\)可由三次样条函数方法求得。  
 
@@ -322,11 +371,12 @@ $$
 
 ![](../assets/几何-24.png)
 
+
 $$
-\varphi(t)=\left\{\begin{array}{c}
-v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1 \\
+\varphi(t)=\begin{cases}
+ v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1\\\\
 v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-1), 1 \leq t \leq 2
-\end{array}\right.
+\end{cases}
 $$
 
 • 但是，
@@ -349,11 +399,12 @@ $$
 ![](../assets/几何-25-1.png)
 
 $$
-\varphi(t)=\left\{\begin{array}{c}
-v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq 1 \\
-v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-1), 1 \leq t \leq 2
-\end{array}\right.
+\varphi(t)=\begin{cases}
+ v_{0}+\frac{v_{1}-v_{0}}{3} t, 0 \leq t \leq \frac{2}{3}\\\\
+v_{0}+\frac{v_{1}-v_{0}}{3}+\frac{2\left(v_{1}-v_{0}\right)}{3}(t-\frac{2}{3}), \frac{2}{3} \leq t \leq 2
+\end{cases}
 $$
+
 
 • 则\\({\varphi }' (\frac{2}{3}- )={\varphi }' (\frac{2}{3}+ ),\varphi (t)\\)在\\([0,2]\\)就是\\(C^\infty \\)了。    
 
@@ -361,10 +412,11 @@ $$
 
 $$
 t=\begin{cases}
- \frac{2}{3}s,0\le s\le \frac{2}{3}, \\
+ \frac{2}{3}s,0\le s\le \frac{2}{3},\\\\
 \frac{3}{4}(s-\frac{2}{3})+1,\frac{2}{3}\le s\le 2.
 \end{cases}
 $$
+
 
 • 使得原来不是\\(C^1 \\)的曲线变为\\(C^1 \\)的了。
 
