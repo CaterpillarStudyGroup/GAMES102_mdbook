@@ -252,7 +252,7 @@ $$
 
 $$
 \left\{\begin{array}{c}
-x=x(t) \\
+x=x(t) \\\\
 y=y(t) 
 \end{array}\right.
 $$
