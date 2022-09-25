@@ -261,7 +261,7 @@ $$
 $$
 \begin{cases}
  \varphi_{n+1}(x_j)=1\\\\
- \varphi_{n+1} (x_0)=1\\\\
+ {\varphi'}_{n+1} (x_0)=1\\\\
 {\varphi}'_{n+1} (x_n)=0
 \end{cases}
 $$
