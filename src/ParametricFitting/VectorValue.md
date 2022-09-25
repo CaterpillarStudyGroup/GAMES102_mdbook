@@ -17,14 +17,14 @@ $$
 
 • 看成多个单变量函数，各个函数独立无关   
 • 一般会用同样的基函数（共享基函数）     
-1
+2
 
 $$
-\left\{\begin{matrix}
+\begin{cases}
  y_1=f_1(x)\\\\
 \vdots  \\\\
 y_m=f_m(x)
-\end{matrix}\right.
+\end{cases}
 $$
 
 
