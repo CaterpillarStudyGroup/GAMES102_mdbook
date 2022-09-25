@@ -34,15 +34,13 @@ $$
 f:R^1 → R^m 
 $$   
 
-3
-
-\\[
+$$
 \left\{\begin{array}{c}
 y_{1}=f_{1}(x) \\
 \vdots \\
 y_{m}=f_{m}(x)
 \end{array}\right.
-\\]
+$$
 
 • 几何解释：   
 • 一个实数\\(𝑥∈𝑅_1\\)?映射到𝑚维空\\(𝑅^m\\)的一个点，轨迹构成\\(𝑅^m\\)的一条“曲线”      
@@ -292,9 +290,11 @@ $$
 t_{i+1}-t_{i}=\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\| \cdot\left(1+\frac{3}{2} \frac{\widehat{\alpha}_{i}\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|}{\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|+\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}+\right.   \left.\frac{3}{2} \frac{\widehat{\alpha}_{i+1}\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}{\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|+\left\|\boldsymbol{k}_{i+2}-\boldsymbol{k}_{i+1}\right\|}\right) 
 $$
 
-$$
+4 
+
+\\[
 with  \hat{\alpha}_{i}=\min \left(\pi-\alpha_{i}, \frac{\pi}{2}\right)  
-$$
+\\]
 
 $$
 and  \alpha_{i}=\operatorname{angle}\left(\boldsymbol{k}_{i-1}, \boldsymbol{k}_{i}, \boldsymbol{k}_{i+1} \right) 
