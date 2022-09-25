@@ -290,14 +290,16 @@ $$
 t_{i+1}-t_{i}=\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\| \cdot\left(1+\frac{3}{2} \frac{\widehat{\alpha}_{i}\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|}{\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|+\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}+\right.   \left.\frac{3}{2} \frac{\widehat{\alpha}_{i+1}\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}{\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|+\left\|\boldsymbol{k}_{i+2}-\boldsymbol{k}_{i+1}\right\|}\right) 
 $$
 
-4 
-
-\\[
-with  \hat{\alpha}_{i}=\min \left(\pi-\alpha_{i}, \frac{\pi}{2}\right)  
-\\]
+with5
 
 $$
-and  \alpha_{i}=\operatorname{angle}\left(\boldsymbol{k}_{i-1}, \boldsymbol{k}_{i}, \boldsymbol{k}_{i+1} \right) 
+\hat{\alpha}_{i}=\min \left(\pi-\alpha_{i}, \frac{\pi}{2}\right)  
+$$
+
+and
+
+$$
+\alpha_{i}=\operatorname{angle}\left({k}_{i-1}, {k}_{i}, {k}_{i+1} \right) 
 $$
 
 
