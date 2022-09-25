@@ -45,15 +45,15 @@ $$
 
 $$
 M=\left(\begin{array}{ccc}
-b_{1}\left(x_{1}\right) & \ldots & b_{n}\left(x_{1}\right) \\
-\ldots & \ldots & \ldots \\
+b_{1}\left(x_{1}\right) & \ldots & b_{n}\left(x_{1}\right) \\\\
+\ldots & \ldots & \ldots \\\\
 b_{1}\left(x_{m}\right) & \ldots & b_{n}\left(x_{m}\right)
 \end{array}\right)
 $$
 
 # 求解
 
-*关于\\(\lambda\\)的二次多项式    
+* 关于\\(\lambda\\)的二次多项式    
 $$
 \lambda^{T} M^{T} M \lambda-2 y^{T} M \lambda+y^{T} y 
 $$
