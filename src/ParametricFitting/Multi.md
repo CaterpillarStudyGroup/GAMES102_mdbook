@@ -5,17 +5,14 @@ $$
 f: R^n \rightarrow R^1
 $$
 
-或
 
 $$
-\begin{pmatrix}
-x_1 \\
-\vdots  \\
-x_n
-\end{pmatrix} \rightarrow y
+\begin{pmatrix}x_1
+ \\\\\vdots 
+ \\\\x_n
+\end{pmatrix}
+\rightarrow y
 $$
-
-或
 
 $$
 y = f(x_1, \cdots, x_n)
@@ -31,7 +28,7 @@ $$
 # 二元函数的基函数构造   
 
 • 方法：**张量积**形式，即用两个一元函数的基函数的相互乘积来定义   
-• 比如：二次二元多项式函数的基函数\\(z=f(x,y)\\)的基函数{\\(1,x,y,x^2,xy,y^2)\\)}   
+• 比如：二次二元多项式函数的基函数\\(z=f(x,y)\\)的基函数{\\(1,x,y,x^2,xy,y^2\\)}   
 
 ![](../assets/16.PNG)  
 > &#x1F446; [10:23] 例子：幂基
@@ -61,11 +58,10 @@ $$
 # 多元函数的神经网络表达
 
 $$
-f:\begin{pmatrix}
-x_1 \\
-\vdots  \\
-x_n
-\end{pmatrix} \rightarrow y
+f:\begin{pmatrix}x_1
+ \\\\\vdots 
+ \\\\x_n
+\end{pmatrix} →y
 $$
 
 • 用一个**单变量函数\\(\sigma (x)\\)（称为激活函数）的不同仿射变换来构造** “基函数”：**基函数数目可控**    
@@ -73,7 +69,7 @@ $$
 y=f(x_1,x_2x,...,x_n)
 $$
 $$
-=w_0+\sum_{j-1}^{m} W_j\sigma (a_j^1x_1+...a_j^ix_i+...+a_j^nx_n+b_j)
+=W_0+\sum_{j-1}^{m} W_j\sigma (a_j^1x_1+...a_j^ix_i+...+a_j^nx_n+b_j)
 $$
 
 ![](../assets/多元函数-4.png)  
