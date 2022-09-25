@@ -45,7 +45,12 @@ $$
 - 构造插值问题的通用解   
 － 给定  \\(n+1\\)个点  {\\((x_0,y_0),\cdots,(x_n,y_n)\\)}, 寻找一组次数为\\(n\\)的多项式基函数\\(l_i\\)使得  
 
-![](../assets/插值-6.png)  
+$$
+l_i(x_j) = \begin{cases}
+ 1, & \text{ if } i=j \\\\
+ 0, & \text{ if } i\neq j
+\end{cases}
+$$
 
 － 插值问题的解为:   
 $$
@@ -57,12 +62,7 @@ $$
 > &#x2753; 这里没懂
 > 构造基函数li使得：  
 
-$$
-l_i(x_j) = \begin{cases}
- 1 & \text{ if } i=j \\\\
- 0 & \text{ if } i\neq j
-\end{cases}
-$$
+
 
 那么：  
 
