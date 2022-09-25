@@ -252,7 +252,7 @@ $$
 
 $$
 \left\{\begin{array}{c}
-x=x(t) \\
+x=x(t) \\\\
 y=y(t) 
 \end{array}\right.
 $$
@@ -290,7 +290,7 @@ $$
 t_{i+1}-t_{i}=\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\| \cdot\left(1+\frac{3}{2} \frac{\widehat{\alpha}_{i}\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|}{\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|+\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}+\right.   \left.\frac{3}{2} \frac{\widehat{\alpha}_{i+1}\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}{\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|+\left\|\boldsymbol{k}_{i+2}-\boldsymbol{k}_{i+1}\right\|}\right) 
 $$
 
-with8
+with
 
 $$
 \hat{\alpha}_{i}=\min (\pi-{\alpha}_{i}, \frac{\pi}{2} )
@@ -360,16 +360,16 @@ $$
 
 $$f(x)=
 \begin{cases}
-0& \text{x=0}\\
+0& \text{x=0}\\\\
 1& \text{x!=0}
 \end{cases}
 $$
 
 $$ F^{HLLC}=\left\{
 \begin{array}{rcl}
-F_L       &      & {0      <      S_L}\\
-F^*_L     &      & {S_L \leq 0 < S_M}\\
-F^*_R     &      & {S_M \leq 0 < S_R}\\
+F_L       &      & {0      <      S_L}\\\\
+F^*_L     &      & {S_L \leq 0 < S_M}\\\\
+F^*_R     &      & {S_M \leq 0 < S_R}\\\\
 F_R       &      & {S_R \leq 0}
 \end{array} \right. 
 $$
