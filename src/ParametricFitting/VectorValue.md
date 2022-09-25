@@ -290,7 +290,7 @@ $$
 t_{i+1}-t_{i}=\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\| \cdot\left(1+\frac{3}{2} \frac{\widehat{\alpha}_{i}\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|}{\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|+\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}+\right.   \left.\frac{3}{2} \frac{\widehat{\alpha}_{i+1}\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}{\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|+\left\|\boldsymbol{k}_{i+2}-\boldsymbol{k}_{i+1}\right\|}\right) 
 $$
 
-with8
+with
 
 $$
 \hat{\alpha}_{i}=\min (\pi-{\alpha}_{i}, \frac{\pi}{2} )
