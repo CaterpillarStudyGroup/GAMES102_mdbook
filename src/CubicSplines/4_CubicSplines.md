@@ -212,16 +212,18 @@ $$
 ## Hermit型插值多项式     
 
 假设
-$$
-\left\{\begin{array} { r l } 
-{ S ( x _ { i - 1 } ) } & { = y _ { i - 1 } } \\
-{ S ( x _ { i } ) } & { = y _ { i } }
-\end{array} \quad \right.
-$$
 
 $$
 \begin{cases}
-{s}' (x_{i-1})=m_{i-1} \\
+ S(x_{i-1})=f_{i-1}\\\\
+S(x_i)=y_i
+\end{cases}
+$$
+
+
+$$
+\begin{cases}
+ {s}' (x_{i-1})=m_{i-1} \\\\
 {s}' (x_i)=m_i
 \end{cases}
 $$
@@ -241,8 +243,45 @@ S(x)=\sum_{i=0}^{n}y_i \varphi _i(x)+{y}'_0 \varphi _{n+1}(x)+{y}'_n \varphi _{n
 $$
 
 其中\\(\varphi _i(x)\\)均为三次样条函数，且满足  
+$$
+\begin{cases}
+ {\varphi} (x_j)=\delta _{ij} \\\\
+{\varphi}'_i (x_0)={\varphi}'_i(x_n)=0
+\end{cases}
+$$
 
-![](../assets/几何-31.png)
+$$
+(i,j=0,1,\dots,n)
+$$
+
+$$
+(i=0,1,\dots,n)
+$$
+
+$$
+\begin{cases}
+ {\varphi}_{n+1} (x_j)=1 \\\\
+ {\varphi}'_{n+1} (x_0)=1 \\\\
+{\varphi}'_{n+1} (x_n)=0
+\end{cases}
+$$
+
+$$
+(j=0,1,\dots,n)
+$$
+
+$$
+\begin{cases}
+ {\varphi}_{n+2} (x_j)=0 \\\\
+ {\varphi}'_{n+2} (x_0)=0 \\\\
+{\varphi}'_{n+2} (x_n)=1
+\end{cases}
+$$
+
+$$
+(j=0,1,\dots,n)
+$$
+
 
 任一\\(\varphi _i(x)\\)可由三次样条函数方法求得。  
 
