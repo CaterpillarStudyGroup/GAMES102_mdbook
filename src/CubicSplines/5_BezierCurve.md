@@ -46,6 +46,14 @@ x →\begin{pmatrix}y_1
 \end{pmatrix}
 $$
 
+$$
+\begin{cases}
+ y_1=f_1(x)\\\\
+\vdots  \\\\
+y_m=f_m(x)
+\end{cases}
+$$
+
 
 
 建模的两种形式
