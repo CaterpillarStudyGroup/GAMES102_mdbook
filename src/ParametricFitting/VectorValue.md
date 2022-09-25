@@ -20,8 +20,8 @@ $$
 
 $$
 \left\{\begin{matrix}
- y_1=f_1(x)\\
-\vdots  \\
+ y_1=f_1(x)\\\\
+\vdots  \\\\
 y_m=f_m(x)
 \end{matrix}\right.
 $$
