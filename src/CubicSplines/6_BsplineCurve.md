@@ -36,7 +36,7 @@ $$
 * 形式类比：每个控制顶点用一个基函数进行组合   
 
 $$
-x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot b_i
+x(t)=\sum_{i=0}^{n} N_{i,k}(t)\cdot d_i
 $$
 
 * 性质要求：  
@@ -58,37 +58,37 @@ $$
 * Free form curve design    
 • Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves   
 
-启发：  
+# 启发： 
+
 * Bernstein基函数的递推公式：  
 
 $$
-B_i^n(t)=(1-t)B_{i-1}^{(n-1)}(1-t)
+B_i^n(t)=(1-t)B_{i}^{(n-1)}(t)+tB_{i-1}^{(n-1)}(1-t)
 $$
 
-with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i \in \left \{  0...n\right \}\\) 
+with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i\notin \\){ \\(0\dots n\\)}
 
-
-* 思路：   
-• 局部处处类似定义，由一个基函数平移得到    
-• 高阶的基函数由2个低阶的基函数“升阶”得到    
-• 利于保持一些良好的性质，比如提高光滑性   
+  - 思路：   
+    - 局部处处类似定义，由一个基函数平移得到    
+    - 高阶的基函数由2个低阶的基函数“升阶”得到    
+      - 利于保持一些良好的性质，比如提高光滑性   
 
 # Key Ideas   
 
 ![](../assets/曲线5.png)  
 
-* 以三次为例    
-• We design one basis function 𝑏(𝑡)      
-* Properties:   
-• 𝑏(𝑡) is \\(C^2\\) continuous    
-• 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
-• 𝑏(𝑡) is has local support   
-• Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
-• \\(𝑏(𝑡)\\)/ge 0 or all 𝑡  
+  - 以三次为例    
+    - We design one basis function 𝑏(𝑡)      
+    - Properties:   
+      - 𝑏(𝑡) is \\(C^2\\) continuous    
+      - 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
+      - 𝑏(𝑡) is has local support   
+       - Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
+      - \\(𝑏(𝑡)\ge 0 \\) or all 𝑡      
 
-* In short:   
-• All desirable properties build into the basis   
-• Linear combinations will inherit these  
+  - In short:   
+    - All desirable properties build into the basis   
+    - Linear combinations will inherit these  
 
 
 # Shifted Basis Functions   
@@ -130,17 +130,19 @@ Courtesy of Renjie Chen
 
 # B‐spline curves: general case   
 
-* Given: knot sequence \\(t_o < t_1 < ... < t_n < ... < t_{n+k}\\)
-\\((t_0,t_i,...,t_{n=k})\\) is called knot vector)      
+* Given: knot sequence \\(t_o < t_1 < \cdots < t_n < \cdots < t_{n+k}\\)
+\\((t_0,t_i,\cdots,t_{n=k})\\) (\\((t_0,t_1,\dots,t_{n+k})\\)is called knot vector)      
 
-* Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
+* Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
 
 $$
 N_{i,1}(t)=\begin{cases}
- 1,t_i\le t\le t_{i+1}\\
+ 1,t_i\le t<t_{i+1}\\\\
+\\\\
 0,otherwise
 \end{cases}
 $$
+
 
 $$
 N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
@@ -156,7 +158,8 @@ for \\(k>1\\), and \\(i=0,...,n\\)
 
 $$
 N_{i,1}(t)=\begin{cases}
- 1,t_i\le t\le t_{i+1}\\
+ 1,t_i\le t<t_{i+1}\\\\
+\\\\
 0,otherwise
 \end{cases}
 $$
@@ -178,26 +181,23 @@ for\\( k>1,\\) and \\(i=0,...,n\\)
 
 # Basis properties   
 
-* For the so defined basis functions, the following properties can be shown:   
+* For the so defined basis functions, the following properties can be shown:    
+• \\(𝑁_{i,k}(t)\\) > 0 for \\(𝑡_i\\) < 𝑡 < \\(t_{i+k}\\)    
+•\\(𝑁_{i,k}(t)\\) > 0 for \\(𝑡_0\\) < 𝑡 < \\(t_i\\) or \\(t_{i+k}\\) <t < \\(t_{n+k}\\)    
+• \\(\sum_{i=0}^{n} N_{i,k}(t)=1 \\)for \\(t_{k-1}\le t\le t_{n+1} \\)     
 
-• \\(𝑁_{i,k}\\) > 0 for \\(𝑡_i\\) < 𝑡 < \\(t_{i+k}\\)   
-
-•\\(𝑁_{i,k}\\) > 0 for \\(𝑡_0\\) < 𝑡 < \\(t_i\\) or \\(t_{i+k}\\) <t < \\(t_{n+k}\\)  
-
-• \\(\sum_{i=0}^{n} N_{i,k}(t)=1 \\)for \\(t_{k-1}\le t\le t_{n+1} \\)   
-
-* For \\(t_i\le t_j\le t_{i+k}\\), the basis functions \\(N_{i,k}(t)\\) are \\(C^{k-2} \\)at the knots \\(t_j\\)    
+* For \\(t_i\le t_j\le t_{i+k}\\), the basis functions  \\(N_{i,k}(t)\\) are \\(C^{k-2} \\) at the knots \\(t_j\\)      
 
 
-* The interval\\([t_i,t_{i+k}]\\), is called support of\\(N_{i,k}\\)      
+* The interval \\([t_i,t_{i+k}]\\), is called support of \\(N_{i,k}\\)      
 
 
 # B‐spline curves  
 
 
 * B‐spline curves    
-• Given:\\(𝑛+1\\) control points \\(𝒅_0,...,d_n∈R^3\\)     
-knot vector \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)    
+• Given:\\(𝑛+1\\) control points \\(𝒅_0,\dots,d_n∈\mathbb{R} ^3\\)     
+knot vector \\(𝑇=(t_0,\dots,t_n,\dots,t_{n+k})\\)    
 
 • Then, the B‐spline curve 𝒙(𝑡) of the order 𝑘 is defined as    
 
@@ -208,7 +208,8 @@ $$
 • The points \\(𝒅_i\\) are called de Boor points    
 
 **Carl R. de Boor**     
-German‐American mathematician University of Wisconsin‐Madison   
+German‐American mathematician        
+University of Wisconsin‐Madison   
 
 
 
@@ -227,16 +228,16 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 # B‐spline curves
 
 * Multiple weighted knot vectors  
-• So far: \\(𝑇=(t_0,...,t_n,...,t_{n+k})\\)with\\(t_0\le t_1\le ...\le t_{n+k}\\)     
-• Now: also multiple knots allowed, i.e. with \\(t_0\le t_1\le ...\le t_{n+k}\\)   
-• The recursive definition of the B spline function \\(𝑁_{i,k}(i=0,...,n) \\) works nonetheless as long as no more than 𝑘 knots coincide    
+• So far: \\(𝑇=(t_0,\dots,t_n,\dots,t_{n+k})\\)with\\(t_0\le t_1\le \dots\le t_{n+k}\\)     
+• Now: also multiple knots allowed, i.e. with \\(t_0\le t_1\le \dots\le t_{n+k}\\)   
+• The recursive definition of the B spline function \\(𝑁_{i,k}(i=0,\dots,n) \\) works nonetheless as long as no more than 𝑘 knots coincide    
 
 
 # B‐spline curves
 
 * Effect of multiple knots:   
-set: \\(t_0=t_1=...=t_{n+k}\\)    
-• and \\(t_{n+1}=t_{n+2}=...=t_{n+k}\\)   
+• set: \\(t_0=t_1=\dots=t_{n+k}\\)    
+• and \\(t_{n+1}=t_{n+2}=\dots=t_{n+k}\\)   
 
 \\(𝒅_0\\) and \\(𝒅_n\\) are interpolated      
 
@@ -265,19 +266,16 @@ set: \\(t_0=t_1=...=t_{n+k}\\)
 # B‐spline curves    
 
 * Interesting property:    
-• B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})=(0,...,0,1,...,1)\\)   
-𝑘 times    𝑘 times
+• B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})\\)= 
+![](../assets/曲线24-1.png)   
 
-![](../assets/曲线24.png)
 
 are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)    
 
 
 # B‐spline curves properties    
 
-* Given:   
-
-![](../assets/曲线22.png)    
+![](../assets/曲线-22-1.png)    
 • de Boor polygon \\(𝒅_0,…,𝒅_n\\)    
 • Then, the following applies for the related B‐spline curve\\(x(t)\\):   
 
@@ -286,14 +284,15 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 
 •\\(x(t_0)=d_0,x(t_{n+1})=d_n\\) (end point interpolation)    
 
-•\\(\dot{x} (t_0)=\frac{k-1}{t_k-t_0} (d_1-d_0)\\) (tangent direction at \\(d_0,\\) similar in \\(d_n\\)    
+•\\(\dot{x} (t_0)=\frac{k-1}{t_k-t_0} (d_1-d_0)\\) (tangent direction at \\(d_0,\\) similar in \\(d_n\\))    
 
 • \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
 
 
 # B‐spline curves properties   
 
-• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1\dots \le 𝑙 < 𝑘)\\) means \\(𝐶^{k-𝑙-1}\\) ‐continuity     
+• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1\le 𝑙 < 𝑘)\\) means         
+\\(𝐶^{k-𝑙-1}\\) ‐continuity     
 • Local impact of the de Boor points: moving of \\(𝑑_i\\) only changes the curve in the region \\([𝑡_i,t_{i+k}]\\)    
 • The insertion of new de Boor points does not change the polynomial degree of the curve segments        
 
@@ -314,17 +313,17 @@ Similar algorithm to the de Casteljau algorithm for Bezier curves; consists of a
 
 # The de Boor algorithm   
 
-• Given:
+• Given:     
 \\(𝒅_0,…,𝒅_n\\): de Boor points     
 
 $$
-(t_0,\cdots ,t_{k-1}=t_0,t_k,t_{k+1},\cdots ,t_n,t_{n+1},\cdots ,t_{n+k}=t_{n+1})
+(t_0,\cdots ,t_{k-1}=t_0,t_k,t_{k+1},\dots ,t_n,t_{n+1},\dots ,t_{n+k}=t_{n+1})
 $$
 
 Knot vector
 
-• wanted:
-Curve point \\(𝒙(𝑡)\\) of the B‐spline curve of the order 𝑘    
+• wanted:     
+Curve point \\(𝒙(𝑡)\\)       of the B‐spline curve of the order 𝑘    
 
 
 # The de Boor algorithm    
@@ -339,7 +338,7 @@ $$
 for \\(i=r-k+1+j,\cdots ,r\\)    
 
 $$
-d_i^j=(1-a^j_i)\cdots  d^{j-1}_{i-1}+a_j^i \ cdots ^{j-1}_i
+d_i^j=(1-a^j_i) \cdot  d^{j-1}_{i-1}+a_j^i \cdot  d^{j-1}_i
 $$
 
 with \\(a_i^j=\frac{t-t_i}{t_{i+k-j}-t_i} \\)
@@ -361,9 +360,9 @@ with \\(a_i^j=\frac{t-t_i}{t_{i+k-j}-t_i} \\)
 * B样条的许多性质   
 • 局部凸包性、变差缩减性、包络性   
 • B样条的导数、积分递推式、几何作图    
-• 重节点的B样条基函数及B样条曲线   
-• Bezier样条曲线转换为B样条曲线    
-• **B样条插值方法**    
-• …
+* 重节点的B样条基函数及B样条曲线   
+* Bezier样条曲线转换为B样条曲线    
+* **B样条插值方法**    
+* …   
 
 ![](../assets/曲线21.png)   
