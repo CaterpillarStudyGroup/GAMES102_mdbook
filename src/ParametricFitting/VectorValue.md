@@ -321,7 +321,7 @@ neighbored control points
 • Involvement of angles in the control polygon      
 
 $$
-t_{i+1}-t_{i}=\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\| \cdot\left(1+\frac{3}{2} \frac{\widehat{\alpha}_{i}\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|}{\left\|\boldsymbol{k}_{i}-\boldsymbol{k}_{i-1}\right\|+\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}+\right.   \left.\frac{3}{2} \frac{\widehat{\alpha}_{i+1}\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|}{\left\|\boldsymbol{k}_{i+1}-\boldsymbol{k}_{i}\right\|+\left\|\boldsymbol{k}_{i+2}-\boldsymbol{k}_{i+1}\right\|}\right) 
+t_{i+1}-t_i=||k_{i+1}-k_i||\cdot (1+\frac{3}{2}\frac{\hat{\alpha } _i||k_{i}-k_{i-1}||}{||k_i-k_{i-1}||+||k_{i+1}-K_i||}+\frac{3}{2} \frac{\hat{\alpha} _{i+1}||k_{i+1}-k_i|| }{||k_{i+1}-k_i||+||k_{i+2}-k{i+1}||)}  
 $$
 
 with
