@@ -333,7 +333,7 @@ $$
 and
 
 $$
-\alpha_{i}=\operatorname{angle}\left({k}_{i-1}, {k}_{i}, {k}_{i+1} \right) 
+\alpha_{i}=angle(k_{i-1},k_i,k_{i+1})
 $$
 
 
