@@ -24,6 +24,7 @@
   - [B样条曲线](CubicSplines/6_BsplineCurve.md)
   - [有理曲线](CubicSplines/7_NURBS.md)
   - [细分曲线](CubicSplines/8_SubdivisionCurves.md)
+  - [瘾式曲线](CubicSplines/9_ImplicitCurves.md)
   
 
   - 
