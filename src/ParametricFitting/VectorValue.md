@@ -327,7 +327,7 @@ $$
 with
 
 $$
-\hat{\alpha}_{i}=\min (\pi-{\alpha}_{i}, \frac{\pi}{2} )
+\hat{\alpha } _i=\min (\pi -\alpha _i,\frac{\pi }{2} )
 $$
 
 and
