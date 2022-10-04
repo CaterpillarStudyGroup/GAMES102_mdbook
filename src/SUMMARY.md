@@ -26,6 +26,7 @@
   - [细分曲线](CubicSplines/8_SubdivisionCurves.md)
   - [瘾式曲线](CubicSplines/9_ImplicitCurves.md)
   - [NURBS曲面](CubicSplines/10_SplineSurfaces.md)
+  - [曲线光顺](CubicSplines/11_CurveFairing.md)
   
 
 
