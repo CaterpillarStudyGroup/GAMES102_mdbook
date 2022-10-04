@@ -244,46 +244,7 @@ S(x)=\sum_{i=0}^{n}y_i \varphi _i(x)+{y}'_0 \varphi _{n+1}(x)+{y}'_n \varphi _{n
 $$
 
 其中\\(\varphi _i(x)\\)均为三次样条函数，且满足  
-$$
-\begin{cases}
- {\varphi} (x_j)=\delta _{ij} \\\\
-{\varphi}'_i (x_0)={\varphi}'_i(x_n)=0
-\end{cases}
-$$
-
-$$
-(i,j=0,1,\dots,n)
-$$
-
-$$
-(i=0,1,\dots,n)
-$$
-
-$$
-\begin{cases}
- \varphi_{n+1}(x_j)=1\\\\
-\varphi'_{n+1} (x_0)=1\\\\
-\varphi'_{n+1} (x_n)=0
-\end{cases}
-$$
-
-
-$$
-(j=0,1,\dots,n)
-$$
-
-
-$$
-\begin{cases}
- \varphi_{n+2}(x_j)=0\\\\
- {\varphi}'_{n+2}(x_0)=0\\\\
-{\varphi}'_{n+2}(x_n)=1
-\end{cases}
-$$
-
-$$
-(j=0,1,\dots,n)
-$$
+![](../assets/公式1.png)
 
 
 任一\\(\varphi _i(x)\\)可由三次样条函数方法求得。  
