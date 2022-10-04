@@ -5,7 +5,7 @@
 
 # 回顾：参数曲线   
 
-• 曲线定义在一个单参数 的区间上，有 上的基函数来线性组合控制顶点来定义    
+• 曲线定义在一个单参数\\(t\\)的区间上，有\\(t\\)上的基函数来线性组合控制顶点来定义    
 
 $$
 x(t)=\sum_{i=0}^{n} B^n_i(t)b_i
@@ -17,48 +17,47 @@ $$
 
 
 # 回顾：平面曲线的定义方法  
-* 显式函数
- $$
- f:R^1\longrightarrow R^1
- $$
+ - 显式函数
+   $$
+   f:R^1\longrightarrow R^1
+   $$
  
- $$
-  y=f(x)
- $$
+   $$
+    y=f(x)
+   $$
 
-• 点\\((𝑥,𝑓(𝑥)),𝑥∈[a,b]\\)的轨迹     
+     - 点\\((𝑥,𝑓(𝑥)),𝑥∈[a,b]\\)的轨迹     
 
-![](../assets/瘾曲2.png) 
+   ![](../assets/瘾曲2.png)    
+ - 参数曲线   
+   \\(p:R^1\longrightarrow R^2\\)      
+   \\(x=x(t)\\)    
+   \\(y=y(t)\\)     
+     - 点\\((𝑥(𝑡),𝑦(𝑡)),𝑡∈[𝑎,𝑏]\\)的轨迹    
 
- * 参数曲线   
-\\(p:R^1\longrightarrow R^2\\)      
-\\(x=x(t)\\)    
-\\(y=y(t)\\)     
-• 点\\((𝑥(𝑡),𝑦(𝑡)),𝑡∈[𝑎,𝑏]\\)的轨迹    
-
-![](../assets/瘾曲3.png) 
+   ![](../assets/瘾曲3.png) 
 
 
 # 隐式函数    
 
-* 自变量 和应变量 的关系非显式关系，是一个隐式的关系（代数方程）：
+* 自变量\\(x\\)和应变量\\(y\\)的关系非显式关系，是一个隐式的关系（代数方程）：  
 
 $$
 f(x,y)=0
 $$
 
-* 比如：
+* 比如：     
 • \\(𝑎𝑥+𝑏𝑦+𝑐=0\\)    
 • \\(𝑥^2+𝑦^2=1\\)   
 • \\(𝑦^2=𝑥^3+𝑎𝑥+𝑏\\)   
-• \\(𝑥𝑦^2+ln(𝑥 sin𝑦-𝑒^{y-\sqrt{x} })=\cos (x-\sqrt{x^3-2y} )\\)
+• \\(𝑥𝑦^2+ln(𝑥 \\) \\(sin𝑦-𝑒^{y-\sqrt{x} })=\cos (x-\sqrt{x^3-2y} )\\)
 
 > 所有满足该代数方程的点的轨迹是条曲线  
 
 
 # 隐函数定理   
 
-Implicit Function Theorem:
+Implicit Function Theorem:     
 • Given a **differentiable** function     
 
 $$
@@ -67,7 +66,7 @@ $$
 
 
 • Within an 𝜀‐neighborhood of\\( 𝒙^{(0)}\\) we can represent the
-zero level set of 𝑓 completely as a heightfield function \\(𝑔 𝑔:ℝ^{(n-1)} → ℝ\\)such that for \\(𝒙-𝒙^{(0)}<𝜀 \\)we have:     
+zero level set of 𝑓 completely as a heightfield function \\(𝑔 𝑔:ℝ^{(n-1)} → ℝ\\) such that for  \\(𝒙-𝒙^{(0)}<𝜀 \\) we have:     
 
 $$
 f(x_1,…,x_{n-1},g(x_1,…,x_{n-1}))=0 
@@ -75,7 +74,7 @@ $$
 
 and   
 
-\\(f(x_1,…,x_{n}\ne 0 \\)everywhere else     
+\\(f(x_1,…,x_{n})\ne 0 \\) everywhere else     
 • The heightfield is a diffrentiable \\((𝑛 -1)\\)‐manifold and
 its surface normal is the colinear to the gradient of 𝑓.     
 
@@ -84,7 +83,8 @@ its surface normal is the colinear to the gradient of 𝑓.
 
 
 • 将隐函数升高一维，看成是\\(x\\)和\\(y\\)的二元函数    
-\\(z=f(x,y),  x,y\in [a,b]\times [c,d]\\)
+\\(z=f(x,y), \\)     
+\\(x,y\in [a,b]\times [c,d]\\)
 
 • 则该隐式曲线为上述二元函数的0等值线（平面\\(z=0\\)与\\(z=f(x,y)\\)的交线）   
 
@@ -119,12 +119,12 @@ $$
 # Differential Properties   
 
   - Some useful differential properties:       
-  - look at a surface point 𝒙, i.e.\\( 𝑓(𝒙)=0\\).      
+     - We look at a surface point 𝒙, i.e.\\( 𝑓(𝒙)=0\\).      
       - We assume \\(𝛻𝑓(𝒙)\ne 0\\).     
     - The unit normal of the implicit surface is given by:    
  \\( 𝑛(𝒙)=\frac{\nabla  f(x) }{||\nabla f(x)|| } \\)
-     - For signed functions, the normal is pointing outward      
-      - For signed distance functions, this simplifies to 𝒏(𝒙)=𝛻𝑓(𝒙)     
+       - For signed functions, the normal is pointing outward      
+       - For signed distance functions, this simplifies to 𝒏(𝒙)=𝛻𝑓(𝒙)     
 
 
 
@@ -158,7 +158,7 @@ $$
 • \\(𝑎𝑥+𝑏𝑦+𝑐=0\\)    
 • \\(𝑥^2+𝑦^2=1\\)      
 • \\(𝑦^2=𝑥^3+𝑎𝑥+𝑏\\)     
-• \\(𝑥𝑦^2+ln(𝑥 sin𝑦-e^{y-\sqrt{x} }=\cos (x-\sqrt{x^3-2y} )\\)     
+• \\(𝑥𝑦^2+ \\)ln \\( (𝑥 \\)  sin𝑦 \\(-e^{y-\sqrt{x} })=\cos (x-\sqrt{x^3-2y} )\\)     
 
 
 # 等值线抽取   
@@ -200,15 +200,14 @@ resolution, this cannot occur.
 
 # Adaptive Grids  
 
-Adaptive / hierarchical grids:
-• Perform a quadtree / octree
-tessellation of the domain (or any
-other partition into elements)
-• Refine where more precision is
-necessary (near surface, maybe
-curvature dependent)
-• Associate basis functions with each
-cell (constant or higher order)   
+ - Adaptive / hierarchical grids:    
+    - Perform a quadtree / octree
+tessellation of the domain (or any
+other partition into elements)     
+    - Refine where more precision is
+necessary (near surface, maybe
+curvature dependent)      
+    - Associate basis functions with each cell (constant or higher order)     
 
 ![](../assets/瘾曲9.png) 
 
@@ -249,5 +248,5 @@ cell (constant or higher order)
 • Multi‐level partition of unity implicits (MPU)     
 • Poisson reconstruction method     
 • Screened Poisson method     
-• …     
+• …       
 ![](../assets/瘾曲13.png)    
