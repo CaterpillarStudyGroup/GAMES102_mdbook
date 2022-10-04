@@ -28,6 +28,7 @@
   - [NURBS曲面](CubicSplines/10_SplineSurfaces.md)
   - [曲线光顺](CubicSplines/11_CurveFairing.md)
   - [离散曲线处理](CubicSplines/12_DiscreteCurves.md)
+  - [曲面的离散表达](CubicSplines/13_TriangularMeshes.md)
   
 
 
