@@ -4,7 +4,7 @@
 
 ![](../assets/细曲1.png)  
 
-* 几何直观性：逐步割角、磨光
+* 几何直观性：逐步割角、磨光    
 • 类似于雕塑雕刻过程   
 
 ![](../assets/细曲2.png)    
@@ -109,7 +109,7 @@ $$
 • 新顶点是老顶点的线性组合    
 * 讨论细分矩阵的谱性质（特征根）           
 
-![](../assets/细曲12.png)  
+![](../assets/细曲12-1.png)  
 
 
 # 举例：Chaikin细分    
@@ -117,37 +117,34 @@ $$
 矩阵形式: 
 
 
-• \\(Control points at level 𝑙: 𝒑^{(l)}_i\\)    
+•Control points at level   \\(𝑙: 𝒑^{(l)}_i\\)    
 
-• \\(“Splitted” points at level 𝑙+1: 𝒑^{(l+1)}_i\\)      
+• “Splitted” points at level \\(𝑙+1: \tilde{p} ^{(l+1)}_i\\)      
 
-• \\(“Averaged” control points at level 𝑙+1:𝒑^{(l+1)}_i\\)    
+• “Averaged” control points at level \\( 𝑙+1:𝒑^{(l+1)}_i\\)    
 
 ![](../assets/细曲13.png)  
 
 # Chaikin细分的矩阵形式      
 
-Splitting in matrix notation
 
 ![](../assets/细曲14.png)  
 
 # Chaikin细分的矩阵形式   
 
-![](../assets/细曲14.png)  
+![](../assets/细曲15.png)  
 
 # 极限情况    
 
 极限曲线上的点可由**细分矩阵**的幂次的极限求得:    
 
 $$
-\begin{pmatrix}
- x_{[\infty] }\\
- x^{[\infty] }\\
-x^{[\infty]}_+
-\end{pmatrix}=\lim_{k \to \infty}  M^k_{subdiv}\begin{pmatrix}
- x_-^{[l]}\\
- x^{[l] }\\
-x^{[l]}_+
+\begin{pmatrix}x_-^{[\infty ]}
+ \\\\x^{[\infty ]} 
+ \\\\x_+^{[\infty ]}
+\end{pmatrix}=\lim_{k \to \infty} M^k_{srbdiv}\begin{pmatrix}x_-^{[l]}
+ \\\\x^{[l]} 
+ \\\\x_+^{[l ]}
 \end{pmatrix}
 $$
 
@@ -158,24 +155,21 @@ $$
 • 否则会爆炸 (>1) 或收缩 (<1)
 
 $$
-\begin{Bmatrix}
-x_{-n}^{[l+k]} \\
-\vdots  \\
-x_{0}^{[l+k]} \\
- \vdots \\
-x_{+n}^{[l+k]}
-\end{Bmatrix}=M^k_{subdiv}\begin{Bmatrix}
-x_{-n}^{[l]} \\
-\vdots  \\
-x_{0}^{[l]} \\
- \vdots \\
-x_{+n}^{[l]}
-\end{Bmatrix}=UD^kU^{-1}\begin{Bmatrix}
-x_{-n}^{[l]} \\
-\vdots  \\
-x_{0}^{[l]} \\
- \vdots \\
-x_{+n}^{[l]}
+\begin{Bmatrix}x_{-n}^{[l+k]} 
+\\\\\vdots
+  \\\\x_{0}^{[l+k]}
+ \\\\\vdots
+  \\\\x_{+n}^{[l+k]}
+\end{Bmatrix}=M^k_{subdiv}\begin{Bmatrix}x_{-n}^{[l]}
+ \\\\\vdots 
+ \\\\x_{0}^{[l]}
+ \\\\\vdots 
+ \\\\x_{+n}^{[l]}
+\end{Bmatrix}=UD^kU^{-1}\begin{Bmatrix}x_{-n}^{[l]}
+ \\\\\vdots 
+ \\\\x_{0}^{[l]}
+ \\\\\vdots
+  \\\\x_{+n}^{[l]}
 \end{Bmatrix}
 $$
 
@@ -197,9 +191,8 @@ $$
 
 ![](../assets/细曲19.png)     
 
-$$
-{p}' _{2i+1}=\frac{p_i+p_{i+1}}{2} +a(\frac{p_i+p_{i+1}}{2}- \frac{p_{i-1}+p_{i+2}}{2} )   
-$$
+
+![](../assets/曲线222.png)
 
 Nira Dyn, David Levin, John A. Gregory A 4‐point interpolatory subdivision     
 scheme for curve design. Computer Aided Geometric Design, 4(4): 257‐268, 1987.   
@@ -218,9 +211,7 @@ scheme for curve design. Computer Aided Geometric Design, 4(4): 257‐268, 1
 
 ![](../assets/细曲22.png)     
 
-$$
-{p}' _{2i+1}=\frac{p_i+p_{i+1}}{2} +a(\frac{p_i+p_{i+1}}{2}- \frac{p_{i-1}+p_{i+2}}{2} )   
-$$
+![](../assets/曲线222.png)
 
 > 可以证明：当\\(𝛼∈(0,\frac{1}{8})\\) 时，生成的细分曲线是光滑的；否则，细分曲线非光滑，生成了分形曲线。    
 
@@ -235,7 +226,8 @@ $$
 
 # 一般：2n点插值细分方法    
 
-• 连续阶随着\\(n\\)增大而增加2点插值细分方法    
+• 连续阶随着\\(n\\)增大而增加     
+2点插值细分方法    
 
 $$
 P_{2i+1}^{k+1}=\frac{1}{2} (P^k_i+P^k_{i+1})
@@ -244,7 +236,7 @@ $$
 4点插值细分方法    
 
 $$
-P_{2i+1}^{k+1}=-\frac{1}{16} P^k_{i-1}+\frac{9}{16}P^k_{i}+\frac{9}{16}P^k_{i+1}-\frac{9}{16}P^k_{i+2}
+P_{2i+1}^{k+1}=-\frac{1}{16} P^k_{i-1}+\frac{9}{16}P^k_{i}+\frac{9}{16}P^k_{i+1}-\frac{1}{16}P^k_{i+2}
 $$
 
 6点插值细分方法    
