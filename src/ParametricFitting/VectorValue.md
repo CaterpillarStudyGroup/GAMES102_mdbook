@@ -322,6 +322,7 @@ neighbored control points
 * Foley parameterization     
 • Involvement of angles in the control polygon      
 
+
 $$
 t_{i+1}-t_i=||k_{i+1}-k_i||\cdot (1+\frac{3}{2}\frac{\hat{\alpha } _i||k_{i}-k_{i-1}||}{||k_i-k_{i-1}||+||k_{i+1}-K_i||}+\frac{3}{2} \frac{\hat{\alpha} _{i+1}||k_{i+1}-k_i|| }{||k_{i+1}-k_i||+||k_{i+2}-k{i+1}||}  )
 $$

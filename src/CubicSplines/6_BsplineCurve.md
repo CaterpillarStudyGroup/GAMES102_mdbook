@@ -84,7 +84,7 @@ with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i\notin \\){ \\(0\dots n\\)}
       - 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
       - 𝑏(𝑡) is has local support   
        - Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
-      - \\(𝑏(𝑡)\ge 0 \\) or all 𝑡      
+      - \\(𝑏(𝑡)\ge 0 \\) for all 𝑡      
 
   - In short:   
     - All desirable properties build into the basis   
@@ -131,7 +131,7 @@ Courtesy of Renjie Chen
 # B‐spline curves: general case   
 
 * Given: knot sequence \\(t_o < t_1 < \cdots < t_n < \cdots < t_{n+k}\\)
-\\((t_0,t_i,\cdots,t_{n=k})\\) (\\((t_0,t_1,\dots,t_{n+k})\\)is called knot vector)      
+\\((t_0,t_i,\cdots,t_{n=k})\\) is called knot vector)      
 
 * Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
 
@@ -148,7 +148,7 @@ $$
 N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{i+1}}N_{i+1,k-1}(t)
 $$
 
-for \\(k>1\\), and \\(i=0,...,n\\)   
+for  \\(k>1\\), and \\(i=0,...,n\\)   
 
 
 
@@ -228,15 +228,15 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 # B‐spline curves
 
 * Multiple weighted knot vectors  
-• So far: \\(𝑇=(t_0,\dots,t_n,\dots,t_{n+k})\\)with\\(t_0\le t_1\le \dots\le t_{n+k}\\)     
-• Now: also multiple knots allowed, i.e. with \\(t_0\le t_1\le \dots\le t_{n+k}\\)   
+• So far: \\(𝑇=(t_0,\dots,t_n,\dots,t_{n+k})\\) with \\(t_0< t_1< \dots< t_{n+k}\\)     
+• Now: also multiple knots allowed, i.e. with  \\(t_0\le t_1\le \dots\le t_{n+k}\\)   
 • The recursive definition of the B spline function \\(𝑁_{i,k}(i=0,\dots,n) \\) works nonetheless as long as no more than 𝑘 knots coincide    
 
 
 # B‐spline curves
 
 * Effect of multiple knots:   
-• set: \\(t_0=t_1=\dots=t_{n+k}\\)    
+• set: \\(t_0=t_1=\dots=t_{k-1}\\)    
 • and \\(t_{n+1}=t_{n+2}=\dots=t_{n+k}\\)   
 
 \\(𝒅_0\\) and \\(𝒅_n\\) are interpolated      
@@ -267,6 +267,7 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 
 * Interesting property:    
 • B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})\\)= 
+
 ![](../assets/曲线24-1.png)   
 
 
@@ -275,9 +276,10 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 
 # B‐spline curves properties    
 
-![](../assets/曲线-22-1.png)    
-• de Boor polygon \\(𝒅_0,…,𝒅_n\\)    
-• Then, the following applies for the related B‐spline curve\\(x(t)\\):   
+  - Given:
+![](../assets/曲线22-1.png )    
+    - de Boor polygon \\(𝒅_0,…,𝒅_n\\)    
+  - Then, the following applies for the related B‐spline curve \\(x(t)\\):   
 
 
 # B‐spline curves properties    
@@ -291,7 +293,8 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 
 # B‐spline curves properties   
 
-• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\). 𝑙‐times inner knot \\((1\le 𝑙 < 𝑘)\\) means         
+• Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\).    
+𝑙‐times inner knot \\((1\le 𝑙 < 𝑘)\\) means         
 \\(𝐶^{k-𝑙-1}\\) ‐continuity     
 • Local impact of the de Boor points: moving of \\(𝑑_i\\) only changes the curve in the region \\([𝑡_i,t_{i+k}]\\)    
 • The insertion of new de Boor points does not change the polynomial degree of the curve segments        
