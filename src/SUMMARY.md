@@ -30,6 +30,7 @@
   - [离散曲线处理](CubicSplines/12_DiscreteCurves.md)
   - [曲面的离散表达](CubicSplines/13_TriangularMeshes.md)
   - [离散微分几何](CubicSplines/14_DiscreteDifferential.md)
+  - [3D网格曲面](CubicSplines/15_LaplacianCoordinates.md)
   
 
 
