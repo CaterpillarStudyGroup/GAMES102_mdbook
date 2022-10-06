@@ -100,7 +100,7 @@ $$
 伞型算子):   
 
 $$
-\delta _i=v_i-\sum _{j\in N(i)}w_jv_j
+\delta _i=\nu _i-\sum _{j\in N(i)}w_j\nu _j
 $$
 
 ![](../assets/网格7.png)    
@@ -147,7 +147,7 @@ $$
 ![](../assets/网格10.png)    
 
 $$
-\delta _i=\frac{1}{d_i} \sum _j\in N(i)(V_i-V_j)
+\delta _i=\frac{1}{d_i} \sum _{j\in N(i)}(\nu_i-\nu_j)
 $$
 
 
@@ -164,7 +164,7 @@ $$
 
 ![](../assets/网格10.png)    
 $$
-\delta _i=\frac{1}{d_i} \sum _{j\in N(i)}(V_i-V_j)
+\delta _i=\frac{1}{d_i} \sum _{j\in N(i)}(\nu_i-\nu_j)
 $$    
 
 
@@ -204,15 +204,15 @@ How to find appropriate \\(\lambda\\) and number of iterations?
 ![](../assets/网格14.png)    
 
 $$
-\delta _i=\frac{1}{d_i} \sum _{V\in N(i)}(V_i-V)
+\delta _i=\frac{1}{d_i} \sum _{\nu\in N(i)}(\nu_i-\nu)
 $$
 
 $$
-\frac{1}{len(\gamma )} \int _{V\in \gamma }(V_i-V)ds
+\frac{1}{len(\gamma )} \int _{\nu\in \gamma }(\nu_i-\nu)ds
 $$
 
 $$
-\lim_{len(\gamma ) \to 0} \frac{1}{len(\gamma )} \int _{V\in \gamma }(V_i-V)ds=H(V_i)n_i
+\lim_{len(\gamma ) \to 0} \frac{1}{len(\gamma )} \int _{\nu\in \gamma }(\nu_i-\nu)ds=H(\nu_i)n_i
 $$
 
 
@@ -527,7 +527,7 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 ![](../assets/网格47.png)    
 
 $$
-L(v_i)=v_i-\sum _ {j\in N(i)}w_{ij}v_j = 0
+L(\nu_i)=\nu_i-\sum _ {j\in N(i)}w_{ij}\nu_j = 0
 $$
 
 # Laplacian of Mesh   
@@ -544,7 +544,7 @@ $$
 ![](../assets/网格49.png)    
 
 $$
-L(v_i)=v_i-\sum _ {j\in N(i)}w_{ij}v_j = 0
+L(\nu_i)=\nu_i-\sum _ {j\in N(i)}w_{ij}\nu_j = 0
 $$
 
 
@@ -576,7 +576,7 @@ $$
 
 # Adding Vertex Constraints    
 
-\\(\min _{{X}'} \\){\\( ||L{X}' ||^2+\mu ^2\sum _{i\in C}|{v }'_i -v_i|^2\\)}
+\\(\min _{{X}'} \\){\\( ||L{X}' ||^2+\mu ^2\sum _{i\in C}|{\nu }'_i -\nu_i|^2\\)}
 
 
 ![](../assets/网格53.png)    
