@@ -47,14 +47,14 @@
   - [隐式曲线的拟合](ImplicitCurves/Fitting.md)
 - [NURBS曲面](SplineSurfaces/SplineSurfaces.md)
 - [More]()
-  - [曲线光顺](CubicSplines/11_CurveFairing.md)
-  - [离散曲线处理](CubicSplines/12_DiscreteCurves.md)
-  - [曲面的离散表达](CubicSplines/13_TriangularMeshes.md)
-  - [离散微分几何](CubicSplines/14_DiscreteDifferential.md)
-  - [3D网格曲面](CubicSplines/15_LaplacianCoordinates.md)
-  - [曲面去噪](CubicSplines/16_Smoothing.md)
-  - [采样与剖分](CubicSplines/17_Sampling-Tessellation.md)
-  - [曲面参数化](CubicSplines/18_Parameterization.md)
+  - [曲线光顺](CubicSplines/CurveFairing.md)
+  - [离散曲线处理](CubicSplines/DiscreteCurves.md)
+  - [曲面的离散表达](CubicSplines/TriangularMeshes.md)
+  - [离散微分几何](CubicSplines/DiscreteDifferential.md)
+  - [3D网格曲面](CubicSplines/LaplacianCoordinates.md)
+  - [曲面去噪](CubicSplines/Smoothing.md)
+  - [采样与剖分](CubicSplines/Sampling-Tessellation.md)
+  - [曲面参数化](CubicSplines/Parameterization.md)
   
 
 
