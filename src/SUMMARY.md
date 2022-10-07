@@ -35,6 +35,7 @@
   - [离散微分几何](CubicSplines/14_DiscreteDifferential.md)
   - [3D网格曲面](CubicSplines/15_LaplacianCoordinates.md)
   - [曲面去噪](CubicSplines/16_Smoothing.md)
+  - [采样与剖分](CubicSplines/17_Sampling-Tessellation.md)
   
 
 
