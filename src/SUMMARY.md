@@ -36,7 +36,7 @@
   - [3D网格曲面](CubicSplines/15_LaplacianCoordinates.md)
   - [曲面去噪](CubicSplines/16_Smoothing.md)
   - [采样与剖分](CubicSplines/17_Sampling-Tessellation.md)
-  - [曲面参数化](CubicSplines/17_Sampling-Tessellation.md)
+  - [曲面参数化](CubicSplines/18_Parameterization.md)
   
 
 
