@@ -773,13 +773,13 @@ Minimizing **Packing Efficiency** (**PE**)
 • 特殊的几何结构（三角网格）：特殊的优化方法    
 • **Next**: 大型场景的压缩、传输、调度、渲染…    
 
-![](../assets/参数66.png)     
+![](../assets/参数66.png)        
 
 
-# Future Work and Challenges    
+# Future Work and Challenges     
 
 
-* Fundamental problem for CG    
+* Fundamental problem for CG     
 (geometry/simulation/rendering)   
 * Trade‐of quality/efficiency/complexity    
 * Coupled solution    
