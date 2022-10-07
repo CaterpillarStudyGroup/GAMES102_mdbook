@@ -67,7 +67,7 @@ $$
 $$
 l_i(x) \\\\  
 =C_{i}\left(x-x_{0}\right)\left(x-x_{1}\right) \ldots\left(x-x_{i-1}\right)\left(x-x_{i+1}\right) \ldots\left(x-x_{n}\right) \\\\
-=C_{i} \prod_{j \neq i}\left(x_-x_{j}\right) 
+=C_{i} \prod_{j \neq i}\left(x-x_{j}\right) 
 $$
  
 － 由\\(l_i(x_i)=1\\)可得  

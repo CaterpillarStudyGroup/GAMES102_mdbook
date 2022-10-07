@@ -7,8 +7,22 @@ g_{\mu ,\sigma } (x)= \frac{1}{\sqrt{2\pi } } e^{-\frac{(x-\mu )^{2} }{2\sigma ^
 $$
 
 $$
-a=\frac{x}{\sigma },b=\frac{\mu }{\sigma }   
+a=\frac{1}{\sigma },b=\frac{\mu }{\sigma }   
 $$
+
+> &#x2705; 把任意 Gauss 函数 \\(g_{\mu,\sigma}(x)\\)9 mom 中的x做平移与缩放，使之成为 std Gauss 函数，即：
+$$
+g_{\mu,\sigma}(x) \Rightarrow g_{0,1}(x') 
+$$
+> 通过推导得：  
+$$
+x'=ax+b
+$$
+> 其中：
+$$
+a=\frac{1}{\sigma}, b=-\frac{\mu}{\sigma}
+$$
+
 
 $$
 f(x)=b_{0}+\sum_{i=1}^{n} b_{i} g_{i}(x)
@@ -26,25 +40,9 @@ $$
 \Downarrow 
 $$
 
-<u>**基函数是由一个基本函数通过平移和伸缩变换而来的**</U>
+**基函数是由一个基本函数通过平移和伸缩变换而来的**
 
 ![](../assets/2-5-1.png)  
-
-
-> &#x2705; 把任意 Gauss 函数 \\(g_{\mu,\sigma}(x)\\)9 mom 中的x做平移与缩放，使之成为 std Gauss 函数，即：
-$$
-g_{\mu,\sigma}(x) \Rightarrow g_{0,1}(x') 
-$$
-> 通过推导得：  
-$$
-x'=ax+b
-$$
-> 其中：
-$$
-a=\frac{1}{\sigma}, b=-\frac{\mu}{\sigma}
-$$
-
-**基函数是由一个基本函数通过平移和伸缩变换而来的**
 
 # 换个方式看函数：神经网络
 • 将Gauss函数看成网络
@@ -99,7 +97,7 @@ $$
 • 单隐层神经网络函数： 
 
 $$
-f(x_1,x_2,...,x_n)\longrightarrow \omega_{0}+\sum_{i=1}^{n} \omega_{i} g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
+f(x_1,x_2,...,x_n) = \omega_{0}+\sum_{i=1}^{n} \omega_{i} g_{0,1}(a^i_1x_1+a^i_2x_2+...+a^i_nx_n+b_i)
 $$
 
 # 多层神经网络：多重复合的函数  
@@ -147,7 +145,7 @@ $$
 
 • 万能逼近定理：自由度足够多！  
 $$
-F(X)=\sum_{i=1}^{N} \nu _i\varphi (W^T_iX+b_i)
+F(X)=\sum_{i=1}^{N} v_i\varphi (W^T_iX+b_i)
 $$
 
 ![](../assets/2-5-12.png) 
