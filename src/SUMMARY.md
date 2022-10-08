@@ -55,6 +55,7 @@
   - [曲面去噪](CubicSplines/Smoothing.md)
   - [采样与剖分](CubicSplines/Sampling-Tessellation.md)
   - [曲面参数化](CubicSplines/Parameterization.md)
+  - [曲面简化](CubicSplines/Simplification.md)
   
 
 
