@@ -57,6 +57,7 @@
   - [曲面参数化](CubicSplines/Parameterization.md)
   - [曲面简化](CubicSplines/Simplification.md)
   - [几何映射](CubicSplines/Mapping.md)
+  - [几何优化](CubicSplines/Optimization.md)
   
 
 
