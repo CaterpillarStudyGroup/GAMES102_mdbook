@@ -34,10 +34,7 @@ f(X)=\begin{pmatrix}u(x)
 \end{pmatrix}
 $$
 
-$$
-X=(u,v)\overset{f}{\rightarrow} (u(X),v(X))
-$$
-
+![](../assets/映射28-1.png)  
 
 # 映射的表达    
 
@@ -128,7 +125,7 @@ $$
 • 插值法（比如，RBF插值）    
 
 $$
-f(p_i)=C_0+c_xx+c_yy+\sum c_i\phi (||X-P_i||)
+f(p_i)=c_0+c_xx+c_yy+\sum c_i\phi (||X-P_i||)
 $$
 
 $$
@@ -229,7 +226,6 @@ $$
 
 ![](../assets/映射16.png)  
 
-Flip‐free (foldover‐free) mapping   
 
 
 
@@ -303,7 +299,6 @@ Only Locally Bijective
 ![](../assets/映射15-2.png)  
 
 
-Globally Bijective VS. Locally Bijective
 
 ![](../assets/映射27.png)  
 
@@ -359,314 +354,295 @@ $$
 
 # Recap: Formulation of Parameterization   
 
+$$
+\min_{V} E(V)=\sum _{t\in T}(\sigma _1^2+\frac{1}{\sigma _1^2} +\sigma _2^2+\frac{1}{\sigma _2^2}) 
+$$
 
-• The cost function is highly nonlinear and nonconvex
-• The constraints are nonlinear
-• The Heissian matrix is highly non‐definite
-s.t
-.
-min
-௏ 𝐸ሺ𝑉ሻ ൌ ෍ሺ𝜎ଵ
-ଶ
-൅
-1
-𝜎ଵ
-ଶ ൅ 𝜎ଶ
-ଶ
-൅
-1
-𝜎ଶ
-ଶ
-ሻ
-௧∈்
-𝜎ଵ
-𝜎ଶ ൐ 0, ∀𝑡
-Computationally expensive for large scale meshes!
-Computing maps
-Computing maps
-Computing maps
-Computing maps
-Computing maps
-Computing maps
-• Imposing constraints
-• Finding maps that are most…
-Energy
-Constraints
-Constrained Optimization
-஍
-Φ
-Energy
-Φ
-Energy
-Φ
-uଵ
-uଶ uଷ
-vଵ
-vଶ
-vଷ
-Energy
-Φ୨ 𝑥 ൌ𝐴௝𝑥൅𝛿௝
-𝐸 𝛷 ൌ𝐸 𝐴ଵ,…,𝐴௠
-Map optimization
+$$
+s.t.\sigma _1\sigma _2>0,\forall t
+$$
+
+• The cost function is highly **nonlinear** and **nonconvex**    
+• The constraints are **nonlinear**    
+• The Heissian matrix is highly **non‐definite**    
+
+> Computationally expensive for large scale meshes!   
+
+
+
+# Computing maps   
+
+• Imposing constraints    
+
+![](../assets/映射32.png)  
+
+• Finding maps that are most…   
+
+![](../assets/映射33.png)  
+
+
+# Constrained Optimization   
+
+![](../assets/映射34.png)  
+
+
+# Energy     
+
+
+![](../assets/映射35.png)    
+
+$$
+E(\phi )=E(A_1,\cdots ,A_m)
+$$
+
+
+# Map optimization    
+
+• In terms of differentials:     
+
+argmin \\(E(A_1,\cdots ,A_m)\\)    
+
+![](../assets/映射36.png)    
+
+
+
+# Map optimization    
+
+
 • In terms of differentials:
-ଵ
-୫
-A୨
-Map optimization
-• In terms of differentials:
-௝
-௝
-Separable
-A୨
-Map optimization
-Must impose continuity!
-Φ
-௝
-௝
-Explicit continuity
-• Optimization variables: 
-ଵ
-ଶ
-௠
-• Adjacent 
-௝’s must agree
-𝐴௜
-𝐴௝
-𝑣
-ଵ
-𝑣
-ଶ
-𝐴௜𝑣
-ଵ
-𝐴௜𝑣
-ଶ
-𝐴௝
-𝑣
-ଶ
-𝐴௝
-𝑣
-ଵ
-Explicit continuity
-• Optimization variables: 
-ଵ
-ଶ
-௠
-• Adjacent 
-௝’s must agree
-𝐴௜
-𝐴௝
-𝑣
-ଵ
-𝑣
-ଶ
-௜
-ଵ
-௝
-ଵ
-௜
-ଶ
-௝
-ଶ
-Implicit continuity
-௜
-ଵ
-ଶ
-ଷ
-ଵ
-ଶ
-ଷ
-௜
-ଵ
-ଶ
-ଷ
-ଵ
-ଶ
-ଷ
-ற
-௜
-௜
-𝐴௜
-𝑣
-ଵ
-𝑣
-ଶ
-𝑣
-ଷ
-𝑢
-ଵ
-𝑢
-ଶ
-𝑢
-ଷ
-Linearly express 
-௜’s in terms of 
-Implicit continuity
-• Optimization variables: 
-ଵ
-ଶ
-௡
-(
-)
-𝐴௜
-𝑣
-ଵ
-𝑣
-ଶ
-𝑣
-ଷ
-𝑢
-ଵ
-𝑢
-ଶ
-𝑢
-ଷ
-௝
-௝
-几何优化的求解
-Popular energies
-௝
-௝
-Dirichlet
-஽ ௝ ௝ ி
-ଶ
-௝
-Φ
-area / volume
-Dirichlet
-஽ ௝ ௝ ி
-ଶ
-௝
-Φ
-Dirichlet
-஽ ௝ ௝ ி
-ଶ
-௝
-Φ
-𝐴௝ ⇢ 0
-Orthogonal and Similarity
-• is orthogonal if 
-் ିଵ
-(rotation if det 𝑅 ൐ 0)
-• is a similarity if 
-Closest  and 
-• = closest orthogonal/rotation matrix to 
-• = closest similarity matrix to 
-• Computable using SVD/SSVD:
-்;         ଵ ௡
-• ் ்
-• ்
-mean of SVs
-As‐Similar‐As‐Possible (ASAP)
-௅
-௝
-௝
-௝
-ி
-ଶ
-௝
-closest similarity
-Solving sparse linear system!
-As‐Rigid‐As‐Possible (ARAP)
-ோ
-௝
-௝
-௝
-ி
-ଶ
-௝
-closest rigid transformation
-ARAP vs. ASAP
-ARAP ASAP
-Singular values perspective
-Dirichlet
-𝐴
-ி
-ଶ
-∑
-𝜎௞
-ଶ
-௞
-LSCM 𝐴െ𝒮
-𝐴
-ி
-ଶ
-∑
-𝜎௞ െ 𝜎
-ଶ
-௞
-ARAP 𝐴െℛ
-𝐴
-ி
-ଶ
-∑
-𝜎௞ െ 1
-ଶ
-௞
-mean of SVs
-ARAP: Alternating Optimization 
-Local step
-Global step
-ோ
-௝
-௝
-௝
-ி
-ଶ
-௝
-• Iteratively:
-• Compute and fix 
-𝑅௝ ൌ ℛ
-𝐴௝
+
+argmin \\(\sum _jf(A_j)\\)    separable     
+
+![](../assets/映射37.png)    
+
+
+# Map optimization    
+
+argmin \\(\sum _jf(A_j)\\)
+
+![](../assets/映射38.png)    
+
+Must impose continuity!    
+
+
+
+# Explicit continuity    
+
+• Optimization variables: \\(A_1,A_2,\cdots ,A_m\\)     
+• Adjacent \\(A_j\\)’s must agree     
+
+![](../assets/映射39.png)    
+
+
+
+# Explicit continuity    
+
+• Optimization variables: \\(A_1,A_2,\cdots ,A_m\\)     
+• Adjacent \\(A_j\\)’s must agree   
+
+![](../assets/映射40.png)    
+
+$$
+A_i\nu _1=A_j\nu _1
+$$
+
+$$
+A_i\nu _2=A_j\nu _2
+$$
+
+
+# Implicit continuity    
+
+![](../assets/映射41.png)    
+
+$$
+A_i\overline{\begin{bmatrix}
+ \nu_1 & \nu_2 &\nu_3
+\end{bmatrix}} =\overline{\begin{bmatrix}
+ u_1 & u_2 &u_3
+\end{bmatrix}}
+$$
+
+$$
+A_i=\overline{\begin{bmatrix}
+ u_1 & u_2 &u_3
+\end{bmatrix}} \overline{\begin{bmatrix}
+ \nu_1 & \nu_2 &\nu_3
+\end{bmatrix}}
+$$
+
+$$
+A_i=A_i(U)
+$$
+
+> Linearly express \\(A_i\\) ’s in terms of U   
+
+
+• Optimization variables: \\(u_1,u_2,\cdots ,u_n(U)\\)    
+
+$$
+E(\Phi )=\sum _jf(A_j(U))
+$$
+
+
+# 几何优化的求解    
+
+# Popular energies    
+
+argmin\\(\sum _jf(A_j)\\)    
+
+![](../assets/映射42.png)    
+
+
+# Dirichlet    
+
+area / volume   \\(\Rightarrow E_D=\sum _jw_j||A_j||_F^2\\)   
+
+![](../assets/映射43.png)   
+
+# Dirichlet    
+
+$$
+E_D=\sum _jw_j||A_j||_F^2
+$$
+
+![](../assets/映射44.png)   
+
+
+
+# Orthogonal and Similarity    
+
+• R is <u>orthogonal</u> if \\(R^T=R^{-1}\\)    
+(rotation if det 𝑅 > 0)    
+
+![](../assets/映射45.png)   
+
+• S is a <u>similarity</u> if \\(S =\alpha R\\)   
+
+![](../assets/映射46.png)   
+
+
+
+# Closest  R and S    
+
+
+• \\(\Re(A)=\\) closest orthogonal/rotation matrix to \\(A\\)    
+• \\(\varsigma  (A)\\)= closest similarity matrix to  \\(A\\)    
+
+• Computable using SVD/SSVD:    
+
+\\(A=U\sum V^T\\);\\(\sum\\) =diag\\((\sigma _1,\cdots ,\sigma _n)\\)    
+
+![](../assets/映射46-1.png)   
+
+
+# As‐Similar‐As‐Possible (ASAP)   
+
+$$
+E_L=\sum _jw_j||A_j-\varsigma (A_j)||_F^2
+$$
+
+![](../assets/映射47.png)   
+
+Solving sparse linear system!    
+
+
+# As‐Rigid‐As‐Possible (ARAP)     
+
+
+$$
+E_R=\sum _jw_j||A_j-\Re (A_j)||_F^2
+$$
+
+![](../assets/映射48.png)   
+
+
+# ARAP vs. ASAP    
+
+![](../assets/映射49.png)   
+
+
+# Singular values perspective    
+
+![](../assets/映射50.png)   
+
+
+# ARAP: Alternating Optimization     
+
+$$
+E_R=\sum _jw_j||A_j-\Re (A_j)||_F^2
+$$
+
+* Iteratively:     
+• Compute and fix \\( R_j = \Re (A_j) \\)    Local step    
+
 • Minimize
-෍ 𝑤௝
-𝐴௝
-െ
-𝑅௝
-ி
-ଶ
-௝
-[Liu et al. A Local/Global Approach to Mesh Parameterization. SGP 2008]
+
+\\(\sum _jw_j||A_j-R_j||_F^2\\)   Global step    
+
+
+[Liu et al. A Local/Global Approach to Mesh Parameterization. SGP 2008]    
+
+![](../assets/映射51.png)   
+
+![](../assets/映射52.png)   
+
+![](../assets/映射53.png)   
+
+![](../assets/映射54.png)   
+
+![](../assets/映射55.png)   
+
+![](../assets/映射56.png)   
+
+![](../assets/映射57.png)   
+
+![](../assets/映射58.png)   
 
 
 
+# Alternating optimization    
+
+• Very general    
+
+![](../assets/映射59.png)   
+
+• Related jargon:    
+**gradient descent, global‐local, alternating projections**    
 
 
+# Summary: Geometric Mapping    
+
+• Discrete Mapping   
+
+![](../assets/映射60-1.png)   
+
+• Discrete formulation   
+
+argmin \\(E(\phi )\\)  Separable    
+s.t. \\(\phi \in K\\)    
+
+> • Nonlinear and nonconvex     
+• Computationally expensive for large scale meshes!    
 
 
+# eshless mappings    
+
+![](../assets/映射61.png)   
+
+• Low distortion    
+• Flip‐free    
+• Bijective    
+
+$$
+f(x)=\sum_{i=1}^{m} c_iB_i(x)
+$$
+
+# Geometric Mapping    
 
 
+* 其他区域间的映射求解    
+• 离散形式    
+• 约束条件    
 
-
-
-Alternating optimization
-• Very general
-• Related jargon:
-gradient descent, global‐local, alternating projections
-[Bouaziz et al. 2012]
-Summary: Geometric Mapping
-• Discrete Mapping
-• Discrete formulation
-Separable
-• Nonlinear and nonconvex
-• Computationally expensive for large scale meshes!
-஍
-Meshless mappings
-116
-• Low distortion
-• Flip‐free
-• Bijective
-௜
-௜
-௠
-௜ୀଵ
-Geometric Mapping
-• 其他区域间的映射求解
-• 离散形式
-• 约束条件
-𝑓: 𝕄 → 𝕊
-ଶ
-𝑓:𝕄 → 𝕄ᇱ 𝑓: ℝ
-ଷ → ℝ
-ଷ
-Fu et al. Inversion‐free Geometric Mapping Construction: A Survey. CVM, 2021
-谢 谢！
+![](../assets/映射62.png)   
