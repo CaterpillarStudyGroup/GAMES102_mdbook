@@ -94,7 +94,7 @@ $$
 ![](../assets/优化5.png)   
 
 $$
-f(x)\approx f(x_0)+\nabla f(x_0)^\top (x-x_0)+(x-x_0)^\top Hf(x_0)(x-f(x_0)
+f(x)\approx f(x_0)+\nabla f(x_0)^\top (x-x_0)+(x-x_0)^\top Hf(x_0)(x-x_0)
 $$
 
 
@@ -233,7 +233,7 @@ unconstrained root‐finding.
 
 $$
 \begin{array}{l}  
-  \nabla  \mathbf{f}(x) =\lambda \nabla g(x)  \\  
+  \nabla  \mathbf{f}(x) =\lambda \nabla g(x)  \\\\     
   g(x) = 0 \\    
 \end{array} 
 $$
@@ -247,7 +247,7 @@ Eliminate constraints to reduce to unconstrained case
 • **Newton’s method**    
 Approximation: quadratic function with linear constraint    
 
-• Penalty method   
+• **Penalty method**     
 Augment objective with barrier term, e.g. \\(f(x)+\rho |g(x)|\\)    
 
 
@@ -269,8 +269,8 @@ Method of Multipliers (ADMM)
 
 $$
 \begin{array}{l}  
-  \min_{x,z}& f(x)+g(z)  \\  
-  s.t. &Ax+Bz=c\\    
+  \min_{x,z}& f(x)+g(z)     \\\\  
+  s.t. &Ax+Bz=c   \\\\    
 \end{array} 
 $$
 
@@ -321,20 +321,20 @@ $$
 
 # First‐Order Optimality Conditions   
 
-• Necessary condition for minimum of   
-![](../assets/优化24.png) 
+ - Necessary condition for minimum of   
+ ![](../assets/优化24.png) 
 
-• Langrangian: \\(L(x,\lambda )=f(x)+\sum_{i=1}^{m} \lambda _ig_i(x)\\)  
+ - Langrangian: \\(L(x,\lambda )=f(x)+\sum_{i=1}^{m} \lambda _ig_i(x)\\)  
 
-• Karush‐Kuhn‐Tucker (KKT)     
-conditions for **minimum**  \\(x^*\\)   
-1. Stationarity: \\(\nabla f(x^\ast )+\sum_{i=1}^{m} \lambda _i\nabla g_i(x^\ast )=0\\)    
+ - Karush‐Kuhn‐Tucker (KKT)     
+   conditions for **minimum**  \\(x^*\\)   
+ 1. Stationarity: \\(\nabla f(x^\ast )+\sum_{i=1}^{m} \lambda _i\nabla g_i(x^\ast )=0\\)    
 
-2. Primal feasibility:   \\(g_i(x^*)\le 0\\)   
-3. Dual feasibility:  \\(\lambda _i\ge 0\\)    
-4. Complementary slackness:   \\(\lambda _ig_i(x^*)= 0 \\)     
+ 2. Primal feasibility:   \\(g_i(x^*)\le 0\\)   
+ 3. Dual feasibility:  \\(\lambda _i\ge 0\\)    
+ 4. Complementary slackness:   \\(\lambda _ig_i(x^*)= 0 \\)     
 
-![](../assets/优化25.png) 
+ ![](../assets/优化25.png) 
 
 
 
@@ -356,8 +356,8 @@ conditions for **minimum**  \\(x^*\\)
 
 
 • Searching globally optimal solutions usually requires convexity!     
-• f convex if:  \\(f((1-t)a+tb\le (1-t)f(a)+tf(b)\\)    
-\\(t\in [0,1]\\)    
+• f convex if:  
+\\(f((1-t)a+tb\le (1-t)f(a)+tf(b)\\),    \\(t\in [0,1]\\)    
 
 
 ![](../assets/优化28.png)    
@@ -379,13 +379,14 @@ is convex optimization problem if \\(f(x)\\) and all \\(g_i(x)\\) are convex fun
 <u>consequences</u>   
 
 • feasible region is convex set    
-• equality constraints can only be affine, i.e.\\(g_i(x)=a^Tx+b\\) since    
+• equality constraints can only be affine, i.e. \\(g_i(x)=a^Tx+b\\) since    
 
 $$
 g_i(x)=0\Longleftrightarrow 
-\left\{\begin{matrix}g_i(x) &\le 0
-  \\\\-g_i(x) &\le 0
-\end{matrix}\right.
+\begin{cases}
+g_i(x) &\le 0\\\\
+-g_i(x) &\le 0
+\end{cases}
 $$
 
 ![](../assets/优化31.png)  
