@@ -13,7 +13,59 @@ $$
 f:X → Y
 $$
 
-![](../assets/离散2.png)  
+
+|一元函数 |
+|------| 
+
+$$
+\begin{array}{l} 
+  f:R^1\to R^1    \\\\    
+  y=f(x) \\\\ 
+\end{array} 
+$$
+
+
+|多元函数 |
+|------| 
+
+$$
+\begin{array}{l} 
+  f: R^m \to R^1    \\\\    
+  y=f (x_1, x_2, \cdots, x_m) \\\\ 
+\end{array} 
+$$
+
+ 
+
+|高维（单参数）曲线 |
+|------| 
+
+$$
+\begin{array}{l} 
+  f: R^1 \to R^n \\\\
+  y_1=f_1(x) \\\\
+  y_2=f_2(x) \\\\ 
+  \vdots \\\\
+y_n=f_n(x) \\\\ 
+\end{array} 
+$$
+
+|高维曲面(\\(𝑚 <𝑛\\))/降维映射(\\(m>n\\\)) |
+|------|   
+
+$$
+\begin{array}{l} 
+  f: R^m \to R^n \\\\
+  y_1=f_1(x_1,x_2,\cdots,x_m) \\\\
+  y_2=f_2(x_1,x_2,\cdots,x_m) \\\\ 
+  \vdots \\\\
+y_n=f_n(x_1,x_2,\cdots,x_m) \\\\ 
+\end{array} 
+$$
+
+
+
+
 
 
 # Curve Modeling in \\(R^2\\)（建模/造型）   
@@ -38,16 +90,35 @@ $$
 
 * 显式函数曲线   
 
-![](../assets/离散4.png)    
+$$
+\begin{array}{l} 
+  f:R^1\to R^1    \\\\    
+  y=f(x) \\\\ 
+\end{array} 
+$$
+
+![](../assets/离散4-1.png)    
 
 * 参数曲线    
 
-![](../assets/离散5.png)    
+$$
+\begin{array}{l} 
+  p:R^1\to R^1    \\\\    
+  x=x(t) \\\\ 
+  y=y(t) \\\\ 
+\end{array} 
+$$
+
+![](../assets/离散5-1.png)    
 
 * 隐式曲线    
-• Level set (水平集)     
+• Level set (水平集)    
 
-![](../assets/离散6.png)    
+$$
+f(x,y)=0
+$$
+
+![](../assets/离散6-1.png)    
 
 
 * 细分曲线      
@@ -258,7 +329,36 @@ $$
 
 # 各种重心坐标的计算方法     
 
-![](../assets/离散25-1.png)    
+\\(\star \\) Wachspress (WP) coordinates    
+
+$$
+w_{i}=\frac{\cot \gamma_{i-1}+\cot \beta_{i}}{r_{i}^{2}}
+$$
+
+![](../assets/离散40.png)    
+
+\\(\star \\) mean value (MV) coordinates     
+
+$$
+w_{i}=\frac{\tan \left(\alpha_{i-1} / 2\right)+\tan \left(\alpha_{i} / 2\right)}{r_{i}}
+$$
+
+![](../assets/离散41.png)    
+
+
+\\(\star \\) discrete harmonic (DH) coordinates     
+
+$$
+w_{i}=\cot \beta_{i-1}+\cot \gamma_{i}
+$$
+
+![](../assets/离散42.png)    
+
+
+
+
+
+
 
 # • 1.imge warping     
 
