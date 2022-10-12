@@ -551,7 +551,7 @@ Vertex colors on three levels in the mesh hierarchy
 
 
 
-# Recap: Texture Synthesis by     
+# Recap: Texture Synthesis by Neighborhood Search     
 
 ![](../assets/合成58.png)     
 
