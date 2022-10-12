@@ -181,7 +181,7 @@ WE NEED TO EAT CAKE
 
 
 &#x2705;  However, since our sample image is finite, an exact neighbourhood match might not be present     
-&#x2705;  So we find the best match using SSD error (weighted by a Gaussian to emphasize local structure), and take all 
+&#x2705;  So we find the **best** match using SSD error (weighted by a Gaussian to emphasize local structure), and take all 
 samples within some distance from that match     
 
 
