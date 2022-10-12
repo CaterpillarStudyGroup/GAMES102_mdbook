@@ -263,7 +263,7 @@ Select Best Neighborhood from all Candidates
 ![](../assets/合成28.png)    
 
 Construct graph such that:    
-Graph Mincut \\(\Leftrightarrow\\)  Best Seam     
+Graph Mincut \\(\Leftrightarrow\\) Best Seam     
 
 ![](../assets/合成29.png)    
 
