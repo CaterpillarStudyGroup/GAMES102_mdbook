@@ -180,8 +180,8 @@ WE NEED TO EAT CAKE
 # Really Synthesizing One Pixel    
 
 
-\\(\Box\\)  However, since our sample image is finite, an exact neighbourhood match might not be present     
-\\(\Box\\)  So we find the best match using SSD error (weighted by a Gaussian to emphasize local structure), and take all 
+&#x2705;  However, since our sample image is finite, an exact neighbourhood match might not be present     
+&#x2705;  So we find the best match using SSD error (weighted by a Gaussian to emphasize local structure), and take all 
 samples within some distance from that match     
 
 
@@ -747,9 +747,9 @@ Vertex colors on three levels in the mesh hierarchy
 
 
 • Bidirectional Texture Functions (BTF): A collection of images of the same surface under different lighting and viewing directions.     
-\\(\Box \\) 6D Function ( \\(x, y, l_θ, l_φ, v_θ, v_φ\\) )    
-\\(\Box \\) Dense Sampling in Viewing/Lighting Directions    
-\\(\Box \\) Capturing Appearance of Real World Surface    
+&#x2705; 6D Function ( \\(x, y, l_θ, l_φ, v_θ, v_φ\\) )    
+&#x2705; Dense Sampling in Viewing/Lighting Directions    
+&#x2705; Capturing Appearance of Real World Surface    
 
 ![](../assets/合成92.png)     
 
