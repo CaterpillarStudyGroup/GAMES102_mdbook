@@ -430,6 +430,14 @@ $$
 where \quad \mathcal {F} (W_h) =||X_h W_h-X_h||_{F}^{2}+ \lambda||W_{h}^{T} W_{h}||_{1,1} 
 $$
 
+$$
+where \quad \mathcal {F} (W_h) =||X_h W_h-X_h||_{F}^{2}+ \lambda
+$$
+
+$$
+||W_{h}^{T} W_{h}||_{1,1} 
+$$
+
 
 
 # Consistent multi‐feature penalty    
