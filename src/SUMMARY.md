@@ -60,6 +60,7 @@
   - [几何优化](CubicSplines/Optimization.md)
   - [纹理合成](CubicSplines/TextureSynthesis.md)
   - [几何建模](CubicSplines/Modeling.md)
+  - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
   
 
 
