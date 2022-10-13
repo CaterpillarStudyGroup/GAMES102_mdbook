@@ -8,7 +8,7 @@
 # 建模(modeling)：设计与重建    
 
 
- - 曲面设计(Design)    
+ - **曲面设计**(**Design**)    
     - 不存在的物体：通过人工交互凭空设计出新的物体    
       - CAGD (NURBS)、mesh modeling    
      - 存在的物体：通过人工交互编辑修改构建出新的物体    
@@ -20,12 +20,15 @@
 
 
 
+# Surface Editing
+
 
 # Design Modeling    
 
 
 * Design from zero    
 • Create a shape by a set of 3D design operators such as extrusion or revolution etc.    
+
 * **Design from a given shape** (**Mesh editing**)    
 • Select a base shape    
 • Select editing elements and editing operators     
@@ -55,7 +58,7 @@
 • Dragging handles ‐‐ vertices, features, ROI, …    
 * Deformed shape: adapt to user intents    
 
-**Challenges**:
+**Challenges**:    
 • Operations    
 • Preservation of properties    
 • Semantics    
@@ -187,8 +190,8 @@ $$
 
 
 • Preserve local detail – Laplacian coordinates    
-• Representation with sparse matrices    
-• Efficient linear surface reconstruction       
+• Representation with **sparse** matrices    
+• Efficient **linear** surface reconstruction       
 
 
 ![](../assets/建模14.png)  
@@ -205,7 +208,7 @@ $$
 
 
 $$
-\tilde{X} =\underset{X}{argmin} \left ( ||LX-\delta ^{(x)}||^2+\sum _{j\in C}w^2||x_j-c_j||^2 \right ) 
+\tilde{X} =\underset{X}{argmin} \left ( ||LX-\delta ^{(x)}||^2+\sum _{j\in C}\omega ^2||x_j-c_j||^2 \right ) 
 $$
 
 • Gradient Approximation    
@@ -224,8 +227,8 @@ $$
 • The spatial constraints will serve as modeling constraints    
 • Reconstruct the surface every time the modeling constraints are changed    
 
-Detail constraints:       \\( LX=\delta \\)     
-Modeling constraints: \\(x_j=c_j,  j\in\\left \\{ j_1,j_2,\dots,j_k \right \\}\\)    
+Detail constraints:       \\( \quad LX=\delta \\)     
+Modeling constraints: \\(\quad x_j=c_j,  \quad j\in\\left \\{ j_1,j_2,\dots,j_k \right \\}\\)    
 
 
 
@@ -322,7 +325,7 @@ $$
 
 
 # 1.6 As‐rigid‐as‐possible Deformation     
-[Siggraph 2003]    
+ 
 
 ![](../assets/建模22.png)    
 
@@ -388,379 +391,741 @@ $$
 
 
 
-constraints
-i
-j
-Frame‐based deformations
-• Reconstruction:
-• After having the frames, solve for positions
-Frame‐based deformations
-• Reconstruction:
-• After having the frames, solve for positions
-Results
-2. Curve Proxy
-User Specifications
-• Line or curve features
-2.1 Skeleton based
-• Axial Deformation
-Object Define an axis Deform axis Deformed object
-[1994]
-Axial Deformation
-2.2 Sketching Deformations
-[2005]
-Sketching Deformation
-Skeleton‐based Deformation
-[2002]
+# Frame‐based deformations    
 
-2.3 Wires based
-[Siggraph 1999]
-• Silhouette sketching  Feature sketching Sketching a shape can be 
-interpreted as inverse NonPhotorealistic Rendering 
- A sketch-based 
-modeling interface 
-which uses silhouettes 
-and sketches as input, 
-and produces contours, 
-ridges and ravines
-2.4 Silhouette sketching based
-[Nealen et al. Siggraph 05]
-Silhouette Sketching
-• Approximate sketching
-• Balance weighting between detail and positional constraints
-Silhouette Sketching
-• Approximate sketching
-• Balance weighting between detail and positional constraints
-2.5 Volumetric Graph Laplacian
-[Zhou et al. Siggraph 2005]
+* Reconstruction:    
+• After having the frames, solve for positions Frame‐based deformations    
 
-Animation Modeling from 2D Cartoons
-Short Summary: curve proxy
-• Curve features
-• Skeletons
-• Silhouette
-• Free‐form sketches
-• Wires
-• 2D image contours
-•
-…
-3. Mesh Proxy
-User Specifications
-• Define a mesh proxy for the shape: generally a simpler, coarse 
-mesh which encloses the shape
-• The shape is embedded into the mesh proxy
-• Deform the mesh proxy using point/line base methods
-• Advantages: 
-• You can deform arbitrary objects
-• Independent of object representation
-3.1 Free‐form Deformation (FFD)
-• Proxy: a lattice mesh 
-• more easily parametrized than the object
-• Deformation defined by the tensor Bezier solid
-[Sederberg et al. 86]
-FFD Examples
-3.2 Cage‐based deformation
-• Proxy: cage
-• Barycentric coordinates
-• Many works…
-[Ju et al. 2005]
-3.3 Multiresolution Editing
-• Proxy: simplified shape
-• Pros
-• Preserving details, scalable 
-• Cons
-• Instable reconstruction for 
-large deformation
-• Resampling problem 
-• Invariant variables
-• Detail information
-[Kobbelt et al. 2003]
-Decimation
-Reconstruction
-Editing
-Short Summary: mesh proxy
-• Lattice
-• Cage
-• Simplified shape
-•
-…
-4. Deformation Transfer
-Deformation Transfer
-Siggraph 2004
-Editing Arbitrary Deforming 
-Surface Animations
-Siggraph 2006
-Deforming Surface
-Editing Surface
-5. Sketch‐based Modeling
-（基于草图的建模）
-An Example
-B‐Mesh
-[Ji et al. 2010]
-B‐Mesh
-[Ji et al. 2010]
-Sketch‐based Modeling Systems
-[Igarashi et al. 1999]
-[Karpenko et al. 2006]
-[Rivers et al. 2010]
-More…
-Sketch2Scene [Xu et al. 2013]
-Sketch‐to‐Design [Xie et al. 2013]
-6. Sculpturing Modeling
-Highly Detailed Meshes
-Motivation: Sculpturing
-Sculpturing Modeling
-• A series of sculpting/brush operators
-Sculpting Modeling Tools
-Mudbox
-3D Coat
-Zbrush
-3D Brushes
-Sculpting Modeling
-Summary: Shape Editing
-• Points
-• Points, vertices, …
-• Lines/Curves
-• Sketches, skeletons, silhouettes, wires, … 
-• Meshes
-• Bezier nets, lattices, cages, …
-• Other shapes
-• Deformation transfer: learning deformation from other 
-shapes
-• Physically‐based shape deformation (*)
-• Material‐based, FEM, simulation
-Data‐Driven Modeling
-三维几何模型数据库
-1. Modeling by Examples
-1. Segment into parts
-2. Search 3D database for parts
-3. Compose parts into a model
-[Funkhouser et al. Siggraph 2004]
-Modeling by Examples
-1. Segment into parts
-2. Search 3D database for parts
-3. Compose parts into a model
-[Funkhouser et al. Siggraph 2004]
-2. Probabilistic Reasoning
-• Design space 
-[Chaudhuri et al. Siggraph 2011]
-2. Probabilistic Reasoning
-• Exploring the design space 
-[Chaudhuri et al. Siggraph 2011]
-3. ShapeSynth: 
-Exploration as Design Tool
-[Averkiou et al. Siggraph 2014]
-4. Photo‐inspired Modeling
-[Xu et al. Siggraph 2012]
-Examples
-5. Primitive‐based Modeling
-Chen et al. 2013
-6. Shadow Guidance Fan et al. 2013
-ShadowDraw [Lee et al. 2011]
-6. Shadow Guidance Fan et al. 2013
-7. Learning Generative Models of 
-3D Shapes (3D‐GAN)
-• Emergence of various 3D‐GANs for shape generation
-Chinagraph 2020 Key note talk by Hao Zhang:
-https://www.bilibili.com/video/BV1Pa4y1x7au?p=3
-Chaudhuri, et al. Learning Generative Models of 3D Structures. Computer Graphics Forum (Eurographics STAR), 2020.
-Shape Morphing
-Shape Morphing
-• Given two objects produce sequence of 
-intermediate objects that gradually evolve from 
-one object to the other
-• Interpolate object shapes
-• Interpolate object attributes
-• Color, texture, normal, etc.
-Applications
-Shape Transformations
-• Warping: Unary Op
-• Given Object A and F(t), find Object B
-• Morphing: Binary Op
-• Given Object A and Object B, find F(t)
-A
-? F(t)
-A
-?
-B
-Terminologies
-• Morphing
-• Metamorphosis
-• Shape blending
-• Shape averaging
-• Shape interpolation
-• Shape transition
-Rules for Good Morphing
-• Natural
-• Keep as much as possible of the two shapes during the 
-transformation
-• Volume, curvature, area, etc...
-• Subjective aesthetic criteria
-• User control
-• intuitive
-• not too heavy
-• can be adapted to user's knowledge
-Morphing
-• Input: two meshes source & target
-• Frames at t0 and tn
-• Output: sequence of intermediate meshes
-• Frames t1 to tn‐1
-• Intermediate mesh:
+![](../assets/建模27.png)   
+
+
+
+# Frame‐based deformations    
+
+* Reconstruction:    
+• After having the frames, solve for positions Results     
+
+![](../assets/建模28.png)   
+
+
+# Results    
+
+![](../assets/建模29.png)   
+
+
+
+# 2. Curve Proxy    
+
+# User Specifications    
+
+• Line or curve features    
+
+![](../assets/建模30.png)   
+
+
+# 2.1 Skeleton based    
+
+• Axial Deformation [1994]
+
+![](../assets/建模31.png)   
+
+
+
+# Axial Deformation    
+
+![](../assets/建模32.png)   
+
+
+# 2.2 Sketching Deformations        
+
+![](../assets/建模33.png)   
+
+
+# Sketching Deformation    
+
+![](../assets/建模34.png)   
+
+
+# Skeleton‐based Deformation     
+   
+
+![](../assets/建模35.png)   
+
+
+# 2.3 Wires based    
+[Siggraph 1999]    
+
+![](../assets/建模36.png)   
+
+
+# 2.4 Silhouette sketching based    
+[Nealen et al. Siggraph 05    
+
+
+![](../assets/建模37.png)   
+
+
+# Silhouette Sketching    
+
+* Approximate sketching     
+• Balance weighting between detail and positional constraints    
+
+![](../assets/建模38.png)   
+
+![](../assets/建模39.png)   
+
+
+
+# 2.5 Volumetric Graph Laplacian    
+    
+
+![](../assets/建模40.png)   
+
+![](../assets/建模41.png)   
+
+
+# Animation Modeling from 2D Cartoons    
+
+![](../assets/建模42.png)   
+
+
+# Short Summary: curve proxy    
+
+• Curve features    
+• Skeletons    
+• Silhouette    
+• Free‐form sketches    
+• Wires    
+• 2D image contours   
+• …    
+
+
+
+# 3. Mesh Proxy   
+
+# User Specifications    
+
+* Define a mesh proxy for the shape: generally a simpler, coarse mesh which encloses the shape    
+• The shape is embedded into the mesh proxy    
+* Deform the mesh proxy using point/line base methods    
+* Advantages:     
+• You can deform arbitrary objects    
+• Independent of object representation    
+
+![](../assets/建模43.png)   
+
+
+
+# 3.1 Free‐form Deformation (FFD)    
+[Sederberg et al. 86]   
+
+
+* Proxy: a **lattice** mesh     
+• more easily parametrized than the object     
+• Deformation defined by the tensor Bezier solid     
+
+![](../assets/建模44.png)   
+
+
+# 3.2 Cage‐based deformation   
+
+
+* Proxy: cage    
+• Barycentric coordinates    
+• Many works…    
+
+![](../assets/建模45.png)   
+
+
+
+# 3.3 Multiresolution Editing    
+
+
+* Proxy: simplified shape    
+
+* Pros    
+• Preserving details, scalable    
+* Cons    
+• Instable reconstruction for large deformation    
+• Resampling problem     
+* Invariant variables    
+• Detail information    
+
+![](../assets/建模46.png)   
+
+![](../assets/建模47.png)   
+
+
+
+# Short Summary: mesh proxy   
+
+• Lattice    
+• Cage    
+• Simplified shape    
+• …     
+
+
+# 4. Deformation Transfer    
+
+
+# Deformation Transfer    
+Siggraph 2004    
+
+![](../assets/建模48.png)   
+
+
+# Editing Arbitrary Deforming Surface Animations    
+Siggraph 2006    
+
+![](../assets/建模49.png)   
+
+
+
+# 5. Sketch‐based Modeling     
+# （基于草图的建模）   
+
+![](../assets/建模50.png)   
+
+# An Example    
+
+![](../assets/建模51.png)   
+
+
+
+# B‐Mesh    
+[Ji et al. 2010]   
+
+![](../assets/建模52.png)   
+
+
+
+# Sketch‐based Modeling Systems    
+
+![](../assets/建模53.png)   
+
+
+
+# More…   
+
+![](../assets/建模54.png)   
+
+
+# 6. Sculpturing Modeling    
+
+
+# Highly Detailed Meshes    
+
+![](../assets/建模55.png)   
+
+
+# Motivation: Sculpturing    
+
+![](../assets/建模56.png)   
+
+
+# Sculpturing Modeling    
+
+• A series of sculpting/brush operators    
+
+![](../assets/建模57.png)   
+
+
+
+# Sculpting Modeling Tools    
+
+![](../assets/建模58.png)   
+
+
+# 3D Brushes
+    
+
+![](../assets/建模59.png)   
+
+
+
+# Sculpting Modeling    
+
+![](../assets/建模60.png)   
+
+
+# Summary: Shape Editing   
+
+* Points    
+• Points, vertices, …    
+* Lines/Curves    
+• Sketches, skeletons, silhouettes, wires, …    
+* Meshes    
+• Bezier nets, lattices, cages, …    
+* Other shapes   
+• Deformation transfer: learning deformation from other shapes    
+* **Physically‐based shape deformation** (*)    
+• **Material‐based, FEM, simulation**    
+
+
+
+# Data‐Driven Modeling   
+
+
+# 三维几何模型数据库     
+
+![](../assets/建模61.png)   
+
+
+# 1. Modeling by Examples    
+[Funkhouser et al. Siggraph 2004]   
+ 
+1. Segment into parts    
+2. Search 3D database for parts    
+3. Compose parts into a model    
+
+![](../assets/建模62.png)    
+
+
+# Modeling by Examples    
+[Funkhouser et al. Siggraph 2004]   
+
+1. Segment into parts   
+2. Search 3D database for parts    
+3. Compose parts into a model    
+
+![](../assets/建模63.png)    
+
+
+# 2. Probabilistic Reasoning    
+[Chaudhuri et al. Siggraph 2011]    
+
+• Design space    
+
+![](../assets/建模64-1.png)    
+
+$$
+\mathbf{P(X)} =\prod_i\mathbf{P}\left ( x_i|\pi (x_i) \right )
+$$
+
+
+# 2. Probabilistic Reasoning     
+[Chaudhuri et al. Siggraph 2011]   
+
+• Exploring the design space    
+
+![](../assets/建模65-1.png)  
+
+
+# 3. ShapeSynth:     
+# Exploration as Design Tool      
+[Averkiou et al. Siggraph 2014]    
+
+![](../assets/建模66.png) 
+
+
+# 4. Photo‐inspired Modeling     
+    
+
+![](../assets/建模67.png)    
+
+
+# Examples    
+
+![](../assets/建模68.png)    
+
+ 
+
+# 5. Primitive‐based Modeling    
+     
+
+![](../assets/建模69.png)    
+
+
+# 6. Shadow Guidance    
+Fan et al. 2013    
+
+![](../assets/建模70.png)    
+
+
+
+# 6. Shadow Guidance    
+Fan et al. 2013     
+
+![](../assets/建模71.png)    
+
+
+# 7. Learning Generative Models of 3D Shapes (3D‐GAN)    
+
+• Emergence of various 3D‐GANs for shape generation    
+
+![](../assets/建模72.png)    
+
+
+Chinagraph 2020 Key note talk by Hao Zhang:    
+<https://www.bilibili.com/video/BV1Pa4y1x7au?p=3>    
+Chaudhuri, et al. Learning Generative Models of 3D Structures. Computer Graphics Forum (Eurographics STAR), 2020.     
+  
+
+
+
+# Shape Morphing    
+
+ - Given two objects produce sequence of intermediate objects that gradually evolve from one object to the other    
+    - Interpolate object shapes    
+    - Interpolate object attributes    
+      - Color, texture, normal, etc.    
+
+![](../assets/建模73.png)    
+
+
+# Applications    
+
+![](../assets/建模74.png)    
+
+
+# Shape Transformations    
+
+* Warping: Unary Op    
+• Given **Object A** and **F(t)**, find **Object B**    
+
+![](../assets/建模75.png)    
+
+* Morphing: Binary Op    
+• Given **Object A** and **Object B**, find **F(t)**    
+
+![](../assets/建模76.png)    
+
+
+
+# Terminologies   
+
+• Morphing    
+• Metamorphosis    
+• Shape blending    
+• Shape averaging    
+• Shape interpolation    
+• Shape transition    
+
+
+
+# Rules for Good Morphing    
+
+ - Natural    
+    - Keep as much as possible of the two shapes during the transformation    
+      - Volume, curvature, area, etc...    
+    - Subjective aesthetic criteria    
+ - User control    
+    - intuitive    
+    - not too heavy   
+    - can be adapted to user's knowledge    
+
+
+
+
+# Morphing   
+
+* Input: two meshes source & target    
+• Frames at \\(t_0\\) and \\(t_n\\)    
+* Output: sequence of intermediate meshes    
+• Frames \\(t_1\\) to \\(t_{n‐1}\\)    
+* Intermediate mesh:    
 • For each point on source/target model specify location 
-at time ti consistent with source & target
-Morphing: Two Sub‐Problems
-• Correspondence problem
-• Compatible meshes
-• For each point on source/target meshes 
-find corresponding point on second mesh 
-= Parameterization
-• Path problem
-• Inbetween shapes
-• Specify trajectory in time for each point
-• For mesh 
-– specify vertex trajectory
-vertex-to-vertex
-triangle-to-triangle
-1. Vertex Correspondence 
-• Compatible meshes (consistent meshes, inter‐map)
-• Each vertex on source mesh mapped to vertex on target (and vice
-versa)
-• Have common connectivity
-Homogeneous models Heterogeneous models
-Separate sampling Different geometries
-Challenges
-Correspondence: Parameterization
-• To compute map between source mesh S and  target mesh T parameterize both on common  domain D:
-• Common domain options
-• 2D patch(es) 
-– works for genus 0 + boundary
-• Use convex boundary (why?)
-• Sphere
-• Base mesh
-1.1 Parameterization: Planar domain
-1.1 Parameterization: Planar domain
-1.1 Parameterization: Planar domain
-1.2 Parameterization: Sphere domain
-1.3 Parameterization: Base mesh
-• MAPS
-Lee et al. 1999
-1.3 Parameterization: Base mesh
-1.3 Parameterization: Base mesh
-1.4 Decomposition Based
-[Shlafman et al. 2002]
-1.5 Component Based
-[Zhao et al. 2003]
-Overlaying-based
-[Schreiner et al. 2004]
-Common domain-based
-[Aigerman et al. 2014] [Aigerman et al. 2015] [Aigerman et al. 2016] [Mandad et al. 2016]
-[Kraevoy et al. 2004]
-Subdivision-based
-[Kwok et al. 2012]
-1.6 Many Recent Works
-1.7 Error‐Bounded Compatible Remeshing
-• Optimization based method
-Yang et al.  Error‐Bounded Compatible Remeshing. Siggraph 2020.
-Stage 2
-Edge‐based
-compatible
-remeshing
-Increase
-target
-edge length
-Is angle
-too small?
-Stage 1
-Cut
-construction
-Boundary‐
-to‐interior
-compatible
-remeshing
-Is
-error‐bounded?
-Adjust
-target
-edge length
-N
-o
-Input
-Intermediate
-result Output
-Relaxing complexity Reducing mesh complexity
-1.7 Error‐Bounded Compatible Remeshing
-Yang et al.  Error‐Bounded Compatible Remeshing. Siggraph 2020.
-1.8 Different Topologies
-[DeCarlo et al. 1996]
-1.8 Different Topologies
-[DeCarlo et al. 1996]
-More: Correspondences between 
-planar shapes – Matching 
-• Physically Based Method  [Sederberg et al. 1992]
-More: Correspondences between 
-planar shapes – Matching 
-• Curve Aligning [Sebastian et al. 2003]
-More: Correspondences between 
-planar shapes – Matching 
-• Perceptually Based Method [Liu et al. 2004]
-2. Vertex Path (Trajectory)
-• Input:
-• All vertices on source & target have 
-one‐to‐one correspondence with 
-each other
-• Each vertex has two 3D coords vFc1
-(source) and vFc2 (target)
-• Output: generate the intermediate 
-shapes from two shapes
-Simplest Method: Linear Interpolation
-• Linear interpolation between corresponding points
-• Work well for many cases
-• many drawbacks
-Linear Interpolation
-• Simple and easy
-• Drawbacks
-• Shrinkage
-Unnatural Results in 
-Linear Interpolation
-Intrinsic Approach
-• Intrinsic variables
-• edge lengths 
-• turning angles
-Sederberg et al. 1993
-Fourier Approach
-Chen et al. 2001
-Wavelet Approach
-• Wavelet decomposition Zhang et al. 2000
-Star Skeleton Representation
-[Shapira et al. 1995]
-Interior Based Approach
-• Based on compatible triangulation
-• [Gotsman and Surazhsky, 1999‐2001]
-• As‐rigid‐as‐possible [Alexa et al. 2000]
-Morphing between Different Topologies
-Liu et al. 2005
-Implicit Approaches
-• Construct a 4D function which interpolates two shapes (with 
-iso‐value 0 and 1 respectively)
-Distance Field
-• Distance field of a shape
-[Cohen-Or et al. 1998]
-Distance Field
-Variational Implicit Function
-[Turk et al. 1999]
-Examples
-Polymorph: 
-Morphing between multiple shapes
-Summary
-3D content creation is still hard
-• One of the most central and challenging problems in graphics
-• (Comparing to simulation and rendering)
-Challenges to Geometric Modeling
-• Modeling porous structure
-• Modeling non‐homogeneous materials
-• varying density
-• changing composition
-• multiple phases (solid, liquid)
-•
-…
-生物多孔组织 多孔泡沫 微胞腔结构
-谢 谢！
+at time \\(t_i\\) consistent with source & target    
+
+
+# Morphing: Two Sub‐Problems    
+
+ - Correspondence problem   
+    - Compatible meshes    
+    - For each point on source/target meshes find corresponding point on second mesh = Parameterization     
+
+   ![](../assets/建模77.png)    
+
+ - Path problem    
+    - Inbetween shapes    
+    - Specify trajectory in time for each point    
+      - For mesh – specify vertex trajectory       
+
+
+
+
+# 1. Vertex Correspondence    
+
+
+* Compatible meshes (consistent meshes, inter‐map)    
+• Each vertex on source mesh mapped to vertex on target (and vice versa)    
+• Have common connectivity    
+
+![](../assets/建模78.png)    
+
+
+
+# Challenges    
+
+![](../assets/建模79.png)    
+
+
+# Correspondence: Parameterization     
+
+ - To compute map between source mesh S and  target mesh T parameterize both on common  domain D:     
+
+$$
+F_s:S \to D\\\\
+F_t:S \to D\\\\
+F_{st}:F_t^{-1} F_s
+$$
+
+ - Common domain options
+    - 2D patch(es) – works for genus 0 + boundary
+      - Use convex boundary (why?)
+    - Sphere
+    - Base mesh    
+
+
+
+# 1.1 Parameterization: Planar domain    
+
+![](../assets/建模80.png)    
+
+
+# 1.1 Parameterization: Planar domain    
+
+![](../assets/建模81.png)    
+
+
+# 1.1 Parameterization: Planar domain    
+
+![](../assets/建模82.png)    
+
+
+# 1.2 Parameterization: Sphere domain    
+
+![](../assets/建模83.png)    
+
+
+# 1.3 Parameterization: Base mesh     
+Lee et al. 1999    
+
+• MAPS    
+
+![](../assets/建模84.png)    
+
+
+# 1.3 Parameterization: Base mesh    
+
+![](../assets/建模85.png)    
+
+
+# 1.3 Parameterization: Base mesh    
+
+![](../assets/建模86.png)    
+
+
+
+# 1.4 Decomposition Based    
+[Shlafman et al. 2002]   
+
+![](../assets/建模87.png)    
+
+
+# 1.5 Component Based    
+   
+
+![](../assets/建模88.png)    
+
+
+
+# 1.6 Many Recent Works    
+
+![](../assets/建模89.png)    
+
+
+# 1.7 Error‐Bounded Compatible Remeshing    
+Yang et al.  Error‐Bounded Compatible Remeshing. Siggraph 2020.    
+
+• Optimization based method    
+
+![](../assets/建模90.png)    
+
+
+
+# 1.7 Error‐Bounded Compatible Remeshing   
+Yang et al.  Error‐Bounded Compatible Remeshing. Siggraph 2020.    
+
+![](../assets/建模91.png)    
+
+
+# 1.8 Different Topologies    
+[DeCarlo et al. 1996]     
+
+![](../assets/建模92.png)    
+
+
+# 1.8 Different Topologies    
+    
+
+![](../assets/建模93.png)    
+
+
+# More: Correspondences between planar shapes – Matching     
+
+• Physically Based Method  [Sederberg et al. 1992]    
+
+![](../assets/建模94.png)    
+
+
+# More: Correspondences between planar shapes – Matching     
+• Curve Aligning [Sebastian et al. 2003]    
+
+![](../assets/建模95.png)    
+
+$$
+\mu[g]=\int_{C}\left|\frac{\partial}{\partial s}(\bar{C}(\bar{s})-C(s))\right|^{2} d s+R \int_{C}(\kappa(s)-\bar{\kappa}(\bar{s}))^{2} d s
+$$
+
+# More: Correspondences between planar shapes – Matching    
+• Perceptually Based Method [Liu et al. 2004]    
+
+![](../assets/建模96.png)    
+
+
+
+# 2. Vertex Path (Trajectory)    
+
+* Input:   
+• All vertices on source & target have one‐to‐one correspondence with each other    
+• Each vertex has two 3D coords vFc1 (source) and vFc2 (target)   
+
+* Output: generate the intermediate shapes from two shapes    
+
+![](../assets/建模97.png)    
+
+
+
+# Simplest Method: Linear Interpolation   
+
+* Linear interpolation between corresponding points    
+* Work well for many cases    
+• many drawbacks    
+
+![](../assets/建模98.png)    
+
+
+
+# Linear Interpolation    
+
+* Simple and easy    
+* Drawbacks   
+• Shrinkage    
+
+![](../assets/建模99.png)    
+
+
+# Unnatural Results in Linear Interpolation    
+
+![](../assets/建模100.png)    
+
+
+# Intrinsic Approach    
+Sederberg et al. 1993   
+
+* Intrinsic variables    
+• edge lengths    
+• turning angles    
+
+![](../assets/建模101.png)    
+
+
+
+# Fourier Approach   
+   
+
+![](../assets/建模102-1.png)    
+
+
+$$
+\begin{array}{l} 
+  \begin{bmatrix}x(t)
+ \\\y(t)
+\end{bmatrix} \\\\ 
+  =\begin{bmatrix}a_0
+ \\\c_0
+\end{bmatrix}+ {\textstyle \sum_{k=1}^{\infty }} \begin{bmatrix} a_k &b_k
+  \\\\ c_k &d_k
+\end{bmatrix}\begin{bmatrix}\cos(2\pi kt)
+ \\\ \sin(2\pi kt)
+\end{bmatrix} \\ 
+\end{array} 
+$$
+
+
+# Wavelet Approach     
+Zhang et al. 2000   
+
+
+• Wavelet decomposition 
+
+![](../assets/建模103.png)    
+
+
+# Star Skeleton Representation    
+[Shapira et al. 1995]    
+
+![](../assets/建模104.png)    
+
+
+# Interior Based Approach     
+
+* Based on compatible triangulation    
+• [Gotsman and Surazhsky, 1999‐2001]     
+• As‐rigid‐as‐possible [Alexa et al. 2000]      
+
+![](../assets/建模106.png)    
+
+
+
+# Morphing between Different Topologies    
+Liu et al. 2005     
+
+![](../assets/建模107.png)    
+
+
+
+# Implicit Approaches     
+
+• Construct a 4D function which interpolates two shapes (with iso‐value 0 and 1 respectively)     
+
+![](../assets/建模108.png)    
+
+
+
+# Distance Field    
+[Cohen-Or et al. 1998]   
+
+
+• Distance field of a shape    
+
+![](../assets/建模109-1.png)    
+
+
+# Distance Field    
+
+![](../assets/建模110.png)    
+
+
+
+# Variational Implicit Function    
+
+![](../assets/建模111.png)    
+
+$$
+f(X)=\sum_{j=1}^{n} d_j\phi (X-C_j)+P(X)
+$$
+
+
+# Examples     
+
+![](../assets/建模112.png)    
+
+
+# Polymorph:    
+# Morphing between multiple shapes     
+
+![](../assets/建模113.png)    
+
+
