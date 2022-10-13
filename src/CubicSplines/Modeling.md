@@ -305,125 +305,89 @@ Yu et al. Mesh Editing With Poisson-Based Gradient Field Manipulation. Siggraph 
 
 • Reconstruct a function from its gradients via the Poisson equation:     
 
-$$
-\underset{f}{\arg \min } \int_\Omega ||\nabla f-W||^2,s.t.f|_{\partial \Omega} =f^*|_{\partial \Omega}
-$$
-
-
 
 $$
-\underset{f}{\arg \min } \int_{\Omega}\|\nabla f-\mathbf{w}\|^{2}, \quad
+\underset{f}{\arg \min } \underset{\Omega}{\int}\||\nabla f-\mathbf{w}\||^{2}, \quad  s.t. \quad  f\left |_{\partial \Omega }= f^* \right | _{\partial \Omega}
 $$ 
-
-s.t.   
-
-$$
-f|_{\partial \Omega}=f^{*}|_{\partial \Omega} 
-$$
+  
 
 $$
 \Downarrow 
 $$
 
 $$
- \Delta f=\operatorname{div} \mathbf{w} \quad  with  \left.\quad f\right|_{\partial \Omega}=\left.f^{*}\right|_{\partial \Omega} 
+ \Delta f=\operatorname{div} \mathbf{w} \quad  with  \left.\quad f \right|_{\partial \Omega}=\left.f^{*}\right| _{\partial \Omega} 
 $$
 
 
 
+# 1.6 As‐rigid‐as‐possible Deformation     
+[Siggraph 2003]    
 
-Poisson images
-2 * arg min , s.t. f
-f f f 
-
-
-
- 
-
-w
-* f ff div with 
-
-
-  w
-1.6 As‐rigid‐as‐possible Deformation
-[Siggraph 2003]
-1.7 ARAP Modeling
+![](../assets/建模22.png)    
+
+
+# 1.7 ARAP Modeling    
+[Sorkine and Alexa, As‐Rigid‐As‐Possible Surface Modeling. SGP 2007]     
+
+
 • Ask all star edges to transform rigidly by some 
-rotation R, then the shape of the cell is preserved
-[Sorkine and Alexa, As‐Rigid‐As‐Possible Surface Modeling. SGP 2007]
-vi vj
-1
-vj
-2
-׳v
-i v׳
-j
-1
-׳v
-j
-2
-Ri
-2
-1 ()
-min ( ) ( )
-n
-i j ii j
-i j Ni
-R 
- 
-     
-v
-vv vv
-.. , j j st j C v c  
-
-ARAP Modeling
-initial guess 1 iterations 4 iterations
-• Keep a local frame at each vertex
-• Prescribe changes to some selected frames
-Local frame:
-{ai, bi, ni}
-1.8 Linear Rotation‐invariant Coordinates 
-[Lipman et al. Siggraph 05]
-Frame‐based deformations
-• Encode the differences between adjacent frames
-• Solve for the new frames in least‐squares sense
-ai –
-aj
-=
-
-1
-ai +
-
-2
-bi + 
-
-3
-ni
-bi –
-bj
-=
-
-1
-ai +
-
-2
-bi + 
-
-3
-ni
-ni –
-nj
-=
-
-1
-ai +
-
-2
-bi +
-
-3
-ni
-… … 
+rotation R, then the shape of the cell is preserved    
+
+![](../assets/建模23.png)    
+
+
+$$
+\min_{\mathbf{v}^{\prime}}\sum_{i=1}^{n} \sum _{j\in N(i)}||({\mathbf{v}}^{\prime}_i-{\mathbf{v}}^{\prime}_j)-R_i({\mathbf{v}}_i-{\mathbf{v}}_j)||^2
+$$
+
+$$
+s.t.\mathbf{v}^{\prime}_j=\mathbf{c} _j,j\in C
+$$
+
+
+# ARAP Modeling    
+
+![](../assets/建模24.png)   
+
+
+
+# 1.8 Linear Rotation‐invariant Coordinates      
+[Lipman et al. Siggraph 05]      
+
+• Keep a local frame at each vertex    
+• Prescribe changes to some selected frames    
+
+![](../assets/建模25.png)   
+
+Local frame:    
+{\\(\mathbf{a}_i, \mathbf{b}_i, \mathbf{n}_i\\)}
+
+
+
+# Frame‐based deformations    
+
+
+• Encode the differences between adjacent frames     
+• Solve for the new frames in least‐squares sense    
+
+
+$$
+\begin{array}{l}
+{\mathbf{a}_i}-{\mathbf{a}_j}=\alpha_1 {\mathbf{a}_i}+\alpha_2 {\mathbf{b}_i}+\alpha_3 {\mathbf{n}_i}\\\\
+{\mathbf{b}_i}-{\mathbf{b}_j}=\beta _1 {\mathbf{a}_i}+\beta _2 {\mathbf{b}_i}+\beta _3 {\mathbf{n}_i} \\\\
+{\mathbf{n}_i}-{\mathbf{n}_j}=\gamma  _1 {\mathbf{a}_i}+\gamma _2 {\mathbf{b}_i}+\gamma _3 {\mathbf{n}_i}
+\end{array}\\\\
+\cdots \cdots \\\\
+constraints
+$$
+
+
+
+![](../assets/建模26.png)   
+
+
+
 constraints
 i
 j
