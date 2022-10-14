@@ -58,8 +58,8 @@
   - [曲面简化](CubicSplines/Simplification.md)
   - [几何映射](CubicSplines/Mapping.md)
   - [几何优化](CubicSplines/Optimization.md)
-  - [纹理合成](CubicSplines/TextureSynthesis.md)
   - [几何建模](CubicSplines/Modeling.md)
+  - [纹理合成](CubicSplines/TextureSynthesis.md)
   - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
   
 
