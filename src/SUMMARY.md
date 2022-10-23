@@ -46,7 +46,6 @@
   - [隐式曲线的绘制](ImplicitCurves/Draw.md)
   - [隐式曲线的拟合](ImplicitCurves/Fitting.md)
 - [NURBS曲面](SplineSurfaces/SplineSurfaces.md)
-<<<<<<< HEAD
 - [More]()
   - [曲线光顺](CubicSplines/CurveFairing.md)
   - [离散曲线处理](CubicSplines/DiscreteCurves.md)
@@ -64,29 +63,7 @@
   - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
 - [Notes]()
   - [傅里叶](Notes/55.md)
-=======
-- [曲线光顺](CurveFairing/CurveFairing.md)
-  - [曲线的微分几何](CurveFairing/DifferentialGeometry.md)
-  - [曲线的光顺定义](CurveFairing/What.md)
-  - [曲线的光顺方法](CurveFairing/How.md)
-- [离散曲线处理]()
-  - [回顾](DiscreteCurves/Review.md)
-  - [曲线的离散](DiscreteCurves/Discretization.md)
-  - [重心坐标](DiscreteCurves/BarycentricCoordinate.md)
-  - [2D形状（离散曲线）处理](DiscreteCurves/2D.md)
-- [三角网格：曲面的离散表达](TriangularMeshes/TriangularMeshes.md)
-- [离散微分几何](DiscreteDifferential/DiscreteDifferential.md)
-- [3D网格曲面](LaplacianCoordinates/LaplacianCoordinates.md)
-- [曲面去噪](Smoothing/Smoothing.md)
-- [采样与剖分](SamplingTessellation/SamplingTessellation.md)
-- [曲面参数化](Parameterization/Parameterization.md)
-- [曲面简化](Simplification/Simplification.md)
-- [几何映射](Mapping/Mapping.md)
-- [几何优化](Optimization/Optimization.md)
-- [几何建模](CubicSplines/Modeling.md)
-- [纹理合成](CubicSplines/TextureSynthesis.md)
-- [形状分析与理解](CubicSplines/ShapeAnalysis.md)
->>>>>>> bdeea1b95c2a81c4a3eefc7a3bb39f400eb1d9f5
+  - [稀疏学习](Notes/56.md)
   
 
 
