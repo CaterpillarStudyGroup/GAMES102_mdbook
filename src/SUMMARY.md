@@ -61,6 +61,8 @@
   - [几何建模](CubicSplines/Modeling.md)
   - [纹理合成](CubicSplines/TextureSynthesis.md)
   - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
+- [Notes]()
+  - [傅里叶](Notes/55.md)
   
 
 
