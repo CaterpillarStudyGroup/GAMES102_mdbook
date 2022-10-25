@@ -62,10 +62,12 @@
   - [纹理合成](CubicSplines/TextureSynthesis.md)
   - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
 - [Notes]()
-  - [傅里叶](Notes/55.md)
-  - [稀疏学习](Notes/56.md)
-  - [稀疏学习2](Notes/57.md) 
+  - [P55](Notes/55.md)
+  - [P56](Notes/56.md)
+  - [P57](Notes/57.md) 
   - [P58](Notes/58.md)
+  - [P59](Notes/59.md)
+  - [P60](Notes/60.md)
 
   
 
