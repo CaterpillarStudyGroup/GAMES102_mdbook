@@ -64,6 +64,9 @@
 - [Notes]()
   - [傅里叶](Notes/55.md)
   - [稀疏学习](Notes/56.md)
+  - [稀疏学习2](Notes/57.md) 
+  - [P58](Notes/58.md)
+
   
 
 
