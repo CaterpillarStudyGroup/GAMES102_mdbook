@@ -78,7 +78,17 @@
   - [P68](Notes/68.md)
   - [P69](Notes/69.md)
   - [P70](Notes/70.md)
-
+  - [P71](Notes/71.md)
+  - [P72](Notes/72.md)
+  - [P73](Notes/73.md) 
+  - [P74](Notes/74.md)
+  - [P75](Notes/75.md)
+  - [P76](Notes/76.md)
+  - [P77](Notes/77.md)
+  - [P78](Notes/78.md)
+  - [P79](Notes/79.md)
+  - [P81](Notes/80.md)
+  - [P81](Notes/81.md) 
   
 
 
