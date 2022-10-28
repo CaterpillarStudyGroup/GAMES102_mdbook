@@ -87,8 +87,11 @@
   - [P77](Notes/77.md)
   - [P78](Notes/78.md)
   - [P79](Notes/79.md)
-  - [P81](Notes/80.md)
+  - [P80](Notes/80.md)
   - [P81](Notes/81.md) 
+  - [P82](Notes/82.md)
+  - [P83](Notes/83.md)
+  - [P84](Notes/84.md) 
   
 
 
