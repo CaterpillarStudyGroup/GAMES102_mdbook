@@ -51,6 +51,8 @@ b_{1}\left(x_{m}\right) & \ldots & b_{n}\left(x_{m}\right)
 \end{array}\right)
 $$
 
+> 公试1是关于系数\\((\lambda _1,\lambda _2,\dots ,\lambda _n,)\\)的函数，直接求极小值的闭式解。    
+
 # 求解
 
 * 关于\\(\lambda\\)的二次多项式    

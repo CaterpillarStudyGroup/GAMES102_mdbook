@@ -38,6 +38,8 @@ and
 • The heightfield is a diffrentiable \\((𝑛 -1)\\)‐manifold and
 its surface normal is the colinear to the gradient of 𝑓.     
 
+> 对于任意的隐函数，全局上很难写出 \\(y=f(x)\\)形式。   
+但在任意一个局部，可以定义出\\(y=f(x)\\)   
 
 # 隐式曲线    
 
@@ -57,6 +59,7 @@ $$
 
 ![](../assets/瘾曲4.png) 
 
+> 找一个隐式函数上的点的过程称为显式化或参数化。    
 
 
 # 隐式函数表达    

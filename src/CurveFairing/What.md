@@ -11,6 +11,7 @@
        - Lack of solid theories   
        - Far from solved      
 
+> 光顺是一种微观的性质，很难描述，且没有明确的数学定义。   
 
 # 曲线的曲率图    
 
@@ -21,6 +22,7 @@
 
 ![](../assets/光顺6.png)    
 
+> 船的表面光顺可以减小水的阻力。    
 
 # Fairing Design is Important!     
 • Shoe sole    
@@ -64,6 +66,8 @@ $$
 \int _ck^2ds=MIN
 $$
 
+> 最后一个用整条曲线的能量来定义，是全局面定义法。    
+
 # Observations of Fairness     
 
 * Neither a global problem nor a local problem, but a  large local problem      
@@ -72,6 +76,9 @@ $$
 • Circular spline      
 * Intimately related to uniform distribution of curvature     
 • Curvature is a “magnifier” of the curve fairness      
+
+> 不能用\\(\int K^2=MIN\\) 来定义，有可能k不大，但频繁挠
+动，仍不算光顺。   
 
 # Example 1    
 
@@ -106,7 +113,7 @@ $$
 * Reason     
 • \\({y}''(x) \\) has too many vibration numbers       
 
-
+> 曲线上一直在递增，但\\(y"\\)有太多振荡。    
 
 # Example 3    
 
@@ -119,7 +126,7 @@ $$
 * Reason      
 • \\({y}''(x) \\) has large amplitude at discontinuity point.
 
-
+> 不满足\\(C^2\\)连续，但光顺，因此\\(C^2\\)不是必须的。    
 
 # 曲线的光顺的“新定义”     
 

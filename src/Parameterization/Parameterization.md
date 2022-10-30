@@ -73,6 +73,11 @@ $$
 
 ![](../assets/参数7.png)    
 
+> R 把3D三角形旋转为平面三角形。    
+\\(\phi \\)是两个平面三角形之间的变形。扭曲都来自\\(\phi \\)    
+
+\\(\phi 是奇况矩阵，因此2D是3×3.扭曲都来自L(2×2)\\)          
+
 
 # Isometric Flattening    
 
@@ -97,6 +102,9 @@ $$
 
 ![](../assets/参数10.png)    
 
+> \\(L 是 2×2， 故SVD, \sigma_{1}和\sigma_{2}\\)是奇异值。　    
+\\(\sigma_{1}=\sigma_{2}\\)： 保角， \\(\sigma_{1}\cdot \sigma_{2}=1\\)，保面积。   
+\\(\sigma_{1}=\sigma_{2}=1\\)， 等矩。　　
 
 # Distortion Measure    
 
@@ -120,6 +128,8 @@ High distortion
 # Problem Local Injectivity   
 
 ![](../assets/参数13.png)    
+
+> 翻转\\(\sigma_{1}\cdot \sigma_{2}<0 \\)     
 
 
 # Problem Local Injectivity     
@@ -197,6 +207,11 @@ $$
 [Floater. Parametrization and smooth approximation of surfaces. CAGD 1997.]   
 
 
+> 外部点：映射到 convex boundary 上。   
+内部点：l 邻域点的线性组合，权自己定义。   
+通过求解稀疏方程组确定点的位置。   
+优点：简单、不翻转。    
+缺点：扭曲大。  
 
 # Tutte’s embedding method    
 

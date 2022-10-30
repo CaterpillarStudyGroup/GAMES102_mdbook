@@ -43,6 +43,10 @@
 
     ![](../assets/网格5.png)   
 
+> 一个点的信息通常由它周围的顶点和面片来决定。     
+对于离散几何来说，无穷小邻域性质就通过 l 邻域来分近似。   
+­离散观点：直接取邻域点的特征来计算酯前点的特征     
+连续观点：取邻域点拟合成曲面，然后分析曲面在该点处的特征。   
 
 # 局部特征度量：1‐邻域   
 
@@ -50,7 +54,8 @@
  - Smoothing = averaging    
 ![](../assets/网格6.png)   
 
-
+> 黄点、蓝点的加权平均，可以用各种加权方式。    
+黄色向量：拉普拉斯算子，可以描述红点的尖锐承度。   
 
 # Laplace算子(operator)    
 
@@ -74,6 +79,8 @@ $$
 \Delta f=\frac{\partial^{2} f}{\partial x^{2}}+\frac{\partial^{2} f}{\partial y^{2}}
 $$
 
+> 梯度是一个向量，散度指向量各个分量之和。    
+此页中是连续形式的 Laplace 算子。   
 
 # Laplace‐Beltrami 算子    
 
@@ -105,12 +112,32 @@ $$
 
 ![](../assets/网格7.png)    
 
-
+> 如何理解离散曲面的Laplace比算子？[23:40]    
+2D场景： （图[24:39]）      
+后向差分： 
+$$
+{f}' x=\frac{y_{i+1}-y_i}{x_{i+1}-x_i} 
+$$
+前向差分：
+$$
+{f}' x=\frac{y_i-y_{i-1}}{x_i-x_{i-1}} 
+$$
+3D的场景：
+![](../RAW/75.1.png)  
+① ② ③ ④ 看作是⑤的 l 邻域。    
+推广到一般形式可得：\\(\delta _i\\)     
+\\(\delta _i\\)称为 Laplace 算子，也叫 Laplace 坐标、微分坐标。    
 
 # 平均曲率流定理   
 
 ![](../assets/网格8.png)    
 
+> \\(\gamma \\)代表红点的邻域外围封闭曲线。    
+\\(V_i 是红点， V是\gamma \\)手上的点。    
+\\( len(\gamma) \\)代表曲线长度。    
+\\(H(V_i)为 V_i\\) 的平均曲率。     
+将此定理公式写成离散形式，与\\(\delta _i\\)公式相通。    
+\\(\delta _i\\) 可以作为平均曲率的近似。    
 
 # Geometric Meaning   
 
@@ -150,7 +177,7 @@ $$
 \delta _i=\frac{1}{d_i} \sum _{j\in N(i)}(\nu_i-\nu_j)
 $$
 
-
+> \\(l\\)邻域点加权平均的权有讲究,通常使用 cotangent.  
 
 # Local Laplacian Smoothing    
 
@@ -172,7 +199,9 @@ $$
 
 ![](../assets/网格11.png)    
 
-
+> 上节课的任意曲面到极小曲面的过程,是一种特殊的    
+Local Lapluàn Smoothing.    
+也可以看作是去噪、滤波。
 
 # Laplacian Smoothing    
 
@@ -237,9 +266,14 @@ $$
 
 ![](../assets/网格17.png)    
 
-
+> Mean Curvature Flow 使用 cotangent 权，因此是Laplacian Smoothing 的特殊形式。     
+对于 low densily mesh,\\(\delta _i\\) 比较长，如果使用普­通权，这种情况会收缩快。如果使用 cotangent 权，则不会。  
 
 # Global Laplacian Smoothing    
+
+> Local 方法存在的问题：  
+> 1. 不同位置收敛速度不同    
+2. 自交    
 
 # 极小曲面(minimal surface)    
 
@@ -266,6 +300,12 @@ $$
 Ax = 0
 $$
 
+> 
+$$
+\alpha=(V_1,V_2,\dots ,V_n)^\tau 
+$$
+\\(A 的第 i 行为 L(V_i)的系数，即 V_i 的系数为1，V_j的系数为 — w_{ij}\\),其余为0.整体上非常稀疏。     
+增加将边界点固定的约束。
 
 # Laplacian Matrix   
 
@@ -311,6 +351,8 @@ $$
 
 ![](../assets/网格23.png)    
 
+> 如果用L表示邻接关系，\\(\delta\\)已知，就可以重建出0.   
+不断减小\\(\delta\\)而更新V,得到极小曲面。    
 
 # Basic properties    
 
@@ -320,6 +362,9 @@ to translation
 $$
 LX=\delta
 $$
+
+> L 非满秩， C 为 mesh 的联通个数，至少为1.    
+必须增加额外约束是L满秩。 
 
 # 极小曲面生成的全局方法    
 
@@ -331,6 +376,8 @@ $$
 
 ![](../assets/网格24.png)    
 
+> 更正一下，不是慢慢减\\(\delta\\)迭代更新V,而是直接令\\(\delta=0\\)     
+数学库： MLK, Eigen  
 
 # Mesh Parameterization (Mesh Flattening)     
 曲面参数化   
@@ -373,7 +420,11 @@ $$
 
 ![](../assets/网格28.png)    
 
-    
+>   1. 三角形不能发生翻转。    
+2. 三角形的扭曲能够保持。    
+3. 边界不要自交。    
+参数化的係用：1. 贴纹理     
+  
 # 但，球面是不可展的，必有形变    
 
 ![](../assets/网格29.png)    
@@ -435,6 +486,8 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 
 \\(\Rightarrow\\) Forming a sparse linear system    
 
+> 还是之前 Global Laplacian Smoothing 求极小曲面的原理。    
+但是为什么要把边界点放右边呢？右边还是\\(\delta\\)吗？    
 
 # Tutte’s Method: Why it Works   
 
@@ -482,16 +535,23 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 
 ![](../assets/网格40.png)    
 
+> 使用这种格子作为纹理，方便观察扭曲情况，仍建议用 cotangent 权，扭曲较小。   
+图1：均匀权， 图3：cotangent权     
 
 # 例子   
 
 ![](../assets/网格41.png)    
 
+> 例子中产生了较大的扭曲。且耳朵处容易发生数值精度问题。   
+算法优点：简单、有效、无翻转。    
 
 # Parameterization    
 
 ![](../assets/网格42.png)    
 
+> 复杂模型割成多块分别参数化，再 packing    
+优点：1.减少扭曲。    2.具有语义。    
+缺点：1.空间浪费。    
 
 # 曲面纹理的保存：2D图像   
 
@@ -530,6 +590,11 @@ $$
 L(\nu_i)=\nu_i-\sum _ {j\in N(i)}w_{ij}\nu_j = 0
 $$
 
+> 不带约束的 Laplacian 会导致maesh收缩，因此要固定几个
+点作为约束。     
+hard 约束：必须满足的约束，例如 \\(S.T.g(t)=0\\)    
+Soft 约束: 尽量满足的约束，例如 \\(\min f(x)\\)   
+
 # Laplacian of Mesh   
 
 • Discrete Laplacians
@@ -566,6 +631,8 @@ $$
 
 ![](../assets/网格51.png)    
 
+> hard 约束的问题是,fix点处会很突兀,因此通常使用软约束。   
+每 fix 一个点，在矩阵下面增加三行。   
 
 # Vertex Constraints    
 
@@ -581,12 +648,15 @@ $$
 
 ![](../assets/网格53.png)    
 
+> 第一项： Laplace 尽量小，第二项：固定点尽量不动    
 
 # Face Constraints    
 
 ![](../assets/网格54.png)    
 
-
+> 除了固定顶点位置的约束，还可以对面加约束，例如：固定面片重心的位置。关键是要线性约束。    
+加入约束之后. A 的行数远多于列数。只能求近似解。    
+\\(\min \left \|| Ax- b \right \||^2\\),相当于软约束优化问题。  
 
 # Adding Face Constraints    
 
@@ -628,6 +698,8 @@ $$
 $$
 X = (A^TA)^{-1}A^Tb
 $$
+
+> 求逆比较麻烦，如果 A 不变，可对 \\(A^\tau A\\) 做Cholesky 分解。    
 
 # One Channel Solution    
 
@@ -730,6 +802,9 @@ Applying our algorithm to the bunny model with different parameters.
 Detail constraints: \\(LX=\delta \\)    
 Modeling constraints: \\(x_j=c_j,j\in\\) {\\(j_1,j_2,\dots j_k\\)}    
 
+> 用户对 mesh 的一个点进行编辑，算法更新其他的点，得到合理结果。     
+本质：保持 mesh 的 Laplace 不变，因为 Laplace 描述了曲面的特征。    
+准确说是 Laplace 长度不变，方向有可能旋转。     
 
 # Direct Detail Preserving     
 
