@@ -14,6 +14,8 @@
 
 ![](../assets/表达1.png)   
 
+> 三角形网格是曲面的分片线性逼近  
+
 # Standard Graph Definition    
 
 ![](../assets/表达2.png)   
@@ -38,6 +40,10 @@
 # Meshes     
 
 ![](../assets/表达7.png)   
+
+> 边非流型：图1. 点非流型      
+![](../RAW/72-1.png) 
+本课程假设都是流型曲面。如果遇到非流型就直接去掉或变成流形。 
 
 # Planar Graphs and Meshes     
 

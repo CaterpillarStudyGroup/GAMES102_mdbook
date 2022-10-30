@@ -32,6 +32,12 @@
     - Then \\(b_i^r(t)\\) is the searched curve point 
     \\(𝒙(𝑡)\\) at the parameter value 𝑡    
 
+> 点 \\(b_0^{(0)},b_0^{(1)},b_0^{(2)},b_0^{(3)}是曲线 b_0^{(0)},b_0^{(3)}\\)的控制点。    
+
+
+[30:18]局限性：一次只能针对一个\\(t\\)值计算。    
+
+
 # De Casteljau algorithm    
 
 • Repeated convex combination of control points   

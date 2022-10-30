@@ -39,7 +39,7 @@ $$
 
 ![](../assets/瘾曲7.png)    
 
-
+> 当格子点足够密，曲线性质基本上符合格子性质。 
 
 # 歧义情况   
 
@@ -51,7 +51,7 @@ $$
 resolution, this cannot occur.     
     - Problem: Inconsistent application can lead to holes in the surface (non‐manifold solutions)        
 
-
+> 解决方法：1.加密    2.判断函数导数
 
 # Adaptive Grids  
 

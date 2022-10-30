@@ -14,6 +14,10 @@ $$
     - option 2. – normalize weights in each intermediate result   
       - the second option is numerically more stable     
 
+> 非均匀,使用了非均匀的参数化，参数间距不一致，甚至有可能重合。    
+[24:18] 变差缩减：曲线与直线相交，其交点数不多于控制顶点的凸包与直线的交点数。     
+此性质用于曲线与直线求交。
+
 # NURBS曲线
 * 影响NURBS曲线建模的因素   
 • 控制顶点：用户交互的手段   

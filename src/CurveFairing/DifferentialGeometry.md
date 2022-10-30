@@ -25,3 +25,6 @@
  - Measure curve bending   
 
 ![](../assets/光顺4.png)    
+
+> 曲率：由线上一点的二阶密切圆半径的倒数，即\\(k=\frac{1}{R} \\)    
+曲率是与参数化无关的量     

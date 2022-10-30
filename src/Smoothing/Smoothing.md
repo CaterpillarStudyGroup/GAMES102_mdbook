@@ -16,6 +16,9 @@
 • Mesh improvement     
 • Surface fairing (*)    
 
+> 这几个词都是去噪的不同表达。    
+在连续几何中， fairing 代表光顺，与 smoothing 不同。   
+在离散几何中， fairing 与 smoothing 通用。     
 
 # What is noise?   
 
@@ -88,6 +91,11 @@
 
  ![](../assets/去躁6.png)    
 
+> \\(V是带噪声曲面上的点，V_0\\)是无噪声曲面上的点。    
+假设：   
+① \\(V是V_0\\)沿几方向上做了一点偏移。    
+② \\(n是V_0\\)的法方向。   
+③ 当\\(V接近V_0\\)时， \\(V 的法国方向接近 n\\)    
 
 # Filtering   
 
@@ -117,6 +125,10 @@ $$
 
 ![](../assets/去躁9.png)    
 
+> Gauss 函数的好处：   
+① 概率密度函数，积分和为1.     
+② 具有对称性    
+③ 与距离相关    
 
 # Discrete Filtering (mask)    
 
@@ -133,6 +145,7 @@ $$
 
 ![](../assets/去躁11.png)    
 
+> [26:48] Laplace 光顺===极小化所有边长平方和     
 
 # 滤波对象    
 
@@ -160,6 +173,9 @@ $$
 
 ![](../assets/去躁13.png)   
 
+> 存在的问题：    
+① 过平滑   
+② 不同密度收缩速度不同  
 
 # Laplacian Smoothing    
 
@@ -227,11 +243,16 @@ $$
     - Slow    
     - No stoping criteria    
 
+> 图1：原图    
+图2：普通 Laplace    
+图3：Laplace + 扩张。    
+图3去噪同时保留一些特征。 
 
 # 1.2 Mean Curvature Flow    
 
 ![](../assets/去躁17.png)   
 
+> 引入平均曲率、考虑了几何特征。    
 
 # Mean Curvature Filtering   
 
@@ -270,7 +291,16 @@ $$
 
 ![](../assets/去躁23.png)   
 
-
+> Bilateral:双边     
+U 和 P 代表U点与P点的位置     
+I(U) 和I(P)代表U和P点的值    
+分子：U 点对 P 点的影响表现I(P)前面的系数上。     
+系数考虑了两方面因素：     
+(1) U 与 P 的距离，反映了U 对 P 的影响力。    
+(2) I(U) 与I(P)的距离，反映了I(P)的特征性。    
+二者都是距离越大权重越小。     
+分母，归一化     
+除了U和I(U)，还可以根据实际情况加入更多的特征考量。    
 
 # Bilateral filtering of meshes   
 
@@ -281,6 +311,9 @@ values in images
 
 ![](../assets/去躁24.png)   
 
+> 灰线：理想曲面，实际位置未知。    
+黄点：曲面上的点，由于带噪声呈上下分布。     
+蓝点：黄点中取的任意一点作为例子。
 
 # Bilateral filtering of meshes   
 
@@ -317,7 +350,14 @@ estimator to the smooth surface
 
 ![](../assets/去躁27.png)   
 
-
+> 对蓝点做以下估计：    
+取P点邻域内的点，做PCA，最大特征值对应的向量为 P点的法向。    
+所有点向切平面上投影，得到距离1。    
+所有点向法线上投影，得到距离2。     
+由于同时考虑了距离1和距离2，因此称双边。   
+[>] 前面提到的， feature 和 noise 很难区分。     
+比如例子中的棱角和噪声一样，具有高频、曲率大的特点。    
+但特征有连续性，在大的区间里表现出规律，而噪声不具备这个特点，可以据此区分。     
 
 # Computing the plane    
 
@@ -363,7 +403,8 @@ $$
 \Rightarrow (I-\lambda L)M_{n+1}=M_n
 $$
 
-
+> 认为噪声是沿着法向的偏移，本身就是一种猜测、为什么说用真实曲面的法向会更好呢？[?]     
+隐通过求解线性稀疏方程组得到结果（类似全局法）    
 
 # 2. Normal Filtering    
 
@@ -402,7 +443,8 @@ $$
 
 See more in [Zhang et al. Guided Mesh Normal Filtering. PG 2015.]
 
-
+> 法向是一阶微分量，可以通过积分求出顶点。    
+离散情况下，积分过程变成了线性方程组，方程依据是法向与边垂直。  
 
 # 3. Global Smoothing   
 
@@ -415,7 +457,7 @@ Liu et al. Non‐Iterative Approach for Global Mesh  Optimization. CAD 2007.
 
 ![](../assets/去躁32.png)   
 
-
+> E(s')，第一项：光滑，第二项：数据保持，关键是如何度量光滑。  
 
 # Smoothing Problem   
 
@@ -586,6 +628,7 @@ $$
 
 ![](../assets/去躁48.png)   
 
+> 什么是质量好？(1) 三角形接近正三角形     
 
 # Mesh Improvement   
 
@@ -610,6 +653,8 @@ $$
 • Wang et al. Mesh Denoising via Cascaded Normal Regression. Siggraph 2016.    
 * 很多很多工作…    
 
+> 点云：把点云去噪转化为前面学过的问题。例如取空间上的邻居点作为它的邻域。    
+深度相机的数据质量很差，尤其是深度这一维度。    
 
 # 其他数据的去噪   
 

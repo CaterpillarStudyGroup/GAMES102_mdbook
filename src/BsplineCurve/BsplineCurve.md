@@ -14,6 +14,17 @@ $$
 
 
 > **全局性：牵一发而动全身，不利于设计**  
+> 每个基函数在整平[0，1]作用域上都有值，因此具有全局性。
+任意一个点的移动都会影响整条曲线。    
+
+[?] 不是可以通过分段来解决吗？   
+答：可以，但要分成多个函数来表达。B样条用统一的函数表达分段曲线。
+
+[49:40 图 PDT上没有了]     
+1. 参数化，建立 \\(d_i 与t_i\\)之间的关系。    
+2. 构造基函数，第 i 个基函数是以\\(t_i\\)为中心的局部函数。    
+3. 每个基函数是同一个基函数的平移或伸缩得到。
+
 
 **原因：基函数是全局的**  
 
@@ -98,7 +109,7 @@ with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i\notin \\){ \\(0\dots n\\)}
 
 Courtesy of Renjie Chen   
 
-
+> 图中是均匀参数化的例子。 i 是参数， i 的取值构成节点向量基函数通过结点向量来定义，每个基函数定义在几个特定的节点上。    
 
 # Repeated linear interpolation  
 
@@ -107,6 +118,8 @@ Courtesy of Renjie Chen
 
 ![](../assets/曲线7.png)  
 
+> 怎么构造基函数？   
+从O阶（水平直线）开始，使用t和(1-t)进行线性组合、即升阶每升一次阶，曲线会更光滑，跨度区间会多覆盖一个结点。    
 
 # Repeated linear interpolation   
 
@@ -125,7 +138,7 @@ Courtesy of Renjie Chen
 
 ![](../assets/曲线10.png)  
 
-
+> Uniform:使用均匀参数化     
 
 # B‐spline curves: general case   
 
@@ -149,7 +162,7 @@ $$
 
 for  \\(k>1\\), and \\(i=0,...,n\\)   
 
-
+> 此页公式定义在非均匀结点上。      
 
 # Example
 
@@ -168,6 +181,10 @@ N_{i,1}(t)=\frac{t-t_i}{t_{i+k-1}-t_i} N_{i,k-1}(t)+\frac{t_{i+k}-t}{t_{i+k}-t_{
 $$
 
 for\\( k>1,\\) and \\(i=0,...,n\\)
+
+> \\(N_{i, k}:K 代表阶数，i代表第i\\)个基函数。    
+\\(N_{1, 1}和 N_{2, 1}组合，得到 N_{1, 2}\\)    
+\\(N_{1, 2}和 N_{2, 2}组合，得到 N_{1, 3}\\)     
 
 
 # Example  
@@ -190,6 +207,9 @@ for\\( k>1,\\) and \\(i=0,...,n\\)
 
 * The interval \\([t_i,t_{i+k}]\\), is called support of \\(N_{i,k}\\)      
 
+> 1.1和1.2以说明了基函数的局部性     
+1.3说明权性和凸包性      
+2.说明光滑性     
 
 # B‐spline curves  
 
@@ -210,8 +230,7 @@ $$
 German‐American mathematician        
 University of Wisconsin‐Madison   
 
-
-
+> B样条本质是分段曲线、但通过 local basis funchion 的方法，有一个公式统一了所有分段曲线。    
 
 # Example    
 
@@ -223,6 +242,7 @@ Support intervals of \\(𝑁_{i,k}\\)
 
 Curve defined in interval \\(t_3\le t\le t_6\\)    
 
+> 结点重合会导致连续性下降，每增加一重、连续性减一。可以以此方法控制曲线的连续性。     
 
 # B‐spline curves
 
@@ -247,6 +267,10 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 • Example:\\(k=4,n=5\\)
 
 ![](../assets/曲线15.png)  
+
+> 要使首未端点被插值，需要把首未端点设置为\\(K\\)重。把B-spline curve 的两个端点都设成\\(n-1\\)重，就会退化为 Bezier curve.      
+[1:10:41] Locality     
+在神经网络中把 acfivation 改为 local basis funchion. 这样，只需更新 N N 的部分参数。   
 
 
 # B‐spline curves   
@@ -327,6 +351,7 @@ Knot vector
 • wanted:     
 Curve point \\(𝒙(𝑡)\\)       of the B‐spline curve of the order 𝑘    
 
+> [?] 这个算法是要算什么？    
 
 # The de Boor algorithm    
 
@@ -368,3 +393,5 @@ with \\(a_i^j=\frac{t-t_i}{t_{i+k-j}-t_i} \\)
 * …   
 
 ![](../assets/曲线21.png)   
+
+> [?] 插值这一部分没听懂     
