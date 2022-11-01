@@ -73,6 +73,12 @@ different polygon counts
 • Each operation introduces error   
 • Find and apply operation which introduces the least error    
 
+> 面片简化：[51:47]     
+1. 顶点删除 [图54:51]
+2. 边收缩 [图56:46]
+聚类法：[57:46]    
+画格子，格子内的三角形收缩、点合并会产生非流型和悬挂边     
+
 
 # simplification Operations (1)    
 
@@ -153,6 +159,9 @@ different polygon counts
 
 ![](../assets/简化12.png)     
 
+> 误差度量[58:59]，全局优于局部    
+局部度量方法：    
+点越尖锐越重要。(Laplace,一圈夹角等）   
 
 # 1. Local Simplification Strategies    
 
@@ -176,6 +185,9 @@ different polygon counts
 • Discrete curvature    
 
 ![](../assets/简化13.png)     
+
+> QEM,二次误差度量    
+用二次曲面拟合这条边。拟合得到系数矩阵，用矩阵性质度量扭曲。    
 
 
 # Implementation Details    
@@ -334,6 +346,7 @@ If no solution - select the edge midpoint
 • Stretch in least‐curved directions    
 
 
+> 简化后的折叠、翻转现象     
 
 # Selecting Valid Pairs for Contraction    
 
@@ -431,6 +444,7 @@ $$
 Resampling    
 
 
+
 # 2.1 Mesh Re‐Tiling [Turk 92]    
 
 
@@ -438,6 +452,8 @@ Resampling
 meshing by introducing new “uniformly spaced ” vertices   
 
 ![](../assets/简化26.png)    
+
+> Re-Tilling：重采样
 
 # Re‐Tiling Example    
 
@@ -458,6 +474,11 @@ $$
 
 ![](../assets/简化28.png)    
 
+> 全局简化策略
+把顶点看作曲面上流动的粒子，模拟粒子之间的作用力不能保持 Appearance 特征     
+光顺能量    
+minimize Laplacian 能量 [1:06:02图]  
+
 # Basic Topological Operations    
 
 • Edge Collapse   
@@ -472,6 +493,8 @@ $$
 
 ![](../assets/简化30.png)    
 
+> \\(M = M_o + M_i\\) (中间的操作)     
+记录简化过程     
 
 # Multiresolution Representation    
 
@@ -501,6 +524,7 @@ Multiresolution Representation of \\(M\\) = Base mesh \\(M^0\\)  +  A sequence o
 
 **Concern**: **transitions may** “**pop**”       
 
+> 提前生成好不同 level 的模型，根据实际情况决定用哪个可能存在跳变。    
 
 # 2. Continuous LOD    
 
@@ -509,7 +533,8 @@ Multiresolution Representation of \\(M\\) = Base mesh \\(M^0\\)  +  A sequence o
 Concern: transitions may “pop”   
 \\(\to\\) would like smooth LOD   
 
-
+> 记录中间操作，可以只增加或减少一个边     
+消耗计算资源，因此不常用      
 
 # Mesh Simplification Procedure   
 

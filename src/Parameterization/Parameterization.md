@@ -289,7 +289,8 @@ W is symmetric: \\(w_{ij}=w_{ji}\\)
 
 ![](../assets/参数23.png)     
 
-
+> 基于角度的展开，把角度当作变量，求解参数化的网格 
+   
 # Constrained Minimization    
 
 
@@ -361,6 +362,7 @@ $$
 • Have non‐linear system of equations    
 • Use Newton method to solve    
 
+> 用 Lagrange 算法解带约束的优化问题   
 
 # Examples    
 
@@ -394,7 +396,7 @@ $$
 
 > [Fu and Liu. Computing Inversion‐Free Mappings by Simplex Assembly. Siggraph Asia 2016]    
 
-
+> 优化三角形变换的系数     
 
 # Methods of Mesh arameterization    
 
@@ -465,7 +467,7 @@ det\begin{pmatrix}(U_2+V_2t)-(U_1+V_1t)
 \end{pmatrix}=0
 $$
 
-![](../assets/参数31.png)     
+![](../assets/参数31.png)  
 
 &#x2705; Use a locally supported barrier function to 
 prevent the boundary collision    
@@ -480,6 +482,10 @@ $$
 
 > Smith and Schaefer. Bijective Parameterization with Free Boundaries. Siggraph 2015.    
 
+> 以 Tuttle 算法为基础，调整边界点位置，减少扭曲  
+度量扭曲的方法[22:43]（最后一个最常用）    
+局限性：非线性、非凸问题、且参数多    
+因此优化效率低  
 
 # Accelerated Quadratic Proxy (AQP)   
 
@@ -490,6 +496,12 @@ $$
 ![](../assets/参数33.png)     
 
 > Kovalsky et al. Accelerated Quadratic Proxy for eometric Optimization. Siggraph 2016.     
+
+> 利用离散 Laplacian 作为 Hessian 的近似     
+SLIM: \\(\dots ，加机 \dots \\)     
+ANVF:\\(\dots 向量场算子\dots\\)      
+CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快   
+各种方法都是找更好的H近似，使得优化过程更快更稳定。    
 
 # Scalable Locally Injective Mappings (SLIM)
 
@@ -559,6 +571,12 @@ $$
 
 > [Ligang Liu et al.  Progressive Parameterizations. Siggraph 2018]     
 
+> 问题描述：   
+[图28:52]了脖子为边界.头挤在中间，中间扭曲很大⇒能量大⇒下降慢     
+解决方法：    
+[图29:29] 不优化整体，而是中间那区域     
+*个人感觉不 make sense *    
+[图30:35]
 
 # Progressive Paramerization   
 
@@ -581,6 +599,8 @@ $$
 
 ![](../assets/参数42.png)     
 
+> [图32:40] 不允许全局发生碰撞    
+这是一个全局问题，因此计算量大   
 
 # Quasi‐Newton (QN) [Smith et al. 2015]    
 
@@ -607,6 +627,8 @@ Iterations: 24
 
 ![](../assets/参数45.png)     
 
+> 在形状外面包一层更大的网格    
+在更大网格上用传统方法处理  
 
 # Comparisons    
 
@@ -621,6 +643,7 @@ Hilbert-curve-shaped developable surface
 
 # 封闭曲面的割缝问题    
 
+> 封闭曲面要展开必须先割缝     
 
 # 割缝问题：封闭曲面的参数化    
 
@@ -650,7 +673,10 @@ Hilbert-curve-shaped developable surface
 
 ![](../assets/参数50.png)     
 
-
+> MST 算法1:     
+找最大扭曲→找边界最短路径→路径对应割缝      
+MST 算法 2：
+把曲面映射到球面，找最大扭曲的点，连起来   
 
 # Simultaneous optimization     
 
@@ -661,7 +687,15 @@ Hilbert-curve-shaped developable surface
 
 ![](../assets/参数52.png)     
 
-
+> OptCuts 算法     
+通过割缝减少中心扭曲    
+AutoCuts     
+可以实时割开或合并    
+VSC    
+扭曲小 && 割缝总长度小    
+Cut Generation Problem    
+输入：桔子皮曲面、2D形状    
+输出：割缝、展开后接近2D形状。   
 
 # 纹理地图：多片参数化    
 Texture Atlas     
@@ -670,6 +704,11 @@ Texture Atlas
 # Multi‐charts Parameterization    
 
 ![](../assets/参数53.png)     
+
+> 多片参数化 [43:48]     
+单片参䩥扭曲大\\(\Rightarrow\\) 切成小片，分别参数化、再拼起来。    
+拼起来时尽量少的面积浪费[44:54]    
+集装箱问题    
 
 # Texture Atlas    
 
@@ -719,6 +758,7 @@ Minimizing **Packing Efficiency** (**PE**)
 
 ![](../assets/参数58.png)     
 
+> Boater:割开与填补    
 
 # Bounded Packing Efficiency   
 
@@ -727,7 +767,7 @@ Minimizing **Packing Efficiency** (**PE**)
 
 > [Liu et al. Atlas Refinement with Bounded Packing Efficiency. Siggraph 2019.]    
 
-
+> 把网格参数化为box align.装箱之后再对边界优化     
 
 # PE Bounds    
 
