@@ -13,7 +13,9 @@
 
 > 光顺是一种微观的性质，很难描述，且没有明确的数学定义。   
 
-# 曲线的曲率图    
+# 什么是光顺曲线？
+
+## 从曲线的曲率图的直观理解    
 
 ![](../assets/光顺5.png)    
 
@@ -24,7 +26,8 @@
 
 > 船的表面光顺可以减小水的阻力。    
 
-# Fairing Design is Important!     
+**Fairing Design is Important!**    
+
 • Shoe sole    
 • Cam profile    
 • Ship hull    
@@ -34,9 +37,9 @@
 
 ![](../assets/光顺7.png)    
 
+# 光顺的定义
 
-
-# Why Difficult?     
+## 为什么光顺难以定义    
 
 * A subjective concept     
 • The subtle bumps, wiggles, and inflection points of a curve      
@@ -47,10 +50,7 @@
 • No objective measures    
 • Cannot do it mathematically    
 
-![](../assets/光顺8.png)    
-
-
-# Some ‘Definitions’ of Fairness     
+## 光顺的参考定义     
 
 * [Su and Liu 1978]       
 • A curve is fair if it is \\(C^2\\) continuous and its curvature plot is free of any unnecessary variation, i.e., the distribution of curvature must be as uniform as possible.     
@@ -68,7 +68,7 @@ $$
 
 > 最后一个用整条曲线的能量来定义，是全局面定义法。    
 
-# Observations of Fairness     
+## Observations of Fairness     
 
 * Neither a global problem nor a local problem, but a  large local problem      
 • Not an energy minimization problem    
@@ -80,7 +80,7 @@ $$
 > 不能用\\(\int K^2=MIN\\) 来定义，有可能k不大，但频繁挠
 动，仍不算光顺。   
 
-# Example 1    
+### Example 1    
 
 $$
 y=sin x, x\in[0,6\pi]
@@ -96,7 +96,7 @@ viewing from point O
 (One vibration: from convex to concave or from concave to convex)     
 
 
-# Example 2   
+### Example 2   
 
 $$
 y=\frac{1+\delta }{0} x^2+\sin x,x\in [0,6\pi ],\delta >0
@@ -115,7 +115,7 @@ $$
 
 > 曲线上一直在递增，但\\(y"\\)有太多振荡。    
 
-# Example 3    
+### Example 3    
 
 ![](../assets/光顺11.png)  
 
@@ -128,7 +128,7 @@ $$
 
 > 不满足\\(C^2\\)连续，但光顺，因此\\(C^2\\)不是必须的。    
 
-# 曲线的光顺的“新定义”     
+## 曲线的光顺的“新定义”     
 
 • 一条曲线是光顺的，如果     
 （1）它是\\(C^{l+1}  ( l > 0 )\\)连续的；    

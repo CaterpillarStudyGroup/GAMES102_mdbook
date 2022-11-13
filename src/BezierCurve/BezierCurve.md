@@ -32,7 +32,7 @@ $$
 ![](../assets/B曲-11.png) 
 
 
-# 3D空间的Bezier曲线（单参数）   
+# 例子：3D空间的Bezier曲线（单参数）   
 
 $$
 • f(t)=\sum_{i=1}^{n} B^n_ip_i,t\in [0,1]

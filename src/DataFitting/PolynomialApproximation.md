@@ -6,9 +6,8 @@
 • 更紧凑的表达  
 • 计算简单、更稳定  
 
-# 最小二乘逼近
-
-* 逼近问题   
+# 逼近问题
+   
 － 给定一组线性无关的连续函数集合\\(B\\)={\\(b_1, \ldots b_n\\)}和一组结点{\\((x_1, y_1)\\), ...,\\((x_m, y_m)\\)}, 其中\\(m>n\\)    
 － 在\\(B\\)张成空间中哪个函数\\(f\in\operatorname{span}(B)\\)对结点逼近最好?    
 － 示例: 给定一组点,找到最佳逼近的线性函数    
@@ -24,6 +23,9 @@
 $$
 \underset{f \in \operatorname{span}(B)}{\operatorname{argmin}} \sum_{j=1}^{m}\left(f\left(x_{j}\right)-y_{j}\right)^{2}
 $$
+
+> 公试1是关于系数\\((\lambda _1,\lambda _2,\dots ,\lambda _n,)\\)的函数，直接求极小值的闭式解。    
+
 
 $$
 \sum_{j=1}^{m}\left(f\left(x_{j}\right)-y_{j}\right)^{2}=\sum_{j=1}^{m}\left(\sum_{i=1}^{n} \lambda_{i} b_{i}\left(x_{j}\right)-y_{j}\right)^{2}
@@ -51,7 +53,6 @@ b_{1}\left(x_{m}\right) & \ldots & b_{n}\left(x_{m}\right)
 \end{array}\right)
 $$
 
-> 公试1是关于系数\\((\lambda _1,\lambda _2,\dots ,\lambda _n,)\\)的函数，直接求极小值的闭式解。    
 
 # 求解
 

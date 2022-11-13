@@ -14,7 +14,7 @@
 [?]  \\(y"\\)不就是\\(K\\)吗？为什么需要这个前提条件？     
 工业界做高精设备时才需要考虑光顺。   
 
-# 曲线的光顺方法    
+# 光顺方法的基本思想    
 
 • \\(C^1\\) continuous     
 • Decrease jump amplitude of curvature      
@@ -22,13 +22,9 @@
 • Decrease the second vibration number \\(S\\)     
 
 
-# Steps    
+# 具体步骤    
 
-• Coarse fairing     
-• Basic fairing      
-• Fine fairing      
-
-# Step 1. 初光顺     
+## Step 1. 初光顺 Coarse fairing    
 * 定界法    
 • Adjust the positions of control points    
 • Decrease the jump amplitude of curvature     
@@ -36,7 +32,7 @@
 * Physical approach    
 
 
-# Step 2. 基本光顺    
+## Step 2. 基本光顺 Basic fairing   
 
 * 卡尺法     
 • Adjust the positions of control points    
@@ -45,38 +41,13 @@
 * Geometric approach      
 
 
-# Step 3. 精光顺    
+## Step 3. 精光顺 Fine fairing   
 
 * 回弹法     
 • Check the signs of shear force at control points     
 • Adjust the change numbers of shear force     
 • Decrease the second vibration number \\(S\\)      
 * Physical approach     
-
-
-# Example 1    
-
-![](../assets/光顺14.png)   
-
-
-# Example 2    
-
-![](../assets/光顺15.png)  
-
-# Example 3    
-
-![](../assets/光顺16.png)  
-
-
-# 光顺结果   
-
-![](../assets/光顺17.png)  
-
-
-# 光顺结果    
-
-![](../assets/光顺18.png)  
-
 
 # B样条曲线的光顺方法    
 
@@ -99,30 +70,3 @@ $$
 
 
 **王士玮等，基于稀疏模型的曲线光顺算法，计算机辅助设计与图形学学报，2016.**      
-
-
-# 光顺结果及比较    
-
-![](../assets/光顺19.png)  
-
-
-# 光顺结果及比较    
-
-![](../assets/光顺20.png)  
-
-
-# 曲面的光顺   
-
-* 无严格定义    
-• 工业界：Class A曲面（Dassault CATIA ）  
-
-![](../assets/光顺21.png)  
-
-![](../assets/光顺22.png)  
-
-• 方法1：三向曲线光顺     
-• 方法2：能量法     
-
-# 光顺曲面    
-
-![](../assets/光顺23.png)  

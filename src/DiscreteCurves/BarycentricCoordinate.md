@@ -1,7 +1,7 @@
 # 重心坐标     
 
-
-# Free‐form Deformation (FFD)    
+# 需求
+## Free‐form Deformation (FFD)    
 [Sederberg et al. 86]
 
 
@@ -17,44 +17,37 @@
 通过控制 Bazier 顶点来控制目标面片。    
 Bezier 顶点称为 proxy （代理）  
 
-# 图像变形    
-
-• 交互：boundary editing    
-
-![](../assets/离散15.png)    
-
 > 使 Proxy 不一定是 Bezier 点，也可以是边界上的点，主要是找到目标上任意一个点与 Proxy 点之间的关系。    
 
+## 图像变形    
 
-# 图像变形     
+• 交互：boundary editing    
 
 ![](../assets/离散16.png)    
 
 **问题**：给定一个包含物体的边界多边形，改变边界时，如何计算物体的变形？      
 即，内部点与边界点（**控制顶点**）之间的关联关系？     
 
-![](../assets/离散17.png)    
+# 几何图形的重心坐标
 
-
-
-# 三角形的重心坐标     
+## 三角形的重心坐标     
 
 ![](../assets/离散18.png)    
 
 > 简单例子，三角形的顶点是 Proxy 点. P是三角形内任意一点，用某种方法来描述P与 Proxy 点之间的关系。    
 
-# 四边形？   
+## 四边形？   
 
 ![](../assets/离散19.png)    
 
-# 多边形的重心坐标？   
+## 多边形的重心坐标？   
 
 ![](../assets/离散20.png)    
 
 > 四边及以上多边形不能用三角形的方法求重心，坐标，因为系数解不唯一。     
 因此需要一种对所有多边形适用的更统一的重心坐标定义方式。      
 
-# Warping with BC      
+## Warping with BC      
 
 ![](../assets/离散21.png)    
 
@@ -98,17 +91,16 @@ Bezier 顶点称为 proxy （代理）
 * Example: A 2D triangle     
 • Unique (barycentric):     
 
-  $$
-  b_1=\frac{A_{xv_2v_3}}{A_{v_1v_2v_3}} 
-  $$
+$$
+b_1=\frac{A_{xv_2v_3}}{A_{v_1v_2v_3}} 
+$$
+
 • Can be extended to any N‐D simplex        
 * A general polytope     
 • Non‐unique      
 • The triangle‐trick can not be applied.       
 
 ![](../assets/离散24.png)    
-
-
 
 
 # BC of 2D Polygons   
@@ -155,28 +147,24 @@ $$
 
 ![](../assets/离散42.png)    
 
+# 重心坐标的应用
 
-
-
-
-
-
-# • 1.imge warping     
+## 1.imge warping     
 
 ![](../assets/离散26.png)    
 
 
-# • 2. shading     
+## 2. shading     
 
 ![](../assets/离散27.png)    
 
 
-# 3. Transfinite Interpolation: Interpolating height function to model a surface    
+## 3. Transfinite Interpolation: Interpolating height function to model a surface    
 
 ![](../assets/离散28.png)    
 
 
-# • allow directly updating on interpolation when resampled.     
+## 4. allow directly updating on interpolation when resampled.     
 
 ![](../assets/离散29-1.png)     
 

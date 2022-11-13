@@ -1,238 +1,56 @@
-
-# 离散微分几何    
-
-
-# 回顾：三角网格曲面   
-
-
-![](../assets/微分1-1.png)   
-
-
-
-# 回顾：三角网格曲面    
-
-* 观点 1：曲面的离散逼近    
-• 采样：顶点为从曲面上的采样点     
-• 构网：每个三角面为线性平面     
-• 本质：分片线性逼近    
-
-![](../assets/微分2.png)   
-
-* 观点 2：平面图的嵌入     
-• 平面图    
-• 图的顶点提升 (lifting) 至三维空间   
-• 本质：二维流形    
-
-![](../assets/微分3.png)   
-
-
-# 回顾：数据结构—图 (graph)    
-
-
-* G={V, E, F}      
-• V: 顶点集合；E: 边集合；F: 三角形集合     
-• 有其中两个集合可推出另一个集合     
-
-![](../assets/微分4.png)   
-
-* 多边形网格均可转化为三角网格       
-
-![](../assets/微分5.png)   
-
-* 不考虑非流形结构    
-
-![](../assets/微分6.png)   
-
-
-# 三角网格编程初步    
-
-
-# 半边 (half‐edge) 数据结构    
-
-* 半边结构：以“边”为中心的数据结构    
-• 网格连接关系存储在边上，每条边表达为两条“半边”    
-• 目的：提高点线面的查询或增删改操作的效率    
-
-![](../assets/微分8.png)    
-
-<https://www.flipcode.com/archives/The_Half‐Edge_Data_Structure.shtml>    
-
-
-
-# 半边 (half‐edge) 数据结构      
-
-![](../assets/微分9.png)   
-
-<https://www.flipcode.com/archives/The_Half‐Edge_Data_Structure.shtml>   
-
-
-
-
-# 几何（网格）处理库    
-
-
-• CGAL: <http://www.cgal.org>    
-• Libigl: <https://github.com/libigl/libigl>    
-• MeshLab: <http://www.meshlab.net>    
-• OpenMesh: <https://www.openmesh.org>    
-• PCL (Point Cloud Library): <http://www.pointclouds.org>    
-• TriMesh: <http://graphics.stanford.edu/software/trimesh>    
-• DGtal: <https://dgtal.org>    
-
-• 本课程作业框架：Utopia (USTC自研）   
-
-
-<http://staff.ustc.edu.cn/~lgliu/Resources/CG/3D_modeling.htm>    
-
-
-# 曲线曲面的微分几何    
-
-# Curves    
-
-
-# Differential Geometry of a Curve    
-
-![](../assets/微分10.png)   
-
-# Differential Geometry of a Curve    
-
-Point p on the curve at \\(u_0\\)   
-
-![](../assets/微分11.png)   
-
-p = C \\((u_0)\\)     
-
-> \\(C_u\\) 与曲线相切，又记为T     
-\\(C_{uu} 与 N 同朝向(夹角<90^{\circ})\\)     
-B 称为从法矢，B与 \\(C_u\\) 叉乘得到 N.    
-[>] \\(N,C_{uu},C_u\\) 应该在同一平面内，且\\(C_{uu}位于C_u 和 N \\)之间。      
-T（切线），B(以法），N（法线）构成直角坐标系。    
-
-# Differential Geometry of a Curve    
-
-
-Tangent T to the curve at \\(u_0\\)    
-
-![](../assets/微分12.png)   
-
-\\(C_u=\frac{\partial C(u)}{\partial u} \\),\\(T=\frac{C_u}{||C_u||} \\)     
-
-
-# Differential Geometry of a Curve     
-
-Normal N and Binormal B to the curve at \\(u_0\\)    
-
-![](../assets/微分13.png)   
-
-
-# Differential Geometry of a Curve    
-
-Curvature κ at \\(u_0\\) and the radius ρ osculating circle   
-
-![](../assets/微分14.png)   
-
-
-# Curves    
-
-![](../assets/微分15.png)   
-
-# Curve Curvature    
-
-* Curvature is **independent** of parameterization     
-• \\(C(t), C(t+5), C(2 t)\\) have same curvature (at corresponding locations)    
-
-* Corresponds to radius of osculating circle \\(R=1/k\\)    
-
-* Measure curve bending    
-
-![](../assets/微分16.png)   
-
-
-# Surfaces   
+# 曲面的微分几何    
 
 # Differential Geometry of a Surface    
 
-![](../assets/微分17.png)   
+![](../assets/微分25.png)  
+
+## Point p
+
+Point p on the surface at \\((u_0,v_0)\\)     
 
 > \\(S_u 和 S_v\\) 张成一个平面，称为切平面。     
 N 所在平面与曲面相交，得到平面曲线，有对应的曲率空间曲面的切线和曲率都是基于特定方向的。    
 
-
-# Differential Geometry of a Surface    
-
-Point p on the surface at \\((u_0,v_0)\\)     
-
-![](../assets/微分18.png)   
-
-
-# Differential Geometry of a Surface     
+## Tangent \\(S_u\\)
 
 Tangent \\(S_u\\) in the u direction      
 
 \\(S_u=\frac{\partial S(u,v)}{\partial u} \\)     
 
 S(u,v)
-![](../assets/微分19.png)   
 
 
-# Differential Geometry of a Surface     
-
+## Tangent \\(S_v\\)
 
 Tangent \\(S_v\\) in the v direction     
 
 \\(S_v=\frac{\partial S(u,v)}{\partial v} \\)     
 
-![](../assets/微分20.png)  
-
-
-
-# Differential Geometry of a Surface    
-
-
-Plane of tangents T    
+## Plane of tangents T    
 
 \\(T=uS_u+vS_v\\)     
 
-![](../assets/微分21.png)  
+## Normal N    
 
-# Differential Geometry of a Surface    
-
-
-Normal N    
 \\(N=\frac{S_u\times S_v}{||S_u\times S_v||} \\)    
 
-![](../assets/微分22.png)  
+## Curvature
 
-
-# Differential Geometry of a Surface    
-
-
-Normal section   
-
-![](../assets/微分23.png)  
-
-
-# Differential Geometry of a Surface    
-
-Curvature
-
-![](../assets/微分24.png)  
-
-# 方向曲率：曲率是随着方向变化的    
-
-Curvature
-
-![](../assets/微分25.png)  
+方向曲率：曲率是随着方向变化的    
 
 
 # 曲面的曲率   
 
 
-* 主曲率    
+## 主曲率 Principal Directions   
 • 两个方向（正交）曲率：最大曲率\\(𝜅_1\\)和最小曲率\\(𝜅_2\\)     
 * 欧拉公式     
 • 其他方向曲率\\(k=k_1\cos ^2\theta +k_2\sin ^2\theta \\)     
-* 高斯曲率     
+
+![](../assets/微分28.png)  
+![](../assets/微分29.png)
+
+## 高斯曲率     
 • \\(k=k_1k_2\\)    
 • 等距变换不变量     
 • 处处高斯曲率为0的曲面：可展曲面     
@@ -240,7 +58,7 @@ Curvature
 
 ![](../assets/微分26.png)  
 
-* 平均曲率    
+## 平均曲率    
 • \\(k=\frac{k_1+k_2}{2} \\)    
 • 处处平均曲率为0的曲面：极小曲面      
 
@@ -250,16 +68,6 @@ Curvature
 等距变换：曲面发生变形，但曲面上任意两点间距离不变。   
 切线面：任意空间曲线的所有切线构成的面。     
 微分几何研究曲面无穷小邻域上的微分属性（导数、曲率）    
-
-# Principal Directions    
-
-![](../assets/微分28.png)  
-
-
-# Surface Curvature    
-
-![](../assets/微分29.png)  
-
 
 # 离散微分几何    
 

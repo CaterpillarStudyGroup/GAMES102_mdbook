@@ -38,9 +38,7 @@ $$
 
 **有无统一的表达方式？**
 
-
-
-# 思考：样条曲线的统一表达  
+## 思考：样条曲线的统一表达  
 
 
 * 形式类比：每个控制顶点用一个基函数进行组合   
@@ -57,7 +55,7 @@ $$
 * 如何构造？   
 
 
-# B样条的产生  
+## B样条的产生  
 
 * Early use of splines on computers for data interpolation     
 • Ferguson at Boeing, 1963    
@@ -68,7 +66,7 @@ $$
 * Free form curve design    
 • Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves   
 
-# 启发： 
+## 启发： 
 
 * Bernstein基函数的递推公式：  
 
@@ -117,21 +115,11 @@ Courtesy of Renjie Chen
 • Another way to increase smoothness:    
 
 ![](../assets/曲线7.png)  
+![](../assets/曲线8.png)  
+![](../assets/曲线9.png)  
 
 > 怎么构造基函数？   
 从O阶（水平直线）开始，使用t和(1-t)进行线性组合、即升阶每升一次阶，曲线会更光滑，跨度区间会多覆盖一个结点。    
-
-# Repeated linear interpolation   
-
-• Another way to increase smoothness:  
-![](../assets/曲线8.png)  
-
-
-# Repeated linear interpolation   
-
-• Another way to increase smoothness    
-![](../assets/曲线9.png)  
-
 
 # De Boor Recursion: uniform case       
 • The **uniform** B‐spline basis of order 𝒌 (degree 𝒌-𝟏) is given as       
@@ -140,7 +128,7 @@ Courtesy of Renjie Chen
 
 > Uniform:使用均匀参数化     
 
-# B‐spline curves: general case   
+## B‐spline curves: general case   
 
 * Given: knot sequence \\(t_o < t_1 < \cdots < t_n < \cdots < t_{n+k}\\)
 \\((t_0,t_i,\cdots,t_{n=k})\\) is called knot vector)      
@@ -164,14 +152,13 @@ for  \\(k>1\\), and \\(i=0,...,n\\)
 
 > 此页公式定义在非均匀结点上。      
 
-# Example
+## Example 1
 
 ![](../assets/曲线11.png)    
 
 $$
 N_{i,1}(t)=\begin{cases}
  1,t_i\le t<t_{i+1}\\\\
-\\\\
 0,otherwise
 \end{cases}
 $$
@@ -186,12 +173,11 @@ for\\( k>1,\\) and \\(i=0,...,n\\)
 \\(N_{1, 1}和 N_{2, 1}组合，得到 N_{1, 2}\\)    
 \\(N_{1, 2}和 N_{2, 2}组合，得到 N_{1, 3}\\)     
 
-
-# Example  
+## Example  2
 
 ![](../assets/曲线12.png)  
 
-# Example  
+## Example  3
 
 ![](../assets/曲线13.png)  
 
@@ -246,13 +232,12 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 
 # B‐spline curves
 
+## B‐spline curves的性质
+
 * Multiple weighted knot vectors  
 • So far: \\(𝑇=(t_0,\dots,t_n,\dots,t_{n+k})\\) with \\(t_0< t_1< \dots< t_{n+k}\\)     
 • Now: also multiple knots allowed, i.e. with  \\(t_0\le t_1\le \dots\le t_{n+k}\\)   
 • The recursive definition of the B spline function \\(𝑁_{i,k}(i=0,\dots,n) \\) works nonetheless as long as no more than 𝑘 knots coincide    
-
-
-# B‐spline curves
 
 * Effect of multiple knots:   
 • set: \\(t_0=t_1=\dots=t_{k-1}\\)    
@@ -261,34 +246,28 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 \\(𝒅_0\\) and \\(𝒅_n\\) are interpolated      
 
 
-# B‐spline curves
+## B‐spline curves的例子
 
 
-• Example:\\(k=4,n=5\\)
-
-![](../assets/曲线15.png)  
-
-> 要使首未端点被插值，需要把首未端点设置为\\(K\\)重。把B-spline curve 的两个端点都设成\\(n-1\\)重，就会退化为 Bezier curve.      
-[1:10:41] Locality     
-在神经网络中把 acfivation 改为 local basis funchion. 这样，只需更新 N N 的部分参数。   
-
-
-# B‐spline curves   
+### Example:\\(k=4,n=5\\)
 
 • Example:\\(k=4,n=5\\)
 
 ![](../assets/曲线16.png)  
 
-# B‐spline curves  
 
-• Further example   
+> 要使首未端点被插值，需要把首未端点设置为\\(K\\)重。把B-spline curve 的两个端点都设成\\(n-1\\)重，就会退化为 Bezier curve.      
+[1:10:41] Locality     
+在神经网络中把 acfivation 改为 local basis funchion. 这样，只需更新 N N 的部分参数。   
+
+### Further example   
 
 ![](../assets/曲线17.png)  
 
 
-# B‐spline curves    
+## B‐spline curves的性质    
 
-* Interesting property:    
+### 性质1：Interesting property:    
 • B‐spline functions \\(𝑁_{i,k}(𝑖=0,…,𝑘-1)\\) of the order 𝑘 over the knot vector \\(𝑇=(t_0,t_1,...,t_{2k-1})\\)= 
 
 ![](../assets/曲线24-1.png)   
@@ -297,7 +276,7 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)    
 
 
-# B‐spline curves properties    
+### 性质2
 
   - Given:
 ![](../assets/曲线22-1.png )    
@@ -305,7 +284,7 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
   - Then, the following applies for the related B‐spline curve \\(x(t)\\):   
 
 
-# B‐spline curves properties    
+### 性质3    
 
 •\\(x(t_0)=d_0,x(t_{n+1})=d_n\\) (end point interpolation)    
 
@@ -314,7 +293,7 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 • \\(x(t)\\) consists of \\(n-k+2\\) polynomial curve segments of degree \\(k-1\\) (assuming no multiple inner knots)    
 
 
-# B‐spline curves properties   
+### 性质4
 
 • Multiple inner knots ⇒ reduction of continuity of\\(𝑥(𝑡)\\).    
 𝑙‐times inner knot \\((1\le 𝑙 < 𝑘)\\) means         
@@ -323,7 +302,7 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 • The insertion of new de Boor points does not change the polynomial degree of the curve segments        
 
 
-# B‐spline curves properties 
+### 性质5
 
 • Locality of B‐spline curves     
 ![](../assets/曲线19.png)   
@@ -339,6 +318,8 @@ Similar algorithm to the de Casteljau algorithm for Bezier curves; consists of a
 
 # The de Boor algorithm   
 
+## 算法背景
+
 • Given:     
 \\(𝒅_0,…,𝒅_n\\): de Boor points     
 
@@ -353,7 +334,7 @@ Curve point \\(𝒙(𝑡)\\)       of the B‐spline curve of the order�
 
 > [?] 这个算法是要算什么？    
 
-# The de Boor algorithm    
+## 算法过程    
 
 1. Search index with \\(t_r\le  t\le t_{r+1}\\)   
 2. for \\(i=r-k+1,\cdots ,r\\)

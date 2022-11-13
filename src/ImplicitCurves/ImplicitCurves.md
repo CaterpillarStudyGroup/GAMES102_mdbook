@@ -89,12 +89,6 @@ $$
        - For signed functions, the normal is pointing outward      
        - For signed distance functions, this simplifies to 𝒏(𝒙)=𝛻𝑓(𝒙)     
 
-
-
-# Differential Properties   
-
-
-  - Some useful differential properties:
     - The mean curvature of the surface is proportional to the divergence of the unit normal:   
 \\(-2𝐻(𝒙)=𝛻⋅𝒏(𝒙)=\frac{𝜕}{𝜕𝑥} n_x(x)+\frac{𝜕}{𝜕y}ny(x)+\frac{𝜕}{𝜕z}n_z(x)\\)
 \\(=𝛻 ⋅\frac{𝛻𝑓(𝒙)}{||𝛻𝑓(𝒙)||} \\)

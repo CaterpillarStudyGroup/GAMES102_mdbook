@@ -41,7 +41,7 @@ $$
 
 > 当格子点足够密，曲线性质基本上符合格子性质。 
 
-# 歧义情况   
+## 歧义情况   
 
   - There is a (minor) technical problem remaining:     
     - The triangulation can be ambiguous    
