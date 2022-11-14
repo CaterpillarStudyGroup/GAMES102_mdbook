@@ -45,7 +45,7 @@
   - [隐式曲线](ImplicitCurves/ImplicitCurves.md)
   - [隐式曲线的绘制](ImplicitCurves/Draw.md)
   - [隐式曲线的拟合](ImplicitCurves/Fitting.md)
-- [NURBS曲面]
+- [NURBS曲面]()
   - [回顾](SplineSurfaces/Review.md)
   - [Trimmed Nurbs](SplineSurfaces/TrimmedNurbs.md)
   - [三角域上的Bezier曲面片](SplineSurfaces/SplineSurfaces.md)
