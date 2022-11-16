@@ -83,7 +83,7 @@
 - [采样与剖分]()
   - [采样](SamplingTessellation/Sampling.md)
   - [平面三角形网络](SamplingTessellation/Triangular.md)
-  - [](SamplingTessellation/SamplingTessellation.md)
+  - [采样与剖分](SamplingTessellation/SamplingTessellation.md)
 - [曲面参数化](Parameterization/Parameterization.md)
 - [曲面简化](Simplification/Simplification.md)
 - [几何映射](Mapping/Mapping.md)
