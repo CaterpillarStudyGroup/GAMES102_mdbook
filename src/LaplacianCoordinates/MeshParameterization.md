@@ -2,7 +2,7 @@
 曲面参数化   
 
 
-# 2D Manifold Surfaces in \\(R^3\\)   
+## 2D Manifold Surfaces in \\(R^3\\)   
 
 * A surface \\(S\\) in \\(R^3\\) has an **intrinsic dimension** of 2D   
 •a patch \\(\Omega\\) in \\(R^2\\) is embedded into \\(R^3\\) (each point in \\(\Omega\\) is assigned a position in \\(R^3\\))    
@@ -11,7 +11,7 @@
 
 
 
-# Parametric Surfaces    
+## Parametric Surfaces    
 
 ![](../assets/网格26.png)    
 
@@ -32,7 +32,7 @@ $$
 ![](../assets/网格27.png)    
 
 
-# 参数化：将曲面展开成平面    
+## 参数化：将曲面展开成平面    
 
 * 每个3D顶点(\\(x,y,z\\))对应一个2D点(\\(u,v\\))    
 • (\\(u,v\\)) 称为 (\\(x,y,z\\)) 的参数（2D流形曲面的本征维数）    
@@ -44,7 +44,7 @@ $$
 3. 边界不要自交。    
 参数化的係用：1. 贴纹理     
   
-# 但，球面是不可展的，必有形变    
+**但，球面是不可展的，必有形变**    
 
 ![](../assets/网格29.png)    
 
@@ -52,25 +52,6 @@ $$
 > 思考：   
 1.地图上的两点之间的距离是真实距离吗？哪些地方的距离可信度更高？    
 2.地图上看，哪些区域的面积被放大了？    
-
-
-# 传统横板地图    
-
-![](../assets/网格30.png)    
-
-
-沿经线切开    
-
-# 新型竖板地图    
-
-![](../assets/网格31.png)    
-   
-
-
-# 北京‐纽约的最短路径   
-
-![](../assets/网格33.png)    
-
 
 # 参数化是几何处理中的基本问题    
 
@@ -89,7 +70,7 @@ $$
 
 ![](../assets/网格34.png)    
 
-# 将边界映射到平面的凸多边形上    [Floater 97’]
+## 将边界映射到平面的凸多边形上    [Floater 97’]
 
 • Fixing the boundary of the mesh onto   
 
@@ -99,7 +80,7 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 <http://www.cs.jhu.edu/~misha/Fall09/Floater97.pdf>    
 
 
-# 方法：求解稀疏方程组   
+## 方法：求解稀疏方程组   
 
 ![](../assets/网格36.png)    
 
@@ -108,7 +89,7 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 > 还是之前 Global Laplacian Smoothing 求极小曲面的原理。    
 但是为什么要把边界点放右边呢？右边还是\\(\delta\\)吗？    
 
-# Tutte’s Method: Why it Works   
+## Tutte’s Method: Why it Works   
 
 
  - Theorem [**Tutte**,63], [Maxwel,1864] :     
@@ -136,8 +117,6 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 • Shape‐preserving parametrization    
 
 • 如何判断哪个参数化方法更好？    
-
-
 
 
 M. Floater. Parametrization and smooth approximation of surface triangulations. CAGD, 1997.      

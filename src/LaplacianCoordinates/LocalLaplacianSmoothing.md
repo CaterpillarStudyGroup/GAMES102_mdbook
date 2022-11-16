@@ -1,6 +1,6 @@
 # Local Laplacian Smoothing    
 
-# Differential Coordinates (Laplace Coordinates)    
+## Differential Coordinates (Laplace Coordinates)    
 
 
  - Represent local detail at each surface point    
@@ -14,7 +14,7 @@ $$
 $$    
 
 
-# Laplacian Smoothing Flow   
+## Laplacian Smoothing Flow   
 
 ![](../assets/网格11.png)    
 
@@ -22,7 +22,7 @@ $$
 Local Lapluàn Smoothing.    
 也可以看作是去噪、滤波。
 
-# Laplacian Smoothing    
+## Laplacian Smoothing    
 
 $$
 P^{new}=P^{old}+\lambda L(P^{old})
@@ -35,12 +35,12 @@ $$
     - Energy = sum of squared edge lengths in mesh
     - Parameter \\(\lambda >0\\) controls convergence "speed"    
 
-# Laplacian Smoothing – Example 
+Example :
 
 ![](../assets/网格12.png)    
 
 
-# Problem of Over‐smoothing   
+## Problem of Over‐smoothing   
 
 How to find appropriate \\(\lambda\\) and number of iterations?   
 
@@ -64,12 +64,12 @@ $$
 $$
 
 
-# Discrete Mean Curvature Flow   
+## Discrete Mean Curvature Flow   
 
 ![](../assets/网格15.png)    
 
  
-# Discrete Mean Curvature   
+## Discrete Mean Curvature   
 
 $$
 Hn=\frac{\nabla _PA}{2A} 
@@ -81,7 +81,7 @@ $$
 
 ![](../assets/网格16.png)    
 
-# Properties of Mean Curvature Flow   
+## Properties of Mean Curvature Flow   
 
 ![](../assets/网格17.png)    
 

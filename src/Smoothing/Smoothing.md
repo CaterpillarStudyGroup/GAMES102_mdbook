@@ -1,12 +1,6 @@
-
-# 网格曲面上的噪声   
-
-> Meshes obtained from real world objects are often noisy.    
-
-![](../assets/去躁1.png)    
-
-
 # Mesh (surface) Denoising    
+
+Meshes obtained from real world objects are often noisy.    
 
 ![](../assets/去躁2.png)    
 
@@ -20,7 +14,7 @@
 在连续几何中， fairing 代表光顺，与 smoothing 不同。   
 在离散几何中， fairing 与 smoothing 通用。     
 
-# What is noise?   
+## What is noise?   
 
 • High‐frequent tiny parts     
 • Small bumps on the surface     
@@ -34,7 +28,7 @@
 
 
 
-# Denoising / Smoothing [From Wiki]    
+## Denoising / Smoothing [From Wiki]    
 
 
  - In statistics and image processing, to smooth a data set is to create **an approximating function** that attempts to capture **important patterns** in the data, while leaving out noise or other fine‐scale structures/rapid phenomena.    
@@ -46,17 +40,18 @@
 
 # Smoothing / Denoising Problem    
 
+## 问题定义
+
  - Input:\\(M\\) （含噪声的网格曲面）     
  - Output:\\(M^0\\) （无噪声的网格曲面）     
  - Denoising model:  \\(M=M^0+\varepsilon \\)      
 
- - Challenges    
+## Challenges    
     - Both the ideal mesh \\(M^0\\) and the noise \\(𝜀\\) are unknown    
     - “ill‐posed” problem!    
 
 
-# Mesh smoothing    
-
+## 原理    
 
 * 假定：网格顶点的数据及连接关系不变    
 * 问题转化为：求顶点的新位置，使得“噪声”减少！    
@@ -69,6 +64,7 @@
 
 # Mesh Smoothing Problem     
 
+## 定义
 
 * Input: \\(M\\)（含噪声的网格曲面）     
 * Output:  \\(M^0\\)（无噪声的网格曲面）    
@@ -78,7 +74,7 @@
 • What is the displacement vector \\(n\\) for vertex \\(𝒗\\) ?   
 
 
-# Mesh Smoothing Model    
+## Mesh Smoothing Model    
 
  \\(\nu=\nu^0+\varepsilon n\\) (for all \\(\nu\in M\\))    
      
@@ -111,11 +107,11 @@
 • 将\\(𝑥(𝑡)\\)的局部信息进行混合平均    
 
 
-# Image Filtering   
+## Image Filtering   
 
 ![](../assets/去躁8.png)    
 
-# Gaussian Filtering    
+## Gaussian Filtering    
 
 • 使用Gauss函数作为权函数   
 
@@ -130,13 +126,12 @@ $$
 ② 具有对称性    
 ③ 与距离相关    
 
-# Discrete Filtering (mask)    
+## Discrete Filtering (mask)    
 
 ![](../assets/去躁10.png)    
 
 
-# Mesh Vertex Filtering: 
-# Laplacian operator / Umbrella Operator    
+## Mesh Vertex Filtering: Laplacian operator / Umbrella Operator    
 
 $$
 P_{new}\gets P_{old}+\lambda L(P_{old})
@@ -147,7 +142,7 @@ $$
 
 > [26:48] Laplace 光顺===极小化所有边长平方和     
 
-# 滤波对象    
+## 滤波对象    
 
 * Vertex   
 * Normal   

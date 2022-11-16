@@ -1,3 +1,20 @@
+# Laplacian Editing     
+[Sorkine et al. SGP 2004]
+
+
+# What’s are Details?    
+
+• Detail = surface – smooth (surface)    
+• Smoothing = averaging    
+
+![](../assets/网格62.png)    
+
+
+# What’s the Difference?    
+
+![](../assets/网格63.png)    
+
+
 # Laplacian Editing   
 
  - Local detail representation – enables **detail preservation** through various modeling tasks    
