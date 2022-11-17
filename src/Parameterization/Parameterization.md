@@ -1,8 +1,6 @@
+# 回顾
 
-
-
-
-# 回顾：\\(R^3\\)中的参数曲面   
+## \\(R^3\\)中的参数曲面   
 
 • 本质是二维的（二维流形）    
 • 曲面的每个点对应与参数域上的一个点（称为参数）   
@@ -22,7 +20,7 @@ $$
 ![](../assets/参数1.png)    
 
 
-# 逆问题：参数化(Parameterization)   
+## 逆问题：参数化(Parameterization)   
 
 • 问题：给定一张曲面，如何找其二维的参数定义域？   
 • 又称为：曲面展开(flattening)   
@@ -32,27 +30,14 @@ $$
 
 ![](../assets/参数2.png)    
 
-# 参数化的重要性   
+# 参数化
+
+## 参数化的重要性   
 
 • 例子：B样条曲面拟合   
 
 ![](../assets/参数3.png)    
 
-
-
-# 理想的参数化？    
-
-> A: One that preserves all the basic geometry length, angles, area, …      
-
-\\(\Rightarrow \\) **Isometric** parameterization    
-
-
-
-• But: only for **developable surfaces** i.e., there will always be distortions!    
-
-![](../assets/参数4.png)    
-
-\\(\Rightarrow \\) Try to keep the distortion as **small** as possible    
 
 # 参数化期望保持的几何性质   
 
@@ -60,33 +45,18 @@ $$
 • 保面积映射(area‐preserving)：authalic    
 • 等距映射(isometric)：conformal + authalic    
 
-![](../assets/参数5.png)    
-
-# Metric of Distortion    
-
-• \\(f\\) is approximated by **piecewise linear maps** between pairs of triangles    
-
 ![](../assets/参数6.png)    
 
-
-# Isometric Flattening    
-
-![](../assets/参数7.png)    
-
-> R 把3D三角形旋转为平面三角形。    
-\\(\phi \\)是两个平面三角形之间的变形。扭曲都来自\\(\phi \\)    
-
-\\(\phi 是奇况矩阵，因此2D是3×3.扭曲都来自L(2×2)\\)          
-
-
-# Isometric Flattening    
-
-![](../assets/参数8.png)    
+• \\(f\\) is approximated by **piecewise linear maps** between pairs of triangles    
 
 # Isometric Flattening    
 
 ![](../assets/参数9.png)    
 
+> R 把3D三角形旋转为平面三角形。    
+\\(\phi \\)是两个平面三角形之间的变形。扭曲都来自\\(\phi \\)    
+
+\\(\phi 是奇况矩阵，因此2D是3×3.扭曲都来自L(2×2)\\)          
 
 # Distortion Measure    
 
@@ -102,13 +72,7 @@ $$
 
 ![](../assets/参数10.png)    
 
-> \\(L 是 2×2， 故SVD, \sigma_{1}和\sigma_{2}\\)是奇异值。　    
-\\(\sigma_{1}=\sigma_{2}\\)： 保角， \\(\sigma_{1}\cdot \sigma_{2}=1\\)，保面积。   
-\\(\sigma_{1}=\sigma_{2}=1\\)， 等矩。　　
-
-# Distortion Measure    
-
-![](../assets/参数11.png)    
+> \\(L 是 2×2， 做SVD, \sigma_{1}和\sigma_{2}\\)是奇异值。　    
 
 • angle‐preserving (conformal) \\(\sigma _1=\sigma _2\\)   
 
@@ -118,50 +82,33 @@ $$
 
 
 
-# Desired Property: Low distortion    
+# Desired Property
+
+## Low distortion    
 
 ![](../assets/参数12.png)    
 
 High distortion    
 
 
-# Problem Local Injectivity   
-
-![](../assets/参数13.png)    
-
-> 翻转\\(\sigma_{1}\cdot \sigma_{2}<0 \\)     
-
-
-# Problem Local Injectivity     
+## Local Injectivity   
 
 ![](../assets/参数14.png)    
 
+> 翻转\\(\sigma_{1}\cdot \sigma_{2}<0 \\)     
 
-# Desired Property: Flip free triangles    
+## Flip free triangles    
 
 ![](../assets/参数15.png)    
 
 Flip/Foldover triangles    
 
 
-# Distortion     
+## Distortion (Flip/Foldover)    
 
 ![](../assets/参数16.png)    
-
-
-# Distortion    
-
 ![](../assets/参数17.png)    
-
-
-# Distortion    
-
 ![](../assets/参数18.png)    
-
-
-
-# Distortion (Flip/Foldover)    
-
 ![](../assets/参数19.png)    
 
 
@@ -179,21 +126,7 @@ Flip/Foldover triangles
 
 
 
-# Methods of Mesh arameterization    
-
-* **Tutte’s method and its variants**    
-• Tutte’s method [Tutte 1963; Floater 1997, 2003]   
-• Variants [Weber and Zorin 2014; Aigerman and Lipman 2015,  2016; Aigerman et al. 2017; Bright et al. 2017; ]    
-* Geometry‐based optimization methods   
-• Representation based methods [Sheffer and Sturler 2001;  Sheffer et al. 2005; Chien et al. 2016b; Fu and Liu 2016]   
-• ARAP [Sorkine and Alex 2007; Liu et al. 2008]   
-• Bounded distortion methods [Lipman 2012; Aigerman et al.  2014; Kovalsky et al. 2015]   
-* Foldover free guaranteed optimization methods    
-• [Smith and Schaefer 2015; Kovalsky et al. 2016; Jiang et al.  2017; Claici et al. 2017; Rabinovich et al. 2017; Shtengel et al.  2017; Zhu et al. 2018]       
-
-
-
-# Tutte’s embedding method   
+## Tutte’s embedding method   
 
 &#x2705; Map the triangulation within a **convex** boundary by solving a sparse linear system    
 
@@ -213,10 +146,6 @@ $$
 优点：简单、不翻转。    
 缺点：扭曲大。  
 
-# Tutte’s embedding method    
-
-
-&#x2705; Map the triangulation within a **convex** boundary by solving a sparse linear system    
 &#x2705; Foldover‐free result with a theoretical **guarantee**    
 
 
@@ -245,39 +174,18 @@ $$
 W is symmetric: \\(w_{ij}=w_{ji}\\)     
 
 
-
-# Tutte’s embedding method   
-
-
-&#x2705; Map the triangulation within a **convex** boundary by solving a linear system     
-&#x2705; Foldover‐free result with a theoretical **guarantee**     
 &#x2705; Usually **high distortion**    
 
 ![](../assets/参数21.png)    
 
 
-
-# Variants of Tutte’s embedding method
+### Variants of Tutte’s embedding method
 &#x2705; Foldover‐free result with theoretical **guarantees**    
 
 ![](../assets/参数22.png)    
 
 
-# Methods of Mesh arameterization    
-
-
-* Tutte’s method and its variants   
-• Tutte’s method [Tutte 1963; Floater 1997, 2003]   
-• Variants [Weber and Zorin 2014; Aigerman and Lipman 2015,  2016; Aigerman et al. 2017; Bright et al. 2017;]   
-* **Geometry‐based optimization methods**   
-• Representation based methods [Sheffer and Sturler 2001;  Sheffer et al. 2005; Chien et al. 2016b; Fu and Liu 2016]    
-• ARAP [Sorkine and Alex 2007; Liu et al. 2008]    
-• Bounded distortion methods [Lipman 2012; Aigerman et al.  2014; Kovalsky et al. 2015]    
-* Foldover free guaranteed optimization methods    
-• [Smith and Schaefer 2015; Kovalsky et al. 2016; Jiang et al.  2017; Claici et al. 2017; Rabinovich et al. 2017; Shtengel et al.  2017; Zhu et al. 2018]    
-
-
-# Angle Based Flattening (ABF) & ABF++    
+## Angle Based Flattening (ABF) & ABF++    
 [Sheffer and Sturler 2001; Sheffer et al. 2005]    
 
 
@@ -291,8 +199,7 @@ W is symmetric: \\(w_{ij}=w_{ji}\\)
 
 > 基于角度的展开，把角度当作变量，求解参数化的网格 
    
-# Constrained Minimization    
-
+### Constrained Minimization    
 
 • Notations:    
 
@@ -311,7 +218,7 @@ $$
 w_i^j=\beta  _i^{j^-2}
 $$
 
-# Constraints    
+### Constraints    
 
 • To avoid flipped triangles   
 
@@ -344,7 +251,7 @@ $$
 
 
 
-# Solution    
+### Solution    
 
 • Use Lagrange Multipliers    
 
@@ -364,13 +271,11 @@ $$
 
 > 用 Lagrange 算法解带约束的优化问题   
 
-# Examples    
+### Examples    
 
 ![](../assets/参数26.png)     
 
-
-
-# As‐rigid‐as‐possible (ARAP) [Liu et al. 2008]     
+## As‐rigid‐as‐possible (ARAP) [Liu et al. 2008]     
 
 
 * Measuring the approximation between the linear mapping and the rigidity (the optimal rotation)   
@@ -385,7 +290,7 @@ $$
 
 
 
-# Simplex Assembly [Fu and Liu 2016]    
+## Simplex Assembly [Fu and Liu 2016]    
 
 
 &#x2705;Instead of vertex positions, treat the affine transformation as variables    
@@ -398,21 +303,7 @@ $$
 
 > 优化三角形变换的系数     
 
-# Methods of Mesh arameterization    
-
-* Tutte’s method and its variants    
-• Tutte’s method [Tutte 1963; Floater 1997, 2003]    
-• Variants [Weber and Zorin 2014; Aigerman and Lipman 2015,  2016; Aigerman et al. 2017; Bright et al. 2017; ]    
-* Geometry‐based optimization methods    
-• Representation based methods [Sheffer and Sturler 2001;  Sheffer et al. 2005; Chien et al. 2016b; Fu and Liu 2016]     
-• ARAP [Sorkine and Alex 2007; Liu et al. 2008]    
-• Bounded distortion methods [Lipman 2012; Aigerman et al.  2014; Kovalsky et al. 2015]    
-* **Foldover free guaranteed optimization methods**     
-• [Smith and Schaefer 2015; Kovalsky et al. 2016; Jiang et al.  2017; Claici et al. 2017; Rabinovich et al. 2017; Shtengel et al.  2017; Zhu et al. 2018]    
-
-
-
-# Flip‐free parameterization methods     
+## Flip‐free parameterization methods     
 
 * Start with a flip‐free (valid) initialization    
 * Reducing the distortion while guaranteeing the validity    
@@ -420,12 +311,12 @@ $$
 
 ![](../assets/参数29.png)     
 
-# Low distortion cost functions     
+### Low distortion cost functions     
 
 ![](../assets/参数30.png)     
 
 
-# Formulation of Optimization    
+### Formulation of Optimization    
 
 $$
 \min_{V} E(V)=\sum _{t\in T}(\sigma _1^2+\frac{1}{\sigma _1^2} +\sigma _2^2+\frac{1}{\sigma _2^2})
@@ -441,7 +332,7 @@ s.t  \\(\sigma _1\sigma _2>0,\\)  \\(\forall t\\)
 
 
 
-# Solver for the optimization    
+### Solver for the optimization    
 
 
 Input: a valid parameterization initialization \\(𝑥_0\\)    
@@ -456,7 +347,7 @@ Until converged
 **Output**: a locally injective parameterization     
 
 
-# Maximal Search Step    
+### Maximal Search Step    
 
 &#x2705; Explicitly limit the maximal line search step to 
 prevent foldover    
@@ -487,7 +378,7 @@ $$
 局限性：非线性、非凸问题、且参数多    
 因此优化效率低  
 
-# Accelerated Quadratic Proxy (AQP)   
+## Accelerated Quadratic Proxy (AQP)   
 
 &#x2705; **H** = discrete Laplacian L    
 &#x2705; Acceleration     
@@ -503,7 +394,7 @@ ANVF:\\(\dots 向量场算子\dots\\)
 CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快   
 各种方法都是找更好的H近似，使得优化过程更快更稳定。    
 
-# Scalable Locally Injective Mappings (SLIM)
+## Scalable Locally Injective Mappings (SLIM)
 
 &#x2705; **H** = reweighted Laplacian L    
 &#x2705; Compute the weight matrix \\(W_J\\) by the matching  gradients condition     
@@ -521,7 +412,7 @@ $$
 
 
 
-# Isometry‐Aware Preconditioning (AKVF)   
+## Isometry‐Aware Preconditioning (AKVF)   
 
 
 &#x2705; **H** = approximate killing vector field perator \\(K(x)\\)    
@@ -532,7 +423,7 @@ $$
 
 > Claici et al. Isometry‐Aware Preconditioning for Mesh Parameterization. SGP 2017.     
 
-# Composite Majorization (CM)   
+## Composite Majorization (CM)   
 
 
 &#x2705; Use a tight convex proxy to approximate the 
@@ -550,7 +441,7 @@ $$
 > Shtengel et al. Geometric Optimization via Composite Majorization. Siggraph 2017.
 
 
-# Blended Cured Quasi‐Newton (BCQN)    
+## Blended Cured Quasi‐Newton (BCQN)    
 
 &#x2705; Blended quasi‐Newton method    
 &#x2705; Barrier‐aware line search filtering     
@@ -578,8 +469,6 @@ $$
 *个人感觉不 make sense *    
 [图30:35]
 
-# Progressive Paramerization   
-
 ![](../assets/参数39.png)     
 
 > [Ligang Liu et al.  Progressive Parameterizations. Siggraph 2018]   
@@ -590,256 +479,3 @@ $$
 ![](../assets/参数41.png)     
 
 
-# Bijective Parameterizations    
-
-
-# Bijective Parameterization    
-
-• **Globally intersection‐free**    
-
-![](../assets/参数42.png)     
-
-> [图32:40] 不允许全局发生碰撞    
-这是一个全局问题，因此计算量大   
-
-# Quasi‐Newton (QN) [Smith et al. 2015]    
-
-**Quasi‐Newton solver  with slow convergence**!    
-
-Energy: 1.027    
-Time: 8.57s    
-Iterations: 3553    
-
-![](../assets/参数43.png)     
-
-# Scaffold [Jiang et al. 2017]    
-
-**Linear systems with updated nonzero structure matrices**!    
-
-Energy: 1.027    
-Time: 3.22s    
-Iterations: 24    
-
-![](../assets/参数44.png)     
-
-# Efficient Bijective Parameterizations    
-[Su et al. Siggraph 2020]    
-
-![](../assets/参数45.png)     
-
-> 在形状外面包一层更大的网格    
-在更大网格上用传统方法处理  
-
-# Comparisons    
-
-![](../assets/参数46.png)     
-
-![](../assets/参数47.png)     
-
-Hilbert-curve-shaped developable surface   
-
-![](../assets/参数48.png)     
-
-
-# 封闭曲面的割缝问题    
-
-> 封闭曲面要展开必须先割缝     
-
-# 割缝问题：封闭曲面的参数化    
-
-• A closed surface cannot be flattened     
-• A cut is needed to cut it open into a disk‐like patch     
-
-![](../assets/参数49.png)     
-
-
-# Existing Works 
-
-* Minimum spanning tree method    
-• [Sheffer 2002; Sheffer and Hart 2002; Chai et al. 2018]    
-* Mesh segmentation approaches    
-• [Julius et al. 2005; Lévy et al. 2002; Sander et al. 2002, 2003; Zhang et al. 2005; Zhou et al. 2004]    
-* Simultaneous optimization    
-• [Poranne et al. 2017; Li et al. 2018]     
-* Variational method    
-• [Sharp and Crane 2018]    
-
-
-
-# Minimum spanning tree methods   
-
-
-• **Nodes: extrema points with high curvature/distortion etc**.    
-
-![](../assets/参数50.png)     
-
-> MST 算法1:     
-找最大扭曲→找边界最短路径→路径对应割缝      
-MST 算法 2：
-把曲面映射到球面，找最大扭曲的点，连起来   
-
-# Simultaneous optimization     
-
-![](../assets/参数51.png)     
-
-# Variational Surface Cutting     
-[Sharp and Crane 2018]  
-
-![](../assets/参数52.png)     
-
-> OptCuts 算法     
-通过割缝减少中心扭曲    
-AutoCuts     
-可以实时割开或合并    
-VSC    
-扭曲小 && 割缝总长度小    
-Cut Generation Problem    
-输入：桔子皮曲面、2D形状    
-输出：割缝、展开后接近2D形状。   
-
-# 纹理地图：多片参数化    
-Texture Atlas     
-
-
-# Multi‐charts Parameterization    
-
-![](../assets/参数53.png)     
-
-> 多片参数化 [43:48]     
-单片参䩥扭曲大\\(\Rightarrow\\) 切成小片，分别参数化、再拼起来。    
-拼起来时尽量少的面积浪费[44:54]    
-集装箱问题    
-
-# Texture Atlas    
-
-![](../assets/参数54.png)     
-
-
-# Atlas Generation:     
-Minimizing **Packing Efficiency** (**PE**)    
-
-
-• A packing problem: NP hard!   
-
-![](../assets/参数55.png)     
-
-
-# Atlas Generation    
-
-* Low Distortion   
-• [Golla et al. 2018; Liu et al. 2018; Shtengel et al. 2017; Zhu et al. 2018]    
-* Consistent orientation     
-• [Floater 2003; Tutte 1963; Claici et al. 2017; Hormann and Greiner 2000; Rabinovich et al. 2017; Schüller et al. 2013]    
-* Bijection    
-• [Jiang et al. 2017; Smith and Schaefer 2015]    
-* Low boundary length    
-• [Li et al. 2018; Poranne et al. 2017; Sorkine et al. 2002]    
-* Packing efficiency    
-• Box cutter [Limper et al. 2018]    
-• **Bounded Packing Efficiency** [**Liu et al. 2019**]    
-
-
-
-# Atlas Refinement: Higher PE   
-
-![](../assets/参数56.png)     
-
-
-# Box Cutter [Limper et al. 2018]    
-
-* Atlas refinement    
-• Remove overlaps    
-• Improve **packing efficiency**    
-
-![](../assets/参数57.png)     
-
-* No additional distortion
-* Bounded boundary length elongation   
-
-![](../assets/参数58.png)     
-
-> Boater:割开与填补    
-
-# Bounded Packing Efficiency   
-
-![](../assets/参数59.png)     
-
-
-> [Liu et al. Atlas Refinement with Bounded Packing Efficiency. Siggraph 2019.]    
-
-> 把网格参数化为box align.装箱之后再对边界优化     
-
-# PE Bounds    
-
-![](../assets/参数60.png)     
-
-
-# Different PE Bounds    
-
-![](../assets/参数61.png)     
-
-
-# 球面参数化   
-
-# 问题：球面参数化    
-
-• 输入：亏格为0的封闭曲面（拓扑同胚于球面）    
-
-![](../assets/参数62.png)     
-
-
-# 球面参数化的主要方法   
-
-* Direct methods    
-• [Kent et al. 1992], [Kobbelt et al. 99], [Gu et al. 03]    
-* Optimization methods    
-• [Sheffer et al. 04], [Li et al.06&07], [Zayer et al.06], [Friedel et al., 07], [Kazhdan et al. 2012], [Wan et al. 
-12&13], [Wang et al., 14&16]    
-* Coarse‐to‐fine methods    
-• [Praun and Hoppe 04], [Tang et al. 16], [Hu et al. 17]   
-
-
-# Our Works on Spherical Parameterization    
-
-![](../assets/参数63.png)     
-
-<http://staff.ustc.edu.cn/~lgliu>   
-
-
-# Mapping between Mesh Surfaces    
-
-\\(\star\\) 相容性网格（Compatible mesh）：一组具有相同连接关系且与给定模型形状近似的网格    
-
-![](../assets/参数64.png)     
-
-
-# Our Works on Compatible Mappings    
-
-![](../assets/参数65.png)     
-
-
-<http://staff.ustc.edu.cn/~lgliu>    
-
-
-# 总结：曲面参数化    
-
-• 几何处理的基本问题：大量的应用    
-• 是一个从3D到2D的降维问题：将几何数据表达为图像     
-• 特殊的几何结构（三角网格）：特殊的优化方法    
-• **Next**: 大型场景的压缩、传输、调度、渲染…    
-
-![](../assets/参数66.png)        
-
-
-# Future Work and Challenges     
-
-
-* Fundamental problem for CG     
-(geometry/simulation/rendering)   
-* Trade‐of quality/efficiency/complexity    
-* Coupled solution    
-• Parameterizaiton, cutting, atlas    
-* Other methods     
-• Diffusion for optimization    
-• Better initializations than Tutte’s method    
-• Learning based methods    
