@@ -68,7 +68,7 @@
   - [曲线曲面的微分几何](DiscreteDifferential/DiscreteDifferential.md)
   - [极小曲面](DiscreteDifferential/MinimaSurface.md)
 - [3D网格曲面]()
-  - [3D网格曲面]LaplacianCoordinates/LaplacianCoordinates.md)
+  - [3D网格曲面](LaplacianCoordinates/LaplacianCoordinates.md)
   - [局部Laplace平滑](LaplacianCoordinates/LocalLaplacianSmoothing.md)
   - [全局Laplace平滑](LaplacianCoordinates/GlobalLaplacianSmoothing.md)
   - [曲面参数化](LaplacianCoordinates/MeshParameterization.md)
