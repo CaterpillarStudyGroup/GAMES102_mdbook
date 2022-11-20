@@ -6,6 +6,8 @@
 • 更紧凑的表达  
 • 计算简单、更稳定  
 
+![](../assets/插值-7.png)  
+
 # 逼近问题
    
 － 给定一组线性无关的连续函数集合\\(B\\)={\\(b_1, \ldots b_n\\)}和一组结点{\\((x_1, y_1)\\), ...,\\((x_m, y_m)\\)}, 其中\\(m>n\\)    
@@ -15,7 +17,6 @@
 
 > &#x1F50E; [31：38]  
 
-![](../assets/插值-7.png)  
 
 # 最佳逼近的定义
 
@@ -43,8 +44,6 @@ $$
 =\lambda^{T} M^{T} M \lambda-2y^{T} M\lambda +y^{T} y
 $$
 
-![](../assets/插值-7.png)
-
 $$
 M=\left(\begin{array}{ccc}
 b_{1}\left(x_{1}\right) & \ldots & b_{n}\left(x_{1}\right) \\\\
@@ -53,6 +52,7 @@ b_{1}\left(x_{m}\right) & \ldots & b_{n}\left(x_{m}\right)
 \end{array}\right)
 $$
 
+> [?] 所以含义到底是啥？
 
 # 求解
 

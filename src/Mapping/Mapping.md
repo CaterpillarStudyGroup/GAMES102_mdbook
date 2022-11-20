@@ -18,10 +18,6 @@
 
 ![](../assets/映射2.png)  
 
-
-
-# 映射（ Mapping / Map ）   
-
 ![](../assets/映射3.png)  
 
 
@@ -45,7 +41,7 @@ $$
 # 映射的表达    
 
 
-# 映射的表达：化繁为简   
+## 映射的表达：化繁为简   
 
 * 映射表达为基本映射（基函数）的线性组合    
 • 函数的分解   
@@ -55,7 +51,7 @@ $$
 
 
 
-# 映射：基函数的线性组合    
+## 映射：基函数的线性组合    
 
 
 • 基函数(basis functions):   
@@ -81,7 +77,7 @@ $$
 ![](../assets/映射6.png)  
 
 
-# 映射的表达：化繁为简   
+## 映射的表达：化繁为简   
 
 * 映射表达为基本映射（基函数）的线性组合    
 • 函数的分解    
@@ -91,7 +87,7 @@ $$
 
 
 
-# 映射：简单区域上映射的连续组合   
+## 映射：简单区域上映射的连续组合   
 
 
 • \\(f\\) is approximated by **piecewise linear maps** between pairs of triangles    
@@ -100,7 +96,7 @@ $$
 
 # 几何映射的例子    
 
-# 例1：2D变形   
+## 例1：2D变形   
 
 ![](../assets/映射8.png)  
 
@@ -111,7 +107,7 @@ $$
 [10:43] mesh 点是指定点（例如重心坐标）的组合。     
 通过移动指定点控制mesh.    
 
-# 本质：插值问题   
+### 本质：插值问题   
 
 ![](../assets/映射9.png)  
 
@@ -132,7 +128,7 @@ $$
 $$
 
 
-# 求解    
+### 求解    
 
 • 插值法（比如，RBF插值）    
 
@@ -161,7 +157,7 @@ s.t. f(P_i)=q_i,\forall i
 $$
 
 
-# 更多约束   
+### 更多约束   
 
 • Hermite插值：插值梯度    
 
@@ -176,35 +172,7 @@ Df(P_i)=D_i
 $$
 
 
-# 例2: Barycentric Coordinates   
-
-Stages:    
-• Source shape    
-• Polygonal cage    
-• Coordinates   
-
-![](../assets/映射11.png)  
-
-$$
-f(X)=\sum_{i=1}^{n} \alpha _i(X)q_i
-$$
-
-
-# 例2: Barycentric Coordinates    
-
-Stages:    
-• Source shape    
-• Polygonal cage    
-• Coordinates    
-
-![](../assets/映射12-1.png)  
-
-$$
-f(X)=\sum_{i=1}^{n} \alpha _i(X)q_i
-$$
-
-
-# 例2: Barycentric Coordinates   
+## 例2: Barycentric Coordinates   
 
 
 Stages:   
@@ -213,6 +181,8 @@ Stages:
 • Coordinates    
 • Manipulate cage    
 • Apply deformation    
+
+![](../assets/映射12-1.png)  
 
 ![](../assets/映射13.png)  
 
@@ -224,12 +194,12 @@ $$
 # 映射的性质   
 
 
-# What are good maps?   
+## What are good maps?   
 
 ![](../assets/映射14.png)  
 
-> 
-# Flip (foldover) triangles in mapping    
+
+### Flip (foldover) triangles in mapping    
 
 ![](../assets/映射15.png)  
 
@@ -237,7 +207,7 @@ $$
 扭曲：尽量少，否则有鬼影现象 [21:28下图]    
 local 双射（单射)：——对应，但有翻转发生   
 
-# Locally injective mappings    
+### Locally injective mappings    
 
 ![](../assets/映射16.png)  
 
@@ -259,7 +229,7 @@ $$
 
 
 
-# Globally Bijective VS. Locally Bijective   
+### Globally Bijective VS. Locally Bijective   
 
 
 ![](../assets/映射15-1.png)  
@@ -269,32 +239,9 @@ $$
 [32:02图]  有一个矩形，希望把它边界变成红线形，求变形后的形状：      
 期望：形变较小/夹角小\\(\dots\\) (看应用需求)   
 
-# Globally Bijective VS. Locally Bijective   
-
-![](../assets/映射15-1.png)    
-
 ![](../assets/映射17.png)  
-
-
-  
-
-# Globally Bijective VS. Locally Bijective   
-
-![](../assets/映射15-1.png) 
-
-
 ![](../assets/映射18.png)  
-
-
-# Globally Bijective VS. Locally Bijective   
-
-![](../assets/映射15-1.png) 
-
 ![](../assets/映射19.png)  
-
-
-# Globally Bijective VS. Locally Bijective    
-
 ![](../assets/映射20.png)  
 
 Only Locally Bijective   
@@ -302,48 +249,25 @@ Only Locally Bijective
 ![](../assets/映射21.png)  
 
 
-# Locally Bijection – Non‐example   
+### Locally Bijection – Non‐example   
 
 ![](../assets/映射22.png)  
-
-
-# Locally Bijection – Non‐example    
-
 ![](../assets/映射23.png)  
-
-
-# Locally Bijection – Non‐example    
-
 ![](../assets/映射24.png)   
-
-
-# Locally Bijection – Non‐example    
-
 ![](../assets/映射25.png)  
 
 
 
-# Locally Bijection – Sufficient condition  
+### Locally Bijection – Sufficient condition  
 
 ![](../assets/映射26.png)  
 
-
-# Globally Bijective VS. Locally Bijective   
+### Globally Bijective VS. Locally Bijective   
 
 ![](../assets/映射15-2.png)  
-
-
-
 ![](../assets/映射27.png)  
 
-
-
 Google: “Global inversion theorems”    
-
-
-# What are good maps?   
-
-![](../assets/映射28.png)  
 
 
 # Jacobian的几何意义   
@@ -353,7 +277,7 @@ Google: “Global inversion theorems”
 ![](../assets/映射29.png)  
 
 
-# Distortion Measure    
+## Distortion Measure    
 
 $$
 L=U\begin{pmatrix}
@@ -377,7 +301,7 @@ $$
 
 
 
-# Distortion Metric   
+## Distortion Metric   
 
 ![](../assets/映射31.png)  
 
@@ -386,7 +310,7 @@ $$
 # 映射的优化模型    
 
 
-# Recap: Formulation of Parameterization   
+## Recap: Formulation of Parameterization   
 
 $$
 \min_{V} E(V)=\sum _{t\in T}(\sigma _1^2+\frac{1}{\sigma _1^2} +\sigma _2^2+\frac{1}{\sigma _2^2}) 
@@ -402,9 +326,7 @@ $$
 
 > Computationally expensive for large scale meshes!   
 
-
-
-# Computing maps   
+## Computing maps   
 
 • Imposing constraints    
 
@@ -415,12 +337,12 @@ $$
 ![](../assets/映射33.png)  
 
 
-# Constrained Optimization   
+## Constrained Optimization   
 
 ![](../assets/映射34.png)  
 
 
-# Energy     
+## Energy     
 
 
 ![](../assets/映射35.png)    
@@ -430,7 +352,7 @@ E(\phi )=E(A_1,\cdots ,A_m)
 $$
 
 
-# Map optimization    
+## Map optimization    
 
 • In terms of differentials:     
 
@@ -440,7 +362,7 @@ argmin \\(E(A_1,\cdots ,A_m)\\)
 
 
 
-# Map optimization    
+## Map optimization    
 
 
 • In terms of differentials:
@@ -450,7 +372,7 @@ argmin \\(\sum _jf(A_j)\\)    separable
 ![](../assets/映射37.png)    
 
 
-# Map optimization    
+## Map optimization    
 
 argmin \\(\sum _jf(A_j)\\)
 
@@ -460,21 +382,12 @@ Must impose continuity!
 
 
 
-# Explicit continuity    
+## Explicit continuity    
 
 • Optimization variables: \\(A_1,A_2,\cdots ,A_m\\)     
 • Adjacent \\(A_j\\)’s must agree     
 
 ![](../assets/映射39.png)    
-
-
-
-# Explicit continuity    
-
-• Optimization variables: \\(A_1,A_2,\cdots ,A_m\\)     
-• Adjacent \\(A_j\\)’s must agree   
-
-![](../assets/映射40.png)    
 
 $$
 A_i\nu _1=A_j\nu _1
@@ -485,7 +398,7 @@ A_i\nu _2=A_j\nu _2
 $$
 
 
-# Implicit continuity    
+## Implicit continuity    
 
 ![](../assets/映射41.png)    
 
@@ -521,20 +434,18 @@ $$
 
 # 几何优化的求解    
 
-# Popular energies    
+## Popular energies    
 
 argmin\\(\sum _jf(A_j)\\)    
 
 ![](../assets/映射42.png)    
 
 
-# Dirichlet    
+## Dirichlet    
 
 area / volume   \\(\Rightarrow E_D=\sum _jw_j||A_j||_F^2\\)   
 
 ![](../assets/映射43.png)   
-
-# Dirichlet    
 
 $$
 E_D=\sum _jw_j||A_j||_F^2
@@ -544,7 +455,7 @@ $$
 
 
 
-# Orthogonal and Similarity    
+## Orthogonal and Similarity    
 
 • R is <u>orthogonal</u> if \\(R^T=R^{-1}\\)    
 (rotation if det 𝑅 > 0)    
@@ -557,7 +468,7 @@ $$
 
 
 
-# Closest  R and S    
+## Closest  R and S    
 
 
 • \\(\Re(A)=\\) closest orthogonal/rotation matrix to \\(A\\)    
@@ -570,7 +481,7 @@ $$
 ![](../assets/映射46-1.png)   
 
 
-# As‐Similar‐As‐Possible (ASAP)   
+## As‐Similar‐As‐Possible (ASAP)   
 
 $$
 E_L=\sum _jw_j||A_j-\varsigma (A_j)||_F^2
@@ -581,7 +492,7 @@ $$
 Solving sparse linear system!    
 
 
-# As‐Rigid‐As‐Possible (ARAP)     
+## As‐Rigid‐As‐Possible (ARAP)     
 
 
 $$
@@ -591,17 +502,17 @@ $$
 ![](../assets/映射48.png)   
 
 
-# ARAP vs. ASAP    
+## ARAP vs. ASAP    
 
 ![](../assets/映射49.png)   
 
 
-# Singular values perspective    
+## Singular values perspective    
 
 ![](../assets/映射50.png)   
 
 
-# ARAP: Alternating Optimization     
+## ARAP: Alternating Optimization     
 
 $$
 E_R=\sum _jw_j||A_j-\Re (A_j)||_F^2
@@ -660,7 +571,7 @@ s.t. \\(\phi \in K\\)
 • Computationally expensive for large scale meshes!    
 
 
-# eshless mappings    
+# Meshless mappings    
 
 ![](../assets/映射61.png)   
 
