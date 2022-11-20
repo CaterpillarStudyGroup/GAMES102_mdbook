@@ -106,7 +106,7 @@
   - [不等式约束的优化问题](Optimization/不等式约束的优化问题.md)
   - [Convex Optimization](Optimization/ConvexOptimization.md)
   - [其他优化问题](Optimization/其他优化问题.md)
-- [几何建模](CubicSplines/Modeling.md)
+- [几何建模](Modeling/Modeling.md)
 - [纹理合成](CubicSplines/TextureSynthesis.md)
 - [形状分析与理解](CubicSplines/ShapeAnalysis.md)
   
