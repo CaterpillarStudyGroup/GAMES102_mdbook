@@ -1,43 +1,20 @@
-# 曲线的光顺定义    
-
-
-# Geometric Design: Two Phases    
-
- - Shape design and modeling (Macro)     
- - Fairing design and modeling (Micro)     
-    - A post‐processing after shape design     
-    - Less well studied    
-       - Difficult problem     
-       - Lack of solid theories   
-       - Far from solved      
-
-> 光顺是一种微观的性质，很难描述，且没有明确的数学定义。   
-
-# 什么是光顺曲线？
-
-## 从曲线的曲率图的直观理解    
+# 从曲线的曲率图的直观理解    
 
 ![](../assets/光顺5.png)    
 
-
-# Why fairing curves?    
-
-![](../assets/光顺6.png)    
-
-> 船的表面光顺可以减小水的阻力。    
 
 **Fairing Design is Important!**    
 
 • Shoe sole    
 • Cam profile    
-• Ship hull    
+• Ship hull：船的表面光顺可以减小水的阻力。    
 • Car profile    
 • Plane profile    
 • …     
 
-![](../assets/光顺7.png)    
-
 # 光顺的定义
+
+> 光顺是一种微观的性质，很难描述，且没有明确的数学定义。   
 
 ## 为什么光顺难以定义    
 
@@ -83,7 +60,7 @@ $$
 ### Example 1    
 
 $$
-y=sin x, x\in[0,6\pi]
+y=\sin x, x\in[0,6\pi]
 $$
 
 ![](../assets/光顺9.png)    

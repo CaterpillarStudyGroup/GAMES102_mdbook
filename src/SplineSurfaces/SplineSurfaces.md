@@ -15,28 +15,3 @@ $$
 F(x)=\sum_{i+j+k=n;i,j,k\ge0}^{} \frac{n!}{i!j!k!} \alpha  ^i\beta ^j\gamma ^kp_{i,j,k}
 $$
 
-$$
-x=\alpha a+\beta b+\gamma c,\alpha +\beta +\gamma =1
-$$
-
-![](../assets/曲面17.png)   
-
-> \\(\alpha ,\beta ,\gamma \\) 为三角形上某个点的重心坐标。 
-
-# 连续性   
-
-![](../assets/曲面18.png)   
-
-
-# 总结  
-
-* 张量积曲面   
-• 两个独立方向的“曲线的曲线”    
-• 性质大都类同于曲线的性质   
-• 表达、公式形式比曲线情形复杂    
-• 特殊问题：角点的光滑性    
-
-* 张量积体（三参数）    
-• Bezier体    
-
-![](../assets/曲面19.png)    

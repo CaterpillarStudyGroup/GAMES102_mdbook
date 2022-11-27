@@ -1,17 +1,16 @@
 # B样条曲线  
 
-# Bezier曲线的不足   
-• \\(n\\)次Bezier曲线：\\(n+1\\)个控制顶点    
+# 为什么引入B样条曲线
+
+## Bezier曲线的不足   
+
+\\(n\\)次Bezier曲线：\\(n+1\\)个控制顶点    
 
 ![](../assets/曲线1.png)   
 
 $$
 x(t)=\sum_{i=0}^{n} B_i^n(t)\cdot b_i
 $$
-
-![](../assets/曲线2.png)  
-![](../assets/曲线3.png)
-
 
 > **全局性：牵一发而动全身，不利于设计**  
 > 每个基函数在整平[0，1]作用域上都有值，因此具有全局性。
@@ -25,20 +24,17 @@ $$
 2. 构造基函数，第 i 个基函数是以\\(t_i\\)为中心的局部函数。    
 3. 每个基函数是同一个基函数的平移或伸缩得到。
 
-
 **原因：基函数是全局的**  
 
+## 样条曲线的不足  
 
-# 样条曲线  
-
-* 分段的多项式曲线（Bezier曲线）   
-• 分段表达，具有局部性   
-
-![](../assets/曲线4.png)   
+分段的多项式曲线（Bezier曲线）  
+优点：分段表达，具有局部性   
+缺点：要分成多个函数来表达。
 
 **有无统一的表达方式？**
 
-## 思考：样条曲线的统一表达  
+# 思考：样条曲线的统一表达  
 
 
 * 形式类比：每个控制顶点用一个基函数进行组合   
@@ -54,21 +50,9 @@ $$
 
 * 如何构造？   
 
-
-## B样条的产生  
-
-* Early use of splines on computers for data interpolation     
-• Ferguson at Boeing, 1963    
-• Gordon and de Boor at General Motors     
-• B‐splines, de Boor 1972    
-
-
-* Free form curve design    
-• Gordon and Riesenfeld, 1974 → B‐splines as a generalization of Bezier curves   
-
 ## 启发： 
 
-* Bernstein基函数的递推公式：  
+Bernstein基函数的递推公式：  
 
 $$
 B_i^n(t)=(1-t)B_{i}^{(n-1)}(t)+tB_{i-1}^{(n-1)}(1-t)
@@ -76,28 +60,26 @@ $$
 
 with \\(B_0^0(t)=1,B^n_i(t)=0\\) for \\(i\notin \\){ \\(0\dots n\\)}
 
-  - 思路：   
-    - 局部处处类似定义，由一个基函数平移得到    
-    - 高阶的基函数由2个低阶的基函数“升阶”得到    
-      - 利于保持一些良好的性质，比如提高光滑性   
+思路：   
+- 局部处处类似定义，由一个基函数平移得到    
+- 高阶的基函数由2个低阶的基函数“升阶”得到，利于保持一些良好的性质，比如提高光滑性   
 
-# Key Ideas   
+## Key Ideas   
 
 ![](../assets/曲线5.png)  
 
-  - 以三次为例    
-    - We design one basis function 𝑏(𝑡)      
-    - Properties:   
-      - 𝑏(𝑡) is \\(C^2\\) continuous    
-      - 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
-      - 𝑏(𝑡) is has local support   
-       - Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
-      - \\(𝑏(𝑡)\ge 0 \\) for all 𝑡      
+以三次为例    
+- We design one basis function 𝑏(𝑡)      
+- Properties:   
+  - 𝑏(𝑡) is \\(C^2\\) continuous    
+  - 𝑏(𝑡) is piecewise polynomial, degree 3 (cubic)   
+  - 𝑏(𝑡) is has local support   
+   - Overlaying shifted \\(𝑏 (𝑡+i)\\) forms a partition of unity   
+  - \\(𝑏(𝑡)\ge 0 \\) for all 𝑡      
 
-  - In short:   
-    - All desirable properties build into the basis   
-    - Linear combinations will inherit these  
-
+In short:   
+- All desirable properties build into the basis   
+- Linear combinations will inherit these  
 
 # Shifted Basis Functions   
 
@@ -218,7 +200,7 @@ University of Wisconsin‐Madison
 
 > B样条本质是分段曲线、但通过 local basis funchion 的方法，有一个公式统一了所有分段曲线。    
 
-# Example    
+例子  
 
 • \\(k=4,n=5\\)     
 
@@ -246,12 +228,7 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 \\(𝒅_0\\) and \\(𝒅_n\\) are interpolated      
 
 
-## B‐spline curves的例子
-
-
-### Example:\\(k=4,n=5\\)
-
-• Example:\\(k=4,n=5\\)
+- 例子1:\\(k=4,n=5\\)
 
 ![](../assets/曲线16.png)  
 
@@ -260,7 +237,7 @@ Curve defined in interval \\(t_3\le t\le t_6\\)
 [1:10:41] Locality     
 在神经网络中把 acfivation 改为 local basis funchion. 这样，只需更新 N N 的部分参数。   
 
-### Further example   
+- 例子2
 
 ![](../assets/曲线17.png)  
 
@@ -308,9 +285,7 @@ are Bernstein polynomials\\(𝐵_i^{k-1}\\) of degree \\(𝑘-1\\)
 ![](../assets/曲线19.png)   
 
 
-# B‐spline curves   
-
-* Evaluation of B‐spline curves   
+## Evaluation of B‐spline curves   
 • Using B‐spline functions   
 • Using the de Boor algorithm
 Similar algorithm to the de Casteljau algorithm for Bezier curves; consists of a number of linear interpolations on the de Boor polygon     

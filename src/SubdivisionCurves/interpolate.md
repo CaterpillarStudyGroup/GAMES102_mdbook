@@ -1,5 +1,6 @@
 # 插值型细分方法     
- - 细分方法：   
+
+细分方法：   
 • 保留原有顶点   
 • 对每条边，增加一个新顶点     
 • 不断迭代，生成一条曲线     
@@ -11,9 +12,9 @@
 > 保证原顶点不动。    
 又称为补角法。   
 
-# 4点插值型细分
+## 4点插值型细分
 
-## 细分规则     
+### 细分规则     
 
 ![](../assets/细曲19.png)     
 
@@ -26,12 +27,11 @@
 Nira Dyn, David Levin, John A. Gregory A 4‐point interpolatory subdivision     
 scheme for curve design. Computer Aided Geometric Design, 4(4): 257‐268, 1987.   
 
-## 4点插值型细分曲线的例子
+### 4点插值型细分曲线的例子
 
-![](../assets/细曲20.png)     
 ![](../assets/细曲21.png)     
 
-# 一般：2n点插值细分方法    
+## 一般：2n点插值细分方法    
 
 • 连续阶随着\\(n\\)增大而增加     
 2点插值细分方法    
@@ -62,14 +62,14 @@ $$
 
 > 要通过解方程或优化来解
 
-# 基于双圆弧插值的曲线细分方法    
+## 基于双圆弧插值的曲线细分方法    
 
-* 性质（证明稍难）    
-• 极限曲线\\(𝐺^2\\)，光顺，保形      
+性质（证明稍难）：极限曲线\\(𝐺^2\\)，光顺，保形      
 
 ![](../assets/细曲26.png)     
 
-参考文献    
+## 参考文献    
+
 • Denis Zorin et al.Subdivision for Modeling and Animation. SIGGRAPH 2000 Course Notes    
 • Warren and Weimer. Subdivision Methods for Geometric Design: A Constructive Approach. Morgan-Kaufmann Publishers, 2002     
 • M.S. Sabin. Recent Progress in Subdivision: a Survey. Advances in Multiresolution for Geometric Modelling Mathematics and Visualization 2005, 203‐230      

@@ -1,6 +1,6 @@
-# 曲线光顺    
+# 曲线光顺 Curve fairing   
 
-# 光滑(Smooth)曲线    
+## 光滑(Smooth)曲线    
 
 * 连续曲线(Continuous)：参数连续性    
 • 给定 2 条曲线     
@@ -13,9 +13,7 @@
 • 更适合交互式曲线设计     
 
 
-# 什么是光顺曲线？    
-
-• Curve fairing    
+## 什么是光顺曲线？         
 
 ![](../assets/光顺1.png) 
 

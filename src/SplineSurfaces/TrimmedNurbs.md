@@ -1,9 +1,7 @@
-# Trimmed NURBS曲面   
+# Trimmed NURBS曲面
 
-> Trimmed:裁剪   
-
-# 表达带“洞”或非矩形边界的曲面   
-
+Trimmed：裁剪   
+Trimmed NURBS曲面：表达带“洞”的曲面
 
 • 曲面上的曲线：使用参数域上的NURBS曲线来定义，然后复合得到曲面上的曲线      
 
@@ -14,18 +12,16 @@
 
 # 三角域上的Bezier曲面片    
 
-# 三角域的Bernstein‐Bezier曲面片    
+三角域的Bernstein‐Bezier曲面片：表达非矩形边界的曲面    
 
 • 矩形域有时不方便     
 • 使用三角域来定义曲面片    
-
-![](../assets/曲面16.png)   
 
 > 背景：张量积形式的 Bezier 曲面定义在矩形曲域，表达很不灵活，难以应用于非规整曲面。    
 定义在三角面片上的类似于 Bezier 的曲面。      
 
 
-# 三角Bezier曲面片    
+## 三角Bezier曲面片    
 
 $$
 F(x)=\sum_{i+j+k=n;i,j,k\ge0}^{} \frac{n!}{i!j!k!} \alpha  ^i\beta ^j\gamma ^kp_{i,j,k}
@@ -39,7 +35,7 @@ $$
 
 > \\(\alpha ,\beta ,\gamma \\) 为三角形上某个点的重心坐标。 
 
-# 连续性   
+## 连续性   
 
 ![](../assets/曲面18.png)   
 

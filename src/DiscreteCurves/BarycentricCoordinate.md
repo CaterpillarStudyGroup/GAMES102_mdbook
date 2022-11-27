@@ -16,35 +16,16 @@
 用 Bezier 面片包围目标面片。     
 通过控制 Bazier 顶点来控制目标面片。    
 Bezier 顶点称为 proxy （代理）  
-
 > 使 Proxy 不一定是 Bezier 点，也可以是边界上的点，主要是找到目标上任意一个点与 Proxy 点之间的关系。    
-
-## 图像变形    
-
-• 交互：boundary editing    
-
-![](../assets/离散16.png)    
 
 **问题**：给定一个包含物体的边界多边形，改变边界时，如何计算物体的变形？      
 即，内部点与边界点（**控制顶点**）之间的关联关系？     
 
 # 几何图形的重心坐标
 
-## 三角形的重心坐标     
+三角形的顶点是 Proxy 点. P是三角形内任意一点，用某种方法来描述P与 Proxy 点之间的关系。    
 
-![](../assets/离散18.png)    
-
-> 简单例子，三角形的顶点是 Proxy 点. P是三角形内任意一点，用某种方法来描述P与 Proxy 点之间的关系。    
-
-## 四边形？   
-
-![](../assets/离散19.png)    
-
-## 多边形的重心坐标？   
-
-![](../assets/离散20.png)    
-
-> 四边及以上多边形不能用三角形的方法求重心，坐标，因为系数解不唯一。     
+四边及以上多边形不能用三角形的方法求重心，坐标，因为系数解不唯一。     
 因此需要一种对所有多边形适用的更统一的重心坐标定义方式。      
 
 ## Warping with BC      
@@ -54,20 +35,20 @@ Bezier 顶点称为 proxy （代理）
 
 # Coordinates    
 
- - Homogeneous coordinates
-    - Given points \\(v_\Sigma \\) = {\\(v_1,\cdots ,v_i,\cdots \\)}    
-    - Express a new point \\(x\\) as affine combination of \\(v_\Sigma \\)    
+Homogeneous coordinates
+- Given points \\(v_\Sigma \\) = {\\(v_1,\cdots ,v_i,\cdots \\)}    
+- Express a new point \\(x\\) as affine combination of \\(v_\Sigma \\)    
 
-         \\(x=\Sigma b_i v_i,\\) where \\(\Sigma b_i = 1\\)    
+     \\(x=\Sigma b_i v_i,\\) where \\(\Sigma b_i = 1\\)    
 
-    - \\(b_i\\) are called homogeneous coordinates      
-    - Barycentric if all       
+- \\(b_i\\) are called homogeneous coordinates      
+- Barycentric if all       
 
-   $$
-   b_i \ge 0
-   $$
+$$
+b_i \ge 0
+$$
 
-    ![](../assets/离散22.png)    
+![](../assets/离散22.png)    
 
 # Applications    
 
@@ -78,10 +59,6 @@ Bezier 顶点称为 proxy （代理）
 \\({x}' =\Sigma b_i{v}' _i\\)     
 • Shell texture      
 • Image/Shape deformation     
-
-![](../assets/离散23.png)    
-
-
 
 # Coordinates In A Polytope     
 
@@ -159,7 +136,14 @@ $$
 ![](../assets/离散27.png)    
 
 
-## 3. Transfinite Interpolation: Interpolating height function to model a surface    
+## 3. Transfinite Interpolation
+
+• 问题：给定4条边界曲线，构造插值这4条曲线的一张曲面     
+• Coons surfaces      
+
+![](../assets/离散30.png)     
+
+Interpolating height function to model a surface    
 
 ![](../assets/离散28.png)    
 
@@ -168,16 +152,6 @@ $$
 
 ![](../assets/离散29-1.png)     
 
-
-# Transfinite Interpolation    
- 
-• 问题：给定4条边界曲线，构造插值这4条曲线的一张曲面     
-• Coons surfaces      
-
-![](../assets/离散30.png)     
-
-
-
 # 广义重心坐标的学习资料   
 
-• <http://www.inf.usi.ch/faculty/hormann/barycentric>     
+http://www.inf.usi.ch/faculty/hormann/barycentric

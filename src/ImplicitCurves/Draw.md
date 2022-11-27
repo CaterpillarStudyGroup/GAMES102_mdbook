@@ -1,21 +1,5 @@
 # 隐式曲线的绘制   
 
-
-# 如何找隐式函数表达的点的集合？   
-
-* 自变量 和应变量 的关系非显式关系，是一个隐式的关系（代数方程）：     
-
-$$
-f(x,y)=0
-$$
-
-* 比如：    
-• \\(𝑎𝑥+𝑏𝑦+𝑐=0\\)    
-• \\(𝑥^2+𝑦^2=1\\)      
-• \\(𝑦^2=𝑥^3+𝑎𝑥+𝑏\\)     
-• \\(𝑥𝑦^2+ \\)ln \\( (𝑥 \\)  sin𝑦 \\(-e^{y-\sqrt{x} })=\cos (x-\sqrt{x^3-2y} )\\)     
-
-
 # 等值线抽取   
 
 * 输入：一个二元隐式函数\\(z=f(x,y)\\)     
@@ -43,25 +27,18 @@ $$
 
 ## 歧义情况   
 
-  - There is a (minor) technical problem remaining:     
-    - The triangulation can be ambiguous    
-    - In some cases, different topologies are possible which are all locally plausible:      
+- In some cases, different topologies are possible which are all locally plausible:      
 ![](../assets/瘾曲8.png) 
-    - This is an undersampling artifact. At a sufficiently high
+- This is an undersampling artifact. At a sufficiently high
 resolution, this cannot occur.     
-    - Problem: Inconsistent application can lead to holes in the surface (non‐manifold solutions)        
+- Problem: Inconsistent application can lead to holes in the surface (non‐manifold solutions)        
 
 > 解决方法：1.加密    2.判断函数导数
 
-# Adaptive Grids  
+# Adaptive / hierarchical grids
 
- - Adaptive / hierarchical grids:    
-    - Perform a quadtree / octree
-tessellation of the domain (or any
-other partition into elements)     
-    - Refine where more precision is
-necessary (near surface, maybe
-curvature dependent)      
-    - Associate basis functions with each cell (constant or higher order)     
+- Perform a quadtree / octree tessellation of the domain (or any other partition into elements)     
+- Refine where more precision is necessary (near surface, maybe curvature dependent)      
+- Associate basis functions with each cell (constant or higher order)     
 
 ![](../assets/瘾曲9.png) 

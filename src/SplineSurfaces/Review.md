@@ -1,27 +1,10 @@
-# 回顾：  
+# 参数曲面
 
-## 参数曲面
-[参数曲面](https://caterpillarstudygroup.github.io/GAMES102_mdbook/ParametricFitting/VectorValue.html)   
-
-• 双参数\\((u,v)\\)     
-• 参数曲面  
-$$
-\begin{pmatrix}x
- \\\\y 
- \\\\z
-\end{pmatrix}=\begin{pmatrix}x(u,v)
- \\\\y (u,v)
- \\\\z(u,v)
-\end{pmatrix}
-$$
-
-![](../assets/曲面2.png)
-
-
+[link](https://caterpillarstudygroup.github.io/GAMES102_mdbook/ParametricFitting/VectorValue.html)   
 
 ## 张量积曲面  
 
-[张量积](https://caterpillarstudygroup.github.io/GAMES102_mdbook/ParametricFitting/Multi.html)  
+张量积：[link](https://caterpillarstudygroup.github.io/GAMES102_mdbook/ParametricFitting/Multi.html)  
 
 $$
 f(u,v)=\sum_{i=1}^{n} \sum_{j=1}^{n}b_i(u)b_j(v)p_{i,j}
@@ -34,9 +17,6 @@ $$
 $$
 =\sum_{j=1}^{n} b_j(v)\sum_{i=1}^{n}b_{i}(u)p_{i,j}
 $$
-
-![](../assets/曲面5.png)   
-
 
 • “曲线的曲线”      
 • 两个参数的顺序无关    
@@ -80,5 +60,3 @@ $$
 • 有理曲面    
 
 • NURBS曲面    
-
-![](../assets/曲面11.png)   
