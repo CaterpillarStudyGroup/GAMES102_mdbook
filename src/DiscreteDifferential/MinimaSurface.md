@@ -86,13 +86,6 @@ $$
 
     ![](../assets/微分55.png)  
 
- - 初始网格    
-    - 自己构造    
-      - 平面：Delaunay三角化（学习Triangle库）    
-      - 空间变形: Warping     
-
-      ![](../assets/微分56.png)  
-
 > 对于封闭曲面，不固定住的点，最后会收缩到一个点。    
 
 # Triangle    

@@ -1,7 +1,4 @@
-# Curves的微分几何    
-
-
-# Differential Geometry of a Curve    
+# 曲线的微分几何    
 
 ![](../assets/微分14.png)   
 
@@ -42,6 +39,4 @@ Curvature κ at \\(u_0\\) and the radius ρ osculating circle
 * Corresponds to radius of osculating circle \\(R=1/k\\)    
 
 * Measure curve bending    
-
-![](../assets/微分16.png)   
 
