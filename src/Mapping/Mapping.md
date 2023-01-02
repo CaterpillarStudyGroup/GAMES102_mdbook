@@ -1,57 +1,14 @@
-# 几何映射
- 
-> [3:11] \\(x\\)是一个2D向量      
-[03:47] 每个映射看作是基函数的一个组合     
-两个分量共享基函数，不共享系数。    
-[05:41]分片线性仿射变换\\(f\\)，但\\(f_i\\)和\\(f_j\\)要满足连续和光滑性。    
+# 回顾
 
-
-
-# 回顾：曲面参数化   
-
-• 问题：将空间曲面展开到二维平面    
-• 本质：寻求一个映射\\(f:S\subset R^3\to\Omega \subset R^2\\)   
-
-![](../assets/映射1.png)  
-
-# 映射（ Mapping / Map ）   
-
-![](../assets/映射2.png)  
-
-![](../assets/映射3.png)  
-
-
-
-# 本节课：平面几何映射   
-
-• 映射表达：
-
-$$
-f:\mathbb{R} ^2\to\mathbb{R} ^2
-$$
-
-$$
-f(X)=\begin{pmatrix}u(x)
- \\\\v(x)
-\end{pmatrix}
-$$
-
-![](../assets/映射28-1.png)  
+曲面参数化   
+映射（ Mapping / Map ）   
+平面几何映射   
 
 # 映射的表达    
 
-
-## 映射的表达：化繁为简   
-
-* 映射表达为基本映射（基函数）的线性组合    
-• 函数的分解   
-
-* 映射表达为小区域（三角形区域）上映射的拼接   
-• 区域的分解（映射的离散）   
-
-
-
 ## 映射：基函数的线性组合    
+
+映射表达为基本映射（基函数）的线性组合    
 
 
 • 基函数(basis functions):   
@@ -77,20 +34,12 @@ $$
 ![](../assets/映射6.png)  
 
 
-## 映射的表达：化繁为简   
-
-* 映射表达为基本映射（基函数）的线性组合    
-• 函数的分解    
-
-* **映射表达为小区域（三角形区域）上映射的拼接**    
-• **区域的分解**（**映射的离散**）    
-
-
 
 ## 映射：简单区域上映射的连续组合   
 
+映射表达为小区域（三角形区域）上映射的拼接
 
-• \\(f\\) is approximated by **piecewise linear maps** between pairs of triangles    
+\\(f\\) is approximated by **piecewise linear maps** between pairs of triangles    
 
 ![](../assets/映射7.png)  
 
@@ -100,121 +49,36 @@ $$
 
 ![](../assets/映射8.png)  
 
-> [06:51] 2D变形问题：构造一个函数\\(f\\)， 使得拖拽      
-点\\(f(P)\\)满足到达目标点的约束。   
-[10:06] 或\\(f(P)\\)满足\\(f'(P)\\)为目标值的约束，就是法
-线插值。    
-[10:43] mesh 点是指定点（例如重心坐标）的组合。     
-通过移动指定点控制mesh.    
+> [06:51] 2D变形问题：构造一个函数\\(f\\)， 使得拖拽点\\(f(P)\\)满足到达目标点的约束。   
+[10:06] 或\\(f(P)\\)满足\\(f'(P)\\)为目标值的约束，就是法线插值。    
+[10:43] mesh 点是指定点（例如重心坐标）的组合。通过移动指定点控制mesh.    
 
-### 本质：插值问题   
-
-![](../assets/映射9.png)  
-
-$$
-f(P_i)=\sum c_if_i(X)
-$$
-
-$$
-c_i=?
-$$
-
-$$
-f(P_i)=q_i,\forall i
-$$
-
-$$
-\sum c_if_i(P_i)=q_i,\forall i
-$$
-
-
-### 求解    
-
-• 插值法（比如，RBF插值）    
-
-$$
-f(p_i)=c_0+c_xx+c_yy+\sum c_i\phi (||X-P_i||)
-$$
-
-$$
-\phi (r)=r^2\log r
-$$
-
-$$
-f(P_i)=q_i,\forall i
-$$
-
-• 逼近法（能量极小法）    
-
-$$
-\min E_{TPS}(f)=\iint [(\frac{\partial ^2f}{\partial x^2} )^2+2(\frac{\partial ^2f}{\partial x\partial y} )^2+(\frac{\partial ^2f}{\partial y^2} )^2]
-$$
-
-Bending energy   
-
-$$
-s.t. f(P_i)=q_i,\forall i
-$$
-
-
-### 更多约束   
-
-• Hermite插值：插值梯度    
-
-![](../assets/映射10.png)  
-
-$$
-f(P_i)=q_i            
-$$
-
-$$
-Df(P_i)=D_i            
-$$
-
+本质：插值问题   
 
 ## 例2: Barycentric Coordinates   
 
-
-Stages:   
-• Source shape    
-• Polygonal cage    
-• Coordinates    
-• Manipulate cage    
-• Apply deformation    
-
-![](../assets/映射12-1.png)  
-
-![](../assets/映射13.png)  
-
-$$
-f(X)=\sum_{i=1}^{n} \alpha _i(X)q_i
-$$
-
+重心坐标：[link](../DiscreteCurves/BarycentricCoordinate.md)
 
 # 映射的性质   
 
-
-## What are good maps?   
+问：What are good maps?
 
 ![](../assets/映射14.png)  
 
-
-### Flip (foldover) triangles in mapping    
+答：（1）满足双射，即Source 与 target 一一 对应。local 双射（单射)：一一对应，但有翻转发生      
+（2）扭曲尽量少，否则有鬼影现象 [21:28下图]    
+   
+## 翻转 Flip (foldover) - 单射
 
 ![](../assets/映射15.png)  
 
-> 双射：Source 与 target —— 对应      
-扭曲：尽量少，否则有鬼影现象 [21:28下图]    
-local 双射（单射)：——对应，但有翻转发生   
-
-### Locally injective mappings    
-
-![](../assets/映射16.png)  
-
-> \\(f(x)=\left\{\begin{matrix}
+$$
+f(x)=\begin{pmatrix}
 u(x) \\\\
 V(x)
-\end{matrix}\right.\\)  是映射关系，求\\(f\\)的 Jacobian,
+\end{pmatrix}
+$$
+是映射关系，求\\(f\\)的 Jacobian,
 \\(J\\)是每个分量分别对\\(x\\)和构成偏导     
 det|J| >0，\\(\Rightarrow \\)未翻转。    
 [23:35]有两个区域 \\(D_o, D_i, \Omega \\) 为\\(x_0\\)的无穷小邻域?     

@@ -96,7 +96,7 @@ Gauss函数的特性：拟局部性
 
 ## 高维情形：多元函数  
 
->&#x1F50E; 见【多元函数】，[link](http://localhost:3000/ParametricFitting/Multi.html)  
+>&#x1F50E; 见【多元函数】，[link](https://caterpillarstudygroup.github.io/GAMES102_mdbook/ParametricFitting/Multi.html)  
 
 变量的多个分量的线性组合  
 

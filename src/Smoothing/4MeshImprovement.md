@@ -1,35 +1,12 @@
 # 4. Mesh Improvement    
 
-# Smoothing Everywhere    
+什么是质量好？（1）三角形接近正三角形（2）无翻转     
 
-* Real life applications    
-• Sculpture    
-• Decoration    
-
-* Methods    
-• Corner cutting    
-
-* Geometric modeling    
-• Chaikin's scheme     
-• Bézier: de Castljau algorithm   
-• B‐spline: knot insertion   
-• Subdivision surface    
-
-# Mesh Improvement   
-
-![](../assets/去躁48.png)   
-
-> 什么是质量好？(1) 三角形接近正三角形     
-
-# Mesh Improvement   
+## 方法一：Flip   
 
 ![](../assets/去躁49.png)   
 
-
-# Mesh Improvement 
-
-• Example   
-
+Example   
 ![](../assets/去躁50.png)   
 
 
@@ -44,14 +21,14 @@
 • Wang et al. Mesh Denoising via Cascaded Normal Regression. Siggraph 2016.    
 * 很多很多工作…    
 
-> 点云：把点云去噪转化为前面学过的问题。例如取空间上的邻居点作为它的邻域。    
-深度相机的数据质量很差，尤其是深度这一维度。    
-
 # 其他数据的去噪   
 
-
 • Point cloud   
+
+> 点云：把点云去噪转化为前面学过的问题。例如取空间上的邻居点作为它的邻域。    
 
 • Volumetric data   
 
 • Depth images    
+
+> 深度相机的数据质量很差，尤其是深度这一维度。    

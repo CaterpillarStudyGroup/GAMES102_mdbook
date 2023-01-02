@@ -2,21 +2,17 @@
 
 ![](../assets/简化30.png)    
 
-> \\(M = M_o + M_i\\) (中间的操作)     
-记录简化过程     
+# 多分辨率的分析与表达
 
-# Multiresolution   
-
-## Multiresolution Representation    
-
+## 多分辨率表达 Multiresolution Representation    
 
 Multiresolution Representation of \\(M\\) = Base mesh \\(M^0\\)  +  A sequence of refinements \\(M^i\\)    
 
+> \\(M_i\\)： (中间的操作)，记录简化过程     
+
 ![](../assets/简化31.png)    
 
-
-
-## Multiresolution Analysis   
+## 多分辨率分析 Multiresolution Analysis   
 
 [Lounsbery-etal93] [Eck-etal95] [Certain-etal96]    
 
@@ -25,75 +21,21 @@ Multiresolution Representation of \\(M\\) = Base mesh \\(M^0\\)  +  A sequence o
 
 # 1. Discrete LOD   
 
-\\(\Box \\) “Pop” discontinuity    
-
-![](../assets/简化33.png)    
-
-**Concern**: **transitions may** “**pop**”       
-
-> 提前生成好不同 level 的模型，根据实际情况决定用哪个可能存在跳变。    
+提前生成好不同 level 的模型，根据实际情况决定用哪个可能存在跳变。    
 
 # 2. Continuous LOD    
 
-![](../assets/简化34.png)    
-
-Concern: transitions may “pop”   
-\\(\to\\) would like smooth LOD   
-
-> 记录中间操作，可以只增加或减少一个边     
+记录中间操作，可以只增加或减少一个边     
 消耗计算资源，因此不常用      
 
-## Mesh Simplification Procedure   
-
-• Idea: recode sequence of edge collapses     
-
 ![](../assets/简化35.png)    
-
-
-## Simplification Process    
-
-![](../assets/简化36.png)    
-
-
-## Invertible!    
-
-Vertex split transformation:   
-
-![](../assets/简化37.png)    
-
-
-## Reconstruction Process    
-
-![](../assets/简化38.png)    
-
-
-## Continuous‐resolution LOD    
-
-From PM, extract \\(M^i\\) of any desired complexity.   
-
-![](../assets/简化39.png)    
-
-
-## Progressive Transmission    
-
-Transmit records progressively:   
-
-![](../assets/简化40.png)    
-
+> &#x1F446; recode sequence of edge collapses
 
 # 3. View‐Dependent LOD    
 
-• Show nearby portions of object at higher resolution than distant portions    
+Show nearby portions of object at higher resolution than distant portions    
 
 ![](../assets/简化41.png)    
-
-
-## Selective Refinement    
-
-![](../assets/简化42.png)    
-
-[SIGGRAPH 96]: incremental update not possible   
-
 
 # Challenges   
 

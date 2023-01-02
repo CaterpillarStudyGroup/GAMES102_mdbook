@@ -1,15 +1,10 @@
-
-
-
 # 高维几何对象的采样与剖分    
 
-![](../assets/采样47.png)    
-
-- 二维流形曲面的采样与网格化   
+## 二维流形曲面的三角网格化   
 
 ![](../assets/采样48.png)    
 
-- 二维流形曲面的四边形网格化   
+## 二维流形曲面的四边形网格化   
 
 ![](../assets/采样49.png)    
 
@@ -30,9 +25,5 @@
 
 
 # Solving PDE (FEM)
-• Resolution, basis order, element quality…     
 
-![](../assets/采样52.png)    
-
-![](../assets/采样53.png)    
-
+见GAMES103

@@ -1,55 +1,30 @@
 # 三角网格：曲面的离散表达   
 
-# 绘制：离散表达     
-
-* 曲线的绘制：曲线须离散成多边形      
-* 曲面的绘制：曲面须离散成**三角形网格**       
-
-![](../assets/表达1.png)   
-
-> 三角形网格是曲面的分片线性逼近  
-
-# Connectivity    
-
-![](../assets/表达3.png)   
-
-# Graph Embedding    
+三角形网格是曲面的分片线性逼近  
 
 ![](../assets/表达4.png)   
 
-# Planar Graphs     
+二维流形上的三角网络本质上就是个平面图。  
 
-![](../assets/表达5.png)   
+> Planar Graphs：这页没讲       
+> Triangulation：这页后面再讲      
 
+# 流形Meshes     
 
-# Triangulation    
-
-![](../assets/表达6.png)   
-
-# Meshes     
+流形：任意一个点的无穷小领域同胚于一个二维圆盘      
 
 ![](../assets/表达7.png)   
 
-> 边非流型：图1. 点非流型      
+> &#x1F446; 图1中一条边有三个相邻的面，因此是非流型边  
+
 ![](../RAW/72-1.png)   
-本课程假设都是流型曲面。如果遇到非流型就直接去掉或变成流形。 
+> &#x1F446; 非流形顶点 
 
-# Planar Graphs and Meshes     
+> &#x2757; 本课程假设都是流型曲面。如果遇到非流型就直接去掉或变成流形。 
 
-![](../assets/表达8.png)   
-
-# Topology     
-
-![](../assets/表达9.png)   
-
-# Orientability     
-
-![](../assets/表达10.png)   
-
-# Duality      
-
-![](../assets/表达11.png)   
-
-• Delaunay Triangulation vs. Voronoi Graph    
+> Planar Graphs and Meshes：参数化的本质是把空间流形在二维平面上展开，后面会讲     
+> Topology：后面碰到再讲     
+> Orientability：可定向：每个面片都有一致的朝向，极少碰到，碰到再解释     
+> Duality：下节课再讲      
 
 

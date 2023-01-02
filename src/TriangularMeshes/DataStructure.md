@@ -1,45 +1,8 @@
 # 网格曲面的数据结构    
 
-
-# Uses of Mesh Data     
-
-
-* Rendering     
-• Triangle trip     
-* Geometry queries     
-• What are the vertices of face #k ?      
-• Are vertices #i and #j adjacent?     
-• Which faces are adjacent face #k ?    
-* Geometry operations    
-• Remove/add a vertex/face    
-• Mesh simplification     
-• Vertex split, edge collapse     
-
-
-
-# Storing Mesh Data     
-
-* Storage of generic meshes     
-• Hard to implement efficiently     
-* Assume     
-• Triangular     
-• Orientable     
-• Manifold        
-
-## Define a Mesh
-
-* Geometry     
-• Vertex coordinates     
-* Connectivity     
-• How do vertices connected?     
-
-![](../assets/表达12.png)   
-
-• List of Edge      
-• Vertex‐Edge     
-• Vertex‐Face      
-• Combined      
-
+> Uses of Mesh Data：跳过     
+> Storing Mesh Data：跳过        
+> Define a Mesh：跳过   
 
 # 3D Mesh Surface     
 

@@ -1,3 +1,4 @@
 # 回顾
 
-http://localhost:3000/DataFitting/DataFitting.html
+数据拟合：[link](https://caterpillarstudygroup.github.io/GAMES102_mdbook/DataFitting/DataFitting.html)
+

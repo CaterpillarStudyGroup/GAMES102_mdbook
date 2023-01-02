@@ -1,75 +1,35 @@
-# Local Laplacian Smoothing    
+# Local Laplacian Smoothing的作用    
 
-## Differential Coordinates (Laplace Coordinates)    
+## 几何细节的度量
 
+Useful for operations on surfaces where **surface details** are important   
 
- - Represent local detail at each surface point    
-    - better describe the shape    
- - Linear transition from global to differential   
- - Useful for operations on surfaces where **surface details** are important   
+## Laplacian Smoothing
 
-![](../assets/网格10.png)    
-$$
-\delta _i=\frac{1}{d_i} \sum _{j\in N(i)}(\nu_i-\nu_j)
-$$    
-
-
-## Laplacian Smoothing Flow   
-
-![](../assets/网格11.png)    
-
-> 上节课的任意曲面到极小曲面的过程,是一种特殊的    
-Local Lapluàn Smoothing.    
-也可以看作是去噪、滤波。
-
-## Laplacian Smoothing    
+### 方法
 
 $$
 P^{new}=P^{old}+\lambda L(P^{old})
 $$
 
- - Equivalent to box filter in signal processing    
- - Apply to all vertices on mesh    
- - Typically repeat several times    
- - Can describe as energy minimization    
-    - Energy = sum of squared edge lengths in mesh
-    - Parameter \\(\lambda >0\\) controls convergence "speed"    
+![](../assets/网格11.png)    
 
-Example :
+> 上节课的任意曲面到极小曲面的过程,是一种特殊的Local Lapluàn Smoothing.    
+也可以看作是去噪、滤波。
 
-![](../assets/网格12.png)    
+平滑也相当于滤波，GAMES101有解释。  
 
-
-## Problem of Over‐smoothing   
-
-How to find appropriate \\(\lambda\\) and number of iterations?   
-
+### over-smoothing问题
+但存在over-smoothing问题，需要选择合适的\\(\lambda\\)和迭代次数。  
 ![](../assets/网格13.png)    
 
+### 基于平均曲率流近似Laplacian Smoothing的效果
 
-# Mean Curvature Flow   
+平均曲率流：[link](../LaplacianCoordinates/LaplacianCoordinates.md)
 
-![](../assets/网格14.png)    
-
-$$
-\delta _i=\frac{1}{d_i} \sum _{\nu\in N(i)}(\nu_i-\nu)
-$$
-
-$$
-\frac{1}{len(\gamma )} \int _{\nu\in \gamma }(\nu_i-\nu)ds
-$$
-
-$$
-\lim_{len(\gamma ) \to 0} \frac{1}{len(\gamma )} \int _{\nu\in \gamma }(\nu_i-\nu)ds=H(\nu_i)n_i
-$$
-
-
-## Discrete Mean Curvature Flow   
+不知道拉普拉斯坐标，但知道平均曲率和法向，也能做拉普拉斯平滑
 
 ![](../assets/网格15.png)    
-
- 
-## Discrete Mean Curvature   
 
 $$
 Hn=\frac{\nabla _PA}{2A} 
@@ -80,8 +40,6 @@ Hn=\frac{1}{4A} \sum _j(\cot \alpha _j+\cot \beta _j)(P-Q_j)
 $$
 
 ![](../assets/网格16.png)    
-
-## Properties of Mean Curvature Flow   
 
 ![](../assets/网格17.png)    
 

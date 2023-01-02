@@ -1,7 +1,8 @@
 # 从曲线的曲率图的直观理解    
 
-![](../assets/光顺5.png)    
+![](../assets/光顺1.png) 
 
+> 看上去光滑的曲线，放大后发现是凹凹凸凸的（右）
 
 **Fairing Design is Important!**    
 
@@ -14,36 +15,34 @@
 
 # 光顺的定义
 
-> 光顺是一种微观的性质，很难描述，且没有明确的数学定义。   
 
 ## 为什么光顺难以定义    
 
-* A subjective concept     
-• The subtle bumps, wiggles, and inflection points of a curve      
-• Related to human perception    
-• Dependent on designer’s experience    
-* A difficult task     
-• Examining the curves by eye!    
-• No objective measures    
-• Cannot do it mathematically    
+光顺是一种微观的性质，很难描述  
+是否光顺取决于人的主观和经验  
+没有明确的数学定义  
+没有客观的测量方法   
 
 ## 光顺的参考定义     
 
-* [Su and Liu 1978]       
-• A curve is fair if it is \\(C^2\\) continuous and its curvature plot is free of any unnecessary variation, i.e., the distribution of curvature must be as uniform as possible.     
-* [Farin and Sapidis, 1989]      
-• A curve is fair if its curvature plot consists of relatively few 
-monotone pieces.    
-* [Farin 2002]     
-• A curve is fair if its curvature plot is continuous and consists of only a few monotone pieces.     
-* [Roulier and Rando, 1994]     
-• A curve is fair if it is \\(C^2\\) continuous and minimizes the integral of the squared curvature with respect to arc length    
+1. [Su and Liu 1978]       
+- \\(C^2\\) continuous  
+- curvature plot is free of any unnecessary variation  
+  例如： the distribution of curvature must be as uniform as possible.     
+2. [Farin and Sapidis, 1989]      
+- curvature plot consists of relatively few 单调段（monotone pieces）    
+3. [Farin 2002]     
+- curvature plot is continuous
+- curvature plot consists of only a few monotone pieces.     
+4. [Roulier and Rando, 1994]     
+- \\(C^2\\) continuous
+-  minimizes the integral of the squared curvature with respect to arc length    
 
 $$
 \int _ck^2ds=MIN
 $$
 
-> 最后一个用整条曲线的能量来定义，是全局面定义法。    
+> 这是用整条曲线的能量来定义，是全局面定义法。    
 
 ## Observations of Fairness     
 
@@ -65,13 +64,9 @@ $$
 
 ![](../assets/光顺9.png)    
 
-* The curve is \\(C^\infty \\)    
-* The curve is not fair as the eye is very uncomfortable while 
-viewing from point O       
-* Reason     
-• It has too many inflections (vibration numbers)    
-(One vibration: from convex to concave or from concave to convex)     
-
+The curve is \\(C^\infty \\)，但并不光顺  
+原因：拐点（vibration）数太多    
+拐点即 from convex to concave or from concave to convex)     
 
 ### Example 2   
 
@@ -85,29 +80,22 @@ $$
 {y}'' =1+\delta -\sin x > 0
 $$
 
-* The curve is \\(C^\infty \\) without any inflection point.    
-* The curve is not fair as the eye is very uncomfortable while viewing from point O (it winds along the black parabola curve)     
-* Reason     
-• \\({y}''(x) \\) has too many vibration numbers       
-
-> 曲线上一直在递增，但\\(y"\\)有太多振荡。    
+The curve is \\(C^\infty \\)且一直在递增无拐点，但仍不光顺  
+原因：\\(y''\\)有太多振荡。    
 
 ### Example 3    
 
 ![](../assets/光顺11.png)  
 
-* The curvature function \\({y}''(x) \\) is discontinuous.    
-* Vibration number of \\({y}''(x) \\) can be defined if it is a bounded function.         
-\\({y}''(x) \\) is bounded \\(\Rightarrow {y}'(x)\\) has bounded variation \\(\Rightarrow y(x)\in C^{l+1}\\)    
-* The curve is not fair if \\(k_1\\) and  \\(k_2\\) are much different.      
-* Reason      
-• \\({y}''(x) \\) has large amplitude at discontinuity point.
+The curvature function \\({y}''(x) \\)不满足G2连续。  
+\\(k_1\\)与\\(k_2\\)变化不大时光顺。  
+原因：\\({y}''(x) \\) has large amplitude at discontinuity point.
 
 > 不满足\\(C^2\\)连续，但光顺，因此\\(C^2\\)不是必须的。    
 
 ## 曲线的光顺的“新定义”     
 
-• 一条曲线是光顺的，如果     
+一条曲线是光顺的，如果     
 （1）它是\\(C^{l+1}  ( l > 0 )\\)连续的；    
 （2）它的曲线本身拐点较少；     
 （3）它的曲率图的拐点较少；    
@@ -119,10 +107,7 @@ $$
 
 # Remarks   
 
-* Vibration     
-• Change from convex to concave or change from concave to convex     
-* First vibration number \\(R\\)      
-• Vibration number of \\(y(x)\\)     
-* Second vibration number \\(S\\)    
-• Vibration number of curvature function     
+震荡数 Vibration：Change from convex to concave or change from concave to convex     
+一阶震荡数 First vibration number \\(R\\)：Vibration number of \\(y(x)\\)     
+二阶震荡数 Second vibration number \\(S\\)：Vibration number of curvature function     
 

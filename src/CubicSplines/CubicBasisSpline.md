@@ -1,5 +1,7 @@
 # 三次基样条   
 
+> 这一节没讲，用Hermit基组成样条叫基样条。  
+
 $$
 S(x)=\sum_{i=0}^{n}y_i \varphi _i(x)+{y}'_0 \varphi _{n+1}(x)+{y}'_n \varphi _{n+2}(x)
 $$

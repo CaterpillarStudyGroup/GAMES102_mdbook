@@ -1,77 +1,54 @@
-# 离散微分几何    
-
-
 # 离散微分几何要解决的问题   
 
-> 微分几何研究曲面无穷小邻域上的微分属性（导数、曲率）    
+微分几何研究曲面无穷小邻域上的微分属性（导数、曲率）    
+但Mesh是分段线性的，在三角形内部无穷连续，在边和点上\\(C^0\\)连续。      
+\\(C^0\\)连续不光滑、不可微，如何讨论微分性质？
 
-**meshes are only \\(C^0\\)**    
 
-* Meshes are piecewise linear surfaces   
-• Infinitely continuous on triangles   
-• \\(C^0\\) at edges and vertices    
-
-> \\(C^0\\)连续不光滑、不可微，如何讨论微分性质？
-
+> 答：通过采样点估计出原始曲面的微分属性。包括：  
 • Normal estimation    
 • Curvature estimation    
 • Principal curvature directions   
-• …   
+• …  
 
-> 答：通过采样点估计出原始曲面的微分属性。
-
-# Estimation of Differential Measures    
-
+## 两种估计微分属性的方法论
 
 Approximate the (unknown) underlying surface    
-- Continuous approximation    
-  - Approximate the surface & compute continuous differential 
-measures (normal, curvature)   
-- Discrete approximation   
-  - Approximate differential measures for mesh    
 
-
+（1） Continuous approximation：Approximate the surface & compute continuous differential measures (normal, curvature)   
+（2） Discrete approximation：Approximate differential measures for mesh    
 
 # Continuous Approximation   
 
 ## Quadratic Approximation     
 
-### Approximate surface by quadric    
- - At each mesh vertex (use surrounding triangles)   
-    - Compute normal at vertex    
-      - Typically average face normals    
-    - Compute tangent plane & local coordinate system    
-      - (node = (0,0,0))    
-    - For each neighbor vertex compute location in local system    
-      - relative to node and tangent plane   
+### 第一步：获取周围点的信息
+
+对于要估计的顶点，使用其周围的顶点的信息：  
+
+- Compute normal at vertex    
+  - Typically average face normals    
+- Compute tangent plane & local coordinate system    
+  - (node = (0,0,0))    
+- For each neighbor vertex compute location in local system    
+  - relative to node and tangent plane   
 
 ![](../assets/微分32.png)    
 
 
-### approximating vertices
+### 第二步：拟合曲面
 
-* Find quadric function approximating vertices    
+定义 quadric function，例如抛物面    
 
 $$
 F(x, y, z)=ax^{2}+bxy+cy^{2}-z=0 
 $$
 
-* To find coefficients use least squares fit    
+使用least squares来找到拟合quadric function的系数
 
 $$
 \min \sum_{i}^{} (ax_i^2+bx_iy_i+cy_i^2-z_i) 
 $$
-
- 
-### approximating points     
-
-Finding the quadric function approximating points     
-
-$$
-F(x,y,z)=ax^2+bxy+cy^2-z=0
-$$
-
-To find coefficients use least square \\(\min \sum _i(ax_i^2+bx_iy_i+cy_i^2-z_i)\\) fit to find minimum:    
 
 $$
 \begin{pmatrix}x_1^2  & x_1y_1 &y_1^2
@@ -97,18 +74,27 @@ $$
 
 Approximation can be found by:\\(\tilde{X}=\left(A^{T} A\right)^{-1} A^{T} b\\)     
 
-### Approximation principal curvatures
+### 第三步：基于曲面估计微分属性
 
-• Given surface \\(F\\) its principal curvatures \\(k_\min \\) and \\(k_\max\\) are real roots of:   
+Approximation principal curvatures
+
+Given surface \\(F\\)，principal curvatures \\(k_\min \\) and \\(k_\max\\) are real roots of:   
 
 $$
 k^{2}-(a+c)k + ac - b^{2} = 0
 $$
 
-• Mean curvature: \\(H = (k_\min + k_\max)/2\\)     
-• Gaussian curvature:\\(K = k_\min  k_\max\\)    
+Mean curvature: 
 
+$$
+H = (k_\min + k_\max)/2
+$$
 
+Gaussian curvature:  
+
+$$
+K = k_\min  k_\max
+$$
 
 ## Other approximation     
 
@@ -121,19 +107,17 @@ $$
 
 # Discrete Approximation    
 
-## Normal Estimation   
+## 顶点的Normal Estimation   
 
- - Normal estimation on vertices     
-    - Defined for each face    
-    - Average face normals    
-      - Weighted:  face areas, angles at vertex      
+顶点Normal = 加权平均 face normals    
 
- - What happen at edges/creases?     
+Weighted:  face areas, angles at vertex      
 
+> What happen at edges/creases?     
 
 ## Mean Curvature     
 
-• 由Laplace‐Beltrami定理：      
+由Laplace‐Beltrami（平均曲率流）定理：      
 
 $$
 K(x_i)=\frac{1}{2A_M} \sum_{j\in N_1(i)}^{} (\cot \alpha _{ij}+\cot \beta _{ij})(x_i-x_j)
@@ -141,36 +125,32 @@ $$
 
 ![](../assets/微分33.png)    
 
-> \\(N_l(X_i)\\):表\\(X_i点的l\\)邻域点     
+其中：  
+\\(N_l(X_i)\\):表\\(X_i点的l\\)邻域点     
 \\(A_m\\)：整个多边形的面积     
 
 ## Gauss Curvature     
 
-• 由Gauss‐Bonnet定理：   
-
+Gauss‐Bonnet定理：   
 
 ![](../assets/微分34.png)    
 
 
-### Example1    
+例子：      
 
 ![](../assets/微分35.png)    
+> &#x1F446; color map：数据的可视化方法，红 > 绿 > 篮    
 
- - Approximation always results in some noise    
- - Solution    
-    - Truncate extreme values    
-      - Can come for instance from division by very small area    
-    - Smooth    
-      - More later    
+## 存在的问题
 
-> color map：数据的可视化方法，红 > 绿 > 篮    
+Approximation always results in some noise    
+解决方法：（1）截断（2）平滑
 
 ## References    
 
 - MEYER M., DESBRUN M., SCHRÖDER P., BARR A.: Discrete differential‐geometry operators for triangulated 2‐manifolds. In Visualization and Mathematics III, Hege H.‐C., Polthier K., (Eds.). Springer, 2003, pp. 35–58. (<u>PDF</U>)    
 
 > 离散微分几何算子的开创性文章   
-
 
 - TAUBIN G.: Estimating the tensor of curvature of a surface from a polyhedral approximation. In Proc. International Conference on Computer Vision (1995), pp. 902–907.     
 - MEYER M., DESBRUN M., SCHRÖDER P., BARR A.: Discrete differential‐geometry operators for triangulated 2‐ manifolds. In Visualization and Mathematics III, Hege H.‐C., Polthier K., (Eds.). Springer, 2003, pp. 35–58.      

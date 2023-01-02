@@ -1,16 +1,23 @@
 # 1. Local Simplification Strategies    
 
+Local error: Compare new patch with previous iteration    
+
+• Fast    
+• Accumulates error    
+• Memory‐less    
+
 
 ## The Basic Algorithm    
 
-* Repeat    
-• Select the element with minimal error     
-• Perform simplification operation (remove/contract)     
-• Update error (local/global)    
-* Until mesh size / quality is achieved     
+（1） Select the element with minimal error     
+（2） Perform simplification operation (remove/contract)     
+（3） Update error (local/global)    
+重复（1）-（3）Until mesh size / quality is achieved     
 
 
-## Simplification Error Metrics     
+## 顶点删除的误差度量
+
+> 点越尖锐越重要。(Laplace,一圈夹角等）  
 
 * Measures    
 • Distance to plane    
@@ -21,56 +28,25 @@
 
 ![](../assets/简化13.png)     
 
-> QEM,二次误差度量    
+
+## 边收缩的误差度量 
+
+### QEM,二次误差度量    
+
 用二次曲面拟合这条边。拟合得到系数矩阵，用矩阵性质度量扭曲。    
 
-
-# Implementation Details    
-
-* Vertices/Edges/Faces data structure     
-• Easy access from each element to neighboring elements    
-* Use priority queue (e.g. heap)    
-• Fast access to element with minimal error    
-• Fast update    
-
-
-## 1.1 Vertex Removal [Schroeder et al 92]     
-
-- Simplification operation: Vertex removal   
-- Error metric: Distance to average plane    
-- May preserve mesh features (creases)   
-
-![](../assets/简化14.png)     
-![](../assets/简化15.png)     
-
-
-## 1.2 Edge Collapse [Hoppe el al 93]    
-
-- Simplification operation: Pair contraction    
-- Error metric: distance, pseudo-global    
-- Simplifies also topology    
-
-
-![](../assets/简化16.png)     
-
-
-# Distance Metric: Quadrics    
-
-- Choose point closest to set of planes (triangles)    
+（1） Choose point closest to set of planes (triangles)    
 
 ![](../assets/简化17.png)     
 
 
-- Sum of squared distances to set of planes is quadratic  \\(\Rightarrow\\)  has a minimum     
+（2） Sum of squared distances to set of planes is quadratic  \\(\Rightarrow\\)  has a minimum     
 
 ![](../assets/简化18.png)     
 
+> 用二次曲面来拟合，得到系数矩阵，用二次曲面性质来度量 [Garland & Heckbert 1997]    
 
-
-## The Quadric Error Metric (QEM)    
-[Garland & Heckbert 1997]    
-
-• Given a plane, we can define a **quadric** Q    
+Given a plane, we can define a **quadric** Q    
 
 $$
 Q=(A,b,c)=(nn^T,dn,d^2)
@@ -134,7 +110,7 @@ $$
 • Fallback to fixed placement if A is non‐invertible    
 
 
-## Contracting Two Vertices    
+### Contracting Two Vertices    
 
 - **Goal**: Given edge e=(\\(v_1, v_2\\)), find contracted    
 
@@ -164,7 +140,7 @@ If no solution - select the edge midpoint
 
 
 
-## Visualizing Quadrics    
+### Visualizing Quadrics    
 
 ![](../assets/简化19.png)     
 
@@ -177,7 +153,7 @@ If no solution - select the edge midpoint
 
 > 简化后的折叠、翻转现象     
 
-# Selecting Valid Pairs for Contraction    
+### Selecting Valid Pairs for Contraction    
 
 - Edges:   
 
@@ -193,7 +169,7 @@ If no solution - select the edge midpoint
 
 ![](../assets/简化20.png)     
 
-# Algorithm    
+### Algorithm    
 
 - Compute \\(Q_v\\) for all the mesh vertices    
 - Identify all valid pairs   
@@ -204,11 +180,13 @@ If no solution - select the edge midpoint
 • Update the priority queue with new valid pairs     
 
 
-# Artifacts by Edge Collapse    
+### Artifacts by Edge Collapse    
 
 ![](../assets/简化21.png)     
 
-# Pros and Cons    
+收缩后会出现边的翻转
+
+### Pros and Cons    
 
 * Pros    
 • Error is bounded    
@@ -221,21 +199,21 @@ If no solution - select the edge midpoint
 • Introduces new vertices not present in the original mesh    
 
 
-## 1.3 Appearance‐based metrics    
+## Appearance‐based metrics    
 
- - Generalization required to handle appearance properties    
-    - color    
-    - texture    
-    - normals    
-    - etc.    
- - Treat each vertex as a 6‐vector [x,y,z,r,g,b]    
-    - Assume this 6D space is Euclidean    
-      - Of course, color space is only roughly Euclidean    
-    - Scale xyz space to unit cube for consistency     
+- Generalization required to handle appearance properties    
+  - color    
+  - texture    
+  - normals    
+  - etc.    
+- Treat each vertex as a 6‐vector [x,y,z,r,g,b]    
+  - Assume this 6D space is Euclidean    
+    - Of course, color space is only roughly Euclidean    
+  - Scale xyz space to unit cube for consistency     
 
 
 
-## Generalized Quadric Metric    
+### Generalized Quadric Metric    
 
 
 |        |  Vertex  |  Dimension  |
