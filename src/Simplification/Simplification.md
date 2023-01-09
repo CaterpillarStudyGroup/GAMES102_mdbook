@@ -95,20 +95,6 @@ Merge all vertices within the same cell
 • 几何   
 • 视觉：纹理、材质、法向…    
 
-### Local error: Compare new patch with previous iteration    
-• Fast    
-• Accumulates error    
-• Memory‐less    
-
-> 点越尖锐越重要。(Laplace,一圈夹角等）   
-
-### Global error: Compare new patch with original mesh    
-• Slow    
-• Better quality control    
-• Can be used as termination condition    
-• Must remember the original mesh throughout the algorithm   
-
-
 ### Local vs. Global Error    
 
 全局优于局部，具体见下一页    

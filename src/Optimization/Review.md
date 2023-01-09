@@ -1,16 +1,7 @@
-# 回顾：参数化中的优化问题   
+# 回顾
 
-$$
-\min_{V} E(V)=\sum _{t\in T}(\sigma _1^2+\frac{1}{\sigma _1^2} +\sigma _2^2+\frac{1}{\sigma _2^2}) 
-$$
-
-s.t.  \\(\sigma _1\sigma _2>0,\forall t\\)   
-
-![](../assets/优化1.png)   
-
-
-
-# 回顾：几何处理中的优化问题   
+参数化中的优化问题  
+几何处理中的优化问题   
 
 ![](../assets/优化2.png)   
 

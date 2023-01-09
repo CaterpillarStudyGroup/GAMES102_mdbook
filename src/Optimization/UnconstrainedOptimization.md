@@ -1,23 +1,6 @@
 # 无约束的优化问题    
 
-
-# Unconstrained Optimization    
-
-$$
-\min_xf(x)
-$$
-
-• Gradient descent    
-• Newton    
-• Quasi‐Newton    
-• Coordinate descent    
-
-![](../assets/优化9.png)   
-
-
-
-# 梯度下降法   
-(Gradient descent)   
+## 梯度下降法 Gradient descent   
 
 ![](../assets/优化10.png)   
 
@@ -25,38 +8,23 @@ $$
 x_{k+1}=x_k-\alpha _k\nabla f(x_k)
 $$
 
-# 梯度下降法   
-(Gradient descent)   
-
-**Line search**    
-\\(\Downarrow \\)    
-\\(x_{k+1}=x_k-\alpha _k\nabla f(x_k)\\)    
-
-> **Gradient descent**    
-
-# 牛顿法 (Newton’s method)    
+## 牛顿法 (Newton’s method)    
 
 ![](../assets/优化11.png)   
 
 
-# 拟牛顿法 (Quasi‐Newton)    
+## 拟牛顿法 (Quasi‐Newton)    
 
 ![](../assets/优化12.png)   
 
-* Estimate the Hessian based on previous gradients    
-* Recursively inverse Hessian    
- > • BFGS (Broyden–Fletcher–Goldfarb–Shanno algorithm)    
-  • L‐BFGS    
+用一下近似但更容易计算的H来代替真实的H：BFGS、L‐BFGS    
 
+## 坐标下降法 (Coordinate descent)    
 
-# 坐标下降法 (Coordinate descent)    
+目标: minimize\\(_{x,y},𝐸(𝑥, 𝑦)\\)     
 
-**Obj**: minimize\\(_{x,y},𝐸(𝑥, 𝑦)\\)     
-
-• Alternating variables    
-
-Repeat    
+Repeat Alternating variables    
 1. \\( y_{k+1}=\min_yE(x_k,y)\\)  
 2. \\(x_{k+1}=\min_xE(x,y_{k+1})\\)    
 
-
+> [1:09:31] 沿坐标轴下降，且每次只选一个坐标轴。      
