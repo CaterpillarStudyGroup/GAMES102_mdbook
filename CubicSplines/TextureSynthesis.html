@@ -1,0 +1,715 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>纹理合成 - GAMES102</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of GAMES102">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">GAMES102</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction 介绍</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Introduction/3DData.html"><strong aria-hidden="true">1.1.</strong> 三维数据</a></li><li class="chapter-item expanded "><a href="../Introduction/MathBasic.html"><strong aria-hidden="true">1.2.</strong> 数学基础</a></li><li class="chapter-item expanded "><a href="../Introduction/MLBaic.html"><strong aria-hidden="true">1.3.</strong> ML基础</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 数据拟合</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DataFitting/DataFitting.html"><strong aria-hidden="true">2.1.</strong> 数据拟合</a></li><li class="chapter-item expanded "><a href="../DataFitting/PolynomialInterpolation.html"><strong aria-hidden="true">2.2.</strong> 1. 多项式插值</a></li><li class="chapter-item expanded "><a href="../DataFitting/PolynomialApproximation.html"><strong aria-hidden="true">2.3.</strong> 2. 多项式逼近</a></li><li class="chapter-item expanded "><a href="../DataFitting/Funtion.html"><strong aria-hidden="true">2.4.</strong> 3. 函数空间及基函数</a></li><li class="chapter-item expanded "><a href="../DataFitting/RBF.html"><strong aria-hidden="true">2.5.</strong> 4. RBF函数插值/逼近</a></li><li class="chapter-item expanded "><a href="../DataFitting/NewView.html"><strong aria-hidden="true">2.6.</strong> 5. 从另一个角度来看拟合函数</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 参数拟合</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ParametricFitting/Review.html"><strong aria-hidden="true">3.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/Multi.html"><strong aria-hidden="true">3.2.</strong> 多元函数</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/VectorValue.html"><strong aria-hidden="true">3.3.</strong> 向量值函数</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/CurveFitting.html"><strong aria-hidden="true">3.4.</strong> 曲线拟合</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 三次样条函数</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CubicSplines/CubicSplineFunction.html"><strong aria-hidden="true">4.1.</strong> 三次样条函数</a></li><li class="chapter-item expanded "><a href="../CubicSplines/CubicBasisSpline.html"><strong aria-hidden="true">4.2.</strong> 三次基样条</a></li><li class="chapter-item expanded "><a href="../CubicSplines/CubicSplineCurve.html"><strong aria-hidden="true">4.3.</strong> 三次样条曲线</a></li><li class="chapter-item expanded "><a href="../CubicSplines/GeometricContinuity.html"><strong aria-hidden="true">4.4.</strong> 几何连续性</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Bezier曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../BezierCurve/Review.html"><strong aria-hidden="true">5.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../BezierCurve/BernsteinBasisFunction.html"><strong aria-hidden="true">5.2.</strong> Bernstein基函数</a></li><li class="chapter-item expanded "><a href="../BezierCurve/BezierCurve.html"><strong aria-hidden="true">5.3.</strong> Bezier曲线</a></li><li class="chapter-item expanded "><a href="../BezierCurve/Property.html"><strong aria-hidden="true">5.4.</strong> Bernstein基函数及Bezier曲线的性质</a></li><li class="chapter-item expanded "><a href="../BezierCurve/DeCasteljau算法.html"><strong aria-hidden="true">5.5.</strong> de Casteljau算法</a></li><li class="chapter-item expanded "><a href="../BezierCurve/GeometricSpline.html"><strong aria-hidden="true">5.6.</strong> 几何样条曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> B样条曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../BsplineCurve/Why.html"><strong aria-hidden="true">6.1.</strong> 为什么引入B样条曲线</a></li><li class="chapter-item expanded "><a href="../BsplineCurve/BuildBSpline.html"><strong aria-hidden="true">6.2.</strong> 构造B样条基函数</a></li><li class="chapter-item expanded "><a href="../BsplineCurve/BsplineCurve.html"><strong aria-hidden="true">6.3.</strong> B样条曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> NURBS曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../NURBS/Review.html"><strong aria-hidden="true">7.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../NURBS/RationalCurve.html"><strong aria-hidden="true">7.2.</strong> 有理曲线</a></li><li class="chapter-item expanded "><a href="../NURBS/NURBS.html"><strong aria-hidden="true">7.3.</strong> NURBS曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 细分曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SubdivisionCurves/Review.html"><strong aria-hidden="true">8.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/Chaikin.html"><strong aria-hidden="true">8.2.</strong> Chaikin细分方法</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/Property.html"><strong aria-hidden="true">8.3.</strong> 细分曲线的性质证明</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/interpolate.html"><strong aria-hidden="true">8.4.</strong> 插值型细分方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 隐式曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ImplicitCurves/Review.html"><strong aria-hidden="true">9.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/ImplicitCurves.html"><strong aria-hidden="true">9.2.</strong> 隐式曲线</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/Draw.html"><strong aria-hidden="true">9.3.</strong> 隐式曲线的绘制</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/Fitting.html"><strong aria-hidden="true">9.4.</strong> 隐式曲线的拟合</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> NURBS曲面</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SplineSurfaces/Review.html"><strong aria-hidden="true">10.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../SplineSurfaces/TrimmedNurbs.html"><strong aria-hidden="true">10.2.</strong> Trimmed Nurbs</a></li><li class="chapter-item expanded "><a href="../SplineSurfaces/SplineSurfaces.html"><strong aria-hidden="true">10.3.</strong> 三角域上的Bezier曲面片</a></li></ol></li><li class="chapter-item expanded "><a href="../CurveFairing/CurveFairing.html"><strong aria-hidden="true">11.</strong> 曲线光顺</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CurveFairing/What.html"><strong aria-hidden="true">11.1.</strong> 曲线的光顺定义</a></li><li class="chapter-item expanded "><a href="../CurveFairing/How.html"><strong aria-hidden="true">11.2.</strong> 曲线的光顺方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> 离散曲线处理</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DiscreteCurves/Review.html"><strong aria-hidden="true">12.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/Discretization.html"><strong aria-hidden="true">12.2.</strong> 曲线的离散</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/BarycentricCoordinate.html"><strong aria-hidden="true">12.3.</strong> 重心坐标</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/2D.html"><strong aria-hidden="true">12.4.</strong> 2D形状（离散曲线）处理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 三角网格：曲面的离散表达</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../TriangularMeshes/TriangularMeshes.html"><strong aria-hidden="true">13.1.</strong> 曲面的离散表达</a></li><li class="chapter-item expanded "><a href="../TriangularMeshes/DataStructure.html"><strong aria-hidden="true">13.2.</strong> 网格曲面的数据结构</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> 离散微分几何</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DiscreteDifferential/Review.html"><strong aria-hidden="true">14.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/Curves.html"><strong aria-hidden="true">14.2.</strong> 曲线的微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/Surfaces.html"><strong aria-hidden="true">14.3.</strong> 曲面的微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/DiscreteDifferential.html"><strong aria-hidden="true">14.4.</strong> 离散微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/MinimaSurface.html"><strong aria-hidden="true">14.5.</strong> 极小曲面</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">15.</strong> 3D网格曲面</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LaplacianCoordinates.html"><strong aria-hidden="true">15.1.</strong> 3D网格曲面</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LocalLaplacianSmoothing.html"><strong aria-hidden="true">15.2.</strong> 局部Laplace平滑</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/GlobalLaplacianSmoothing.html"><strong aria-hidden="true">15.3.</strong> 全局Laplace平滑</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/MeshParameterization.html"><strong aria-hidden="true">15.4.</strong> 曲面参数化</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/Constrained.html"><strong aria-hidden="true">15.5.</strong> 约束</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LaplacianEditing.html"><strong aria-hidden="true">15.6.</strong> 编辑</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">16.</strong> 曲面去噪</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Smoothing/Smoothing.html"><strong aria-hidden="true">16.1.</strong> 去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/1VertexFiltering.html"><strong aria-hidden="true">16.2.</strong> 顶点去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/2NormalFiltering.html"><strong aria-hidden="true">16.3.</strong> 法向去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/3GlobalSmoothing.html"><strong aria-hidden="true">16.4.</strong> 全局去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/4MeshImprovement.html"><strong aria-hidden="true">16.5.</strong> mesh提升</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> 采样与剖分</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SamplingTessellation/Sampling.html"><strong aria-hidden="true">17.1.</strong> 采样</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/Triangular.html"><strong aria-hidden="true">17.2.</strong> 平面三角形网络</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/Delaunay.html"><strong aria-hidden="true">17.3.</strong> Delaunay</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/MeshGeneration.html"><strong aria-hidden="true">17.4.</strong> Mesh Generation</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/SamplingTessellation.html"><strong aria-hidden="true">17.5.</strong> 高维几何对象的采样与剖分</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> 曲面参数化</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Parameterization/Parameterization.html"><strong aria-hidden="true">18.1.</strong> 曲面参数化</a></li><li class="chapter-item expanded "><a href="../Parameterization/Bijective.html"><strong aria-hidden="true">18.2.</strong> Bijective Parameterization</a></li><li class="chapter-item expanded "><a href="../Parameterization/Cut.html"><strong aria-hidden="true">18.3.</strong> 封闭曲面的割缝问题</a></li><li class="chapter-item expanded "><a href="../Parameterization/TextureAtlas.html"><strong aria-hidden="true">18.4.</strong> 纹理地图：多片参数化</a></li><li class="chapter-item expanded "><a href="../Parameterization/ball.html"><strong aria-hidden="true">18.5.</strong> 球面参数化</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> 曲面简化</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Simplification/Simplification.html"><strong aria-hidden="true">19.1.</strong> 面片简化</a></li><li class="chapter-item expanded "><a href="../Simplification/1Local.html"><strong aria-hidden="true">19.2.</strong> Local</a></li><li class="chapter-item expanded "><a href="../Simplification/2Global.html"><strong aria-hidden="true">19.3.</strong> Global</a></li><li class="chapter-item expanded "><a href="../Simplification/LOD.html"><strong aria-hidden="true">19.4.</strong> LOD</a></li></ol></li><li class="chapter-item expanded "><a href="../Mapping/Mapping.html"><strong aria-hidden="true">20.</strong> 几何映射</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">21.</strong> 几何优化</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Optimization/Review.html"><strong aria-hidden="true">21.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../Optimization/Fundamentals.html"><strong aria-hidden="true">21.2.</strong> Fundamentals</a></li><li class="chapter-item expanded "><a href="../Optimization/UnconstrainedOptimization.html"><strong aria-hidden="true">21.3.</strong> 无约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/等式约束的优化问题.html"><strong aria-hidden="true">21.4.</strong> 等式约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/不等式约束的优化问题.html"><strong aria-hidden="true">21.5.</strong> 不等式约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/ConvexOptimization.html"><strong aria-hidden="true">21.6.</strong> Convex Optimization</a></li><li class="chapter-item expanded "><a href="../Optimization/其他优化问题.html"><strong aria-hidden="true">21.7.</strong> 其他优化问题</a></li></ol></li><li class="chapter-item expanded "><a href="../Reconstruct/Reconstruct.html"><strong aria-hidden="true">22.</strong> 曲面重建</a></li><li class="chapter-item expanded "><a href="../Modeling/Modeling.html"><strong aria-hidden="true">23.</strong> 几何建模</a></li><li class="chapter-item expanded "><a href="../CubicSplines/TextureSynthesis.html" class="active"><strong aria-hidden="true">24.</strong> 纹理合成</a></li><li class="chapter-item expanded "><a href="../CubicSplines/ShapeAnalysis.html"><strong aria-hidden="true">25.</strong> 形状分析与理解</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">GAMES102</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/GAMES102_mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="回顾曲面重建或建模"><a class="header" href="#回顾曲面重建或建模">回顾：曲面重建或建模</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%901.png" alt="" /> </p>
+<h1 id="textured-surfaces"><a class="header" href="#textured-surfaces">Textured Surfaces</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%902.png" alt="" /> </p>
+<h1 id="texturing-3d-models"><a class="header" href="#texturing-3d-models">Texturing 3D Models</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%903.png" alt="" /> </p>
+<h1 id="texture-synthesis"><a class="header" href="#texture-synthesis">Texture Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%904.png" alt="" /> </p>
+<h1 id="2d-texture-synthesis"><a class="header" href="#2d-texture-synthesis">2D Texture Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%905.png" alt="" /> </p>
+<h1 id="texture-synthesis-1"><a class="header" href="#texture-synthesis-1">Texture Synthesis</a></h1>
+<ul>
+<li>Given a sample texture <em>I</em>, the goal is to synthesize a new texture <em>J</em> that<br />
+• looks like the input sample<br />
+• no part of result is the duplicate of the sampl</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%906.png" alt="" /> </p>
+<h1 id="applications"><a class="header" href="#applications">Applications</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%907.png" alt="" /> </p>
+<h1 id="1-textures"><a class="header" href="#1-textures">1. Textures</a></h1>
+<h1 id="what-is-texture"><a class="header" href="#what-is-texture">What is texture?</a></h1>
+<p>• Characterized by appearance<br />
+• Elements arranged quasi‐randomly</p>
+<p><img src="../assets/%E5%90%88%E6%88%908.png" alt="" /> </p>
+<h1 id="image-vs-texture"><a class="header" href="#image-vs-texture">Image VS. Texture</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%909.png" alt="" /> </p>
+<h1 id="texture"><a class="header" href="#texture">Texture</a></h1>
+<ul>
+<li>Images containing repeating patterns<br />
+• Locality: small parts look alike<br />
+• Stochastic: they never look exactly the same</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9010.png" alt="" /> </p>
+<h1 id="dynamic-textures"><a class="header" href="#dynamic-textures">Dynamic Textures</a></h1>
+<p>• Appearance similar even as texture evolves</p>
+<p><img src="../assets/%E5%90%88%E6%88%9011.png" alt="" /> </p>
+<h1 id="classification-attribution"><a class="header" href="#classification-attribution">Classification (Attribution)</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9012.png" alt="" /> </p>
+<h1 id="2-2d-texture-synthesis"><a class="header" href="#2-2d-texture-synthesis">2. 2D Texture Synthesis</a></h1>
+<p>Texture Synthesis:<br />
+A Simple Solution … Tiling</p>
+<p><img src="../assets/%E5%90%88%E6%88%9013.png" alt="" /> </p>
+<h1 id="desirable-properties"><a class="header" href="#desirable-properties">Desirable Properties</a></h1>
+<p>• Result looks like the input<br />
+• Efficient<br />
+• General<br />
+• Easy to use<br />
+• Extensible</p>
+<p><img src="../assets/%E5%90%88%E6%88%9014.png" alt="" /> </p>
+<h1 id="challenges"><a class="header" href="#challenges">Challenges</a></h1>
+<ul>
+<li>Texture analysis<br />
+• how to capture the essence of texture?</li>
+<li>Need to model the whole spectrum<br />
+• from repeated to stochastic texture</li>
+<li>This problem is at intersection of vision, graphics, statistics, and image compression</li>
+</ul>
+<h1 id="examplebased-techniques"><a class="header" href="#examplebased-techniques">Example‐based Techniques</a></h1>
+<ul>
+<li>Parametric Techniques<br />
+• Compute global statistics in feature space and sample images from texture ensemble directly</li>
+<li>Non‐parametric Techniques<br />
+• Estimate local conditional probability density function and synthesize pixels incrementally</li>
+</ul>
+<h1 id="parametric-techniques"><a class="header" href="#parametric-techniques">Parametric Techniques</a></h1>
+<p>• Hypothesize a <strong>mathematical model</strong> for texture representation<br />
+• <strong>Match</strong> model parameters of input and output texture</p>
+<p><img src="../assets/%E5%90%88%E6%88%9015.png" alt="" /> </p>
+<h1 id="pyramidbased-texture-analysissynthesis"><a class="header" href="#pyramidbased-texture-analysissynthesis">Pyramid‐Based Texture Analysis/Synthesis</a></h1>
+<p>[Heeger &amp; Bergen, Siggraph 1995]</p>
+<p>• Initialize J to noise<br />
+• Create multiresolution pyramids for I and J<br />
+• Match the histograms of J’s pyramid levels with I’s pyramid levels<br />
+• Loop until convergence<br />
+• Can be generalized to 3D</p>
+<h1 id="results"><a class="header" href="#results">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9016.png" alt="" /></p>
+<h1 id="failures"><a class="header" href="#failures">Failures</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9017.png" alt="" /> </p>
+<h1 id="nonparametric-techniques"><a class="header" href="#nonparametric-techniques">Non‐Parametric Techniques</a></h1>
+<ul>
+<li>Synthesis by <strong>copying</strong> from the input</li>
+<li>Markov‐Random Field Model<br />
+• Pixel appearance depends only on neighborhood</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9018.png" alt="" /> </p>
+<h1 id="markov-random-field"><a class="header" href="#markov-random-field">Markov Random Field</a></h1>
+<ul>
+<li>[Shannon,’48] proposed a way to generate English‐looking text using N‐grams:<br />
+• Assume a generalized Markov model<br />
+• Use a large text to compute prob. distributions of each letter given N‐1 previous letters<br />
+• Starting from a seed repeatedly sample this Markov chain to generate new letters<br />
+• Also works for whole words</li>
+</ul>
+<p>WE NEED TO EAT CAKE</p>
+<h1 id="synthesizing-one-pixel"><a class="header" href="#synthesizing-one-pixel">Synthesizing One Pixel</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9019.png" alt="" /></p>
+<p>• Assuming Markov property, what is conditional probability distribution of p, given the neighbourhood window?<br />
+• Instead of constructing a model, let’s directly search the input image for all such neighbourhoods to produce a histogram for p<br />
+• To synthesize p,  just pick one match at random</p>
+<h1 id="really-synthesizing-one-pixel"><a class="header" href="#really-synthesizing-one-pixel">Really Synthesizing One Pixel</a></h1>
+<p>✅  However, since our sample image is finite, an exact neighbourhood match might not be present<br />
+✅  So we find the <strong>best</strong> match using SSD error (weighted by a Gaussian to emphasize local structure), and take all 
+samples within some distance from that match</p>
+<h1 id="pixelbased-texture-synthesis"><a class="header" href="#pixelbased-texture-synthesis">Pixel‐Based Texture Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9020.png" alt="" /></p>
+<p>Select Best Neighborhood from all Candidates</p>
+<h1 id="randomness-parameter"><a class="header" href="#randomness-parameter">Randomness Parameter</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9021.png" alt="" /> </p>
+<h1 id="results-1"><a class="header" href="#results-1">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9022-1.png" alt="" /></p>
+<h1 id="patchbased-synthesis"><a class="header" href="#patchbased-synthesis">Patch‐based Synthesis</a></h1>
+<p>[Liang et al. TOG 2002]</p>
+<p>• Copy patches instead of single pixels</p>
+<p><img src="../assets/%E5%90%88%E6%88%9023.png" alt="" /> </p>
+<h1 id="patchbased-texture-synthesis"><a class="header" href="#patchbased-texture-synthesis">Patch‐Based Texture Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9024.png" alt="" /> </p>
+<p><strong>Select</strong> <em><strong>Best</strong></em> <strong>Neighborhood from all Candidates</strong></p>
+<h1 id="synthesis-result"><a class="header" href="#synthesis-result">Synthesis Result</a></h1>
+<p>— High‐quality Texture</p>
+<p><img src="../assets/%E5%90%88%E6%88%9025.png" alt="" /></p>
+<p>• Efros’ algorithm has a tendency to grow garbage and Wei’s TSVQ acceleration further aggravates this problem. In Contrast, patch‐based sampling avoids growing garbage</p>
+<h1 id="advantages"><a class="header" href="#advantages">Advantages</a></h1>
+<ul>
+<li>Speed<br />
+• Orders of magnitude faster than existing texture synthesis algorithm<br />
+• Real‐time synthesis</li>
+<li>Quality<br />
+• Synthesize high‐quality textures ranging from regular to stochastic<br />
+• Avoid growing garbage<br />
+• Synthesize subjectively better natural textures</li>
+</ul>
+<h1 id="mincut-graph-cut-based"><a class="header" href="#mincut-graph-cut-based">Mincut: Graph-cut based</a></h1>
+<p>[Efros&amp;Freeman, Siggraph 2002]</p>
+<p><img src="../assets/%E5%90%88%E6%88%9026-1.png" alt="" /></p>
+<h1 id="minimal-error-boundary"><a class="header" href="#minimal-error-boundary">Minimal error boundary</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9027.png" alt="" /></p>
+<h1 id="seam-optimization"><a class="header" href="#seam-optimization">Seam Optimization</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9028.png" alt="" /></p>
+<p>Construct graph such that:<br />
+Graph Mincut \(\Leftrightarrow\) Best Seam</p>
+<p><img src="../assets/%E5%90%88%E6%88%9029.png" alt="" /></p>
+<p><img src="../assets/%E5%90%88%E6%88%9030.png" alt="" /></p>
+<h1 id="results-natural-images"><a class="header" href="#results-natural-images">Results: Natural Images</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9031.png" alt="" /></p>
+<h1 id="interactive-merging"><a class="header" href="#interactive-merging">Interactive Merging</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9032.png" alt="" /></p>
+<h1 id="results-interactive-merging"><a class="header" href="#results-interactive-merging">Results: Interactive Merging</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9033.png" alt="" /></p>
+<h1 id="application-seam-carving"><a class="header" href="#application-seam-carving">Application: Seam Carving</a></h1>
+<p>[Avidan and Shamir, Siggraph 2007]</p>
+<p>• Removing/adding unimportant seams<br />
+• Content‐aware image resizing/retargetting</p>
+<p><img src="../assets/%E5%90%88%E6%88%9034.png" alt="" /></p>
+<h1 id="seam-carving"><a class="header" href="#seam-carving">Seam Carving</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9035.png" alt="" /></p>
+<h1 id="textonbased-synthesis"><a class="header" href="#textonbased-synthesis">Texton‐based Synthesis</a></h1>
+<p>[Zhang et al., Siggraph 2003]</p>
+<p>• Texton: texture element<br />
+• Texture elements don’t break apart using texton synthesis</p>
+<p><img src="../assets/%E5%90%88%E6%88%9036.png" alt="" /></p>
+<h1 id="feature-map--texture-map"><a class="header" href="#feature-map--texture-map">Feature Map + Texture Map</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9037.png" alt="" /></p>
+<h1 id="synthesis-with-local-size-control"><a class="header" href="#synthesis-with-local-size-control">Synthesis with Local Size Control</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9038.png" alt="" /></p>
+<h1 id="synthesis-with-vector-field-control"><a class="header" href="#synthesis-with-vector-field-control">Synthesis with Vector Field Control</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9039.png" alt="" /></p>
+<h1 id="3-3d-texture-synthesis"><a class="header" href="#3-3d-texture-synthesis">3. 3D Texture Synthesis</a></h1>
+<h1 id="texture-synthesis-on-surfaces"><a class="header" href="#texture-synthesis-on-surfaces">Texture Synthesis on Surfaces</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9040.png" alt="" /></p>
+<h1 id="analogy"><a class="header" href="#analogy">Analogy</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9041.png" alt="" /></p>
+<h1 id="desired-properties"><a class="header" href="#desired-properties">Desired Properties</a></h1>
+<ul>
+<li>Share advantages of 2D algorithm<br />
+• Quality<br />
+• Efficient<br />
+• General<br />
+• Easy to use</li>
+<li>Minimum distortion</li>
+<li>Minimum discontinuity</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9042.png" alt="" /></p>
+<h1 id="3d-texture-synthesis"><a class="header" href="#3d-texture-synthesis">3D Texture Synthesis</a></h1>
+<p>• <strong>Procedural texture synthesis</strong><br />
+• Sample‐based texture synthesis<br />
+• Geometry synthesis</p>
+<h1 id="procedural-textures"><a class="header" href="#procedural-textures">Procedural Textures</a></h1>
+<ul>
+<li>Use 3D functions to define texture properties of objects<br />
+• Non‐trivial programming<br />
+• Flexibility<br />
+• Parametric control<br />
+• Unlimited resolution, antialiasing possible<br />
+• Low memory requirements<br />
+• Low‐cost visual complexity<br />
+• Adapts to arbitrary geometry</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9043.png" alt="" /></p>
+<h1 id="procedural-textures-1"><a class="header" href="#procedural-textures-1">Procedural Textures</a></h1>
+<ul>
+<li><strong>Analytic scalar function of world coordinates</strong>  (<strong>x, y, z</strong>)</li>
+<li><strong>Texturing: evaluation of function on object surface</strong>
+<ul>
+<li>Ray tracing: 3D intersection point with surface</li>
+</ul>
+</li>
+<li><strong>Textures of natural objects</strong>
+<ul>
+<li>Similarity between different patches
+<ul>
+<li>Repetitiveness, coherence</li>
+</ul>
+</li>
+<li>Similarity on different resolution scales
+<ul>
+<li>Self-similarity</li>
+</ul>
+</li>
+<li>But never completely identical
+<ul>
+<li>Additional disturbances, turbulence, noise</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Procedural texture function</strong>
+<ul>
+<li>Mimics statistical properties of natural textures</li>
+<li>Purely empirical approach
+<ul>
+<li>Looks convincing, but has nothing to do with material's physics</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="perlins-noise"><a class="header" href="#perlins-noise">Perlin’s Noise</a></h1>
+<p>[Perlin, Siggraph 1985]</p>
+<ul>
+<li><strong>Noise</strong>  (<strong>x,y,z</strong>)
+<ul>
+<li>Statistical invariance under rotation</li>
+<li>Statistical invariance under translation</li>
+<li>Narrow bandpass limit in frequency</li>
+</ul>
+</li>
+<li><strong>Integer lattice</strong>  (<strong>i, j,k</strong>)
+<ul>
+<li>Random number at each lattice point  (i, j,k)
+<ul>
+<li>Look-up table or hashing function</li>
+</ul>
+</li>
+<li>Gradient lattice noise
+<ul>
+<li>Random gradient vectors</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Evaluation at</strong> (<strong>x,y,z</strong>)
+<ul>
+<li>Tri-linear interpolation</li>
+<li>Cubic interpolation (Hermite spline \(\to\) later)</li>
+</ul>
+</li>
+<li><strong>Unlimited domain</strong>
+<ul>
+<li>Lattice replicated to fill entire space</li>
+</ul>
+</li>
+<li><strong>Fixed fundamental frequency of \(\sim\) 1 Hz over lattice</strong></li>
+<li><strong>Smooth interpolation of interim values</strong></li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9044.png" alt="" /></p>
+<h1 id="turbulence-function"><a class="header" href="#turbulence-function">Turbulence Function</a></h1>
+<ul>
+<li>
+<p><strong>Noise function</strong></p>
+<ul>
+<li>“White” frequency spectrum</li>
+</ul>
+</li>
+<li>
+<p><strong>Natural textures</strong></p>
+<ul>
+<li>Decreasing power spectrum towards high frequencies</li>
+</ul>
+</li>
+<li>
+<p><strong>Turbulence from noise</strong></p>
+<ul>
+<li>Turbulence \((x)=\sum_{i=0}^{k}\) abs ( noise \((2^i x ) / 2^{i}\))</li>
+<li>Summation truncation
+<ul>
+<li>\(1 / 2^{k+1}\) &lt;  size of one pixel (band limit)</li>
+</ul>
+</li>
+<li>
+<ol>
+<li>Term: noise  (x)</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Term: noise  (2 x) / 2</li>
+</ol>
+</li>
+<li>\(\dots\)</li>
+<li>Power spectrum:  1 / f</li>
+<li>(Brownian motion: \(1/f^2\))</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9045.png" alt="" /></p>
+</li>
+</ul>
+<h1 id="synthesis-of-turbulence-1d"><a class="header" href="#synthesis-of-turbulence-1d">Synthesis of Turbulence (1D)</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9046.png" alt="" /></p>
+<h1 id="synthesis-of-turbulence-2d"><a class="header" href="#synthesis-of-turbulence-2d">Synthesis of Turbulence (2D)</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9047.png" alt="" /></p>
+<h1 id="example-marble-texture-function"><a class="header" href="#example-marble-texture-function">Example: Marble Texture Function</a></h1>
+<ul>
+<li>
+<p><strong>Overall structure: alternating layers of white and colored marble</strong></p>
+<ul>
+<li>\(f_{marbie}(x,y,z)\):= marble_color (sin (x))</li>
+<li>marble_color : transfer function</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9048.png" alt="" /></p>
+</li>
+<li>
+<p>Realistic appearance: simulated turbulence</p>
+<ul>
+<li>\(f_{matibie}(x,y,z)\):= marble_color (sin (x +  turbulence (x,y,z)))</li>
+</ul>
+</li>
+<li>
+<p><strong>Moving object: turbulence function also transformed</strong></p>
+</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9049.png" alt="" /></p>
+<h1 id="reaction-diffusion-based-method"><a class="header" href="#reaction-diffusion-based-method">Reaction Diffusion Based Method</a></h1>
+<p>[Turk, Siggraph 1991]</p>
+<p>• Two‐chemical reaction‐diffusion system</p>
+<p>$$
+\begin{array}{l}
+\frac{\partial a}{\partial t}=F(a, b)+D_{a} \nabla^{2} a \\
+\frac{\partial b}{\partial t}=G(a, b)+D_{b} \nabla^{2} b
+\end{array}
+$$</p>
+<p>• Discrete computation</p>
+<p>$$
+\begin{array}{l}
+\Delta a_{i j}=s\left(16-a_{i j} b_{i j}\right)+D_{a}\left(a_{i+1 j}+a_{i-l j}+a_{i j+1}+a_{i j-1}-4 a_{i j}\right) \\<br />
+\Delta b_{i j}=s\left(a_{i j} b_{i j}-b_{i j}-\beta_{i j}\right)+D_{b}\left(b_{i+1 j}+b_{i-1 j}+b_{i j+1}+b_{i j-1}-4 b_{i j}\right)
+\end{array}
+$$</p>
+<h1 id="examples-of-reactiondiffusion"><a class="header" href="#examples-of-reactiondiffusion">Examples of Reaction‐Diffusion</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9050.png" alt="" /></p>
+<h1 id="results-2"><a class="header" href="#results-2">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9051.png" alt="" /></p>
+<h1 id="solid-textures"><a class="header" href="#solid-textures">Solid Textures</a></h1>
+<p>[Peachey, Siggraph 1985]</p>
+<ul>
+<li>Solid texture functions in 3D space</li>
+<li>Nonhomogeneous materials<br />
+• wood and stone</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9052.png" alt="" /></p>
+<h1 id="examples"><a class="header" href="#examples">Examples</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9053.png" alt="" /></p>
+<h1 id="3d-texture-synthesis-1"><a class="header" href="#3d-texture-synthesis-1">3D Texture Synthesis</a></h1>
+<p>• Procedural texture synthesis<br />
+• <strong>Sample‐based texture synthesis</strong><br />
+• Geometry synthesis</p>
+<h1 id="methodology"><a class="header" href="#methodology">Methodology</a></h1>
+<ul>
+<li>Synthesize a surface texture by <strong>coloring mesh vertices</strong></li>
+<li>Extensions from 2D texture synthesis</li>
+<li>Key issues
+<ul>
+<li>Resampling</li>
+<li>Local flattening
+<ul>
+<li>Size</li>
+<li>Orientation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9054.png" alt="" /></p>
+<p>Vertex colors on three levels in the mesh hierarchy</p>
+<h1 id="neighborhood-sampling-on-surface"><a class="header" href="#neighborhood-sampling-on-surface">Neighborhood Sampling on Surface</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9055.png" alt="" /></p>
+<h1 id="resampling"><a class="header" href="#resampling">Resampling</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9056.png" alt="" /></p>
+<h1 id="mesh-neighborhood"><a class="header" href="#mesh-neighborhood">Mesh Neighborhood</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9057.png" alt="" /></p>
+<h1 id="recap-texture-synthesis-by-neighborhood-search"><a class="header" href="#recap-texture-synthesis-by-neighborhood-search">Recap: Texture Synthesis by Neighborhood Search</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9058.png" alt="" /></p>
+<h1 id="surface-texture-synthesis-by-neighborhood-search"><a class="header" href="#surface-texture-synthesis-by-neighborhood-search">Surface Texture Synthesis by Neighborhood Search</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9059.png" alt="" /></p>
+<h1 id="differences-between-2d-and-3d"><a class="header" href="#differences-between-2d-and-3d">Differences between 2D and 3D</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9060.png" alt="" /></p>
+<h1 id="sampling-on-surface-retiling"><a class="header" href="#sampling-on-surface-retiling">Sampling on Surface: Retiling</a></h1>
+<p>[Turk, Siggraph 1992]</p>
+<p>• Distribute a set of vertices over surface as uniformly as possible</p>
+<p><img src="../assets/%E5%90%88%E6%88%9061.png" alt="" /></p>
+<h1 id="retiling-density"><a class="header" href="#retiling-density">Retiling Density</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9062.png" alt="" /></p>
+<h1 id="texture-orientation"><a class="header" href="#texture-orientation">Texture Orientation</a></h1>
+<ul>
+<li>Methods for orienting textures
+<ul>
+<li>user‐specified</li>
+<li>random (for isotropic textures)</li>
+<li>smooth or symmetric (for anisotropic textures)
+<ul>
+<li>by relaxation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="../assets/%E5%90%88%E6%88%9063.png" alt="" /></p>
+<h1 id="user-specified-vector-field"><a class="header" href="#user-specified-vector-field">User Specified Vector Field</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9064.png" alt="" /></p>
+<h1 id="texture-orientation-examples"><a class="header" href="#texture-orientation-examples">Texture Orientation Examples</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9065.png" alt="" /></p>
+<h1 id="results-other-orientations"><a class="header" href="#results-other-orientations">Results: Other Orientations</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9066.png" alt="" /></p>
+<h1 id="multiresolution-synthesis"><a class="header" href="#multiresolution-synthesis">Multiresolution Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9067.png" alt="" /></p>
+<h1 id="mesh-pyramid-by-retiling"><a class="header" href="#mesh-pyramid-by-retiling">Mesh Pyramid by Retiling</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9068.png" alt="" /></p>
+<h1 id="examples-1"><a class="header" href="#examples-1">Examples</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9069.png" alt="" /></p>
+<h1 id="results-3"><a class="header" href="#results-3">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9070.png" alt="" /></p>
+<h1 id="patchbased-synthesis-1"><a class="header" href="#patchbased-synthesis-1">Patch‐based Synthesis</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9071.png" alt="" /></p>
+<h1 id="key-idea--patch-pasting"><a class="header" href="#key-idea--patch-pasting">Key Idea:  Patch Pasting</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9072.png" alt="" /></p>
+<h1 id="algorithm"><a class="header" href="#algorithm">Algorithm</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9073.png" alt="" /></p>
+<h1 id="algorithm-1"><a class="header" href="#algorithm-1">Algorithm</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9074.png" alt="" /></p>
+<h1 id="texture-patch-creation"><a class="header" href="#texture-patch-creation">Texture Patch Creation</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9075.png" alt="" /></p>
+<h1 id="less-structure-to-splotch"><a class="header" href="#less-structure-to-splotch">Less Structure \(\to\) Splotch</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9076.png" alt="" /></p>
+<h1 id="patch-growth"><a class="header" href="#patch-growth">Patch Growth</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9077.png" alt="" /></p>
+<h1 id="patch-growth-1"><a class="header" href="#patch-growth-1">Patch Growth</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9078.png" alt="" /></p>
+<h1 id="patch-growth-2"><a class="header" href="#patch-growth-2">Patch Growth</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9079.png" alt="" /></p>
+<h1 id="tangential-vector-field"><a class="header" href="#tangential-vector-field">Tangential Vector Field</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9080.png" alt="" /></p>
+<h1 id="results-splotches"><a class="header" href="#results-splotches">Results: Splotches</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9081.png" alt="" /></p>
+<p>(<em><strong>completely automatic: no direction field</strong></em>)</p>
+<h1 id="results-anisotropic"><a class="header" href="#results-anisotropic">Results: Anisotropic</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9082.png" alt="" /></p>
+<h1 id="controlling-direction-and-scale"><a class="header" href="#controlling-direction-and-scale">Controlling Direction and Scale</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9083.png" alt="" /></p>
+<p><img src="../assets/%E5%90%88%E6%88%9084.png" alt="" /></p>
+<h1 id="limitations"><a class="header" href="#limitations">Limitations</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9085.png" alt="" /></p>
+<h1 id="featurealigned-texture-synthesis"><a class="header" href="#featurealigned-texture-synthesis">Feature‐aligned Texture Synthesis</a></h1>
+<p>[Xu et al., Siggraph Asia 2009]</p>
+<p><img src="../assets/%E5%90%88%E6%88%9087.png" alt="" /></p>
+<h1 id="curve-orientation-and-vector-field"><a class="header" href="#curve-orientation-and-vector-field">Curve Orientation and Vector Field</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9088.png" alt="" /></p>
+<h1 id="results-4"><a class="header" href="#results-4">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9089.png" alt="" /></p>
+<h1 id="results-5"><a class="header" href="#results-5">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9090.png" alt="" /></p>
+<h1 id="progressivelyvariant-texture-synthesis"><a class="header" href="#progressivelyvariant-texture-synthesis">Progressively‐Variant Texture Synthesis</a></h1>
+<p>[Zhang et al., Siggraph 2003]</p>
+<p><img src="../assets/%E5%90%88%E6%88%9091.png" alt="" /></p>
+<h1 id="btf-synthesis"><a class="header" href="#btf-synthesis">BTF Synthesis</a></h1>
+<p>[Tong et al., Siggraph 2002]</p>
+<p>• Bidirectional Texture Functions (BTF): A collection of images of the same surface under different lighting and viewing directions.<br />
+✅ 6D Function ( \(x, y, l_θ, l_φ, v_θ, v_φ\) )<br />
+✅ Dense Sampling in Viewing/Lighting Directions<br />
+✅ Capturing Appearance of Real World Surface</p>
+<p><img src="../assets/%E5%90%88%E6%88%9092.png" alt="" /></p>
+<h1 id="real-world-texture-from-curet"><a class="header" href="#real-world-texture-from-curet"><em>Real World Texture from CuRet</em></a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9093.png" alt="" /></p>
+<p>•Geometry Details (Mesostructure) on Surface<br />
+•Self-Occlusion, Self-Shadow, and Specularity</p>
+<h1 id="treating-btf-as-a-2d-texture-map"><a class="header" href="#treating-btf-as-a-2d-texture-map"><em>Treating BTF as a 2D Texture Map</em></a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9094.png" alt="" /></p>
+<p><strong>Surface Texton</strong></p>
+<h1 id="surface-texton-map--rendering"><a class="header" href="#surface-texton-map--rendering">Surface Texton Map &amp; Rendering</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9095.png" alt="" /></p>
+<h1 id="kcoherent-search"><a class="header" href="#kcoherent-search">K‐Coherent Search</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9096.png" alt="" /></p>
+<h1 id="examples-2"><a class="header" href="#examples-2">Examples</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9097.png" alt="" /></p>
+<h1 id="comparison"><a class="header" href="#comparison">Comparison</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%9098.png" alt="" /></p>
+<h1 id="3d-texture-synthesis-2"><a class="header" href="#3d-texture-synthesis-2">3D Texture Synthesis</a></h1>
+<p>• Procedural texture synthesis<br />
+• Sample‐based texture synthesis<br />
+• <strong>Geometry synthesis</strong></p>
+<h1 id="geometry-synthesis"><a class="header" href="#geometry-synthesis">Geometry Synthesis</a></h1>
+<ul>
+<li>Generating geometry over surfaces by texture (geometry) samples</li>
+<li>Methods:<br />
+• 3D distance field based method<br />
+• Image analogies extended to volumes<br />
+• Mesh‐based geometric texture synthesis technique</li>
+</ul>
+<h1 id="3d-distance-field-based-method"><a class="header" href="#3d-distance-field-based-method">3D Distance Field based Method</a></h1>
+<p>[Lagae et al., TR 2004]</p>
+<p><img src="../assets/%E5%90%88%E6%88%9099.png" alt="" /></p>
+<h1 id="results-6"><a class="header" href="#results-6">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%90100.png" alt="" /></p>
+<h1 id="geometry-analogy"><a class="header" href="#geometry-analogy">Geometry Analogy</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%90101.png" alt="" /></p>
+<h1 id="mesh-quilting"><a class="header" href="#mesh-quilting">Mesh Quilting</a></h1>
+<p>[Zhou et al., Siggraph 2006]</p>
+<p><img src="../assets/%E5%90%88%E6%88%90102.png" alt="" /></p>
+<h1 id="results-7"><a class="header" href="#results-7">Results</a></h1>
+<p><img src="../assets/%E5%90%88%E6%88%90103.png" alt="" /></p>
+<h1 id="summary-texture-synthesis"><a class="header" href="#summary-texture-synthesis">Summary: Texture Synthesis</a></h1>
+<p>• An important topic on content generation (2D/3D) textures or repeated geometries<br />
+• A well‐studied topic<br />
+• Many applications</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../Modeling/Modeling.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../CubicSplines/ShapeAnalysis.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../Modeling/Modeling.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../CubicSplines/ShapeAnalysis.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/pagetoc.js"></script>
+    </body>
+</html>
