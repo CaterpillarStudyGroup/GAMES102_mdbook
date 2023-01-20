@@ -3,8 +3,6 @@
 [原始课程链接](https://www.bilibili.com/video/BV1NA411E7Yr?spm_id_from=333.337.search-card.all.click)
 
 如有侵权，请联系删除
-
-# 课程主要内容
   
 # 说明
 
