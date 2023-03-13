@@ -24,6 +24,8 @@
 
 # 具体步骤    
 
+这个框架适用于大部分问题：预处理 → 核心算法 → 后处理。  
+核心算法又可以分为粗处理 → 精处理   
 ## Step 1. 初光顺 Coarse fairing    
 * 定界法    
 • Adjust the positions of control points    
@@ -70,3 +72,6 @@ $$
 
 
 **王士玮等，基于稀疏模型的曲线光顺算法，计算机辅助设计与图形学学报，2016.**      
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
