@@ -46,5 +46,7 @@ $$
 - 局部处处类似定义，由一个基函数平移得到    
 - 高阶的基函数由2个低阶的基函数“升阶”得到，利于保持一些良好的性质，比如提高光滑性   
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
 
 
