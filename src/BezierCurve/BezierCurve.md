@@ -36,3 +36,6 @@ f(t)=\sum_{i=1}^{n} B^n_ip_i,t\in [0,1]
 $$
 
 ![](../assets/B曲-12.png) 
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
