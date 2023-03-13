@@ -124,3 +124,6 @@ $$
   - 非凸问题：难！数值求解（ 梯度下降法、牛顿法、拟牛顿法、L‐BFGS, … ），须选择合适初值、步长等；一般要根据具体的优化问题形式及特点来设计合适的优化方法！   
 
 
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
