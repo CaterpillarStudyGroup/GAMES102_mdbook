@@ -32,3 +32,6 @@ $$
 
 \\(\sigma \\) 取什么值能得到比较好的结果？   
 均值\\(\mu\\)和方差\\(\sigma\\)是否可以一起来优化？   
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
