@@ -11,6 +11,7 @@
 • 计算机只能表达离散的数值    
 • 例子：int型的数据（量化）    
 
+> &#x1F4A1; 人的感知精度高，宏观表现为连续，计算能力支持的精度低，宏观表现为离散，精度不匹配就会产生artifact.   
 # 曲线的离散化   
 
 ## 要解决的问题
@@ -68,4 +69,7 @@ If a function \\(x(t)\\) contains no frequencies higher than B hertz, it is comp
 > ![](../RAW/71.1.png)   
 
 * Tylor展开及估计 
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
 
