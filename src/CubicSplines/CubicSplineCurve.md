@@ -15,3 +15,6 @@
 • 3个坐标分量\\(x,y,z\\)分别是参数\\(t\\)的三次样条函数    
 • 对型值点做参数化    
 • 对3个坐标分量分别处理     
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
