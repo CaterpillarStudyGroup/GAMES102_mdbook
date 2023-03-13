@@ -72,3 +72,6 @@ $$
 -2𝐻(𝒙)=𝛻 ⋅ 𝛻𝑓(𝑥)=\frac{𝜕^2}{𝜕𝑥^2} f(x)+\frac{𝜕^2}{𝜕y^2}f(x)+\frac{𝜕^2}{𝜕z^2}f(x)=𝛻𝑓(𝑥)
 $$
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+
