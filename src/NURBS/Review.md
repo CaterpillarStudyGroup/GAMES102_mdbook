@@ -18,3 +18,7 @@ $$
 • B样条曲线：每个控制点上的权系数函数是局部定义的（定义在其参数节点附近的支集）   
 
 ![](../assets/有理曲线-2.png)  
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+
