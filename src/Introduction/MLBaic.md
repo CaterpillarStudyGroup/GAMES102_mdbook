@@ -74,6 +74,7 @@ p_{k}(x)=\prod_{i \in B_{k}} \frac{x-x_{i}}{x_{k}-x_{i}}
 $$  
 
 > &#x2705; 插值函数的**自由度** = **未知量**个数 - **已知量**个数   
+条件数描述了解的稳定性，它与解的个数、自由度无关   
 
 ### 问题
 
@@ -231,3 +232,8 @@ $$
 ![](../assets/4.PNG)
 
 > &#x2705; 一个 \\(x\\) 对应多个 \\(y\\) ,因此不是函数。 
+
+
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
