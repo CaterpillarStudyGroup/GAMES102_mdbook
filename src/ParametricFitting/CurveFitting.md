@@ -10,7 +10,7 @@
 
 ![](../assets/曲线-1.png)  
 
-> &#x1F446; [42：50]图,非函数型  
+> &#x1F446; [42：50]非函数型曲线  
 
 ## 解决方法
 
@@ -155,3 +155,7 @@ $$
 ![](../assets/网格30.png)  
 可展曲面展成平面不会扭曲。    
 球面不可展，展开必定扭曲。  
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+
