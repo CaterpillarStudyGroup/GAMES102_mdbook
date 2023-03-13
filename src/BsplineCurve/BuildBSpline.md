@@ -42,7 +42,7 @@ Repeated linear interpolation：从0阶（水平直线）开始，使用t和(1
 > 此页公式定义在非均匀结点上。      
 
 Given: knot sequence \\(t_0 < t_1 < \cdots < t_n < \cdots < t_{n+k}\\)
-\\((t_0,t_i,\cdots,t_{n=k})\\) is called knot vector)      
+\\((t_0,t_i,\cdots,t_{n=k})\\) is called knot vector   
 
 Normalized B‐spline functions \\(N_{i,k}\\)of the order (degree \\(k-1\\)) are defined as:   
 
@@ -115,3 +115,6 @@ The interval \\([t_i,t_{i+k}]\\), is called support of \\(N_{i,k}\\)
 ## 光滑性
 
 For \\(t_i\le t_j\le t_{i+k}\\), the basis functions  \\(N_{i,k}(t)\\) are \\(C^{k-2} \\) at the knots \\(t_j\\)      
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
