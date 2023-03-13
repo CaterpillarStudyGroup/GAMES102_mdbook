@@ -66,7 +66,7 @@ $$
 
 The curve is \\(C^\infty \\)，但并不光顺  
 原因：拐点（vibration）数太多    
-拐点即 from convex to concave or from concave to convex)     
+拐点即 from convex to concave or from concave to convex     
 
 ### Example 2   
 
@@ -103,11 +103,14 @@ The curvature function \\({y}''(x) \\)不满足G2连续。
 
 > 说明 1： 条件(1)中的 \\(C^{1+l}\\) 是要求曲线为 \\(C^{1}\\) 连续而不必\\(C^{2}\\),但\\(C^{1}\\)的导数满足有界变差。条件 (4) 则要求曲线在曲安非连续点处的跳跃要尺尽可能小。     
 说明 2： 满足 (2)和(3)描述的曲线的它的曲率图含有的单调段都会相对少。这与前面所述的判 别准则 1-4 一致。
-
+> &#x1F4A1; 光顺很难定义，为什么一定要给它一个定义？因为定义代表了一个明确的标准，在同一个标准下讨论问题才有意义。
 
 # Remarks   
 
 震荡数 Vibration：Change from convex to concave or change from concave to convex     
 一阶震荡数 First vibration number \\(R\\)：Vibration number of \\(y(x)\\)     
 二阶震荡数 Second vibration number \\(S\\)：Vibration number of curvature function     
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
 
