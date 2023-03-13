@@ -67,3 +67,5 @@ $$
 － 最小化二次目标函数\\(x^TAx+b^Tx+c \\)    
 － 充分必要条件:\\(2Ax=-b\\)  
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
