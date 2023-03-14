@@ -44,6 +44,8 @@ $$
 
 即顶点偏移的方向为n，大小为\\(\varepsilon\\)
 
+好的算法不追求绝对的真实，而是合理的假设与必要的简化   
+
 ## 偏移的方向n    
 
 n可以是\\(𝒗^0\\)点的法向，或\\(𝒗\\)点的法向。  
@@ -54,7 +56,7 @@ n可以是\\(𝒗^0\\)点的法向，或\\(𝒗\\)点的法向。
 假设：   
 ① \\(v是v_0\\)沿几方向上做了一点偏移。    
 ② \\(n是v_0\\)的法方向。   
-③ 当\\(v接近v_0\\)时， \\(v 的法国方向接近 n\\)    
+③ 当\\(v接近v_0\\)时， \\(v 的法线方向接近 n\\)    
 因此随着逐步迭代，后者会趋进前者。  
 
 ## 偏移的大小\\(\varepsilon\\)
@@ -113,3 +115,6 @@ Laplacian operator / Umbrella Operator：[link](../LaplacianCoordinates/LocalLap
 • Shrinkage      
 
 ![](../assets/去躁12.png)   
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
