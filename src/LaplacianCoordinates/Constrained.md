@@ -16,6 +16,7 @@ Global Laplacian smoothing results in shrinkages
 hard 约束（Interpolation）：必须满足的约束，例如 \\(S.T.g(t)=0\\)    
 Soft 约束（Approximation）: 尽量满足的约束，例如 \\(\min f(x)\\)   
 
+**硬约束会导致约束点变成一尖点，因此引入软约束**   
 
 从优化的方法讲，Soft可以用GD迭代。比hard的KKT要简单  
 
@@ -42,7 +43,7 @@ $$
 
 ![](../assets/网格54.png)    
 
-> 除了固定顶点位置的约束，还可以对面加约束，例如：固定面片重心的位置。关键是要线性约束。    
+> 除了固定顶点位置的约束，**还可以对面加约束**，例如：固定面片重心的位置。**关键是要线性约束**。    
 
 ![](../assets/网格55.png)    
 
