@@ -99,18 +99,10 @@ another
 
 ![](../assets/网格69.png)    
 
-# Detail transfer and mixing    
+   
+第一步：Parameterization onto a common domain and elastic warp to align the features, if needed     
 
- - Correspondence:    
-
-    ![](../assets/网格70-1.png)    
-
-    - Parameterization onto a common domain and elastic warp to align the features, if needed     
-
-
-# Detail transfer and mixing    
-
-• Detail peeling:    
+第二步：Detail peeling:    
 
 ![](../assets/网格71.png)    
 
@@ -118,29 +110,16 @@ $$
 \xi _i=\delta _i-\tilde{\delta } _i
 $$
 
-
-
-# Detail transfer and mixing   
-
-
-• Changing local frames:    
+第三步：Changing local frames:    
 
 ![](../assets/网格72.png)    
 
-# Detail transfer and mixing    
-
-• Reconstruction of target surface from: \\(\delta _{target}\\)    
+第四步：Reconstruction of target surface from: \\(\delta _{target}\\)    
 
 $$
 \delta _{target} ={\delta}' _i+{\xi}' _i
 $$
-
-![](../assets/网格73.png)    
-
-
-# Examples    
-
-![](../assets/网格74.png)    
+  
 
 # Examples    
 
@@ -164,12 +143,12 @@ $$
 
 ![](../assets/网格77.png)    
 
-
-# Mesh transplanting    
-
-
 • Details gradually change in the transition area    
 
 ![](../assets/网格78.png)    
 
+![](../assets/网格78-2.png)    
+提取与还原即 Encoder& Decoder.Laplace 是手工方法，E&D是AI方法。  
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
