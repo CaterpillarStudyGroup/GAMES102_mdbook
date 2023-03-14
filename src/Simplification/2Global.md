@@ -36,5 +36,7 @@ minimize Laplacian 能量 [1:06:02图]
 
 ![](../assets/简化29.png)    
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
 
 
