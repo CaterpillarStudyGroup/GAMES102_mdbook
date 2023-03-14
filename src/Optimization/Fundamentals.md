@@ -97,3 +97,6 @@ minimize \\((E_1(x),E_2(x),\cdots ,E_k(x))\\)
 
 \\(E=\lambda _1E_1+\lambda _2E_2+\cdots +\lambda _kE_k\\)    
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+
