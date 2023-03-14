@@ -28,8 +28,7 @@ Approximate the (unknown) underlying surface
 
 - Compute normal at vertex    
   - Typically average face normals    
-- Compute tangent plane & local coordinate system    
-  - (node = (0,0,0))    
+- Compute tangent plane & local coordinate system      
 - For each neighbor vertex compute location in local system    
   - relative to node and tangent plane   
 
@@ -113,7 +112,8 @@ $$
 
 Weighted:  face areas, angles at vertex      
 
-> What happen at edges/creases?     
+> What happen at edges/creases(折痕)?     
+为什么刘老师要问这个问题，顶点肯定在边上的。  
 
 ## Mean Curvature     
 
@@ -163,4 +163,6 @@ Transactions on Graphics 23, 3 (2004), 609–612. (Proc. SIGGRAPH’2004).
 - PAGE D., SUN Y., KOSCHAN A., PAIK J., ABIDI M.: Normal vector voting: Crease detection and curvature 
 extimation on large, noisy meshes. Graphical Models 64, 3‐4 (2002), 199–229.     
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
 
