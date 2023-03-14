@@ -89,4 +89,6 @@ Empty sphere property: no points inside the circum‐sphere of any simplex
 - Plane sweep (1987, Fortune)    
 - Randomized incremental construction (1992, Guibas, Knuth& Sharir)   
  
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
 
