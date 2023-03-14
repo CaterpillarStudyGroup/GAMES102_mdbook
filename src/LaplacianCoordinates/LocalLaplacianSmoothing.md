@@ -27,7 +27,8 @@ $$
 
 平均曲率流：[link](../LaplacianCoordinates/LaplacianCoordinates.md)
 
-不知道拉普拉斯坐标，但知道平均曲率和法向，也能做拉普拉斯平滑
+不知道拉普拉斯坐标，但知道平均曲率和法向，也能做拉普拉斯平滑    
+Laplacian 可以用于提取高频和平滑高频，效果取决于权重定义是否合理。 
 
 ![](../assets/网格15.png)    
 
@@ -45,3 +46,6 @@ $$
 
 > Mean Curvature Flow 使用 cotangent 权，因此是Laplacian Smoothing 的特殊形式。     
 对于 low densily mesh,\\(\delta _i\\) 比较长，如果使用普­通权，这种情况会收缩快。如果使用 cotangent 权，则不会。  
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
