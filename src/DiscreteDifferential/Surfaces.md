@@ -58,6 +58,7 @@ $$
 > \\(\theta \\)是当前曲率方向与\\(K_1\\)方向的夹角。   
 
 ![](../assets/微分28.png)  
+![](../assets/微分28-1.png)  
 ![](../assets/微分29.png)
 
 ## 高斯曲率     
@@ -106,3 +107,6 @@ $$
 \\(H(V_i)为 V_i\\) 的平均曲率。     
 
 当曲线长度趋于0，其极限是一个常值。常值的方向为法向，大小为平均曲率。  
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
