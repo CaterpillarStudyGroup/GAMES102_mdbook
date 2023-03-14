@@ -28,3 +28,7 @@ Repeat Alternating variables
 2. \\(x_{k+1}=\min_xE(x,y_{k+1})\\)    
 
 > [1:09:31] 沿坐标轴下降，且每次只选一个坐标轴。      
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+
