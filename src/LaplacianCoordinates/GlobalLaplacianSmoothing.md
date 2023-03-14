@@ -26,12 +26,12 @@ $$
 * 检测边界，固定边界    
 * 构建稀疏方程组\\((\delta=0)\\)     
 
-> global体现在所有点的约束同时满足，不需要像Local那天迭代出极小曲面。  
+> global体现在所有点的约束同时满足，不需要像Local那样迭代出极小曲面。  
 > 但是global需要求解方程组，可以用数学方法，也可以用迭代方法。    
 
 * 求解稀疏方程组  
 
-> 注：有高效的求解方法，且有成熟的数学库可使用MLK, Eigen】    
+> 注：有高效的求解方法，且有成熟的数学库可使用MLK, Eigen    
 
 * 更新内部顶点坐标    
 
@@ -85,3 +85,6 @@ $$
 > Rank(L) = n‐c (n‐1 for connected meshes)    
 > L 非满秩， C 为 mesh 的联通个数，至少为1.    
 必须增加额外约束使L满秩。 
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
