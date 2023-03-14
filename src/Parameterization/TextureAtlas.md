@@ -50,3 +50,6 @@ Texture Atlas，Multi‐charts Parameterization
 > [Liu et al. Atlas Refinement with Bounded Packing Efficiency. Siggraph 2019.]    
 
 > 把网格参数化为box align.装箱之后再对边界优化     
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
