@@ -26,3 +26,8 @@
 • PCL (Point Cloud Library): <http://www.pointclouds.org>    
 • TriMesh: <http://graphics.stanford.edu/software/trimesh>    
 • DGtal: <https://dgtal.org>    
+• pymesh  
+• Pymeshlab  
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
