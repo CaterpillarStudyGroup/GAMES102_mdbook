@@ -27,7 +27,8 @@
 > R 把3D三角形旋转为平面三角形。    
 \\(\phi \\)是两个平面三角形之间的变形。扭曲都来自\\(\phi \\)    
 
-\\(\phi 是奇异矩阵，因此2D是3×3.扭曲都来自L(2×2)\\)          
+\\(\phi 是奇异矩阵，因此2D是3×3.扭曲都来自L(2×2)\\)      
+线性变换都可以用transformation matrix表示，都可以通过矩阵的性质来分析变换特点       
 
 ## 扭曲度量    
 
@@ -83,8 +84,7 @@ $$
 [link](../LaplacianCoordinates/MeshParameterization.md)
 
 > 外部点：映射到 convex boundary 上。   
-内部点：1 邻域点的线性组合，权自己定义。   
-通过求解稀疏方程组确定点的位置。   
+内部点：1 邻域点的线性组合，权自己定义。通过求解稀疏方程组确定点的位置。   
 优点：简单、不翻转。    
 缺点：扭曲大。  
 
@@ -104,6 +104,8 @@ $$
 基于角度的展开，把角度当作变量，求解参数化的网格 
 
 ![](../assets/参数23.png)     
+
+![](../assets/参数24-02.png)    
 
 ![](../assets/参数24.png)     
 
@@ -163,6 +165,7 @@ $$
 
 > [Fu and Liu. Computing Inversion‐Free Mappings by Simplex Assembly. Siggraph Asia 2016]    
 
+![](../assets/参数28-1.png)    
 
 ## Foldover free guaranteed optimization methods    
 
@@ -202,7 +205,8 @@ s.t  \\(\sigma _1\sigma _2>0,\\)  \\(\forall t\\)
 
 Input: a valid parameterization initialization \\(𝑥_0\\)    
 Repeat    
-\\(p=-H^{-1}\nabla E(x)\\) How to find a good decent direction?   
+\\(p=-H^{-1}\nabla E(x)\\)   
+How to find a good decent direction?   
 
 \\(𝛼_{max}\\)← injective maximal search step    
 \\(𝛼\\) ←line search by backtracking from \\(𝛼_{max}\\)        
@@ -255,7 +259,7 @@ CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快
 > [Ligang Liu et al.  Progressive Parameterizations. Siggraph 2018]     
 
 > 问题描述：   
-[图28:52]了脖子为边界.头挤在中间，中间扭曲很大⇒能量大⇒下降慢     
+[图28:52]以脖子为边界.头挤在中间，中间扭曲很大⇒能量大⇒下降慢     
 解决方法：    
 [图29:29] **不优化整体，或寻找更好的H逼近，而是中间那区域**     
 *个人感觉不 make sense *    
@@ -265,3 +269,5 @@ CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快
 
 > [Ligang Liu et al.  Progressive Parameterizations. Siggraph 2018]   
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
