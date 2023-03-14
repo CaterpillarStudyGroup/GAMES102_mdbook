@@ -17,7 +17,7 @@ hard 约束（Interpolation）：必须满足的约束，例如 \\(S.T.g(t)=0\\)
 Soft 约束（Approximation）: 尽量满足的约束，例如 \\(\min f(x)\\)   
 
 
-硬约束会导致约束点变成一尖点，因此引入软约束
+从优化的方法讲，Soft可以用GD迭代。比hard的KKT要简单  
 
 ## Vertex Constraints     
 
@@ -64,3 +64,6 @@ $$
 
 **‘8’-like mesh model    
 3070 vertices, 6144 triangles**
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
