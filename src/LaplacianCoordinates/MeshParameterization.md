@@ -44,7 +44,8 @@ M. Floater. Parametrization and smooth approximation of surface triangulations. 
 
 Forming a sparse linear system    
 
-> 还是之前 Global Laplacian Smoothing 求极小曲面的原理。    
+> 还是之前 Global Laplacian Smoothing 求极小曲面的原理。   
+边界点在同一平面上，得到的极小曲面也是在平面上的。   
 但是要把边界点放右边呢？因为右边是固定点，要求的是内部点。  
 
 ## 性质   
@@ -81,3 +82,6 @@ Forming a sparse linear system
 复杂模型割成多块分别参数化，再 packing    
 优点：1.减少扭曲。    2.具有语义。    
 缺点：1.空间浪费。    
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
