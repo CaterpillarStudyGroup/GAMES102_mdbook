@@ -33,3 +33,6 @@ $$
 
 *See more in [Zhang et al. Guided Mesh Normal Filtering. PG 2015.]*
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+
