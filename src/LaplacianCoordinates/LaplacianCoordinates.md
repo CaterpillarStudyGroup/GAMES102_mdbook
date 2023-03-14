@@ -84,12 +84,12 @@ $$
 后向差分： 
 
 $$
-{f}'_x=\frac{y_{i+1}-y_i}{x_{i+1}-x_i} 
+{f}'_ x=\frac{y_ {i+1}-y_i}{x_ {i+1}-x_ i} 
 $$
 
 前向差分：
 $$
-{f}'_x=\frac{y_i-y_{i-1}}{x_i-x_{i-1}} 
+{f}'_ x= \frac{y_ i-y_ {i-1}}{x_ i-x_ {i-1}} 
 $$
 
 ### 3D的场景
@@ -142,3 +142,5 @@ $$
 
 > 1邻域点加权平均的权有讲究,通常使用 cotangent.  
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
