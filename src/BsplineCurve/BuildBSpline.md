@@ -22,7 +22,7 @@ In short:
 
 ### 基函数的构造方法
 
-Repeated linear interpolation：从0阶（水平直线）开始，使用t和(1-t)进行线性组合、即升阶每升一次阶，曲线会更光滑，跨度区间会多覆盖一个结点。    
+Repeated linear interpolation：从0阶（水平直线）开始，使用\\(t\\)和\\((1-t)\\)进行线性组合、即升阶每升一次阶，曲线会更光滑，跨度区间会多覆盖一个结点。    
 
 ![](../assets/曲线7.png)  
 ![](../assets/曲线8.png)  
@@ -94,7 +94,7 @@ for\\( k>1,\\) and \\(i=0,...,n\\)
 
 ## 3. 基函数的平移和伸缩
 
-每个基函数是同一个基函数的平移或伸缩得到，其中第 i 个基函数是以\\(t_i\\)为中心的局部函数。    
+每个基函数是同一个基函数的平移或伸缩得到，其中第 \\(i\\) 个基函数是以\\(t_i\\)为中心的局部函数。    
 
 ![](../assets/曲线25.PNG)  
 
@@ -114,7 +114,7 @@ The interval \\([t_i,t_{i+k}]\\), is called support of \\(N_{i,k}\\)
 
 ## 光滑性
 
-For \\(t_i\le t_j\le t_{i+k}\\), the basis functions  \\(N_{i,k}(t)\\) are \\(C^{k-2} \\) at the knots \\(t_j\\)      
+For \\(\quad t_i\le t_j\le t_{i+k}\\), the basis functions  \\(N_{i,k}(t)\\) are \\(C^{k-2} \\) at the knots \\(t_j\\)      
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
