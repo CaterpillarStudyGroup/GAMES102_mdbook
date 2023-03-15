@@ -63,5 +63,6 @@ $$
 连续表达在数学上容易表达。但在应用上有局限。   
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

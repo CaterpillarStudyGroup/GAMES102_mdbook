@@ -19,7 +19,7 @@ $$
 
 系数矩阵为Vandermonde矩阵，其行列式非零，因此方程组有唯一解。  
 
-> &#x2705; 如果不使用幂基而是别的基函数，也能得到上述方程组并解出唯一解，只是矩阵的内容不同。 
+> &#x2705; 如果不使用幂基而是别的基函数，也能得到上述方程组并解出唯一解，只是矩阵的内容不同。   
 要求解的系数是\\(a_1,a_2, \cdots, a_n\\),此处系数a是未知数，而不是通常理解的\\(x\\), \\(x\\) 代表输入，因此是已知量。
 
 ## 技巧1：构造插值问题的通用解  
@@ -208,4 +208,4 @@ $$
 因此需要更好的基函数来做插值，例如Bernstein基函数、分片多项式  
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

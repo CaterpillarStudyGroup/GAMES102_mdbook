@@ -70,7 +70,8 @@ $$
 • Cashman. Beyond Catmull–Clark? A survey of advances in subdivision surface methods. Compute Graphics Forum,  31(1), 2012, 42–61     
  
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
 
  

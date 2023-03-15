@@ -163,4 +163,5 @@ $$
 所生成的桔色曲线本质阶数是3阶。
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

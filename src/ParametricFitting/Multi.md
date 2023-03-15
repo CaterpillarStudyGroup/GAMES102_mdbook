@@ -69,4 +69,5 @@ $$
 神经网络 hidden layer 的本质，把\\(n\\)维空间的点映射到m维空间的点，网络学习点在不同维度空间中的性质。   
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

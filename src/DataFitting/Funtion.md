@@ -100,4 +100,4 @@ $$
 \\(f(\frac{i}{n})\\)是系数，\\(bn_1,j(x)\\)是基函数，用系数来组合基函数，得到新的函数。
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

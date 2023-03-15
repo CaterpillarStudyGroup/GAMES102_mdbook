@@ -14,6 +14,5 @@
 > **本课程内容主要解决静态数字内容生成的问题。**  
 
 
-
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

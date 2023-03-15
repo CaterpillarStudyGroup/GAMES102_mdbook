@@ -17,7 +17,7 @@ Local error: Compare new patch with previous iteration
 
 ## 顶点删除的误差度量
 
-> 点越尖锐越重要。(Laplace,一圈夹角等）  
+> 点越尖锐越重要。(Laplace,一圈夹角等)   
 
 * Measures    
 • Distance to plane    

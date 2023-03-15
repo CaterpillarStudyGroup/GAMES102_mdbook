@@ -123,4 +123,4 @@ $$
 C连续适合于动画。G连续适合于设计建模。
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

@@ -35,4 +35,5 @@ $$
 (c) 节点处导数满足\\(m_{j+1}=\lambda m_j\\)   
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

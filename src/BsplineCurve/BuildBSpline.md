@@ -117,4 +117,5 @@ The interval \\([t_i,t_{i+k}]\\), is called support of \\(N_{i,k}\\)
 For \\(t_i\le t_j\le t_{i+k}\\), the basis functions  \\(N_{i,k}(t)\\) are \\(C^{k-2} \\) at the knots \\(t_j\\)      
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

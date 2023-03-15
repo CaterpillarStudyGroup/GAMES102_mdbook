@@ -112,5 +112,6 @@ The curvature function \\({y}''(x) \\)不满足G2连续。
 二阶震荡数 Second vibration number \\(S\\)：Vibration number of curvature function     
 
 本文出自CaterpillarStudyGroup，转载请注明出处。
-<https://caterpillarstudygroup.github.io/GAMES102_mdbook/>
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
