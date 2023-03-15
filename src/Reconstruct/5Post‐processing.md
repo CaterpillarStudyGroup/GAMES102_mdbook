@@ -125,5 +125,5 @@ the polygons of the mesh.
     - Han et al. Deep Reinforcement Learning of Volume‐guided Progressive View Inpainting for 3D Point Scene Completion from a Single Depth Image. CVPR 2019.   
     - Nie et al. Skeleton‐bridged Point Completion: From Global Inference to Local Adjustment. NeuIPS 2020.    
 
-
-
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  

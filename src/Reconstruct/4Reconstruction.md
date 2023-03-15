@@ -270,5 +270,5 @@ Sharf et al. Competing Fronts for Coarse–to–Fine Surface Reconstruction. E
 
 Lu and Liu. Surface Reconstruction via Cooperative Evolutions. CAGD 2020.    
 
-
-
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  

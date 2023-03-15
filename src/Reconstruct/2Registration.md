@@ -72,3 +72,5 @@ $$
 > 根据对应点求变换关系(R.t)      
 根据变换关系就对应点    
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
