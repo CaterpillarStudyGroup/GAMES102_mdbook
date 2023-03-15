@@ -24,7 +24,7 @@ $$
 
 Support intervals of \\(𝑁_{i,k}\\)  
 
-> 由于n=5，d0-d5定义第一条曲线，d1-d6定义第二条曲线。  
+> 由于\\(n=5\\)，\\(d_0-d_5\\)定义第一条曲线，\\(d_1-d_6\\)定义第二条曲线。  
 本质上是分段曲线，在连接点上C3连续。  
 
 ## Multiple weighted knot vectors  
