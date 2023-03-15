@@ -21,7 +21,7 @@ different polygon counts
 
 ## Tradeoff
 • Size   
-• Error
+• Error    
 • Quality   
 
 ![](../assets/简化4.png)             
