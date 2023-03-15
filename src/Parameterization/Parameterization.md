@@ -222,9 +222,9 @@ Until converged
 
 > &#x2757; 后面没展开讲的方法，就不记了，没讲清楚，记了也没用
 
-> 利用离散 Laplacian 作为 Hessian 的近似     
-SLIM: \\(\dots ，加机 \dots \\)     
-ANVF:\\(\dots 向量场算子\dots\\)      
+> AQP：利用离散 Laplacian 作为 Hessian 的近似     
+SLIM: \\(\dots ，加权 \dots \\)     
+AKVF:\\(\dots 向量场算子\dots\\)      
 CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快   
 各种方法都是找更好的H近似，使得优化过程更快更稳定。    
 
