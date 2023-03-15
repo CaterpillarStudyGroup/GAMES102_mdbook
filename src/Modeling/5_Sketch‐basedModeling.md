@@ -20,7 +20,9 @@
 ![](../assets/建模53.png)   
 
 
-
 # More…   
 
 ![](../assets/建模54.png)   
+
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  

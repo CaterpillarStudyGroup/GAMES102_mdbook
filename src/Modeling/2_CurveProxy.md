@@ -29,7 +29,7 @@ Axial Deformation [1994]
 
 # 2.4 Silhouette sketching based    
 
-[Nealen et al. Siggraph 05    
+[Nealen et al. Siggraph 05]    
 
 > Silhouette （轮廓线）
 
@@ -63,3 +63,5 @@ Approximate sketching: Balance weighting between detail and positional constrain
 • 2D image contours   
 • …    
 
+本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
