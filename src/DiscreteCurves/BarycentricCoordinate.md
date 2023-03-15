@@ -75,7 +75,7 @@ $$
 
 ![](../assets/离散27.png)    
 
-> 通常只存储顶点上的shading value. 非顶点处的shade value 是通过顶点的shading value 插值是基于重心坐标做的。  
+> 通常只存储顶点上的shading value. 非顶点处的shade value 是通过顶点的shading value 插值得到。插值是基于重心坐标做的。  
 
 ## 3. Transfinite Interpolation
 
