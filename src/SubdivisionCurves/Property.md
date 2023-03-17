@@ -43,6 +43,8 @@ $$
 • 细分矩阵的最大特征根为1  
 • 否则会爆炸 (>1) 或收缩 (<1)  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 

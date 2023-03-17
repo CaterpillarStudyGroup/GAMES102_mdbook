@@ -269,5 +269,8 @@ CM：使用隐式 Laplacian 矩阵，二阶方法、速度更快
 
 > [Ligang Liu et al.  Progressive Parameterizations. Siggraph 2018]   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+ 

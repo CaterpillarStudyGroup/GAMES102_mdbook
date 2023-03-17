@@ -27,6 +27,9 @@
 > Orientability：可定向：每个面片都有一致的朝向，极少碰到，碰到再解释     
 > Duality：下节课再讲      
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

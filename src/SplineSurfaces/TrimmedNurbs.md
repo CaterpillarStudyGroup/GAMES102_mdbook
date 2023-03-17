@@ -49,7 +49,9 @@ $$
 • 表达、公式形式比曲线情形复杂    
 • 特殊问题：角点的光滑性    
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 
 

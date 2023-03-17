@@ -128,6 +128,9 @@ $$
 > 隐式方法通过求解线性稀疏方程组得到结果（类似全局法）  
 > &#x2753; 认为噪声是沿着法向的偏移，本身就是一种猜测、为什么说用真实曲面的法向会更好呢？     
     
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+  
 

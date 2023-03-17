@@ -164,5 +164,8 @@ Light coding打出了一个具有三维纵深的“体编码”，只要看物�
 
 > 后面的机械方法都跳过
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+ 

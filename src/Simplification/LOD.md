@@ -66,5 +66,7 @@ Show nearby portions of object at higher resolution than distant portions
 * The Multi‐Tesselation (MT) homepage:   
 • <http://www.disi.unige.it/person/MagilloP/MT>   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

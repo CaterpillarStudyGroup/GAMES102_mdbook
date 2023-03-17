@@ -15,7 +15,9 @@ $$
 F(x)=\sum_{i+j+k=n;i,j,k\ge0}^{} \frac{n!}{i!j!k!} \alpha  ^i\beta ^j\gamma ^kp_{i,j,k}
 $$
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 
 

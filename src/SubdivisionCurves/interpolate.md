@@ -69,8 +69,11 @@ $$
 • M.S. Sabin. Recent Progress in Subdivision: a Survey. Advances in Multiresolution for Geometric Modelling Mathematics and Visualization 2005, 203‐230      
 • Cashman. Beyond Catmull–Clark? A survey of advances in subdivision surface methods. Compute Graphics Forum,  31(1), 2012, 42–61     
  
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
 
 

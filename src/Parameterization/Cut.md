@@ -43,5 +43,8 @@ AutoCuts
 
 扭曲小 && 割缝总长度小    
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+ 

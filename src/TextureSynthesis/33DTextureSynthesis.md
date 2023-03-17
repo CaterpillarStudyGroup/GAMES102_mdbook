@@ -299,5 +299,8 @@ K‐Coherent Search：通过匹配找到最好的K个，从里面随机选择一
 • A well‐studied topic    
 • Many applications     
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+ 

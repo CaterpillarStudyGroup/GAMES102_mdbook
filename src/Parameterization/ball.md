@@ -29,5 +29,7 @@
 • 是一个从3D到2D的降维问题：将几何数据表达为图像     
 • 特殊的几何结构（三角网格）：特殊的优化方法    
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

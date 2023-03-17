@@ -156,7 +156,10 @@ $$
 可展曲面展成平面不会扭曲。    
 球面不可展，展开必定扭曲。  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
 

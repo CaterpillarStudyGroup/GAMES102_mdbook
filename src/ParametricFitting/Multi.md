@@ -68,6 +68,9 @@ $$
 > 能用低维的神经网络代替高维的张量积，是因为，虽然张量积的各维­度独立，但它对于要拟合的数据来说是有冗余的。    
 神经网络 hidden layer 的本质，把\\(n\\)维空间的点映射到m维空间的点，网络学习点在不同维度空间中的性质。   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
