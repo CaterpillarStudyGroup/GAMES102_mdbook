@@ -34,6 +34,8 @@ $$
 (b) 每段有一个极值点，\\(j+1\\)段极值点是j段极值点的\\(\lambda\\)倍;     
 (c) 节点处导数满足\\(m_{j+1}=\lambda m_j\\)   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 

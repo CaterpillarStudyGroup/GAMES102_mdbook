@@ -16,6 +16,9 @@
 • 对型值点做参数化    
 • 对3个坐标分量分别处理     
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

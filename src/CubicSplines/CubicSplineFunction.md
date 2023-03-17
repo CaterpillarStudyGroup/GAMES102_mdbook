@@ -111,6 +111,8 @@ $$
 
 > &#x2753; 虽然没怎么听懂，但感觉是类似【技巧1构造插值问题的通用解】([link](https://caterpillarstudygroup.github.io/GAMES102_mdbook/DataFitting/PolynomialInterpolation.html#%E6%8A%80%E5%B7%A71%E6%9E%84%E9%80%A0%E6%8F%92%E5%80%BC%E9%97%AE%E9%A2%98%E7%9A%84%E9%80%9A%E7%94%A8%E8%A7%A3))的一种方法。
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 
