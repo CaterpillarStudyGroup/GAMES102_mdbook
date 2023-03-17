@@ -83,5 +83,8 @@ Forming a sparse linear system
 优点：1.减少扭曲。    2.具有语义。    
 缺点：1.空间浪费。    
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

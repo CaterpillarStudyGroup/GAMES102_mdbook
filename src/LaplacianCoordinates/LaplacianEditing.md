@@ -150,5 +150,7 @@ $$
 ![](../assets/网格78-2.png)    
 提取与还原即 Encoder& Decoder.Laplace 是手工方法，E&D是AI方法。  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/

@@ -41,6 +41,9 @@ the second option is numerically more stable
 > [24:18] 变差缩减：曲线与直线相交，其交点数不多于控制顶点的凸包与直线的交点数。     
 此性质用于曲线与直线求交。
    
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

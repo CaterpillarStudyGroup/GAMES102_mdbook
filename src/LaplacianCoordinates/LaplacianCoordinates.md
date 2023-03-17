@@ -142,5 +142,8 @@ $$
 
 > 1邻域点加权平均的权有讲究,通常使用 cotangent.  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+ 

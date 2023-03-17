@@ -99,5 +99,8 @@ $$
 - ___怎么找___，即求解或优化。可以选择不同的优化方法与技巧，目标是既要快、又要好…  
 ③各种优化方法(牛顿下降、Adam)都是在解决“怎么找”的问题  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

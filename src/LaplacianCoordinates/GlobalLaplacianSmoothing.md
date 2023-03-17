@@ -86,5 +86,8 @@ $$
 > L 非满秩， C 为 mesh 的联通个数，至少为1.    
 必须增加额外约束使L满秩。 
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
