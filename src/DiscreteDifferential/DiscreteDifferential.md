@@ -163,6 +163,9 @@ Transactions on Graphics 23, 3 (2004), 609–612. (Proc. SIGGRAPH’2004).
 - PAGE D., SUN Y., KOSCHAN A., PAIK J., ABIDI M.: Normal vector voting: Crease detection and curvature 
 extimation on large, noisy meshes. Graphical Models 64, 3‐4 (2002), 199–229.     
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

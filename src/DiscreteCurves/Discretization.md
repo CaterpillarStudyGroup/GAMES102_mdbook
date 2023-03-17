@@ -70,7 +70,9 @@ If a function \\(x(t)\\) contains no frequencies higher than B hertz, it is comp
 
 * Tylor展开及估计 
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 
 

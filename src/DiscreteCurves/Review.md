@@ -30,5 +30,8 @@
 计算曲线对应点与Q的距离，调整P的位置。    
 公式求解与迭代求解的区别   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+

@@ -94,6 +94,9 @@ Interpolating height function to model a surface
 
 http://www.inf.usi.ch/faculty/hormann/barycentric
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

@@ -63,5 +63,8 @@ Chinagraph 2020 Key note talk by Hao Zhang:
 <https://www.bilibili.com/video/BV1Pa4y1x7au?p=3>    
 Chaudhuri, et al. Learning Generative Models of 3D Structures. Computer Graphics Forum (Eurographics STAR), 2020.     
   
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+  

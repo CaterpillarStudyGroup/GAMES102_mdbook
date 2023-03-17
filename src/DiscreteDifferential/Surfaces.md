@@ -108,5 +108,7 @@ $$
 
 当曲线长度趋于0，其极限是一个常值。常值的方向为法向，大小为平均曲率。  
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
-https://caterpillarstudygroup.github.io/GAMES102_mdbook/  
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/
