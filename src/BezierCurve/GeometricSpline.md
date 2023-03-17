@@ -64,6 +64,8 @@ $$
 
 > 所有的分段连续曲线，曲线可以是直的，曲线之间也可以只有C1连续
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
 

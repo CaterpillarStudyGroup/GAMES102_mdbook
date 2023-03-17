@@ -29,6 +29,9 @@ $$
 * 良好的几何意义：该点将曲线一分两条子Bezier 曲线，其控制顶点是中间生成的点    
 * 可用于Bezier曲线的离散及求根等许多应用    
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 

@@ -26,6 +26,9 @@ $$
 • 输入：交互输入（或者反求）控制顶点{\\(p_i,i=0\sim n\\)}     
 • 输出：曲线\\(f(t)\\)   
 
-本文出自CaterpillarStudyGroup，转载请注明出处。
+---  
+
+> 本文出自CaterpillarStudyGroup，转载请注明出处。
 https://caterpillarstudygroup.github.io/GAMES102_mdbook/
+
 
