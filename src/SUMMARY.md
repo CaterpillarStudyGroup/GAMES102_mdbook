@@ -78,6 +78,7 @@
 - [曲面细分](MeshTessellation/MeshTessellation.md)
   - [Loop细分](./MeshTessellation/Loop.md)
   - [Catmull-Clark 细分](./MeshTessellation/CatmullClark.md)
+- [曲面正则化](./MeshRegularization/MeshRegularization.md)
 - [曲面去噪]()
   - [去噪](Smoothing/Smoothing.md)
   - [顶点去噪](Smoothing/1VertexFiltering.md)

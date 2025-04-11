@@ -101,6 +101,8 @@ Merge all vertices within the same cell
 
 # 简化度量     
 
+衡量坍缩后的形状与坍缩前的接近程度
+
 • 几何   
 • 视觉：纹理、材质、法向…    
 
