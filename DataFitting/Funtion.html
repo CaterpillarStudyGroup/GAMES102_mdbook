@@ -1,0 +1,275 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>3. 函数空间及基函数 - GAMES102</title>
+        <!-- Custom HTML head -->
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="The note of GAMES102">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="../theme/pagetoc.css">
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../index.html">GAMES102</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">1.</strong> Introduction 介绍</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Introduction/3DData.html"><strong aria-hidden="true">1.1.</strong> 三维数据</a></li><li class="chapter-item expanded "><a href="../Introduction/MathBasic.html"><strong aria-hidden="true">1.2.</strong> 数学基础</a></li><li class="chapter-item expanded "><a href="../Introduction/MLBaic.html"><strong aria-hidden="true">1.3.</strong> ML基础</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.</strong> 数据拟合</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DataFitting/DataFitting.html"><strong aria-hidden="true">2.1.</strong> 数据拟合</a></li><li class="chapter-item expanded "><a href="../DataFitting/PolynomialInterpolation.html"><strong aria-hidden="true">2.2.</strong> 1. 多项式插值</a></li><li class="chapter-item expanded "><a href="../DataFitting/PolynomialApproximation.html"><strong aria-hidden="true">2.3.</strong> 2. 多项式逼近</a></li><li class="chapter-item expanded "><a href="../DataFitting/Funtion.html" class="active"><strong aria-hidden="true">2.4.</strong> 3. 函数空间及基函数</a></li><li class="chapter-item expanded "><a href="../DataFitting/RBF.html"><strong aria-hidden="true">2.5.</strong> 4. RBF函数插值/逼近</a></li><li class="chapter-item expanded "><a href="../DataFitting/NewView.html"><strong aria-hidden="true">2.6.</strong> 5. 从另一个角度来看拟合函数</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> 参数拟合</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ParametricFitting/Review.html"><strong aria-hidden="true">3.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/Multi.html"><strong aria-hidden="true">3.2.</strong> 多元函数</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/VectorValue.html"><strong aria-hidden="true">3.3.</strong> 向量值函数</a></li><li class="chapter-item expanded "><a href="../ParametricFitting/CurveFitting.html"><strong aria-hidden="true">3.4.</strong> 曲线拟合</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> 三次样条函数</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CubicSplines/CubicSplineFunction.html"><strong aria-hidden="true">4.1.</strong> 三次样条函数</a></li><li class="chapter-item expanded "><a href="../CubicSplines/CubicBasisSpline.html"><strong aria-hidden="true">4.2.</strong> 三次基样条</a></li><li class="chapter-item expanded "><a href="../CubicSplines/CubicSplineCurve.html"><strong aria-hidden="true">4.3.</strong> 三次样条曲线</a></li><li class="chapter-item expanded "><a href="../CubicSplines/GeometricContinuity.html"><strong aria-hidden="true">4.4.</strong> 几何连续性</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.</strong> Bezier曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../BezierCurve/Review.html"><strong aria-hidden="true">5.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../BezierCurve/BernsteinBasisFunction.html"><strong aria-hidden="true">5.2.</strong> Bernstein基函数</a></li><li class="chapter-item expanded "><a href="../BezierCurve/BezierCurve.html"><strong aria-hidden="true">5.3.</strong> Bezier曲线</a></li><li class="chapter-item expanded "><a href="../BezierCurve/Property.html"><strong aria-hidden="true">5.4.</strong> Bernstein基函数及Bezier曲线的性质</a></li><li class="chapter-item expanded "><a href="../BezierCurve/DeCasteljau算法.html"><strong aria-hidden="true">5.5.</strong> de Casteljau算法</a></li><li class="chapter-item expanded "><a href="../BezierCurve/GeometricSpline.html"><strong aria-hidden="true">5.6.</strong> 几何样条曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.</strong> B样条曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../BsplineCurve/Why.html"><strong aria-hidden="true">6.1.</strong> 为什么引入B样条曲线</a></li><li class="chapter-item expanded "><a href="../BsplineCurve/BuildBSpline.html"><strong aria-hidden="true">6.2.</strong> 构造B样条基函数</a></li><li class="chapter-item expanded "><a href="../BsplineCurve/BsplineCurve.html"><strong aria-hidden="true">6.3.</strong> B样条曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.</strong> NURBS曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../NURBS/Review.html"><strong aria-hidden="true">7.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../NURBS/RationalCurve.html"><strong aria-hidden="true">7.2.</strong> 有理曲线</a></li><li class="chapter-item expanded "><a href="../NURBS/NURBS.html"><strong aria-hidden="true">7.3.</strong> NURBS曲线</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">8.</strong> 细分曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SubdivisionCurves/Review.html"><strong aria-hidden="true">8.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/Chaikin.html"><strong aria-hidden="true">8.2.</strong> Chaikin细分方法</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/Property.html"><strong aria-hidden="true">8.3.</strong> 细分曲线的性质证明</a></li><li class="chapter-item expanded "><a href="../SubdivisionCurves/interpolate.html"><strong aria-hidden="true">8.4.</strong> 插值型细分方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">9.</strong> 隐式曲线</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../ImplicitCurves/Review.html"><strong aria-hidden="true">9.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/ImplicitCurves.html"><strong aria-hidden="true">9.2.</strong> 隐式曲线</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/Draw.html"><strong aria-hidden="true">9.3.</strong> 隐式曲线的绘制</a></li><li class="chapter-item expanded "><a href="../ImplicitCurves/Fitting.html"><strong aria-hidden="true">9.4.</strong> 隐式曲线的拟合</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">10.</strong> NURBS曲面</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SplineSurfaces/Review.html"><strong aria-hidden="true">10.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../SplineSurfaces/TrimmedNurbs.html"><strong aria-hidden="true">10.2.</strong> Trimmed Nurbs</a></li><li class="chapter-item expanded "><a href="../SplineSurfaces/SplineSurfaces.html"><strong aria-hidden="true">10.3.</strong> 三角域上的Bezier曲面片</a></li></ol></li><li class="chapter-item expanded "><a href="../CurveFairing/CurveFairing.html"><strong aria-hidden="true">11.</strong> 曲线光顺</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../CurveFairing/What.html"><strong aria-hidden="true">11.1.</strong> 曲线的光顺定义</a></li><li class="chapter-item expanded "><a href="../CurveFairing/How.html"><strong aria-hidden="true">11.2.</strong> 曲线的光顺方法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">12.</strong> 离散曲线处理</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DiscreteCurves/Review.html"><strong aria-hidden="true">12.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/Discretization.html"><strong aria-hidden="true">12.2.</strong> 曲线的离散</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/BarycentricCoordinate.html"><strong aria-hidden="true">12.3.</strong> 重心坐标</a></li><li class="chapter-item expanded "><a href="../DiscreteCurves/2D.html"><strong aria-hidden="true">12.4.</strong> 2D形状（离散曲线）处理</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">13.</strong> 离散微分几何</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../DiscreteDifferential/Review.html"><strong aria-hidden="true">13.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/Curves.html"><strong aria-hidden="true">13.2.</strong> 曲线的微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/Surfaces.html"><strong aria-hidden="true">13.3.</strong> 曲面的微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/DiscreteDifferential.html"><strong aria-hidden="true">13.4.</strong> 离散微分几何</a></li><li class="chapter-item expanded "><a href="../DiscreteDifferential/MinimaSurface.html"><strong aria-hidden="true">13.5.</strong> 极小曲面</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">14.</strong> 三角网格：曲面的离散表达</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../TriangularMeshes/TriangularMeshes.html"><strong aria-hidden="true">14.1.</strong> 曲面的离散表达</a></li><li class="chapter-item expanded "><a href="../TriangularMeshes/DataStructure.html"><strong aria-hidden="true">14.2.</strong> 网格曲面的数据结构</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LaplacianCoordinates.html"><strong aria-hidden="true">14.3.</strong> 局部特征度量</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LocalLaplacianSmoothing.html"><strong aria-hidden="true">14.4.</strong> 局部Laplace平滑</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/GlobalLaplacianSmoothing.html"><strong aria-hidden="true">14.5.</strong> 全局Laplace平滑</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/MeshParameterization.html"><strong aria-hidden="true">14.6.</strong> 曲面参数化</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/Constrained.html"><strong aria-hidden="true">14.7.</strong> 约束</a></li><li class="chapter-item expanded "><a href="../LaplacianCoordinates/LaplacianEditing.html"><strong aria-hidden="true">14.8.</strong> 编辑</a></li></ol></li><li class="chapter-item expanded "><a href="../MeshTessellation/MeshTessellation.html"><strong aria-hidden="true">15.</strong> 曲面细分</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../MeshTessellation/Loop.html"><strong aria-hidden="true">15.1.</strong> Loop细分</a></li><li class="chapter-item expanded "><a href="../MeshTessellation/CatmullClark.html"><strong aria-hidden="true">15.2.</strong> Catmull-Clark 细分</a></li></ol></li><li class="chapter-item expanded "><a href="../MeshRegularization/MeshRegularization.html"><strong aria-hidden="true">16.</strong> 曲面正则化</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">17.</strong> 曲面去噪</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Smoothing/Smoothing.html"><strong aria-hidden="true">17.1.</strong> 去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/1VertexFiltering.html"><strong aria-hidden="true">17.2.</strong> 顶点去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/2NormalFiltering.html"><strong aria-hidden="true">17.3.</strong> 法向去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/3GlobalSmoothing.html"><strong aria-hidden="true">17.4.</strong> 全局去噪</a></li><li class="chapter-item expanded "><a href="../Smoothing/4MeshImprovement.html"><strong aria-hidden="true">17.5.</strong> mesh提升</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> 采样与剖分</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../SamplingTessellation/Sampling.html"><strong aria-hidden="true">18.1.</strong> 采样</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/Triangular.html"><strong aria-hidden="true">18.2.</strong> 平面三角形网络</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/Delaunay.html"><strong aria-hidden="true">18.3.</strong> Delaunay</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/MeshGeneration.html"><strong aria-hidden="true">18.4.</strong> Mesh Generation</a></li><li class="chapter-item expanded "><a href="../SamplingTessellation/SamplingTessellation.html"><strong aria-hidden="true">18.5.</strong> 高维几何对象的采样与剖分</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">19.</strong> 曲面参数化</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Parameterization/Parameterization.html"><strong aria-hidden="true">19.1.</strong> 曲面参数化</a></li><li class="chapter-item expanded "><a href="../Parameterization/Bijective.html"><strong aria-hidden="true">19.2.</strong> Bijective Parameterization</a></li><li class="chapter-item expanded "><a href="../Parameterization/Cut.html"><strong aria-hidden="true">19.3.</strong> 封闭曲面的割缝问题</a></li><li class="chapter-item expanded "><a href="../Parameterization/TextureAtlas.html"><strong aria-hidden="true">19.4.</strong> 纹理地图：多片参数化</a></li><li class="chapter-item expanded "><a href="../Parameterization/ball.html"><strong aria-hidden="true">19.5.</strong> 球面参数化</a></li></ol></li><li class="chapter-item expanded "><a href="../Simplification/Simplification.html"><strong aria-hidden="true">20.</strong> 面片简化</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Simplification/1Local.html"><strong aria-hidden="true">20.1.</strong> Local</a></li><li class="chapter-item expanded "><a href="../Simplification/2Global.html"><strong aria-hidden="true">20.2.</strong> Global</a></li><li class="chapter-item expanded "><a href="../Simplification/LOD.html"><strong aria-hidden="true">20.3.</strong> LOD</a></li></ol></li><li class="chapter-item expanded "><a href="../Mapping/Mapping.html"><strong aria-hidden="true">21.</strong> 几何映射</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">22.</strong> 几何优化</div></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Optimization/Review.html"><strong aria-hidden="true">22.1.</strong> 回顾</a></li><li class="chapter-item expanded "><a href="../Optimization/Fundamentals.html"><strong aria-hidden="true">22.2.</strong> Fundamentals</a></li><li class="chapter-item expanded "><a href="../Optimization/UnconstrainedOptimization.html"><strong aria-hidden="true">22.3.</strong> 无约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/等式约束的优化问题.html"><strong aria-hidden="true">22.4.</strong> 等式约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/不等式约束的优化问题.html"><strong aria-hidden="true">22.5.</strong> 不等式约束的优化问题</a></li><li class="chapter-item expanded "><a href="../Optimization/ConvexOptimization.html"><strong aria-hidden="true">22.6.</strong> Convex Optimization</a></li><li class="chapter-item expanded "><a href="../Optimization/其他优化问题.html"><strong aria-hidden="true">22.7.</strong> 其他优化问题</a></li></ol></li><li class="chapter-item expanded "><a href="../Reconstruct/Reconstruct.html"><strong aria-hidden="true">23.</strong> 曲面重建</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Reconstruct/1Acquisition.html"><strong aria-hidden="true">23.1.</strong> 1. Acquisition</a></li><li class="chapter-item expanded "><a href="../Reconstruct/2Registration.html"><strong aria-hidden="true">23.2.</strong> 2. Registration</a></li><li class="chapter-item expanded "><a href="../Reconstruct/3Consolidation.html"><strong aria-hidden="true">23.3.</strong> 3. Consolidation</a></li><li class="chapter-item expanded "><a href="../Reconstruct/4Reconstruction.html"><strong aria-hidden="true">23.4.</strong> 4. Reconstruction</a></li><li class="chapter-item expanded "><a href="../Reconstruct/5Post‐processing.html"><strong aria-hidden="true">23.5.</strong> 5. Post‐processing</a></li><li class="chapter-item expanded "><a href="../Reconstruct/动态物体的3D重建.html"><strong aria-hidden="true">23.6.</strong> 动态物体的3D重建</a></li></ol></li><li class="chapter-item expanded "><a href="../Modeling/Modeling.html"><strong aria-hidden="true">24.</strong> 几何建模</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../Modeling/1_PointProxy.html"><strong aria-hidden="true">24.1.</strong> 1 Point Proxy</a></li><li class="chapter-item expanded "><a href="../Modeling/2_CurveProxy.html"><strong aria-hidden="true">24.2.</strong> 2 Curve Proxy</a></li><li class="chapter-item expanded "><a href="../Modeling/3_MeshProxy.html"><strong aria-hidden="true">24.3.</strong> 3 Mesh Proxy</a></li><li class="chapter-item expanded "><a href="../Modeling/4_DeformationTransfer.html"><strong aria-hidden="true">24.4.</strong> 4 Deformation Transfer</a></li><li class="chapter-item expanded "><a href="../Modeling/5_Sketch‐basedModeling.html"><strong aria-hidden="true">24.5.</strong> 5 Sketch‐based Modeling</a></li><li class="chapter-item expanded "><a href="../Modeling/6_SculpturingModeling.html"><strong aria-hidden="true">24.6.</strong> 6 Sculpturing Modeling</a></li></ol></li><li class="chapter-item expanded "><a href="../DataDrivenModeling/DataDrivenModeling.html"><strong aria-hidden="true">25.</strong> Data‐Driven Modeling</a></li><li class="chapter-item expanded "><a href="../ShapeMorphing/ShapeMorphing.html"><strong aria-hidden="true">26.</strong> Shape Morphing</a></li><li class="chapter-item expanded "><a href="../TextureSynthesis/TextureSynthesis.html"><strong aria-hidden="true">27.</strong> 纹理合成</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../TextureSynthesis/1Textures.html"><strong aria-hidden="true">27.1.</strong> Textures</a></li><li class="chapter-item expanded "><a href="../TextureSynthesis/22DTextureSynthesis.html"><strong aria-hidden="true">27.2.</strong> 2D Texture Synthesis</a></li><li class="chapter-item expanded "><a href="../TextureSynthesis/33DTextureSynthesis.html"><strong aria-hidden="true">27.3.</strong> 3D Texture Synthesis</a></li></ol></li><li class="chapter-item expanded "><a href="../ShapeAnalysis/ShapeAnalysis.html"><strong aria-hidden="true">28.</strong> 形状分析与理解</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">GAMES102</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/CaterpillarStudyGroup/GAMES102_mdbook" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main><div class="sidetoc"><nav class="pagetoc"></nav></div>
+                        <h1 id="多项式的优点与缺点"><a class="header" href="#多项式的优点与缺点">多项式的优点与缺点</a></h1>
+<blockquote>
+<p>这种类似于\(\sum a_if_i(x)\)的形式都叫多项式，根据\(f_i(x)\)的不同的定义，会成为不同的多项。例如以幂函数为基的是幂基多项式，比Berstein为基的是Bertein多项式。</p>
+</blockquote>
+<h2 id="优点"><a class="header" href="#优点">优点</a></h2>
+<ol>
+<li>易于计算, 表现良好, 光滑, ...</li>
+<li><strong>表达能力足够!</strong><br />
+魏尔斯特拉斯Weierstrass定理:令\(f\)为闭区间\([a, b]\)上任意连续函数, 则对任意给\(\varepsilon\), 存在\(n\)和<strong>多项式</strong>\(P_n\)使得</li>
+</ol>
+<p>$$
+\left|f(x)-P_{n}(x)\right|&lt;\varepsilon, \forall x \in[a, b]
+$$</p>
+<blockquote>
+<p>翻译成人话是：\(Pn(x)\)可以在一定误差内拟合任意\(f(x)\)。只要n足够大。<br />
+这里\(x的范围区间是[a,b]，通常考虑[0,1]\)</p>
+</blockquote>
+<p><em>Weierstrass只证明了存在性,未给出多项式</em></p>
+<h1 id="bernstein多项式"><a class="header" href="#bernstein多项式">Bernstein多项式</a></h1>
+<h2 id="完备性"><a class="header" href="#完备性">完备性</a></h2>
+<p>伯恩斯坦Bernstein给出了Bernstein的完备性证明：<br />
+对\([0,1]\)区间上任意连续函数\(f(x)\)和任意正整数\(n\), 以下不等式对所有\(x\in[0,1]\)成立</p>
+<p>$$
+|f(x)-B_n(f,x)|&lt;\frac{9}{4} m_{f,n}
+$$</p>
+<p>\(m_{f,n}\)=lower upper bound of |\(f(y_1)-f(y_2)\)|</p>
+<p>\(y_1, y_2\in[0,1] \)  且|\(y_1-y_2\)|&lt;\(\frac{1}{\sqrt{n}} \)</p>
+<p>$$
+B_n(f, x)=\sum_{j=0}^{n} f(x_j) b_{n, j}(x)
+$$</p>
+<p>其中\(x_j\) 为[\(0,1\)]上等距采样点，\(b_{n,j}\)为Bernstein基</p>
+<p>$$
+b_{n,j} = \binom{n}{j} x^j (1-x)^{n-j}
+$$</p>
+<blockquote>
+<p>\(\binom{n}{j}相当于{\textstyle C_{n}^{j}} \),排列组合的意思。 </p>
+</blockquote>
+<h2 id="bernstein基"><a class="header" href="#bernstein基">Bernstein基</a></h2>
+<p><img src="../assets/%E5%A4%9A%E9%A1%B9%E5%BC%8F-1.png" alt="" /></p>
+<ul>
+<li>\(b_{0,0}(x)=1\)</li>
+<li>\(b_{0,1}(x)=1-x, b_{1,1}=x\)</li>
+<li>\(b_{0,2}(x)=(1-x)^2, b_{1,2}=2x(1-x),b_{2,2}=x^2\)</li>
+<li>\(b_{0,3}(x)=(1-x)^3,b_{1,3}=3x(1-x)^2, b_{2,3}=3x^2(1-x),b_{3,3}=x^3\)</li>
+<li>\(b_{0,4}(x)=(1-x)^4,b_{1,4}=4x(1-x)^3,b_{2,4}=6x^2(1-x)^2, b_{3,4}=4x^3(1-x),b_{4,4}=x^4\)</li>
+</ul>
+<blockquote>
+<p>🔎 [36：40]<br />
+✅ 矩阵的本质：在不同的基函数空间做变换<br />
+6张图分别是0-5次的 Bernstein 基。</p>
+</blockquote>
+<h2 id="bernstein多项式的优点"><a class="header" href="#bernstein多项式的优点">Bernstein多项式的优点</a></h2>
+<p>Bernstein基函数的良好性质：</p>
+<ul>
+<li>非常好的几何意义！</li>
+<li>正性、权性（和为1）\(\Rightarrow \)凸包性</li>
+</ul>
+<blockquote>
+<p>权性。上面图中，任意画一条竖线，线上点的\(y\)值和为1<br />
+[?] 什么是凸包性？为什么有权性就有凸包性？<br />
+为什么凸包性就计算稳定？ </p>
+</blockquote>
+<ul>
+<li>变差缩减性</li>
+<li>递归线性求解方法</li>
+<li>细分性</li>
+<li>…</li>
+</ul>
+<blockquote>
+<p>🔎 丰富的理论：CAGD 课程</p>
+</blockquote>
+<h1 id="关于bernstein函数的两种观点"><a class="header" href="#关于bernstein函数的两种观点">关于Bernstein函数的两种观点</a></h1>
+<blockquote>
+<p>🔎 [46：17]</p>
+</blockquote>
+<p><img src="../assets/13.PNG" alt="" /></p>
+<p>$$
+B_{n}(f, x)=\sum_{j=0}^{n} f\left(\frac{i}{n}\right) b_{n, j}(x)
+$$ </p>
+<blockquote>
+<p>\(f(x)\)是一个离散函数， \(f(\frac{i }{n} )\)为\(x\)为第i个采样点时\(f(x)\)的值，因此 \(f(\frac{i}{n} )\)代表能有采样点。</p>
+</blockquote>
+<p>红色实际上是基于蓝点画的 Bezier 曲线。</p>
+<h2 id="代数观点"><a class="header" href="#代数观点">代数观点</a></h2>
+<p>蓝色为采样点\(f(\frac{i}{n} )\)，\(b_{n,j}(x) \)是系数，用系组来组合采样点。 红色为拟合曲线\(B_n (f,x)\)。当采样点足够多时\(n\to \infty\)，得到\(f(x)逼近 B_n (f,x)\)    红线逼近蓝点。</p>
+<h2 id="几何观点"><a class="header" href="#几何观点">几何观点</a></h2>
+<p>\(f(\frac{i}{n})\)是系数，\(bn_1,j(x)\)是基函数，用系数来组合基函数，得到新的函数。</p>
+<hr />
+<blockquote>
+<p>本文出自CaterpillarStudyGroup，转载请注明出处。
+https://caterpillarstudygroup.github.io/GAMES102_mdbook/</p>
+</blockquote>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../DataFitting/PolynomialApproximation.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                            <a rel="next" href="../DataFitting/RBF.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../DataFitting/PolynomialApproximation.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                    <a rel="next" href="../DataFitting/RBF.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        <script type="text/javascript" src="../theme/pagetoc.js"></script>
+    </body>
+</html>
